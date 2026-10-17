@@ -130,7 +130,8 @@ NUMBA_NUM_THREADS=8 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
   --confirm-benchmark --pin-core 0 \
   --index-budget-bytes 24000000000 --peak-ram-cap-bytes 48000000000
 
-python -m fresh.summarize_nba_full results/nba-full-20261012
+python -m fresh.summarize_nba_full results/nba-full-20261012 \
+  --data data/nba-full-20261012
 python -m reproducibility.run nba-selectivity --core 0 --threads 8
 ```
 
@@ -149,7 +150,10 @@ compatibility; explicit memory overrides above are portable.
 
 ### 5. HNSW, DTW, and construction
 
-Install `requirements-hnsw.txt` for the actual graph baseline:
+Install `requirements-hnsw.txt` for the actual graph baseline. If no compatible
+wheel is available, `hnswlib` builds from source and needs a C++11 compiler and
+Python development headers (for example `build-essential` and `python3-dev` on
+Debian/Ubuntu, or `gcc-c++` and `python3-devel` on Fedora):
 
 ```bash
 python -m reproducibility.run hnsw --core 0 --threads 8

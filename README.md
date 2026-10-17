@@ -115,7 +115,10 @@ python -m pip install -r requirements-hnsw.txt
 ```
 
 The actual HNSW baseline uses `hnswlib`. The exhaustive vector backend used in
-some unit tests is not a replacement for HNSW in benchmark results.
+some unit tests is not a replacement for HNSW in benchmark results. Installing
+`hnswlib` from source requires a C++11 compiler and Python development headers.
+The native HNSW build was not validated on the release machine because no C++
+compiler was installed; the baseline's test backend and reporting were tested.
 
 ## Repository layout
 
