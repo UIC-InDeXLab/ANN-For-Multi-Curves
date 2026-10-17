@@ -1,0 +1,113 @@
+{
+  "experiment": "empirical-selectivity-crossover",
+  "stage": "replicated-six-frequency-sweep",
+  "dataset_seed": 2026101302,
+  "index_seeds": [
+    1801,
+    1802,
+    1803
+  ],
+  "m": 32,
+  "d": 2,
+  "rho": 0.5,
+  "relevance_radius": 1.5,
+  "target_recall": 0.9,
+  "tuning_acceptance_recall": 0.95,
+  "tuning_queries": 500,
+  "test_queries": 1000,
+  "warmup_queries": 10,
+  "planted_per_query": 1,
+  "plant_anchor_n": 100000,
+  "deltas": [
+    64.0,
+    128.0,
+    256.0
+  ],
+  "Lmax": 64,
+  "blocking_storage_multipliers": [
+    1,
+    6,
+    24,
+    96
+  ],
+  "include_balanced_in_ablation": true,
+  "blocking_main_latency_weight": 1.0,
+  "ablation_latency_weights": [
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "cost_memory_scale_bytes": 100000000,
+  "cost_latency_scale_seconds": 0.001,
+  "blocking_selection": "same preregistered M/100MB + median_T/1ms objective as the replicated main comparison",
+  "baseline_selection": "fastest qualifying tuning median, with achieved test accuracy reported",
+  "posting_compression": "unique (fingerprint,parent) per table for every method",
+  "index_budget_bytes": 24000000000,
+  "peak_ram_cap_bytes": 48000000000,
+  "minimum_available_ram_bytes": 16000000000,
+  "query_deadline_seconds": 60,
+  "build_deadline_seconds": 1800,
+  "run_cap_seconds": 86400,
+  "monitor_interval_seconds": 1,
+  "pin_core": 20,
+  "build_threads": 48,
+  "probe_chunk": 100000,
+  "verification_chunk": 1000,
+  "main_plot_n": 100000,
+  "c_success_factors": [
+    1.0,
+    1.01,
+    1.05,
+    1.1,
+    1.5,
+    2.0,
+    5.0
+  ],
+  "empirical_question": "At fixed k and n, where does the best complete per-curve variant cross over against the single blocking selection? Show index storage, achieved recall and joint relevance counts; a crossover is not assumed.",
+  "frequency_semantics": "Rounded pool implies realized theoretical f=1-(1-1/pool)^k; increasing f also increases accidental joint answers, so query relevance counts must be shown.",
+  "cases": [
+    {
+      "id": "frequency-005-n100000-k8",
+      "kind": "conjunctive",
+      "n": 100000,
+      "k": 8,
+      "frequency": 0.005
+    },
+    {
+      "id": "frequency-020-n100000-k8",
+      "kind": "conjunctive",
+      "n": 100000,
+      "k": 8,
+      "frequency": 0.02
+    },
+    {
+      "id": "frequency-050-n100000-k8",
+      "kind": "conjunctive",
+      "n": 100000,
+      "k": 8,
+      "frequency": 0.05
+    },
+    {
+      "id": "frequency-180-n100000-k8",
+      "kind": "conjunctive",
+      "n": 100000,
+      "k": 8,
+      "frequency": 0.18
+    },
+    {
+      "id": "frequency-400-n100000-k8",
+      "kind": "conjunctive",
+      "n": 100000,
+      "k": 8,
+      "frequency": 0.4
+    },
+    {
+      "id": "frequency-650-n100000-k8",
+      "kind": "conjunctive",
+      "n": 100000,
+      "k": 8,
+      "frequency": 0.65
+    }
+  ]
+}

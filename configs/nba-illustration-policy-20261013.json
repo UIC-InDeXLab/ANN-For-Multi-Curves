@@ -1,0 +1,17 @@
+{
+  "experiment": "full-nba-illustrative-motion-examples",
+  "index_seed": 2301,
+  "method": "blocking",
+  "minimum_query_mean_path_length_feet": 8.0,
+  "minimum_result_mean_path_length_feet": 8.0,
+  "selection": "smallest actual rank-1 returned geometric distance among eligible moving query/result pairs",
+  "second_panel": "highest-ranked actual retrieved candidate from another database game",
+  "query_must_be_held_out_by_game": true,
+  "retune_index": false,
+  "change_coordinates_or_distance": false,
+  "same_action_type_required": false,
+  "representative_sample": false,
+  "retain_hash_first_median_and_difficult_examples": true,
+  "policy_timing": "Declared before completion of full corpus preparation and before any full-NBA test evaluation",
+  "claims": "Illustrative geometric retrieval only; not expert tactical equivalence or a substitute for all-query results"
+}

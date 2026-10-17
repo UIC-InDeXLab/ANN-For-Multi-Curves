@@ -1,0 +1,15 @@
+{
+  "experiment": "partition-frontier",
+  "stage": "every-partition-both-orientations",
+  "synthetic_config": "synthetic-expanded-20261012.json",
+  "reference_results_root": "../results/fresh-synthetic-expanded-20261012",
+  "case_ids": [
+    "conjunctive-n100000-k8",
+    "rare-n100000-k8"
+  ],
+  "index_seeds": [
+    1701,
+    1702,
+    1703
+  ]
+}

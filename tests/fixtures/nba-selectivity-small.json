@@ -1,0 +1,10 @@
+{
+  "experiment": "nba-selectivity-small-fixture",
+  "stage": "unit-test",
+  "database_path": "./tests/fixtures/nba_selectivity_small/database.npz",
+  "test_path": "./tests/fixtures/nba_selectivity_small/test.npz",
+  "ground_truth_path": "./tests/fixtures/nba_selectivity_small/test-ground-truth.npz",
+  "query_count": 2,
+  "fixed_radius_feet": 5.0,
+  "max_threads": 2
+}

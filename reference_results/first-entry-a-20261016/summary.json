@@ -1,0 +1,296 @@
+{
+  "aggregates": [
+    {
+      "case_id": "conjunctive-n100000-k4",
+      "display_method": "blocking",
+      "seed_count": 3,
+      "mean_recall_at_1": 0.07633333333333332,
+      "min_recall_at_1": 0.072,
+      "mean_within_1_1": 0.7676666666666666,
+      "mean_empty_rate": 0.0036666666666666666,
+      "mean_ratio": 1.0672972046196125,
+      "median_ms": 0.004035886377096176,
+      "median_p95_ms": 0.005940045230090617,
+      "max_median_ms": 0.00423588789999485,
+      "median_index_mb": 2.434216,
+      "median_L": 2.0,
+      "deltas": [
+        32.0,
+        64.0
+      ],
+      "tables": [
+        1,
+        2,
+        3
+      ],
+      "reached_count": 0,
+      "mean_tuning_recall": 0.09933333333333333
+    },
+    {
+      "case_id": "conjunctive-n100000-k4",
+      "display_method": "probe_all",
+      "seed_count": 3,
+      "mean_recall_at_1": 0.07633333333333332,
+      "min_recall_at_1": 0.072,
+      "mean_within_1_1": 0.7676666666666666,
+      "mean_empty_rate": 0.0036666666666666666,
+      "mean_ratio": 1.0672972046196125,
+      "median_ms": 0.00403611920773983,
+      "median_p95_ms": 0.005949544720351696,
+      "max_median_ms": 0.004166038706898689,
+      "median_index_mb": 2.434216,
+      "median_L": 2.0,
+      "deltas": [
+        32.0,
+        64.0
+      ],
+      "tables": [
+        1,
+        2,
+        3
+      ],
+      "reached_count": 0,
+      "mean_tuning_recall": 0.09933333333333333
+    },
+    {
+      "case_id": "conjunctive-n100000-k4",
+      "display_method": "store_all",
+      "seed_count": 3,
+      "mean_recall_at_1": 0.07333333333333333,
+      "min_recall_at_1": 0.069,
+      "mean_within_1_1": 0.765,
+      "mean_empty_rate": 0.021333333333333333,
+      "mean_ratio": 1.0659739076540078,
+      "median_ms": 0.0021730083972215652,
+      "median_p95_ms": 0.0062699662521481505,
+      "max_median_ms": 0.0053425319492816925,
+      "median_index_mb": 74.062024,
+      "median_L": 6.0,
+      "deltas": [
+        16.0,
+        32.0,
+        64.0
+      ],
+      "tables": [
+        2,
+        6,
+        8
+      ],
+      "reached_count": 0,
+      "mean_tuning_recall": 0.08666666666666667
+    },
+    {
+      "case_id": "conjunctive-n100000-k6",
+      "display_method": "blocking",
+      "seed_count": 3,
+      "mean_recall_at_1": 0.9346666666666666,
+      "min_recall_at_1": 0.923,
+      "mean_within_1_1": 0.9673333333333334,
+      "mean_empty_rate": 0.002,
+      "mean_ratio": 1.6488489622267306,
+      "median_ms": 0.04363048356026411,
+      "median_p95_ms": 0.20375341409817338,
+      "max_median_ms": 0.045613967813551426,
+      "median_index_mb": 14.304902,
+      "median_L": 11.0,
+      "deltas": [
+        64.0
+      ],
+      "tables": [
+        11,
+        16
+      ],
+      "reached_count": 0,
+      "mean_tuning_recall": 0.9286666666666666
+    },
+    {
+      "case_id": "conjunctive-n100000-k6",
+      "display_method": "probe_all",
+      "seed_count": 3,
+      "mean_recall_at_1": 0.9346666666666666,
+      "min_recall_at_1": 0.923,
+      "mean_within_1_1": 0.9673333333333334,
+      "mean_empty_rate": 0.002,
+      "mean_ratio": 1.6488489622267306,
+      "median_ms": 0.043064472265541553,
+      "median_p95_ms": 0.20107536111026977,
+      "max_median_ms": 0.04514807369560003,
+      "median_index_mb": 14.304902,
+      "median_L": 11.0,
+      "deltas": [
+        64.0
+      ],
+      "tables": [
+        11,
+        16
+      ],
+      "reached_count": 0,
+      "mean_tuning_recall": 0.9286666666666666
+    },
+    {
+      "case_id": "conjunctive-n100000-k6",
+      "display_method": "store_all",
+      "seed_count": 3,
+      "mean_recall_at_1": 0.93,
+      "min_recall_at_1": 0.918,
+      "mean_within_1_1": 0.963,
+      "mean_empty_rate": 0.012666666666666666,
+      "mean_ratio": 1.5821464779529617,
+      "median_ms": 0.004365807399153709,
+      "median_p95_ms": 0.013311498332768679,
+      "max_median_ms": 0.0044067855924367905,
+      "median_index_mb": 6085.454066,
+      "median_L": 8.0,
+      "deltas": [
+        64.0
+      ],
+      "tables": [
+        8
+      ],
+      "reached_count": 0,
+      "mean_tuning_recall": 0.9173333333333334
+    },
+    {
+      "case_id": "conjunctive-n100000-k8",
+      "display_method": "blocking",
+      "seed_count": 3,
+      "mean_recall_at_1": 0.9649999999999999,
+      "min_recall_at_1": 0.939,
+      "mean_within_1_1": 0.9660000000000001,
+      "mean_empty_rate": 0.03233333333333333,
+      "mean_ratio": 1.1454295829326844,
+      "median_ms": 0.20412192679941654,
+      "median_p95_ms": 0.9043470025062558,
+      "max_median_ms": 0.23313553538173437,
+      "median_index_mb": 30.146248,
+      "median_L": 4.0,
+      "deltas": [
+        128.0
+      ],
+      "tables": [
+        3,
+        4,
+        5
+      ],
+      "reached_count": 3,
+      "mean_tuning_recall": 0.9686666666666666
+    },
+    {
+      "case_id": "conjunctive-n100000-k8",
+      "display_method": "probe_all",
+      "seed_count": 3,
+      "mean_recall_at_1": 0.9786666666666667,
+      "min_recall_at_1": 0.976,
+      "mean_within_1_1": 0.9796666666666667,
+      "mean_empty_rate": 0.01966666666666667,
+      "mean_ratio": 1.0727237860456327,
+      "median_ms": 0.9599074255675077,
+      "median_p95_ms": 3.603424376342444,
+      "max_median_ms": 1.0003135539591312,
+      "median_index_mb": 5.523224,
+      "median_L": 4.0,
+      "deltas": [
+        128.0
+      ],
+      "tables": [
+        4,
+        5
+      ],
+      "reached_count": 3,
+      "mean_tuning_recall": 0.9706666666666667
+    }
+  ],
+  "exclusions": [
+    {
+      "case": "conjunctive-n100000-k8-seed1701",
+      "case_id": "conjunctive-n100000-k8",
+      "index_seed": 1701,
+      "kind": "conjunctive",
+      "n": 100000,
+      "k": 8,
+      "display_method": "store_all",
+      "target_L": 0,
+      "source_config_id": null,
+      "source_L": null,
+      "delta": null,
+      "build_seconds": null,
+      "index_bytes": null,
+      "index_mb": null,
+      "entries": null,
+      "raw_entries": null,
+      "scratch_bytes": null,
+      "recall_at_1": null,
+      "median_ms": null,
+      "p95_ms": null,
+      "queries_evaluated": 0,
+      "test_status": "not run",
+      "status": "missing frozen selection",
+      "exclusion_reason": "not run: no frozen qualified selection",
+      "commit": "de608831df95c3532ccfea840d68b6b8b3e200ee",
+      "config_sha256": "e5ebcbf989c414fe5fbc2c0991c4c96ad0720d5272ed670f1e1b1e22f0040c39",
+      "dataset_sha256": "0f85f59c71c535adf7acaff0822fbc31c3ee8c879cbef8bb117c99101d4c21ea",
+      "queries_sha256": "c6d0228954491c736eeb3b70519b5acd738953897aba19bbebd3c289546887b0"
+    },
+    {
+      "case": "conjunctive-n100000-k8-seed1702",
+      "case_id": "conjunctive-n100000-k8",
+      "index_seed": 1702,
+      "kind": "conjunctive",
+      "n": 100000,
+      "k": 8,
+      "display_method": "store_all",
+      "target_L": 0,
+      "source_config_id": null,
+      "source_L": null,
+      "delta": null,
+      "build_seconds": null,
+      "index_bytes": null,
+      "index_mb": null,
+      "entries": null,
+      "raw_entries": null,
+      "scratch_bytes": null,
+      "recall_at_1": null,
+      "median_ms": null,
+      "p95_ms": null,
+      "queries_evaluated": 0,
+      "test_status": "not run",
+      "status": "missing frozen selection",
+      "exclusion_reason": "not run: no frozen qualified selection",
+      "commit": "de608831df95c3532ccfea840d68b6b8b3e200ee",
+      "config_sha256": "e5ebcbf989c414fe5fbc2c0991c4c96ad0720d5272ed670f1e1b1e22f0040c39",
+      "dataset_sha256": "0f85f59c71c535adf7acaff0822fbc31c3ee8c879cbef8bb117c99101d4c21ea",
+      "queries_sha256": "c6d0228954491c736eeb3b70519b5acd738953897aba19bbebd3c289546887b0"
+    },
+    {
+      "case": "conjunctive-n100000-k8-seed1703",
+      "case_id": "conjunctive-n100000-k8",
+      "index_seed": 1703,
+      "kind": "conjunctive",
+      "n": 100000,
+      "k": 8,
+      "display_method": "store_all",
+      "target_L": 0,
+      "source_config_id": null,
+      "source_L": null,
+      "delta": null,
+      "build_seconds": null,
+      "index_bytes": null,
+      "index_mb": null,
+      "entries": null,
+      "raw_entries": null,
+      "scratch_bytes": null,
+      "recall_at_1": null,
+      "median_ms": null,
+      "p95_ms": null,
+      "queries_evaluated": 0,
+      "test_status": "not run",
+      "status": "missing frozen selection",
+      "exclusion_reason": "not run: no frozen qualified selection",
+      "commit": "de608831df95c3532ccfea840d68b6b8b3e200ee",
+      "config_sha256": "e5ebcbf989c414fe5fbc2c0991c4c96ad0720d5272ed670f1e1b1e22f0040c39",
+      "dataset_sha256": "0f85f59c71c535adf7acaff0822fbc31c3ee8c879cbef8bb117c99101d4c21ea",
+      "queries_sha256": "c6d0228954491c736eeb3b70519b5acd738953897aba19bbebd3c289546887b0"
+    }
+  ],
+  "note": "Grid size and table count are tuned on the tuning queries for one stored entry per key and the first collision as the answer; block structures come from the frozen candidate-reranking selections."
+}

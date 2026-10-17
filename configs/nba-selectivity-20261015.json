@@ -1,0 +1,10 @@
+{
+  "experiment": "nba-selectivity-axis",
+  "stage": "sigmod-non-timed-20261015",
+  "database_path": "data/nba-dtw-20261014/database.npz",
+  "test_path": "data/nba-dtw-20261014/test.npz",
+  "ground_truth_path": "data/nba-dtw-20261014/test-ground-truth.npz",
+  "query_count": 200,
+  "fixed_radius_feet": 5.0,
+  "max_threads": 16
+}

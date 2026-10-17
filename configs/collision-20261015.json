@@ -1,0 +1,28 @@
+{
+  "experiment": "collision-probability-vs-pk-bound",
+  "stage": "sigmod-non-timed-20261015",
+  "dataset_seed": 2026101501,
+  "shift_seed": 2026101502,
+  "pairs": 500,
+  "trials": 20000,
+  "max_tables_u": 64,
+  "d": 2,
+  "m": 32,
+  "r": 0.5,
+  "extent": 1000.0,
+  "step_sd": 3.0,
+  "k_values": [
+    1,
+    2,
+    4,
+    6,
+    8,
+    10
+  ],
+  "p_values": [
+    0.5,
+    0.75
+  ],
+  "report_violation_z": 3.0,
+  "numba_threads": 16
+}

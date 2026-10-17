@@ -1,0 +1,2469 @@
+{
+  "config": {
+    "experiment": "measured-hard-budget-object-count-feasibility-other-budgets",
+    "stage": "budget-256mb-1ms",
+    "dataset_seed": 2026101217,
+    "index_seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "m": 32,
+    "d": 2,
+    "rho": 0.5,
+    "relevance_radius": 1.5,
+    "target_recall": 0.9,
+    "tuning_acceptance_recall": 0.95,
+    "tuning_queries": 500,
+    "test_queries": 1000,
+    "warmup_queries": 10,
+    "planted_per_query": 1,
+    "plant_anchor_n": 100000,
+    "deltas": [
+      64.0,
+      128.0,
+      256.0
+    ],
+    "Lmax": 64,
+    "blocking_storage_multipliers": [
+      1,
+      6,
+      24,
+      96
+    ],
+    "include_balanced_in_ablation": true,
+    "blocking_main_latency_weight": 1.0,
+    "ablation_latency_weights": [
+      1.0
+    ],
+    "cost_memory_scale_bytes": 100000000,
+    "cost_latency_scale_seconds": 0.001,
+    "blocking_selection": "fastest full tuning median among configurations within the hard allocated-index budget and reaching 95% exact-NN success within the per-query deadline",
+    "baseline_selection": "fastest full tuning median among configurations within the same hard allocated-index budget and reaching 95% exact-NN success within the per-query deadline",
+    "tuning_guard_note": "95% empirical tuning is a conservative selection guard for a 90% held-out exact-NN-within-deadline requirement; it is not a population-recall certificate.",
+    "posting_compression": "unique (fingerprint,parent) per table for every indexed method",
+    "index_budget_bytes": 256000000,
+    "peak_ram_cap_bytes": 48000000000,
+    "minimum_available_ram_bytes": 16000000000,
+    "query_deadline_seconds": 0.001,
+    "compilation_deadline_seconds": 60,
+    "build_deadline_seconds": 1800,
+    "run_cap_seconds": 172800,
+    "monitor_interval_seconds": 1,
+    "pin_core": 20,
+    "build_threads": 48,
+    "probe_chunk": 10000,
+    "verification_chunk": 1000,
+    "feasibility_scope": "largest feasible TESTED k in 4..12; every required index seed must meet the serving-index budget and 90% exact-NN success within 10 ms; raw curves and scratch RAM are separate",
+    "cases": [
+      {
+        "id": "conjunctive-n1000000-k4",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 4,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k5",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 5,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k6",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 6,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k7",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 7,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k8",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 8,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k9",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 9,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k10",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 10,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k11",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 11,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k12",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 12,
+        "frequency": 0.18
+      }
+    ]
+  },
+  "manifest": {
+    "commit": "6d6a50a2076f4d14b158a5b67754e17c8602386a",
+    "config_sha256": "0ec1038b15cb6f33caeca24629471a5ebc7f939f0b07264b518cd949405b2e31",
+    "started": 1792086123.0776207,
+    "python": "3.12.7 (main, Jun 18 2025, 13:16:51) [GCC 14.2.0]",
+    "numpy": "2.5.3",
+    "numba": "0.67.0",
+    "pin_core": 20,
+    "build_threads": 48,
+    "stage": "budget-256mb-1ms",
+    "index_seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "cpu_model": "AMD Ryzen Threadripper 7970X 32-Cores"
+  },
+  "groups": [
+    {
+      "k": 4,
+      "method": "blocking",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 4,
+          "method": "blocking",
+          "index_seed": 1701,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 4,
+          "method": "blocking",
+          "index_seed": 1702,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 4,
+          "method": "blocking",
+          "index_seed": 1703,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 4,
+      "method": "per_curve-intersection",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 4,
+          "method": "per_curve-intersection",
+          "index_seed": 1701,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 4,
+          "method": "per_curve-intersection",
+          "index_seed": 1702,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 4,
+          "method": "per_curve-intersection",
+          "index_seed": 1703,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 4,
+      "method": "probe_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 4,
+          "method": "probe_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 4,
+          "method": "probe_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 4,
+          "method": "probe_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 4,
+      "method": "store_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 4,
+          "method": "store_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage"
+          ]
+        },
+        {
+          "k": 4,
+          "method": "store_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage"
+          ]
+        },
+        {
+          "k": 4,
+          "method": "store_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 5,
+      "method": "blocking",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 5,
+          "method": "blocking",
+          "index_seed": 1701,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1701",
+          "measured": true,
+          "index_bytes": 147698348,
+          "index_MB": 147.698348,
+          "config_id": "joint-d128-a6-swap0",
+          "blocks": [
+            3,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 2,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.957,
+          "timeout_rate": 0.0,
+          "median_ms": 0.1390069955959916,
+          "p95_ms": 0.20501880208030338,
+          "max_ms": 0.27915509417653084,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 5,
+          "method": "blocking",
+          "index_seed": 1702,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1702",
+          "measured": true,
+          "index_bytes": 222576340,
+          "index_MB": 222.57634,
+          "config_id": "joint-d128-a6-swap0",
+          "blocks": [
+            3,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.967,
+          "timeout_rate": 0.0,
+          "median_ms": 0.1482649240642786,
+          "p95_ms": 0.21499809809029102,
+          "max_ms": 0.30747801065444946,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 5,
+          "method": "blocking",
+          "index_seed": 1703,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1703",
+          "measured": true,
+          "index_bytes": 221875572,
+          "index_MB": 221.875572,
+          "config_id": "joint-d128-a6-swap0",
+          "blocks": [
+            3,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.982,
+          "timeout_rate": 0.0,
+          "median_ms": 0.14942244160920382,
+          "p95_ms": 0.215730513446033,
+          "max_ms": 0.28929999098181725,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 0.1482649240642786,
+      "median_ms_minmax": [
+        0.1390069955959916,
+        0.14942244160920382
+      ],
+      "p95_ms": 0.21499809809029102,
+      "p95_ms_minmax": [
+        0.20501880208030338,
+        0.215730513446033
+      ],
+      "index_MB": 221.875572,
+      "index_MB_minmax": [
+        147.698348,
+        222.57634
+      ],
+      "success_rate": 0.9686666666666666,
+      "success_rate_minmax": [
+        0.957,
+        0.982
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 5,
+      "method": "per_curve-intersection",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 5,
+          "method": "per_curve-intersection",
+          "index_seed": 1701,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 5,
+          "method": "per_curve-intersection",
+          "index_seed": 1702,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 5,
+          "method": "per_curve-intersection",
+          "index_seed": 1703,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 5,
+      "method": "probe_all",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 5,
+          "method": "probe_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1701",
+          "measured": true,
+          "index_bytes": 26000823,
+          "index_MB": 26.000823,
+          "config_id": "joint-d128-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 2,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.957,
+          "timeout_rate": 0.0,
+          "median_ms": 0.15363807324320078,
+          "p95_ms": 0.22085167001932857,
+          "max_ms": 0.2876881044358015,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 5,
+          "method": "probe_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1702",
+          "measured": true,
+          "index_bytes": 39000907,
+          "index_MB": 39.000907,
+          "config_id": "joint-d128-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.966,
+          "timeout_rate": 0.0,
+          "median_ms": 0.1715205144137144,
+          "p95_ms": 0.2416729461401701,
+          "max_ms": 0.31719193793833256,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 5,
+          "method": "probe_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1703",
+          "measured": true,
+          "index_bytes": 39000907,
+          "index_MB": 39.000907,
+          "config_id": "joint-d128-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.977,
+          "timeout_rate": 0.0,
+          "median_ms": 0.1710649812594056,
+          "p95_ms": 0.23781678173691034,
+          "max_ms": 0.32056705094873905,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 0.1710649812594056,
+      "median_ms_minmax": [
+        0.15363807324320078,
+        0.1715205144137144
+      ],
+      "p95_ms": 0.23781678173691034,
+      "p95_ms_minmax": [
+        0.22085167001932857,
+        0.2416729461401701
+      ],
+      "index_MB": 39.000907,
+      "index_MB_minmax": [
+        26.000823,
+        39.000907
+      ],
+      "success_rate": 0.9666666666666667,
+      "success_rate_minmax": [
+        0.957,
+        0.977
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 5,
+      "method": "store_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 5,
+          "method": "store_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage"
+          ]
+        },
+        {
+          "k": 5,
+          "method": "store_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage"
+          ]
+        },
+        {
+          "k": 5,
+          "method": "store_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 6,
+      "method": "blocking",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 6,
+          "method": "blocking",
+          "index_seed": 1701,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1701",
+          "measured": true,
+          "index_bytes": 222637068,
+          "index_MB": 222.637068,
+          "config_id": "joint-d128-a6-swap0",
+          "blocks": [
+            3,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.967,
+          "timeout_rate": 0.0,
+          "median_ms": 0.09428802877664566,
+          "p95_ms": 0.13674895744770765,
+          "max_ms": 0.1901988871395588,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 6,
+          "method": "blocking",
+          "index_seed": 1702,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1702",
+          "measured": true,
+          "index_bytes": 222727876,
+          "index_MB": 222.727876,
+          "config_id": "joint-d128-a6-swap0",
+          "blocks": [
+            3,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.98,
+          "timeout_rate": 0.0,
+          "median_ms": 0.09804416913539171,
+          "p95_ms": 0.13603537809103725,
+          "max_ms": 0.20311796106398106,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 6,
+          "method": "blocking",
+          "index_seed": 1703,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1703",
+          "measured": true,
+          "index_bytes": 222802220,
+          "index_MB": 222.80222,
+          "config_id": "joint-d128-a6-swap0",
+          "blocks": [
+            3,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.967,
+          "timeout_rate": 0.0,
+          "median_ms": 0.09016692638397217,
+          "p95_ms": 0.12191300047561525,
+          "max_ms": 0.16879593022167683,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 0.09428802877664566,
+      "median_ms_minmax": [
+        0.09016692638397217,
+        0.09804416913539171
+      ],
+      "p95_ms": 0.13603537809103725,
+      "p95_ms_minmax": [
+        0.12191300047561525,
+        0.13674895744770765
+      ],
+      "index_MB": 222.727876,
+      "index_MB_minmax": [
+        222.637068,
+        222.80222
+      ],
+      "success_rate": 0.9713333333333334,
+      "success_rate_minmax": [
+        0.967,
+        0.98
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 6,
+      "method": "per_curve-intersection",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 6,
+          "method": "per_curve-intersection",
+          "index_seed": 1701,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 6,
+          "method": "per_curve-intersection",
+          "index_seed": 1702,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 6,
+          "method": "per_curve-intersection",
+          "index_seed": 1703,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 6,
+      "method": "probe_all",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 6,
+          "method": "probe_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1701",
+          "measured": true,
+          "index_bytes": 39004698,
+          "index_MB": 39.004698,
+          "config_id": "joint-d128-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.967,
+          "timeout_rate": 0.0,
+          "median_ms": 0.16037398017942905,
+          "p95_ms": 0.21611858392134306,
+          "max_ms": 0.349320936948061,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 6,
+          "method": "probe_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1702",
+          "measured": true,
+          "index_bytes": 39004698,
+          "index_MB": 39.004698,
+          "config_id": "joint-d128-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.983,
+          "timeout_rate": 0.0,
+          "median_ms": 0.16072450671344995,
+          "p95_ms": 0.22355009568855164,
+          "max_ms": 0.3153488505631685,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 6,
+          "method": "probe_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1703",
+          "measured": true,
+          "index_bytes": 39004698,
+          "index_MB": 39.004698,
+          "config_id": "joint-d128-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.962,
+          "timeout_rate": 0.0,
+          "median_ms": 0.15576102305203676,
+          "p95_ms": 0.211449631024152,
+          "max_ms": 0.3206969704478979,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 0.16037398017942905,
+      "median_ms_minmax": [
+        0.15576102305203676,
+        0.16072450671344995
+      ],
+      "p95_ms": 0.21611858392134306,
+      "p95_ms_minmax": [
+        0.211449631024152,
+        0.22355009568855164
+      ],
+      "index_MB": 39.004698,
+      "index_MB_minmax": [
+        39.004698,
+        39.004698
+      ],
+      "success_rate": 0.9706666666666667,
+      "success_rate_minmax": [
+        0.962,
+        0.983
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 6,
+      "method": "store_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 6,
+          "method": "store_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: construction RAM estimate"
+          ]
+        },
+        {
+          "k": 6,
+          "method": "store_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: construction RAM estimate"
+          ]
+        },
+        {
+          "k": 6,
+          "method": "store_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: construction RAM estimate"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 7,
+      "method": "blocking",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 7,
+          "method": "blocking",
+          "index_seed": 1701,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1701",
+          "measured": true,
+          "index_bytes": 224943832,
+          "index_MB": 224.943832,
+          "config_id": "joint-d128-a6-swap0",
+          "blocks": [
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.961,
+          "timeout_rate": 0.001,
+          "median_ms": 0.2722035860642791,
+          "p95_ms": 0.3598290728405118,
+          "max_ms": 65.44315186329186,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 7,
+          "method": "blocking",
+          "index_seed": 1702,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1702",
+          "measured": true,
+          "index_bytes": 147501064,
+          "index_MB": 147.501064,
+          "config_id": "joint-d256-a6-swap0",
+          "blocks": [
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 2,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.936,
+          "timeout_rate": 0.0,
+          "median_ms": 0.20382949151098728,
+          "p95_ms": 0.2747143618762493,
+          "max_ms": 0.5113258957862854,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 7,
+          "method": "blocking",
+          "index_seed": 1703,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1703",
+          "measured": true,
+          "index_bytes": 146846268,
+          "index_MB": 146.846268,
+          "config_id": "joint-d256-a6-swap0",
+          "blocks": [
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 2,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.99,
+          "timeout_rate": 0.001,
+          "median_ms": 0.2282171044498682,
+          "p95_ms": 0.3125016461126505,
+          "max_ms": 66.26737606711686,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 0.2282171044498682,
+      "median_ms_minmax": [
+        0.20382949151098728,
+        0.2722035860642791
+      ],
+      "p95_ms": 0.3125016461126505,
+      "p95_ms_minmax": [
+        0.2747143618762493,
+        0.3598290728405118
+      ],
+      "index_MB": 147.501064,
+      "index_MB_minmax": [
+        146.846268,
+        224.943832
+      ],
+      "success_rate": 0.9623333333333334,
+      "success_rate_minmax": [
+        0.936,
+        0.99
+      ],
+      "timeout_rate": 0.0006666666666666666,
+      "timeout_rate_minmax": [
+        0.0,
+        0.001
+      ]
+    },
+    {
+      "k": 7,
+      "method": "per_curve-intersection",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 7,
+          "method": "per_curve-intersection",
+          "index_seed": 1701,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 7,
+          "method": "per_curve-intersection",
+          "index_seed": 1702,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 7,
+          "method": "per_curve-intersection",
+          "index_seed": 1703,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 7,
+      "method": "probe_all",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 7,
+          "method": "probe_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1701",
+          "measured": true,
+          "index_bytes": 39035733,
+          "index_MB": 39.035733,
+          "config_id": "joint-d128-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.957,
+          "timeout_rate": 0.002,
+          "median_ms": 0.6211634026840329,
+          "p95_ms": 0.6691098446026444,
+          "max_ms": 1.037695910781622,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 7,
+          "method": "probe_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1702",
+          "measured": true,
+          "index_bytes": 26035617,
+          "index_MB": 26.035617,
+          "config_id": "joint-d256-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 2,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.927,
+          "timeout_rate": 0.0,
+          "median_ms": 0.4273389931768179,
+          "p95_ms": 0.5084646050818264,
+          "max_ms": 0.7304488681256771,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 7,
+          "method": "probe_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1703",
+          "measured": true,
+          "index_bytes": 26035617,
+          "index_MB": 26.035617,
+          "config_id": "joint-d256-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 2,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.99,
+          "timeout_rate": 0.0,
+          "median_ms": 0.4347249632701278,
+          "p95_ms": 0.5114670027978718,
+          "max_ms": 0.7485260721296072,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 0.4347249632701278,
+      "median_ms_minmax": [
+        0.4273389931768179,
+        0.6211634026840329
+      ],
+      "p95_ms": 0.5114670027978718,
+      "p95_ms_minmax": [
+        0.5084646050818264,
+        0.6691098446026444
+      ],
+      "index_MB": 26.035617,
+      "index_MB_minmax": [
+        26.035617,
+        39.035733
+      ],
+      "success_rate": 0.9579999999999999,
+      "success_rate_minmax": [
+        0.927,
+        0.99
+      ],
+      "timeout_rate": 0.0006666666666666666,
+      "timeout_rate_minmax": [
+        0.0,
+        0.002
+      ]
+    },
+    {
+      "k": 7,
+      "method": "store_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 7,
+          "method": "store_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 7,
+          "method": "store_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 7,
+          "method": "store_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 8,
+      "method": "blocking",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 8,
+          "method": "blocking",
+          "index_seed": 1701,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity",
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 8,
+          "method": "blocking",
+          "index_seed": 1702,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity",
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 8,
+          "method": "blocking",
+          "index_seed": 1703,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity",
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 8,
+      "method": "per_curve-intersection",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 8,
+          "method": "per_curve-intersection",
+          "index_seed": 1701,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 8,
+          "method": "per_curve-intersection",
+          "index_seed": 1702,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 8,
+          "method": "per_curve-intersection",
+          "index_seed": 1703,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 8,
+      "method": "probe_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 8,
+          "method": "probe_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 8,
+          "method": "probe_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 8,
+          "method": "probe_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 8,
+      "method": "store_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 8,
+          "method": "store_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 8,
+          "method": "store_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 8,
+          "method": "store_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 9,
+      "method": "blocking",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 9,
+          "method": "blocking",
+          "index_seed": 1701,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: construction RAM estimate",
+            "excluded: integer capacity",
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 9,
+          "method": "blocking",
+          "index_seed": 1702,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: construction RAM estimate",
+            "excluded: integer capacity",
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 9,
+          "method": "blocking",
+          "index_seed": 1703,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: construction RAM estimate",
+            "excluded: integer capacity",
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 9,
+      "method": "per_curve-intersection",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 9,
+          "method": "per_curve-intersection",
+          "index_seed": 1701,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 9,
+          "method": "per_curve-intersection",
+          "index_seed": 1702,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 9,
+          "method": "per_curve-intersection",
+          "index_seed": 1703,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 9,
+      "method": "probe_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 9,
+          "method": "probe_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 9,
+          "method": "probe_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 9,
+          "method": "probe_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 9,
+      "method": "store_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 9,
+          "method": "store_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 9,
+          "method": "store_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 9,
+          "method": "store_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 10,
+      "method": "blocking",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 10,
+          "method": "blocking",
+          "index_seed": 1701,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: construction RAM estimate",
+            "excluded: integer capacity",
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 10,
+          "method": "blocking",
+          "index_seed": 1702,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: construction RAM estimate",
+            "excluded: integer capacity",
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 10,
+          "method": "blocking",
+          "index_seed": 1703,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: construction RAM estimate",
+            "excluded: integer capacity",
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 10,
+      "method": "per_curve-intersection",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 10,
+          "method": "per_curve-intersection",
+          "index_seed": 1701,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 10,
+          "method": "per_curve-intersection",
+          "index_seed": 1702,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 10,
+          "method": "per_curve-intersection",
+          "index_seed": 1703,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 10,
+      "method": "probe_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 10,
+          "method": "probe_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 10,
+          "method": "probe_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 10,
+          "method": "probe_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 10,
+      "method": "store_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 10,
+          "method": "store_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 10,
+          "method": "store_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 10,
+          "method": "store_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 11,
+      "method": "blocking",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 11,
+          "method": "blocking",
+          "index_seed": 1701,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity",
+            "excluded: mandatory order arrays exceed serving-index budget",
+            "excluded: measured serving-index storage"
+          ]
+        },
+        {
+          "k": 11,
+          "method": "blocking",
+          "index_seed": 1702,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity",
+            "excluded: mandatory order arrays exceed serving-index budget",
+            "excluded: measured serving-index storage"
+          ]
+        },
+        {
+          "k": 11,
+          "method": "blocking",
+          "index_seed": 1703,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity",
+            "excluded: mandatory order arrays exceed serving-index budget",
+            "excluded: measured serving-index storage"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 11,
+      "method": "per_curve-intersection",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 11,
+          "method": "per_curve-intersection",
+          "index_seed": 1701,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 11,
+          "method": "per_curve-intersection",
+          "index_seed": 1702,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 11,
+          "method": "per_curve-intersection",
+          "index_seed": 1703,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 11,
+      "method": "probe_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 11,
+          "method": "probe_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: mandatory order arrays exceed serving-index budget"
+          ]
+        },
+        {
+          "k": 11,
+          "method": "probe_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: mandatory order arrays exceed serving-index budget"
+          ]
+        },
+        {
+          "k": 11,
+          "method": "probe_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: mandatory order arrays exceed serving-index budget"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 11,
+      "method": "store_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 11,
+          "method": "store_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 11,
+          "method": "store_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 11,
+          "method": "store_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 12,
+      "method": "blocking",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 12,
+          "method": "blocking",
+          "index_seed": 1701,
+          "raw_curve_bytes": 6144000000,
+          "case": "conjunctive-n1000000-k12-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity",
+            "excluded: mandatory order arrays exceed serving-index budget",
+            "excluded: measured serving-index storage"
+          ]
+        },
+        {
+          "k": 12,
+          "method": "blocking",
+          "index_seed": 1702,
+          "raw_curve_bytes": 6144000000,
+          "case": "conjunctive-n1000000-k12-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity",
+            "excluded: mandatory order arrays exceed serving-index budget",
+            "excluded: measured serving-index storage"
+          ]
+        },
+        {
+          "k": 12,
+          "method": "blocking",
+          "index_seed": 1703,
+          "raw_curve_bytes": 6144000000,
+          "case": "conjunctive-n1000000-k12-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity",
+            "excluded: mandatory order arrays exceed serving-index budget",
+            "excluded: measured serving-index storage"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 12,
+      "method": "per_curve-intersection",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 12,
+          "method": "per_curve-intersection",
+          "index_seed": 1701,
+          "raw_curve_bytes": 6144000000,
+          "case": "conjunctive-n1000000-k12-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 12,
+          "method": "per_curve-intersection",
+          "index_seed": 1702,
+          "raw_curve_bytes": 6144000000,
+          "case": "conjunctive-n1000000-k12-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 12,
+          "method": "per_curve-intersection",
+          "index_seed": 1703,
+          "raw_curve_bytes": 6144000000,
+          "case": "conjunctive-n1000000-k12-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 12,
+      "method": "probe_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 12,
+          "method": "probe_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 6144000000,
+          "case": "conjunctive-n1000000-k12-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: mandatory order arrays exceed serving-index budget"
+          ]
+        },
+        {
+          "k": 12,
+          "method": "probe_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 6144000000,
+          "case": "conjunctive-n1000000-k12-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: mandatory order arrays exceed serving-index budget"
+          ]
+        },
+        {
+          "k": 12,
+          "method": "probe_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 6144000000,
+          "case": "conjunctive-n1000000-k12-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: mandatory order arrays exceed serving-index budget"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 12,
+      "method": "store_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 12,
+          "method": "store_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 6144000000,
+          "case": "conjunctive-n1000000-k12-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 12,
+          "method": "store_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 6144000000,
+          "case": "conjunctive-n1000000-k12-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 12,
+          "method": "store_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 6144000000,
+          "case": "conjunctive-n1000000-k12-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        }
+      ]
+    }
+  ],
+  "largest_feasible_tested_k": {
+    "blocking": 7,
+    "store_all": null,
+    "probe_all": 7,
+    "per_curve-intersection": null
+  },
+  "not_run_ks": [],
+  "artifacts": {
+    "conjunctive-n1000000-k4-seed1701/dataset.json": "ae203448b40ed6b0a4bb73afc067aa5c158f4920b2c0243f51cef3d3e2908e9f",
+    "conjunctive-n1000000-k4-seed1701/ground-truth.npz": "12663e0108d51e372a0393ea2ab18ede68d32218b424da34de5d475da51d5ade",
+    "conjunctive-n1000000-k4-seed1701/tuning-configurations.json": "15dea0da6db1b6edad00afcc3968562258c5593cabaa5e9586511ca0e83cb7c1",
+    "conjunctive-n1000000-k4-seed1701/tuning-queries.csv": "afd2a22f3969eddfadf6590399e16bdd9865d38dec4da1b69df17a46d854d617",
+    "conjunctive-n1000000-k4-seed1701/frozen-main-selections.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "conjunctive-n1000000-k4-seed1701/main-results.json": "32c51209bc3b93ae627fcb1fdb57bd6eb3adaa74734784f650390d58b1734d13",
+    "conjunctive-n1000000-k4-seed1701/test-queries.csv": "169b3997da47b67da0464f79845ea7ab3991e3bff166a58349a5bd6b45215d8f",
+    "conjunctive-n1000000-k4-seed1701/resources.json": "ac5d9995de8c14a845b87b0f67ef4125a6dbc5608703e5b04f9ba185defd172e",
+    "conjunctive-n1000000-k4-seed1702/dataset.json": "8a6dd837791447b53dd65c072dcd1d78fb656ff6426594027d9a8bdb60d45e94",
+    "conjunctive-n1000000-k4-seed1702/ground-truth.npz": "12663e0108d51e372a0393ea2ab18ede68d32218b424da34de5d475da51d5ade",
+    "conjunctive-n1000000-k4-seed1702/tuning-configurations.json": "b0f8c1f6fb1b13dae6fa9919df79a9054234e9067c5c3139277baa3290a83c4c",
+    "conjunctive-n1000000-k4-seed1702/tuning-queries.csv": "e4765c89055085e2f7e41197d30b53b7ba856110de904bd923394863691c6446",
+    "conjunctive-n1000000-k4-seed1702/frozen-main-selections.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "conjunctive-n1000000-k4-seed1702/main-results.json": "dbd313965ef34745ef085b5b32b9fbb8efc082b69449792488d3c24d32be042e",
+    "conjunctive-n1000000-k4-seed1702/test-queries.csv": "169b3997da47b67da0464f79845ea7ab3991e3bff166a58349a5bd6b45215d8f",
+    "conjunctive-n1000000-k4-seed1702/resources.json": "52ec53744bd133325aaffaf8e35ba01ccfe729792c2d6067f74497510ccac404",
+    "conjunctive-n1000000-k4-seed1703/dataset.json": "6341838ac11aafc1ec910a0608edb86b6b1e4b6e02387c1a7d69473452bc2ccd",
+    "conjunctive-n1000000-k4-seed1703/ground-truth.npz": "12663e0108d51e372a0393ea2ab18ede68d32218b424da34de5d475da51d5ade",
+    "conjunctive-n1000000-k4-seed1703/tuning-configurations.json": "ce2fb38925e10bcce27bb2ea01773635207334cf73ca3bbebfbd75a719fc12e9",
+    "conjunctive-n1000000-k4-seed1703/tuning-queries.csv": "be0b90c236b75ebe91c557ab2bd72100106895b5938b4dde3954e49530ac505d",
+    "conjunctive-n1000000-k4-seed1703/frozen-main-selections.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "conjunctive-n1000000-k4-seed1703/main-results.json": "e24be39c43704a9c99c7490aee7944e9f8c23ecb6ae1e88b59cb9b790bb75091",
+    "conjunctive-n1000000-k4-seed1703/test-queries.csv": "169b3997da47b67da0464f79845ea7ab3991e3bff166a58349a5bd6b45215d8f",
+    "conjunctive-n1000000-k4-seed1703/resources.json": "96385941f304cc707367148ff40e994c56c4026bd7c66981601a98b001aa7802",
+    "conjunctive-n1000000-k5-seed1701/dataset.json": "f4f4f21816802185906500d3d0be84244aa1d731585cff2f644cba01bf5c25a4",
+    "conjunctive-n1000000-k5-seed1701/ground-truth.npz": "c7d9aa4e1b8e1e9581d4e88efddde4c09ad899bc5e5c95fd34f2315271181ef0",
+    "conjunctive-n1000000-k5-seed1701/tuning-configurations.json": "5fc5b6b59ad23e7b6040375d8e1bfd7650e154a2ee5a2ef6c8a39f4720f55a11",
+    "conjunctive-n1000000-k5-seed1701/tuning-queries.csv": "25af347eb3c6eba377a373050722b591147a68dea116b3773a29a80b766b1408",
+    "conjunctive-n1000000-k5-seed1701/frozen-main-selections.json": "8fbab23614c515d8ccd1db2acad5699ae53dd5c50bf011dc8e3683973ae2e8a7",
+    "conjunctive-n1000000-k5-seed1701/main-results.json": "bab3f15b371afbb28bfd3d265c5a17ad86d58add9c144c8ab9ec183990df1716",
+    "conjunctive-n1000000-k5-seed1701/test-queries.csv": "e661633622c62f1bedd08e73ce39ffda5380194aca7e8073b83509fc66aa0517",
+    "conjunctive-n1000000-k5-seed1701/resources.json": "03d4587344ca99f7ea1f2ebfeed64ef600ede5ce08bf989ecaca12e514744d4a",
+    "conjunctive-n1000000-k5-seed1702/dataset.json": "839ff756b9412b5066fd4781c43ee9563146291b7ec6c160038be0e7b753eb4b",
+    "conjunctive-n1000000-k5-seed1702/ground-truth.npz": "c7d9aa4e1b8e1e9581d4e88efddde4c09ad899bc5e5c95fd34f2315271181ef0",
+    "conjunctive-n1000000-k5-seed1702/tuning-configurations.json": "4a487a983339362c62726c0d2b2c95dfcdbf25b571067e476807df9d9d8667b0",
+    "conjunctive-n1000000-k5-seed1702/tuning-queries.csv": "f70724cf63180877e2a80d8a31ddfb5c9d50a909283a47b016b0be9a97507d28",
+    "conjunctive-n1000000-k5-seed1702/frozen-main-selections.json": "44ad72357196cd298d358433fa76c3a3bfd96b6d7ec484b6c8ec1d97bd0c2f7e",
+    "conjunctive-n1000000-k5-seed1702/main-results.json": "ff33a96428f778cc4d246e88a4a0dca5dd04a1f8fce713b0aa8a15bdb7cd13e4",
+    "conjunctive-n1000000-k5-seed1702/test-queries.csv": "c751e62ab5081834d1d6b76d950f6cf89b644298ea9d14a3bd8fa9323cae2f3c",
+    "conjunctive-n1000000-k5-seed1702/resources.json": "7097cad5287242c46bb9e60d04be8f5c2325434544632650e1ae47f0baf2c3fd",
+    "conjunctive-n1000000-k5-seed1703/dataset.json": "2bf65773fe711f11b0e009087e4064a71a7e271a379bc867a1e63d66451a7f1a",
+    "conjunctive-n1000000-k5-seed1703/ground-truth.npz": "c7d9aa4e1b8e1e9581d4e88efddde4c09ad899bc5e5c95fd34f2315271181ef0",
+    "conjunctive-n1000000-k5-seed1703/tuning-configurations.json": "2ff0a2ea784236075f8b459bf7d552949df45f3a4f4f76748de62a690cc39f9d",
+    "conjunctive-n1000000-k5-seed1703/tuning-queries.csv": "2eaf1c8393b16c164bd0d080773ff24d70b6e2acd860f7fec45b64195a4f59de",
+    "conjunctive-n1000000-k5-seed1703/frozen-main-selections.json": "9a2169b1a6ce3f87de6eebac524b141919166c9330289bc23627cfae85506f2c",
+    "conjunctive-n1000000-k5-seed1703/main-results.json": "7bc3389f03aba45b012f94832d35b583eb0751de15b08aa9405fbae291e61b01",
+    "conjunctive-n1000000-k5-seed1703/test-queries.csv": "97aa5d4bc2482f53573be3b63649226bb6004fb97ec3a93e85cf468a4df0cbb3",
+    "conjunctive-n1000000-k5-seed1703/resources.json": "99d49a0c8c2ac0996d35decd6492be3be55b97b23adf15be19709e77654e558a",
+    "conjunctive-n1000000-k6-seed1701/dataset.json": "ffb4e8bd11c29129c985f70b9c81185d802f488de265e2f89bc7215f662ab379",
+    "conjunctive-n1000000-k6-seed1701/ground-truth.npz": "4678c98d9244ba54330681ae2f385156962c052a54910d82862fe4a2a368c1e4",
+    "conjunctive-n1000000-k6-seed1701/tuning-configurations.json": "1daa9fdcbaa70d11aa4429bf3e4c919562bb552e411d6b4d8d319646ac99f0ea",
+    "conjunctive-n1000000-k6-seed1701/tuning-queries.csv": "bb8daa366ca68de1d8b7ee0d89d24394215938b6e2932b713ea4b84b64ad9cd0",
+    "conjunctive-n1000000-k6-seed1701/frozen-main-selections.json": "518e832d6c0fe5186ccdd079ff920cc9d730c34282e3150e4bab1fd219a17fa8",
+    "conjunctive-n1000000-k6-seed1701/main-results.json": "50efbde43d76d0408e9848bcd34e32375883fd525779cf7ac02f5eb070ae177e",
+    "conjunctive-n1000000-k6-seed1701/test-queries.csv": "593eea86ca7c7517fefb7b2f56c6940119d3d581b253110a3e7c91fa27560272",
+    "conjunctive-n1000000-k6-seed1701/resources.json": "ea1b7e866d9bbe89e1beceb55da881aa9bd6ed86ac17ba3c7e8a433c65cb0ef7",
+    "conjunctive-n1000000-k6-seed1702/dataset.json": "c8d59d049e3b87566aa2024ba4bc318951041aa3fadfbd24389f77275977ca9b",
+    "conjunctive-n1000000-k6-seed1702/ground-truth.npz": "4678c98d9244ba54330681ae2f385156962c052a54910d82862fe4a2a368c1e4",
+    "conjunctive-n1000000-k6-seed1702/tuning-configurations.json": "594db498e4e4cba47b8201c45243f4cb64bb1db86194d9fff4bf5fbffc5d144f",
+    "conjunctive-n1000000-k6-seed1702/tuning-queries.csv": "5814d20eb4391243fa46e314ce37d3ec7b2d9c0521b04bac909e6dbee0d0f8de",
+    "conjunctive-n1000000-k6-seed1702/frozen-main-selections.json": "f558bc1206c1872890512d25e155e9e82d7a458758ad6b88eed4170926d6db41",
+    "conjunctive-n1000000-k6-seed1702/main-results.json": "7ed803bec69e3e82c34201a7ad877422d7d0bb65e485e71d5aad11863927e49b",
+    "conjunctive-n1000000-k6-seed1702/test-queries.csv": "7c5d93c8ab155d29e60e90f752dcda6056f38ef6cf4c4adc1aef55d96a6d6a1e",
+    "conjunctive-n1000000-k6-seed1702/resources.json": "1bf1aecf294f3beeed5a5efd7b4e85da7688e2b2ad61a7199a05f2550d97aadd",
+    "conjunctive-n1000000-k6-seed1703/dataset.json": "823498e7f0f87310d7ae339f8de434fa85f513577de0e345452a7d7ad7365e58",
+    "conjunctive-n1000000-k6-seed1703/ground-truth.npz": "4678c98d9244ba54330681ae2f385156962c052a54910d82862fe4a2a368c1e4",
+    "conjunctive-n1000000-k6-seed1703/tuning-configurations.json": "9526780896427180598efabe1cb23b73517c107519f0a2c02acca75dd1506d1f",
+    "conjunctive-n1000000-k6-seed1703/tuning-queries.csv": "de1c8172cec8d379455137a5d32f3d17ac17303d5c54bd8787503cd1463fcaa0",
+    "conjunctive-n1000000-k6-seed1703/frozen-main-selections.json": "8a92965dd19cf25717a0d884b62de320c4557732ee709ee8e4f663e277d58553",
+    "conjunctive-n1000000-k6-seed1703/main-results.json": "411d6bb7db9b1bb80bd03db883a006a04fed0919a7f0ca68fb5582c85ecee9c4",
+    "conjunctive-n1000000-k6-seed1703/test-queries.csv": "3eb7177280c71691b97be8e5689f14928d907cdc2c69ef4a085ccf9909483c07",
+    "conjunctive-n1000000-k6-seed1703/resources.json": "b79989e24c6b8b0409a03df55a92a65f58d797c6243fcd1546c320d3781ea6e7",
+    "conjunctive-n1000000-k7-seed1701/dataset.json": "3fbe3284cf1638a9fc1a236dad10705c694a120f091b1c69967a2ce7cba051a7",
+    "conjunctive-n1000000-k7-seed1701/ground-truth.npz": "98128d5697d612b80717ebe38f04364e94685b15a5fbd038a2e2753bc86d47c1",
+    "conjunctive-n1000000-k7-seed1701/tuning-configurations.json": "74a11528afc9010d9c481ccef325ce6f62e4c2e3257721586fcd5a57af0292b0",
+    "conjunctive-n1000000-k7-seed1701/tuning-queries.csv": "3dd51a90de2f83c9d5cd03914de829ac368f2aa045a13b0890548f91cb2c0ecf",
+    "conjunctive-n1000000-k7-seed1701/frozen-main-selections.json": "e301cd18aaa711b1d7df1aa7e1980884539ab27553500a53f2367c0a4285e1e5",
+    "conjunctive-n1000000-k7-seed1701/main-results.json": "c82ef9c8cf21e68dab1f1261ef7121ef6748bb0290ae0832297e09649d706997",
+    "conjunctive-n1000000-k7-seed1701/test-queries.csv": "d6a1c81fa84e911049ceb4dbda2d99bd44e38dcf0f56616ecc104801b6544b1a",
+    "conjunctive-n1000000-k7-seed1701/resources.json": "6322c4ddda4ccaf498f4ba6a0aca85b452b14a7728cea53df8fcc7b4207f5a37",
+    "conjunctive-n1000000-k7-seed1702/dataset.json": "4a6b6bda52f84d81e6f00b65e4b50e918aa19ebc0594c3b6e77856d5b284511e",
+    "conjunctive-n1000000-k7-seed1702/ground-truth.npz": "98128d5697d612b80717ebe38f04364e94685b15a5fbd038a2e2753bc86d47c1",
+    "conjunctive-n1000000-k7-seed1702/tuning-configurations.json": "8598fb9a9c110352e1018efa5d53160746101734134fe667fd85875d10b1922b",
+    "conjunctive-n1000000-k7-seed1702/tuning-queries.csv": "98640775144a1703ae089189cd0b3bf311a1485ef4d4c6eb8342e2e3e175d524",
+    "conjunctive-n1000000-k7-seed1702/frozen-main-selections.json": "5ccfebab6c0f00eb3d7c8a766b4054e5f766856818eb9f0f232ee172ffe5c0f3",
+    "conjunctive-n1000000-k7-seed1702/main-results.json": "63ee0caae4306b96c8a0fbbbc03ff29a040faf85fcf2cec347648e828ea8d3e1",
+    "conjunctive-n1000000-k7-seed1702/test-queries.csv": "f73f5a892e48a421bf650b476a1636ad72f127277d2e845a7c5507be750b4119",
+    "conjunctive-n1000000-k7-seed1702/resources.json": "119dcdb48fe65f066266721973a03293d5240b0490a13acb490a34f9d5767faf",
+    "conjunctive-n1000000-k7-seed1703/dataset.json": "2f30eaa122139601d7ade65bf58a95fde909b789ff08631b6c6cfae97c7d03d0",
+    "conjunctive-n1000000-k7-seed1703/ground-truth.npz": "98128d5697d612b80717ebe38f04364e94685b15a5fbd038a2e2753bc86d47c1",
+    "conjunctive-n1000000-k7-seed1703/tuning-configurations.json": "6cec40d7225c3d94006d61c992e5c74a3e0d945afe97d695241be5c9bf8bcbff",
+    "conjunctive-n1000000-k7-seed1703/tuning-queries.csv": "cb06e241b757e508a83cf861eb8637949ae2c5e17fac61a641c09ebad8fda230",
+    "conjunctive-n1000000-k7-seed1703/frozen-main-selections.json": "e43214cdb985c63907939082774fa2ec3257540f477fdc29172213fc62fa24a4",
+    "conjunctive-n1000000-k7-seed1703/main-results.json": "1307c1f75da4c4826709f3f564800847d242b7eef2d96d97aa1eaca1a513ea76",
+    "conjunctive-n1000000-k7-seed1703/test-queries.csv": "510d8e7ef6010c4763ec7631b1852b27445bff74a0ed6d9c773dafd598f867bc",
+    "conjunctive-n1000000-k7-seed1703/resources.json": "91f4c104ee1cb53396255291514b1618375daf9aaf42171ac5e46686d17c30bf",
+    "conjunctive-n1000000-k8-seed1701/dataset.json": "96ee558ce3318d53c6f6bb7e976529ddcee93b298b27f8f5fa7ef8b3228eedaf",
+    "conjunctive-n1000000-k8-seed1701/ground-truth.npz": "67b847d29ee93ba9ccefc8adbf79d75880a8643b1515133be3c4d82e7735dc58",
+    "conjunctive-n1000000-k8-seed1701/tuning-configurations.json": "e9cd2b5485942586e93dfbcd3cf7d6124e90f140371f5fa8480e3816103399ee",
+    "conjunctive-n1000000-k8-seed1701/tuning-queries.csv": "849070f65cafbbd1fb61eff8041916278c487607d2c871da1f96e27bcd461348",
+    "conjunctive-n1000000-k8-seed1701/frozen-main-selections.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "conjunctive-n1000000-k8-seed1701/main-results.json": "b224d0dc38f318da072a6fe9860e80d9ebb83d5cb253ccfae5baedd46e4f190f",
+    "conjunctive-n1000000-k8-seed1701/test-queries.csv": "169b3997da47b67da0464f79845ea7ab3991e3bff166a58349a5bd6b45215d8f",
+    "conjunctive-n1000000-k8-seed1701/resources.json": "54d0a5c063ac2ce1b327f4d685ca255d43d9a33666f799e4fdef48012cc16cee",
+    "conjunctive-n1000000-k8-seed1702/dataset.json": "464dae029e5b95cce87072e3c966c1c7f32707d3bee5e8e32359926bad91b943",
+    "conjunctive-n1000000-k8-seed1702/ground-truth.npz": "67b847d29ee93ba9ccefc8adbf79d75880a8643b1515133be3c4d82e7735dc58",
+    "conjunctive-n1000000-k8-seed1702/tuning-configurations.json": "3e438352a7464a88a07de843f28a823fb78622c3146964ce198a524935f9725a",
+    "conjunctive-n1000000-k8-seed1702/tuning-queries.csv": "ca5410e2d831b086b4c350524f03c26333e921f7b500acf5533858e732af8b8d",
+    "conjunctive-n1000000-k8-seed1702/frozen-main-selections.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "conjunctive-n1000000-k8-seed1702/main-results.json": "e0dbeba313362d7e16b9665791ed22d6003f22ed97ebe751f8776811f40e2878",
+    "conjunctive-n1000000-k8-seed1702/test-queries.csv": "169b3997da47b67da0464f79845ea7ab3991e3bff166a58349a5bd6b45215d8f",
+    "conjunctive-n1000000-k8-seed1702/resources.json": "81980eb8c785a5b5ce24bbc369d6167333b5ec4839c0942f900a05720d5c18a3",
+    "conjunctive-n1000000-k8-seed1703/dataset.json": "4c787caefc631fd0974fca9a4fe157d57693868d06cff54cd1166ae4768c7b97",
+    "conjunctive-n1000000-k8-seed1703/ground-truth.npz": "67b847d29ee93ba9ccefc8adbf79d75880a8643b1515133be3c4d82e7735dc58",
+    "conjunctive-n1000000-k8-seed1703/tuning-configurations.json": "52ba5c2953cb4a44fd5330ec1db36c3fec1b39755f82891194deed2875bc20c7",
+    "conjunctive-n1000000-k8-seed1703/tuning-queries.csv": "9badbef9da83b6344b10b1b585bb7367ec2d3912288076ab76c8e9e76cf3a952",
+    "conjunctive-n1000000-k8-seed1703/frozen-main-selections.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "conjunctive-n1000000-k8-seed1703/main-results.json": "a02330e4c7a05bddd8fc707c8af5e1a3656ee19227654a3d1ed55183a1577777",
+    "conjunctive-n1000000-k8-seed1703/test-queries.csv": "169b3997da47b67da0464f79845ea7ab3991e3bff166a58349a5bd6b45215d8f",
+    "conjunctive-n1000000-k8-seed1703/resources.json": "7b7aae3726609d53a74c6ff0cea8030969173081c35d834ec1fc149792a04999",
+    "conjunctive-n1000000-k9-seed1701/dataset.json": "8713b528649cc468daeefe9ba93d4aa6d8f744dccf772b51b7e2481905e1aeba",
+    "conjunctive-n1000000-k9-seed1701/ground-truth.npz": "ae3e2c78b25900cb1674f881c5513a197865f50cde8204c9d1993301b7121acf",
+    "conjunctive-n1000000-k9-seed1701/tuning-configurations.json": "4dc4685e3ff1f6dedd482a31be12867da49383a7d56e7aa6ff523202d8ebd296",
+    "conjunctive-n1000000-k9-seed1701/tuning-queries.csv": "dc919313d4c47e89c8ae6e4fa5645f21e5afec1edc926af86f8f1b8f43ad5262",
+    "conjunctive-n1000000-k9-seed1701/frozen-main-selections.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "conjunctive-n1000000-k9-seed1701/main-results.json": "6c502135f86428e5505a90aba46bcf870454be89a897dc4b3c29a06a7b9cdcd3",
+    "conjunctive-n1000000-k9-seed1701/test-queries.csv": "169b3997da47b67da0464f79845ea7ab3991e3bff166a58349a5bd6b45215d8f",
+    "conjunctive-n1000000-k9-seed1701/resources.json": "22b6104e275ba8f6d1a36859477ce5e35a98ceecb13950f6b91418db146fa533",
+    "conjunctive-n1000000-k9-seed1702/dataset.json": "45d144b4b04b86e1df18f1ac9bb3c660fb8369b2d2618074e036ecbeb967dfa3",
+    "conjunctive-n1000000-k9-seed1702/ground-truth.npz": "ae3e2c78b25900cb1674f881c5513a197865f50cde8204c9d1993301b7121acf",
+    "conjunctive-n1000000-k9-seed1702/tuning-configurations.json": "ba903c9fac1b59328fff907c62a214edb5615738558f2a592ba9df89a1eff588",
+    "conjunctive-n1000000-k9-seed1702/tuning-queries.csv": "e5564ec711f638781782de7a8193bfc5fa4f89c762674c796e9751eb37e95264",
+    "conjunctive-n1000000-k9-seed1702/frozen-main-selections.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "conjunctive-n1000000-k9-seed1702/main-results.json": "dc3a44522cddcc68afd4eccfcdc6f941b261c00d9c988aa639dfbb010d097b34",
+    "conjunctive-n1000000-k9-seed1702/test-queries.csv": "169b3997da47b67da0464f79845ea7ab3991e3bff166a58349a5bd6b45215d8f",
+    "conjunctive-n1000000-k9-seed1702/resources.json": "38b0e4d77a238538a6e9c6d2a7a898bda4a22787a35f3d79fa89e1d2abf674d6",
+    "conjunctive-n1000000-k9-seed1703/dataset.json": "9f8500d35cfd1fd4b72dbf50c35664fddebe7ecf03c7fe9f7847b2548c6d6098",
+    "conjunctive-n1000000-k9-seed1703/ground-truth.npz": "ae3e2c78b25900cb1674f881c5513a197865f50cde8204c9d1993301b7121acf",
+    "conjunctive-n1000000-k9-seed1703/tuning-configurations.json": "830cb008d3db47d869f7c37fc273926669b4c838db7ec72cce5a6d8767bc176a",
+    "conjunctive-n1000000-k9-seed1703/tuning-queries.csv": "aa8adbdedafc58eb14b21e87ea80e837f93c35760d4123fe0c92de68a42c586c",
+    "conjunctive-n1000000-k9-seed1703/frozen-main-selections.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "conjunctive-n1000000-k9-seed1703/main-results.json": "6192af020c3afec365d87d35974f83c7240135be5d8cd47f365c893f7090c866",
+    "conjunctive-n1000000-k9-seed1703/test-queries.csv": "169b3997da47b67da0464f79845ea7ab3991e3bff166a58349a5bd6b45215d8f",
+    "conjunctive-n1000000-k9-seed1703/resources.json": "d6e3845551b5b66a51be1fdf6c797d954a35f86f4647adb4e8d8dda01ae7db14",
+    "conjunctive-n1000000-k10-seed1701/dataset.json": "a2686f396c5c86fd9c6f36b24181907380e6083e9fa5483d16aa222d010dcdd3",
+    "conjunctive-n1000000-k10-seed1701/ground-truth.npz": "49c99d28b7653b610b7ae653b55c2982a93fd015e11fa02f383adf0ff36917a0",
+    "conjunctive-n1000000-k10-seed1701/tuning-configurations.json": "d89f1608ef05aeb0a0bd9368f15b59fbb2aa98dac7de057981643fa3d2f630b5",
+    "conjunctive-n1000000-k10-seed1701/tuning-queries.csv": "0c449fb0149c98558a57115d38227dbe217a1fc4e5ac87889b5eb726cc8fe1c3",
+    "conjunctive-n1000000-k10-seed1701/frozen-main-selections.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "conjunctive-n1000000-k10-seed1701/main-results.json": "6c502135f86428e5505a90aba46bcf870454be89a897dc4b3c29a06a7b9cdcd3",
+    "conjunctive-n1000000-k10-seed1701/test-queries.csv": "169b3997da47b67da0464f79845ea7ab3991e3bff166a58349a5bd6b45215d8f",
+    "conjunctive-n1000000-k10-seed1701/resources.json": "21a156361815f4972aac55aa22d13065d2c295c5323b07e6a383cedd7dee4dc0",
+    "conjunctive-n1000000-k10-seed1702/dataset.json": "d74da8863c2ceb56b2d6fda4cb663bc6643d47c4ccdff4b4d8131d670049cc5a",
+    "conjunctive-n1000000-k10-seed1702/ground-truth.npz": "49c99d28b7653b610b7ae653b55c2982a93fd015e11fa02f383adf0ff36917a0",
+    "conjunctive-n1000000-k10-seed1702/tuning-configurations.json": "6ed10ab09269e0e911859db3acb6173b7a78a0e47d662fe68f6026db03dfe99e",
+    "conjunctive-n1000000-k10-seed1702/tuning-queries.csv": "bd0cd8c5af828bef3e2f0860a3933605146359452a4a0af834fcf5c57423a1b3",
+    "conjunctive-n1000000-k10-seed1702/frozen-main-selections.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "conjunctive-n1000000-k10-seed1702/main-results.json": "dc3a44522cddcc68afd4eccfcdc6f941b261c00d9c988aa639dfbb010d097b34",
+    "conjunctive-n1000000-k10-seed1702/test-queries.csv": "169b3997da47b67da0464f79845ea7ab3991e3bff166a58349a5bd6b45215d8f",
+    "conjunctive-n1000000-k10-seed1702/resources.json": "ae251ff1371435774c485594b4722525cc9a44cd6dd68b9a067800af37659bb8",
+    "conjunctive-n1000000-k10-seed1703/dataset.json": "719a31dfdb5c3429816356ca0d8a3ecccfc2bebcfd714953677d9b518340595c",
+    "conjunctive-n1000000-k10-seed1703/ground-truth.npz": "49c99d28b7653b610b7ae653b55c2982a93fd015e11fa02f383adf0ff36917a0",
+    "conjunctive-n1000000-k10-seed1703/tuning-configurations.json": "e3db0e6ebaefb39b9a6bbf625ada44220a28bae467aefe4b497878e19de236ec",
+    "conjunctive-n1000000-k10-seed1703/tuning-queries.csv": "139423f8ba50601e4aad8c9cd673b24145c675528ac0db30789fbb7dd534b0ee",
+    "conjunctive-n1000000-k10-seed1703/frozen-main-selections.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "conjunctive-n1000000-k10-seed1703/main-results.json": "6192af020c3afec365d87d35974f83c7240135be5d8cd47f365c893f7090c866",
+    "conjunctive-n1000000-k10-seed1703/test-queries.csv": "169b3997da47b67da0464f79845ea7ab3991e3bff166a58349a5bd6b45215d8f",
+    "conjunctive-n1000000-k10-seed1703/resources.json": "0210b083765b7b889915196e907a1cd983e8bb7447fa0d62673221853964020e",
+    "conjunctive-n1000000-k11-seed1701/dataset.json": "7b5633db1ed86266202b65bd5b5c2afd76f97224f8f6dcc6f5e2bed2fc14c896",
+    "conjunctive-n1000000-k11-seed1701/ground-truth.npz": "75188f0abd3c096d2d1bf1f590295656157edbffe54cefe0947272ecd9015eb8",
+    "conjunctive-n1000000-k11-seed1701/tuning-configurations.json": "d59de672cc73823e6338f5ab2b2e9062dc58f568385912c4ebcec72dbee8b6ae",
+    "conjunctive-n1000000-k11-seed1701/tuning-queries.csv": "6dbd89c5daf1cc8533a329dd6a124233074ddf5d4328d87cd31b3e0e3cf422b7",
+    "conjunctive-n1000000-k11-seed1701/frozen-main-selections.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "conjunctive-n1000000-k11-seed1701/main-results.json": "8d59e136d01e7c5c8896fe271d036c09244d1d118d83458a714b4151747183d3",
+    "conjunctive-n1000000-k11-seed1701/test-queries.csv": "169b3997da47b67da0464f79845ea7ab3991e3bff166a58349a5bd6b45215d8f",
+    "conjunctive-n1000000-k11-seed1701/resources.json": "d6cc9a18f1ac1fa9a26950ae4b4bc5f90d10ebffc6c611c6e088f385ba32b658",
+    "conjunctive-n1000000-k11-seed1702/dataset.json": "151455b1786ddc0900a7b746ba3d7b9cf17f2d439beab44dbda5e502a7ab532c",
+    "conjunctive-n1000000-k11-seed1702/ground-truth.npz": "75188f0abd3c096d2d1bf1f590295656157edbffe54cefe0947272ecd9015eb8",
+    "conjunctive-n1000000-k11-seed1702/tuning-configurations.json": "d1f5cee1533c97ee0f87a2235405e943e5ba7eda632c34d234e2e296da1a007f",
+    "conjunctive-n1000000-k11-seed1702/tuning-queries.csv": "52bbc346346cec4afa41e32cba0915dbb1967161d5d6163bb2f55395183e41a2",
+    "conjunctive-n1000000-k11-seed1702/frozen-main-selections.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "conjunctive-n1000000-k11-seed1702/main-results.json": "f49288b02b402e2ad79fcb0d41a954c9bef3da31f24bcb61c7bc5dafbee69da0",
+    "conjunctive-n1000000-k11-seed1702/test-queries.csv": "169b3997da47b67da0464f79845ea7ab3991e3bff166a58349a5bd6b45215d8f",
+    "conjunctive-n1000000-k11-seed1702/resources.json": "e36084261221bf52c83b43a8baecf1a55e5afff24e5d057787c9789e0ecf65e6",
+    "conjunctive-n1000000-k11-seed1703/dataset.json": "939af4bb30f57abe6677bc1035461891d2c1169bc2faf36392b22341cdcf8788",
+    "conjunctive-n1000000-k11-seed1703/ground-truth.npz": "75188f0abd3c096d2d1bf1f590295656157edbffe54cefe0947272ecd9015eb8",
+    "conjunctive-n1000000-k11-seed1703/tuning-configurations.json": "069acce72562e9f7ebfcf65661869765b66a78fab822d54e62e265f41f50fd8d",
+    "conjunctive-n1000000-k11-seed1703/tuning-queries.csv": "de92b631719fa7ecd2d182639f06cb3920cf573dc92df343075758b1e443c66d",
+    "conjunctive-n1000000-k11-seed1703/frozen-main-selections.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "conjunctive-n1000000-k11-seed1703/main-results.json": "bd7ed5b9d1c90a3f62dbaf1a8bca7e508ce3ec53e04858e9cc4a74949803252c",
+    "conjunctive-n1000000-k11-seed1703/test-queries.csv": "169b3997da47b67da0464f79845ea7ab3991e3bff166a58349a5bd6b45215d8f",
+    "conjunctive-n1000000-k11-seed1703/resources.json": "0d89d463250cfe542022cd9cfdb48ca10cb0e1be051233283d3b38a2297aebfd",
+    "conjunctive-n1000000-k12-seed1701/dataset.json": "7a5cccc85139a1ff6329e57f45ebdfaf538b153b4b0b15de4a3566425e6d10df",
+    "conjunctive-n1000000-k12-seed1701/ground-truth.npz": "b318025700f2c2fce3bdafb6ce5627e319ef5784838421118aea885298be0d31",
+    "conjunctive-n1000000-k12-seed1701/tuning-configurations.json": "a474a44237ff1c67ac7fc9a12cf2f1d0da8a3cd34a5adda0717ee99adea1a6dd",
+    "conjunctive-n1000000-k12-seed1701/tuning-queries.csv": "020f780d77f35ac28760a3a0be3c9dbcb669cc20a231c5f8a647e3a55ded48af",
+    "conjunctive-n1000000-k12-seed1701/frozen-main-selections.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "conjunctive-n1000000-k12-seed1701/main-results.json": "8d59e136d01e7c5c8896fe271d036c09244d1d118d83458a714b4151747183d3",
+    "conjunctive-n1000000-k12-seed1701/test-queries.csv": "169b3997da47b67da0464f79845ea7ab3991e3bff166a58349a5bd6b45215d8f",
+    "conjunctive-n1000000-k12-seed1701/resources.json": "b85cd277009ed35f7ad587823e3e11e52a12eff87afb1884b8d65399ab34e18e",
+    "conjunctive-n1000000-k12-seed1702/dataset.json": "9c78a477326c617a4134b7e9099974441c7d46f04846de44d5ea2d136f12fcf3",
+    "conjunctive-n1000000-k12-seed1702/ground-truth.npz": "b318025700f2c2fce3bdafb6ce5627e319ef5784838421118aea885298be0d31",
+    "conjunctive-n1000000-k12-seed1702/tuning-configurations.json": "34ee1fab67ca986019192f1ddb973a76d2db0249954c955f5f140f22922fe242",
+    "conjunctive-n1000000-k12-seed1702/tuning-queries.csv": "3409682adff700d3777dc4f6c5dbdaf1b5e34a42f9710f6322398ee710466a44",
+    "conjunctive-n1000000-k12-seed1702/frozen-main-selections.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "conjunctive-n1000000-k12-seed1702/main-results.json": "f49288b02b402e2ad79fcb0d41a954c9bef3da31f24bcb61c7bc5dafbee69da0",
+    "conjunctive-n1000000-k12-seed1702/test-queries.csv": "169b3997da47b67da0464f79845ea7ab3991e3bff166a58349a5bd6b45215d8f",
+    "conjunctive-n1000000-k12-seed1702/resources.json": "ef09342801c86b3d0c32ca527e8b7ad13f99d3edaf1fcaffb3cd34e97dda89a6",
+    "conjunctive-n1000000-k12-seed1703/dataset.json": "255ea78ebb0967b1f1ba403591a449f2e38f6cea18588db9b673ac44e01d6b7c",
+    "conjunctive-n1000000-k12-seed1703/ground-truth.npz": "b318025700f2c2fce3bdafb6ce5627e319ef5784838421118aea885298be0d31",
+    "conjunctive-n1000000-k12-seed1703/tuning-configurations.json": "d6442bd1fec165d11289eaf804b160de0703d0c608659e586b275d24b289f717",
+    "conjunctive-n1000000-k12-seed1703/tuning-queries.csv": "2a576934c3ac8eaaa8ff52b332066c50f7f6cd6eccf52b36c36e1b3baf34ba8b",
+    "conjunctive-n1000000-k12-seed1703/frozen-main-selections.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "conjunctive-n1000000-k12-seed1703/main-results.json": "bd7ed5b9d1c90a3f62dbaf1a8bca7e508ce3ec53e04858e9cc4a74949803252c",
+    "conjunctive-n1000000-k12-seed1703/test-queries.csv": "169b3997da47b67da0464f79845ea7ab3991e3bff166a58349a5bd6b45215d8f",
+    "conjunctive-n1000000-k12-seed1703/resources.json": "62ad04ef90f750941a0c8ded69b0b75f0822692137dd03fc3d39caa5c78a5252"
+  },
+  "publisher_sha256": "f3b662bd9662963f4a8468d2b4c148c9d0aa883cadd1d8c3aa059091bbbd955a",
+  "notes": [
+    "Maximum is over the tested object counts and configuration shortlist only.",
+    "Every seed must meet both allocated-index and exact-NN-within-deadline requirements.",
+    "Raw curves and query scratch are excluded from the serving-index budget.",
+    "No configurations are substituted after held-out evaluation."
+  ]
+}

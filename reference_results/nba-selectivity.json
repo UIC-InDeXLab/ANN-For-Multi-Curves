@@ -1,0 +1,101 @@
+{
+  "experiment": "nba-selectivity-axis",
+  "stage": "sigmod-non-timed-20261015",
+  "created": 1792093624.1294734,
+  "elapsed_seconds": 19.459089040756226,
+  "config": {
+    "experiment": "nba-selectivity-axis",
+    "stage": "sigmod-non-timed-20261015",
+    "database_path": "data/nba-dtw-20261014/database.npz",
+    "test_path": "data/nba-dtw-20261014/test.npz",
+    "ground_truth_path": "data/nba-dtw-20261014/test-ground-truth.npz",
+    "query_count": 200,
+    "fixed_radius_feet": 5.0,
+    "max_threads": 16
+  },
+  "config_sha256": "c73166d86703bac5e30d5fb61ca87f0b4e06d78fa153bdf00b5484e27c36b37c",
+  "code_commit": "61df5c3a1c5553af09cfc2dedd1d33c73c54ecd5",
+  "code_dirty": false,
+  "database_plays": 23805,
+  "curves_per_play": 5,
+  "query_count": 200,
+  "query_curve_count": 1000,
+  "exact_curve_metric": "curveset.core.frechet (discrete Frechet)",
+  "source_files": {
+    "database_path": "data/nba-dtw-20261014/database.npz",
+    "test_path": "data/nba-dtw-20261014/test.npz",
+    "ground_truth_path": "data/nba-dtw-20261014/test-ground-truth.npz",
+    "database_sha256": "f28f8794a8aab5dc42bb0af4a829464acc6aefdbd3ccec452d132fe0d5b75fa2",
+    "test_sha256": "34c84587ad2bed5006a3adf32a4b606de5cb077128fda2bf67c07d26d465d013",
+    "ground_truth_sha256": "62071411cfafa3609367be9722d367e996d210d3bc7347c07afd44263eb62ba9"
+  },
+  "distributions_pct": {
+    "occurrence_at_r": {
+      "mean": 17.11284604074774,
+      "median": 14.833018273471959,
+      "p10": 3.619827767275783,
+      "p25": 7.3724007561436675,
+      "p75": 23.370090317160262,
+      "p90": 33.21991178323883,
+      "max": 85.12497374501156
+    },
+    "occurrence_at_1_5r": {
+      "mean": 47.48488132745222,
+      "median": 47.93110691031296,
+      "p10": 14.841839949590423,
+      "p25": 31.619407687460615,
+      "p75": 63.40894770006301,
+      "p90": 76.98844780508297,
+      "max": 97.49212350346565
+    },
+    "occurrence_at_2r": {
+      "mean": 72.72998529720647,
+      "median": 79.8697752572989,
+      "p10": 37.664356227683264,
+      "p25": 64.12728418399496,
+      "p75": 88.61268641041798,
+      "p90": 92.57802982566687,
+      "max": 99.97059441293847
+    },
+    "occurrence_at_5ft": {
+      "mean": 1.5123419449695443,
+      "median": 0.4347826086956522,
+      "p10": 0.04200798151648813,
+      "p25": 0.13442554085276204,
+      "p75": 1.4282713715605966,
+      "p90": 3.5232094097878632,
+      "max": 15.60596513337534
+    },
+    "curve_fraction_at_r": {
+      "mean": 3.65113463558076,
+      "median": 3.04473850031506,
+      "p10": 0.7459777357697964,
+      "p25": 1.5715185885318208,
+      "p75": 4.836378911993279,
+      "p90": 7.056248687250579,
+      "max": 34.19197647553035
+    }
+  },
+  "play_count_distributions": {
+    "within_bottleneck_r": {
+      "mean": 1.0,
+      "median": 1.0,
+      "p10": 1.0,
+      "p25": 1.0,
+      "p75": 1.0,
+      "p90": 1.0,
+      "max": 1,
+      "min": 1
+    },
+    "within_bottleneck_1_5r": {
+      "mean": 334.0,
+      "median": 179.5,
+      "p10": 23.0,
+      "p25": 67.75,
+      "p75": 341.75,
+      "p90": 859.8999999999999,
+      "max": 4128,
+      "min": 1
+    }
+  }
+}

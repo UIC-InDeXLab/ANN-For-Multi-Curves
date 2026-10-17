@@ -1,0 +1,78 @@
+{
+  "experiment": "synthetic-regime-pilot",
+  "stage": "exploratory-one-index-seed",
+  "dataset_seed": 2026101207,
+  "index_seed": 801,
+  "m": 32,
+  "d": 2,
+  "rho": 0.5,
+  "relevance_radius": 1.5,
+  "target_recall": 0.9,
+  "tuning_queries": 200,
+  "test_queries": 32,
+  "warmup_queries": 10,
+  "deltas": [
+    64.0,
+    128.0,
+    256.0
+  ],
+  "Lmax": 64,
+  "selection": "fastest complete tuning latency at >=90% tie-aware recall@1 within the index budget",
+  "index_budget_bytes": 24000000000,
+  "peak_ram_cap_bytes": 48000000000,
+  "minimum_available_ram_bytes": 16000000000,
+  "query_deadline_seconds": 60,
+  "build_deadline_seconds": 300,
+  "run_cap_seconds": 3600,
+  "monitor_interval_seconds": 1,
+  "pin_core": 20,
+  "build_threads": 48,
+  "probe_chunk": 100000,
+  "verification_chunk": 1000,
+  "calibration_file": "results/fresh-e1-20261012-full/calibration-d2.json",
+  "calibration_scope": "Fresh probe-only family selector; not a claim of optimal candidate-aware cost.",
+  "cases": [
+    {
+      "id": "conjunctive-n10000-k6",
+      "kind": "conjunctive",
+      "n": 10000,
+      "k": 6,
+      "frequency": 0.18
+    },
+    {
+      "id": "conjunctive-n100000-k6",
+      "kind": "conjunctive",
+      "n": 100000,
+      "k": 6,
+      "frequency": 0.18
+    },
+    {
+      "id": "conjunctive-n100000-k8",
+      "kind": "conjunctive",
+      "n": 100000,
+      "k": 8,
+      "frequency": 0.18
+    },
+    {
+      "id": "rare-n100000-k8",
+      "kind": "rare",
+      "n": 100000,
+      "k": 8,
+      "frequency": 0.005
+    },
+    {
+      "id": "repeated-n100000-k8",
+      "kind": "repeated",
+      "n": 100000,
+      "k": 8,
+      "paths": 4
+    },
+    {
+      "id": "conjunctive-n1000000-k8",
+      "kind": "conjunctive",
+      "n": 1000000,
+      "k": 8,
+      "frequency": 0.18
+    }
+  ]
+}

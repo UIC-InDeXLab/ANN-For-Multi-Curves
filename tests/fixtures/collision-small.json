@@ -1,0 +1,18 @@
+{
+  "experiment": "collision-small-fixture",
+  "stage": "unit-test",
+  "dataset_seed": 31415,
+  "shift_seed": 27182,
+  "pairs": 6,
+  "trials": 128,
+  "max_tables_u": 8,
+  "d": 2,
+  "m": 8,
+  "r": 0.5,
+  "extent": 50.0,
+  "step_sd": 3.0,
+  "k_values": [1, 2],
+  "p_values": [0.5],
+  "report_violation_z": 3.0,
+  "numba_threads": 2
+}

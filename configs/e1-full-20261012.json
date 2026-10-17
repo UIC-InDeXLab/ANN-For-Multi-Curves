@@ -1,0 +1,89 @@
+{
+  "experiment": "E1",
+  "stage": "full",
+  "dataset_seed": 2026101201,
+  "index_seeds": [
+    101,
+    202,
+    303
+  ],
+  "dimensions": [
+    2,
+    3
+  ],
+  "collision_k": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "index_k": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "workloads": [
+    "random",
+    "aligned",
+    "separated-star"
+  ],
+  "m": 32,
+  "r": 1.0,
+  "p": 0.75,
+  "eta": 0.01,
+  "collision_pairs": 200,
+  "shifts_per_pair": 64,
+  "background_n": 10000,
+  "test_queries": 200,
+  "near_miss_radii": [
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512
+  ],
+  "warmup_queries": 10,
+  "factorization_max_k": 8,
+  "index_budget_bytes": 24000000000,
+  "resident_index_cap_bytes": 24000000000,
+  "peak_ram_cap_bytes": 48000000000,
+  "query_deadline_seconds": 60,
+  "build_deadline_seconds": 3600,
+  "configuration_estimated_query_cap_seconds": null,
+  "run_cap_seconds": 172800,
+  "monitor_interval_seconds": 1,
+  "minimum_available_ram_bytes": 16000000000,
+  "pin_core": 20,
+  "build_threads": 48,
+  "probe_chunk": 100000,
+  "calibration_sizes": [
+    1000,
+    10000,
+    100000,
+    1000000,
+    10000000,
+    20000000
+  ],
+  "calibration_dimensions": [
+    2,
+    3
+  ],
+  "calibration_repetitions": 5,
+  "pilot_probe_work_estimate_hours": 7.396,
+  "estimate_note": "Fresh pilot probe-only extrapolation, excluding build, candidate scanning and verification; not a measured full-run duration."
+}

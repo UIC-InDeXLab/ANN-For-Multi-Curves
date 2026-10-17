@@ -1,0 +1,41 @@
+{
+  "experiment": "matched-recall-latency-curves",
+  "stage": "frozen-selected-configurations-vary-L-only",
+  "synthetic_config": "synthetic-expanded-20261012.json",
+  "reference_results_root": "results/fresh-synthetic-expanded-20261012",
+  "case_ids": [
+    "conjunctive-n100000-k6",
+    "conjunctive-n100000-k8",
+    "rare-n100000-k8"
+  ],
+  "index_seeds": [
+    1701,
+    1702,
+    1703
+  ],
+  "methods": [
+    "blocking",
+    "probe_all",
+    "per_curve-intersection"
+  ],
+  "L_values": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64
+  ],
+  "matched_recall_targets": [
+    0.9,
+    0.95,
+    0.97,
+    0.99
+  ]
+}

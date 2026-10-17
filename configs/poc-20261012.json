@@ -1,0 +1,147 @@
+{
+  "experiment": "single-blocking-proof-of-concept",
+  "stage": "proof-of-concept-one-index-seed",
+  "dataset_seed": 2026101215,
+  "index_seed": 1501,
+  "m": 32,
+  "d": 2,
+  "rho": 0.5,
+  "relevance_radius": 1.5,
+  "target_recall": 0.9,
+  "tuning_queries": 200,
+  "test_queries": 1000,
+  "warmup_queries": 10,
+  "planted_per_query": 1,
+  "plant_anchor_n": 2000,
+  "deltas": [
+    64.0,
+    128.0,
+    256.0
+  ],
+  "Lmax": 64,
+  "blocking_storage_multipliers": [
+    1,
+    6,
+    24,
+    96
+  ],
+  "include_balanced_in_ablation": true,
+  "blocking_main_latency_weight": 1.0,
+  "ablation_latency_weights": [
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "cost_memory_scale_bytes": 100000000,
+  "cost_latency_scale_seconds": 0.001,
+  "blocking_selection": "minimum measured tuning M/100MB + lambda*median_T/1ms, lambda=1 in the main comparison",
+  "baseline_selection": "lowest tuning median latency reaching >=90% recall@1 under the same storage budget",
+  "posting_compression": "unique (fingerprint,parent) per table for every indexed method",
+  "index_budget_bytes": 24000000000,
+  "peak_ram_cap_bytes": 48000000000,
+  "minimum_available_ram_bytes": 16000000000,
+  "query_deadline_seconds": 60,
+  "build_deadline_seconds": 600,
+  "run_cap_seconds": 10800,
+  "monitor_interval_seconds": 1,
+  "pin_core": 20,
+  "build_threads": 48,
+  "probe_chunk": 100000,
+  "verification_chunk": 1000,
+  "c_success_factors": [
+    1.0,
+    1.01,
+    1.05,
+    1.1,
+    1.5,
+    2.0,
+    5.0
+  ],
+  "cases": [
+    {
+      "id": "conjunctive-n2000-k4",
+      "kind": "conjunctive",
+      "n": 2000,
+      "k": 4,
+      "frequency": 0.18
+    },
+    {
+      "id": "conjunctive-n2000-k6",
+      "kind": "conjunctive",
+      "n": 2000,
+      "k": 6,
+      "frequency": 0.18
+    },
+    {
+      "id": "conjunctive-n2000-k8",
+      "kind": "conjunctive",
+      "n": 2000,
+      "k": 8,
+      "frequency": 0.18
+    },
+    {
+      "id": "rare-n2000-k4",
+      "kind": "rare",
+      "n": 2000,
+      "k": 4,
+      "frequency": 0.005
+    },
+    {
+      "id": "rare-n2000-k6",
+      "kind": "rare",
+      "n": 2000,
+      "k": 6,
+      "frequency": 0.005
+    },
+    {
+      "id": "rare-n2000-k8",
+      "kind": "rare",
+      "n": 2000,
+      "k": 8,
+      "frequency": 0.005
+    },
+    {
+      "id": "repeated-n2000-k4",
+      "kind": "repeated",
+      "n": 2000,
+      "k": 4,
+      "paths": 4
+    },
+    {
+      "id": "repeated-n2000-k6",
+      "kind": "repeated",
+      "n": 2000,
+      "k": 6,
+      "paths": 4
+    },
+    {
+      "id": "repeated-n2000-k8",
+      "kind": "repeated",
+      "n": 2000,
+      "k": 8,
+      "paths": 4
+    },
+    {
+      "id": "conjunctive-n10000-k8",
+      "kind": "conjunctive",
+      "n": 10000,
+      "k": 8,
+      "frequency": 0.18
+    },
+    {
+      "id": "conjunctive-n50000-k8",
+      "kind": "conjunctive",
+      "n": 50000,
+      "k": 8,
+      "frequency": 0.18
+    },
+    {
+      "id": "rare-n50000-k8",
+      "kind": "rare",
+      "n": 50000,
+      "k": 8,
+      "frequency": 0.005
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "experiment": "nba-full-accessible-integrity-filtered-20261012",
+  "data_directory": "data/nba-full-20261012",
+  "source_repository": "https://github.com/sealneaward/nba-movement-data",
+  "source_api": "https://api.github.com/repos/sealneaward/nba-movement-data",
+  "source_ref": "5c9ee6e1387e052c19ab2d22e12120c2210cbe54",
+  "dataset_seed": 2026101223,
+  "split_salt": "nba-full-20261012-game-split-v1",
+  "split_percentages": [
+    80,
+    10,
+    10
+  ],
+  "tuning_query_cap": 500,
+  "test_query_cap": 1000,
+  "query_selection": "round-robin games, hash-ordered games and clips; fixed before retrieval",
+  "clip_duration_seconds": 4.0,
+  "use_fixed_shot_times": true,
+  "maximum_shot_anchor_shift_seconds": 15.0,
+  "maximum_shooter_ball_distance_feet": 6.0,
+  "maximum_nominal_shot_distance_error_feet": 5.0,
+  "minimum_future_ball_height_feet": 9.5,
+  "maximum_future_ball_basket_distance_feet": 7.0,
+  "ball_flight_validation_seconds": 3.0,
+  "m": 32,
+  "k": 5,
+  "maximum_gap_seconds": 0.12,
+  "clock_alignment_tolerance_seconds": 0.12,
+  "clock_elapsed_tolerance_seconds": 0.2,
+  "ball_in_retrieval_metric": false,
+  "ball_displayed_as_context": true,
+  "coordinate_units": "feet",
+  "orientation": "shared 180-degree rotation of all five players and ball toward left basket",
+  "corpus_definition": "All usable clips in accessible nonduplicate public archives passing the declared SportVU integrity and corrected-shot physical filters; not the whole NBA season or sensor-clean ground truth.",
+  "index_seeds": [
+    2301,
+    2302,
+    2303
+  ],
+  "target_recall": 0.9,
+  "tuning_acceptance_recall": 0.95,
+  "deltas_feet": [
+    8.0,
+    16.0,
+    32.0,
+    64.0
+  ],
+  "Lmax": 64,
+  "blocking_families": [
+    [
+      3,
+      2
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      2,
+      2,
+      1
+    ]
+  ],
+  "main_methods": [
+    "blocking",
+    "probe_all",
+    "store_all",
+    "one_block"
+  ],
+  "supplementary_methods": [
+    "rarest"
+  ],
+  "cost_memory_scale_bytes": 100000000,
+  "cost_latency_scale_seconds": 0.001,
+  "blocking_main_latency_weight": 1.0,
+  "ablation_latency_weights": [
+    0.0,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "index_budget_bytes": 12000000000,
+  "peak_ram_cap_bytes": 14000000000,
+  "query_deadline_seconds": 60.0,
+  "probe_chunk": 100000,
+  "verification_chunk": 1000,
+  "warmup_queries": 3,
+  "preparation_threads": 2,
+  "maximum_extracted_bytes": 512000000,
+  "maximum_archive_bytes": 512000000,
+  "minimum_free_disk_bytes": 2000000000,
+  "network_attempts": 5,
+  "network_timeout_seconds": 90,
+  "ground_truth_batch_size": 8,
+  "c_factors": [
+    1.1,
+    1.25,
+    1.5,
+    2.0
+  ],
+  "topk_diagnostic_count": 5,
+  "illustrative_policy": {
+    "primary": "hash-first test query, regardless of outcome",
+    "optional_best": "smallest exact optimal distance, labelled as selected",
+    "median": "median top1 quality rank including empty answers ranked last",
+    "difficult": "worst top1 quality rank including empty answers",
+    "results": "candidate-reranked top1 and next-ranked candidate from a different database game, with actual rank displayed",
+    "claims": "Geometric trajectory similarity only; ball context only; untimed topK diagnostics, no tactical-semantic or top5 timing claims."
+  },
+  "timing_policy": "Explicitly authorized sequential single-core benchmark; preparation never times indexes.",
+  "recall_claim": "Empirical tuning acceptance, not an all-random-seeds 95-percent recall certificate."
+}

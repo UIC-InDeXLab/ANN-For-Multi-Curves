@@ -1,0 +1,58 @@
+{
+  "experiment": "first-hit-approximation-k10-continuation",
+  "stage": "quality-only-local-completion",
+  "dataset_seed": 2026101201,
+  "index_seeds": [
+    101,
+    202,
+    303
+  ],
+  "dimensions": [
+    2,
+    3
+  ],
+  "index_k": [
+    10
+  ],
+  "workloads": [
+    "random",
+    "aligned",
+    "separated-star"
+  ],
+  "methods": [
+    "cost-model"
+  ],
+  "query_modes": [
+    "first"
+  ],
+  "m": 32,
+  "r": 1.0,
+  "p": 0.75,
+  "eta": 0.01,
+  "background_n": 10000,
+  "test_queries": 200,
+  "near_miss_radii": [
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512
+  ],
+  "warmup_queries": 10,
+  "index_budget_bytes": 24000000000,
+  "resident_index_cap_bytes": 1000000000,
+  "peak_ram_cap_bytes": 4000000000,
+  "query_deadline_seconds": 60,
+  "build_deadline_seconds": 600,
+  "configuration_estimated_query_cap_seconds": null,
+  "run_cap_seconds": 7200,
+  "pin_core": 6,
+  "build_threads": 2,
+  "probe_chunk": 100000,
+  "parent_results": "results/fresh-e1-20261012-full",
+  "scope_note": "Complete omitted k=10 first-hit cells on local CPU without interfering with server latency benchmarks. Reuse the fresh E1 dimension-specific selector calibration; do not report local timings as server comparisons."
+}

@@ -1,0 +1,50 @@
+{
+  "experiment": "one-thread-build-time",
+  "stage": "frozen-selected-configurations-only",
+  "expanded_config": "synthetic-expanded-20261012.json",
+  "scaleup_config": "synthetic-scaleup-20261013.json",
+  "expanded_results_root": "results/fresh-synthetic-expanded-20261012",
+  "scaleup_results_root": "results/fresh-synthetic-scaleup-20261013",
+  "nba_results_root": "results/nba-full-20261012",
+  "nba_data_root": "data/nba-dtw-20261014",
+  "synthetic_cases": [
+    {
+      "id": "conjunctive-n100000-k8",
+      "source": "expanded"
+    },
+    {
+      "id": "conjunctive-n1000000-k8",
+      "source": "expanded"
+    },
+    {
+      "id": "rare-n1000000-k8",
+      "source": "expanded"
+    }
+  ],
+  "nba_case": {
+    "id": "nba-full",
+    "kind": "nba"
+  },
+  "synthetic_index_seeds": [
+    1701,
+    1702,
+    1703
+  ],
+  "nba_index_seeds": [
+    2301,
+    2302,
+    2303
+  ],
+  "methods": [
+    "blocking",
+    "probe_all",
+    "per_curve-intersection",
+    "store_all"
+  ],
+  "repetitions": 3,
+  "build_threads": 1,
+  "pin_core": 20,
+  "rss_sampling_seconds": 0.05,
+  "run_cap_seconds": 172800,
+  "build_deadline_seconds": 1800
+}

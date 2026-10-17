@@ -1,0 +1,44 @@
+{
+  "experiment": "first-entry-index-variant",
+  "stage": "frozen-selections-one-entry-per-key-first-hit-part-b",
+  "synthetic_config": "synthetic-expanded-20261012.json",
+  "reference_results_root": "results/fresh-synthetic-expanded-20261012",
+  "case_ids": [
+    "conjunctive-n100000-k10",
+    "rare-n100000-k4",
+    "rare-n100000-k6",
+    "rare-n100000-k8",
+    "rare-n100000-k10",
+    "repeated-n100000-k4",
+    "repeated-n100000-k6",
+    "repeated-n100000-k8",
+    "repeated-n100000-k10"
+  ],
+  "index_seeds": [
+    1701,
+    1702,
+    1703
+  ],
+  "methods": [
+    "blocking",
+    "probe_all",
+    "store_all"
+  ],
+  "deltas": [
+    8,
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "L_max": 16,
+  "store_all_L_max": 8,
+  "heavy_probe_threshold": 500000,
+  "heavy_deltas": [
+    64,
+    128,
+    256
+  ],
+  "heavy_L_max": 6
+}

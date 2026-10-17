@@ -1,0 +1,3331 @@
+{
+  "config": {
+    "experiment": "measured-hard-budget-object-count-feasibility-other-budgets",
+    "stage": "budget-16gb-100ms",
+    "dataset_seed": 2026101217,
+    "index_seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "m": 32,
+    "d": 2,
+    "rho": 0.5,
+    "relevance_radius": 1.5,
+    "target_recall": 0.9,
+    "tuning_acceptance_recall": 0.95,
+    "tuning_queries": 500,
+    "test_queries": 1000,
+    "warmup_queries": 10,
+    "planted_per_query": 1,
+    "plant_anchor_n": 100000,
+    "deltas": [
+      64.0,
+      128.0,
+      256.0
+    ],
+    "Lmax": 64,
+    "blocking_storage_multipliers": [
+      1,
+      6,
+      24,
+      96
+    ],
+    "include_balanced_in_ablation": true,
+    "blocking_main_latency_weight": 1.0,
+    "ablation_latency_weights": [
+      1.0
+    ],
+    "cost_memory_scale_bytes": 100000000,
+    "cost_latency_scale_seconds": 0.001,
+    "blocking_selection": "fastest full tuning median among configurations within the hard allocated-index budget and reaching 95% exact-NN success within the per-query deadline",
+    "baseline_selection": "fastest full tuning median among configurations within the same hard allocated-index budget and reaching 95% exact-NN success within the per-query deadline",
+    "tuning_guard_note": "95% empirical tuning is a conservative selection guard for a 90% held-out exact-NN-within-deadline requirement; it is not a population-recall certificate.",
+    "posting_compression": "unique (fingerprint,parent) per table for every indexed method",
+    "index_budget_bytes": 16000000000,
+    "peak_ram_cap_bytes": 48000000000,
+    "minimum_available_ram_bytes": 16000000000,
+    "query_deadline_seconds": 0.1,
+    "compilation_deadline_seconds": 60,
+    "build_deadline_seconds": 1800,
+    "run_cap_seconds": 172800,
+    "monitor_interval_seconds": 1,
+    "pin_core": 20,
+    "build_threads": 48,
+    "probe_chunk": 10000,
+    "verification_chunk": 1000,
+    "feasibility_scope": "largest feasible TESTED k in 4..12; every required index seed must meet the serving-index budget and 90% exact-NN success within 10 ms; raw curves and scratch RAM are separate",
+    "cases": [
+      {
+        "id": "conjunctive-n1000000-k4",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 4,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k5",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 5,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k6",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 6,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k7",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 7,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k8",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 8,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k9",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 9,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k10",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 10,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k11",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 11,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k12",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 12,
+        "frequency": 0.18
+      }
+    ]
+  },
+  "manifest": {
+    "commit": "61df5c3a1c5553af09cfc2dedd1d33c73c54ecd5",
+    "config_sha256": "d3a40ef3302b59cbbbab4e0a248d470dbd83fdeef3ec661343a501cfc4430575",
+    "started": 1792093639.4698691,
+    "python": "3.12.7 (main, Jun 18 2025, 13:16:51) [GCC 14.2.0]",
+    "numpy": "2.5.3",
+    "numba": "0.67.0",
+    "pin_core": 20,
+    "build_threads": 48,
+    "stage": "budget-16gb-100ms",
+    "index_seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "cpu_model": "AMD Ryzen Threadripper 7970X 32-Cores"
+  },
+  "groups": [
+    {
+      "k": 4,
+      "method": "blocking",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 4,
+          "method": "blocking",
+          "index_seed": 1701,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1701",
+          "measured": true,
+          "index_bytes": 221305316,
+          "index_MB": 221.305316,
+          "config_id": "joint-d64-a6-swap0",
+          "blocks": [
+            3,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 64.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.934,
+          "timeout_rate": 0.0,
+          "median_ms": 0.8931435877457261,
+          "p95_ms": 1.1603270075283945,
+          "max_ms": 1.3597209472209215,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 4,
+          "method": "blocking",
+          "index_seed": 1702,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1702",
+          "measured": true,
+          "index_bytes": 1121738244,
+          "index_MB": 1121.738244,
+          "config_id": "joint-d64-a24-swap0",
+          "blocks": [
+            4
+          ],
+          "swapped": false,
+          "L": 4,
+          "delta": 64.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.957,
+          "timeout_rate": 0.0,
+          "median_ms": 0.9257193887606263,
+          "p95_ms": 1.1847867514006793,
+          "max_ms": 1.4235281851142645,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 4,
+          "method": "blocking",
+          "index_seed": 1703,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1703",
+          "measured": true,
+          "index_bytes": 221056408,
+          "index_MB": 221.056408,
+          "config_id": "joint-d64-a6-swap0",
+          "blocks": [
+            3,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 64.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.949,
+          "timeout_rate": 0.0,
+          "median_ms": 0.9004495805129409,
+          "p95_ms": 1.172920933458954,
+          "max_ms": 1.3676981907337904,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 0.9004495805129409,
+      "median_ms_minmax": [
+        0.8931435877457261,
+        0.9257193887606263
+      ],
+      "p95_ms": 1.172920933458954,
+      "p95_ms_minmax": [
+        1.1603270075283945,
+        1.1847867514006793
+      ],
+      "index_MB": 221.305316,
+      "index_MB_minmax": [
+        221.056408,
+        1121.738244
+      ],
+      "success_rate": 0.9466666666666667,
+      "success_rate_minmax": [
+        0.934,
+        0.957
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 4,
+      "method": "per_curve-intersection",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 4,
+          "method": "per_curve-intersection",
+          "index_seed": 1701,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1701",
+          "measured": true,
+          "index_bytes": 97615620,
+          "index_MB": 97.61562,
+          "config_id": "per_curve-intersection-d64-L2",
+          "blocks": null,
+          "swapped": false,
+          "L": 2,
+          "delta": 64.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 0.966,
+          "timeout_rate": 0.0,
+          "median_ms": 5.399903515353799,
+          "p95_ms": 5.844271939713508,
+          "max_ms": 6.349476985633373,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 4,
+          "method": "per_curve-intersection",
+          "index_seed": 1702,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1702",
+          "measured": true,
+          "index_bytes": 97045152,
+          "index_MB": 97.045152,
+          "config_id": "per_curve-intersection-d128-L2",
+          "blocks": null,
+          "swapped": false,
+          "L": 2,
+          "delta": 128.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 1.0,
+          "timeout_rate": 0.0,
+          "median_ms": 5.572370951995254,
+          "p95_ms": 8.011570817325264,
+          "max_ms": 10.579060995951295,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 4,
+          "method": "per_curve-intersection",
+          "index_seed": 1703,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1703",
+          "measured": true,
+          "index_bytes": 96657976,
+          "index_MB": 96.657976,
+          "config_id": "per_curve-intersection-d128-L2",
+          "blocks": null,
+          "swapped": false,
+          "L": 2,
+          "delta": 128.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 0.982,
+          "timeout_rate": 0.0,
+          "median_ms": 5.6694271042943,
+          "p95_ms": 7.096556387841701,
+          "max_ms": 8.267804980278015,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 5.572370951995254,
+      "median_ms_minmax": [
+        5.399903515353799,
+        5.6694271042943
+      ],
+      "p95_ms": 7.096556387841701,
+      "p95_ms_minmax": [
+        5.844271939713508,
+        8.011570817325264
+      ],
+      "index_MB": 97.045152,
+      "index_MB_minmax": [
+        96.657976,
+        97.61562
+      ],
+      "success_rate": 0.9826666666666667,
+      "success_rate_minmax": [
+        0.966,
+        1.0
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 4,
+      "method": "probe_all",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 4,
+          "method": "probe_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1701",
+          "measured": true,
+          "index_bytes": 52000404,
+          "index_MB": 52.000404,
+          "config_id": "joint-d64-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 4,
+          "delta": 64.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.97,
+          "timeout_rate": 0.0,
+          "median_ms": 0.9424794698134065,
+          "p95_ms": 1.187731756363064,
+          "max_ms": 1.396086998283863,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 4,
+          "method": "probe_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1702",
+          "measured": true,
+          "index_bytes": 52000404,
+          "index_MB": 52.000404,
+          "config_id": "joint-d64-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 4,
+          "delta": 64.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.953,
+          "timeout_rate": 0.0,
+          "median_ms": 0.9405621094629169,
+          "p95_ms": 1.1937801027670503,
+          "max_ms": 1.393481157720089,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 4,
+          "method": "probe_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1703",
+          "measured": true,
+          "index_bytes": 26000268,
+          "index_MB": 26.000268,
+          "config_id": "joint-d128-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 2,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.968,
+          "timeout_rate": 0.0,
+          "median_ms": 0.9480980224907398,
+          "p95_ms": 1.202488562557846,
+          "max_ms": 1.409491989761591,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 0.9424794698134065,
+      "median_ms_minmax": [
+        0.9405621094629169,
+        0.9480980224907398
+      ],
+      "p95_ms": 1.1937801027670503,
+      "p95_ms_minmax": [
+        1.187731756363064,
+        1.202488562557846
+      ],
+      "index_MB": 52.000404,
+      "index_MB_minmax": [
+        26.000268,
+        52.000404
+      ],
+      "success_rate": 0.9636666666666667,
+      "success_rate_minmax": [
+        0.953,
+        0.97
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 4,
+      "method": "store_all",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 4,
+          "method": "store_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1701",
+          "measured": true,
+          "index_bytes": 838303068,
+          "index_MB": 838.303068,
+          "config_id": "joint-d64-a24-swap0",
+          "blocks": [
+            4
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 64.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.945,
+          "timeout_rate": 0.0,
+          "median_ms": 0.904155895113945,
+          "p95_ms": 1.1725622112862766,
+          "max_ms": 1.3827660586684942,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 4,
+          "method": "store_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1702",
+          "measured": true,
+          "index_bytes": 1121738244,
+          "index_MB": 1121.738244,
+          "config_id": "joint-d64-a24-swap0",
+          "blocks": [
+            4
+          ],
+          "swapped": false,
+          "L": 4,
+          "delta": 64.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.957,
+          "timeout_rate": 0.0,
+          "median_ms": 0.9257193887606263,
+          "p95_ms": 1.1847867514006793,
+          "max_ms": 1.4235281851142645,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 4,
+          "method": "store_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 2048000000,
+          "case": "conjunctive-n1000000-k4-seed1703",
+          "measured": true,
+          "index_bytes": 1116738964,
+          "index_MB": 1116.738964,
+          "config_id": "joint-d64-a24-swap0",
+          "blocks": [
+            4
+          ],
+          "swapped": false,
+          "L": 4,
+          "delta": 64.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.976,
+          "timeout_rate": 0.0,
+          "median_ms": 0.933274975977838,
+          "p95_ms": 1.1879595811478794,
+          "max_ms": 1.3824610505253077,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 0.9257193887606263,
+      "median_ms_minmax": [
+        0.904155895113945,
+        0.933274975977838
+      ],
+      "p95_ms": 1.1847867514006793,
+      "p95_ms_minmax": [
+        1.1725622112862766,
+        1.1879595811478794
+      ],
+      "index_MB": 1116.738964,
+      "index_MB_minmax": [
+        838.303068,
+        1121.738244
+      ],
+      "success_rate": 0.9593333333333334,
+      "success_rate_minmax": [
+        0.945,
+        0.976
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 5,
+      "method": "blocking",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 5,
+          "method": "blocking",
+          "index_seed": 1701,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1701",
+          "measured": true,
+          "index_bytes": 2611166987,
+          "index_MB": 2611.166987,
+          "config_id": "joint-d128-a120-swap0",
+          "blocks": [
+            5
+          ],
+          "swapped": false,
+          "L": 2,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.953,
+          "timeout_rate": 0.0,
+          "median_ms": 0.1300290459766984,
+          "p95_ms": 0.2000279724597931,
+          "max_ms": 0.2680099569261074,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 5,
+          "method": "blocking",
+          "index_seed": 1702,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1702",
+          "measured": true,
+          "index_bytes": 3945981055,
+          "index_MB": 3945.981055,
+          "config_id": "joint-d128-a120-swap0",
+          "blocks": [
+            5
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.973,
+          "timeout_rate": 0.0,
+          "median_ms": 0.13188249431550503,
+          "p95_ms": 0.20192808005958796,
+          "max_ms": 0.30249194242060184,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 5,
+          "method": "blocking",
+          "index_seed": 1703,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1703",
+          "measured": true,
+          "index_bytes": 3931153023,
+          "index_MB": 3931.153023,
+          "config_id": "joint-d128-a120-swap0",
+          "blocks": [
+            5
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.981,
+          "timeout_rate": 0.0,
+          "median_ms": 0.1335775014013052,
+          "p95_ms": 0.19764754688367245,
+          "max_ms": 0.27854181826114655,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 0.13188249431550503,
+      "median_ms_minmax": [
+        0.1300290459766984,
+        0.1335775014013052
+      ],
+      "p95_ms": 0.2000279724597931,
+      "p95_ms_minmax": [
+        0.19764754688367245,
+        0.20192808005958796
+      ],
+      "index_MB": 3931.153023,
+      "index_MB_minmax": [
+        2611.166987,
+        3945.981055
+      ],
+      "success_rate": 0.969,
+      "success_rate_minmax": [
+        0.953,
+        0.981
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 5,
+      "method": "per_curve-intersection",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 5,
+          "method": "per_curve-intersection",
+          "index_seed": 1701,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1701",
+          "measured": true,
+          "index_bytes": 120168556,
+          "index_MB": 120.168556,
+          "config_id": "per_curve-intersection-d128-L2",
+          "blocks": null,
+          "swapped": false,
+          "L": 2,
+          "delta": 128.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 0.938,
+          "timeout_rate": 0.0,
+          "median_ms": 7.037365576252341,
+          "p95_ms": 8.10206038877368,
+          "max_ms": 8.61763907596469,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 5,
+          "method": "per_curve-intersection",
+          "index_seed": 1702,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1702",
+          "measured": true,
+          "index_bytes": 120807124,
+          "index_MB": 120.807124,
+          "config_id": "per_curve-intersection-d128-L2",
+          "blocks": null,
+          "swapped": false,
+          "L": 2,
+          "delta": 128.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 0.974,
+          "timeout_rate": 0.0,
+          "median_ms": 6.427080952562392,
+          "p95_ms": 7.521507691126317,
+          "max_ms": 8.219226030632854,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 5,
+          "method": "per_curve-intersection",
+          "index_seed": 1703,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1703",
+          "measured": true,
+          "index_bytes": 182509708,
+          "index_MB": 182.509708,
+          "config_id": "per_curve-intersection-d64-L3",
+          "blocks": null,
+          "swapped": false,
+          "L": 3,
+          "delta": 64.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 1.0,
+          "timeout_rate": 0.0,
+          "median_ms": 7.930460968054831,
+          "p95_ms": 8.710683172103018,
+          "max_ms": 9.213192854076624,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 7.037365576252341,
+      "median_ms_minmax": [
+        6.427080952562392,
+        7.930460968054831
+      ],
+      "p95_ms": 8.10206038877368,
+      "p95_ms_minmax": [
+        7.521507691126317,
+        8.710683172103018
+      ],
+      "index_MB": 120.807124,
+      "index_MB_minmax": [
+        120.168556,
+        182.509708
+      ],
+      "success_rate": 0.9706666666666667,
+      "success_rate_minmax": [
+        0.938,
+        1.0
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 5,
+      "method": "probe_all",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 5,
+          "method": "probe_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1701",
+          "measured": true,
+          "index_bytes": 26000823,
+          "index_MB": 26.000823,
+          "config_id": "joint-d128-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 2,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.957,
+          "timeout_rate": 0.0,
+          "median_ms": 0.1540854573249817,
+          "p95_ms": 0.22100750356912613,
+          "max_ms": 0.2950520720332861,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 5,
+          "method": "probe_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1702",
+          "measured": true,
+          "index_bytes": 39000907,
+          "index_MB": 39.000907,
+          "config_id": "joint-d128-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.966,
+          "timeout_rate": 0.0,
+          "median_ms": 0.17251749522984028,
+          "p95_ms": 0.24478310951963067,
+          "max_ms": 0.3296118229627609,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 5,
+          "method": "probe_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1703",
+          "measured": true,
+          "index_bytes": 39000907,
+          "index_MB": 39.000907,
+          "config_id": "joint-d128-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.977,
+          "timeout_rate": 0.0,
+          "median_ms": 0.17156347166746855,
+          "p95_ms": 0.23866035044193265,
+          "max_ms": 0.31398492865264416,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 0.17156347166746855,
+      "median_ms_minmax": [
+        0.1540854573249817,
+        0.17251749522984028
+      ],
+      "p95_ms": 0.23866035044193265,
+      "p95_ms_minmax": [
+        0.22100750356912613,
+        0.24478310951963067
+      ],
+      "index_MB": 39.000907,
+      "index_MB_minmax": [
+        26.000823,
+        39.000907
+      ],
+      "success_rate": 0.9666666666666667,
+      "success_rate_minmax": [
+        0.957,
+        0.977
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 5,
+      "method": "store_all",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 5,
+          "method": "store_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1701",
+          "measured": true,
+          "index_bytes": 2611166987,
+          "index_MB": 2611.166987,
+          "config_id": "joint-d128-a120-swap0",
+          "blocks": [
+            5
+          ],
+          "swapped": false,
+          "L": 2,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.953,
+          "timeout_rate": 0.0,
+          "median_ms": 0.1300290459766984,
+          "p95_ms": 0.2000279724597931,
+          "max_ms": 0.2680099569261074,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 5,
+          "method": "store_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1702",
+          "measured": true,
+          "index_bytes": 3945981055,
+          "index_MB": 3945.981055,
+          "config_id": "joint-d128-a120-swap0",
+          "blocks": [
+            5
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.973,
+          "timeout_rate": 0.0,
+          "median_ms": 0.13188249431550503,
+          "p95_ms": 0.20192808005958796,
+          "max_ms": 0.30249194242060184,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 5,
+          "method": "store_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 2560000000,
+          "case": "conjunctive-n1000000-k5-seed1703",
+          "measured": true,
+          "index_bytes": 3931153023,
+          "index_MB": 3931.153023,
+          "config_id": "joint-d128-a120-swap0",
+          "blocks": [
+            5
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.981,
+          "timeout_rate": 0.0,
+          "median_ms": 0.1335775014013052,
+          "p95_ms": 0.19764754688367245,
+          "max_ms": 0.27854181826114655,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 0.13188249431550503,
+      "median_ms_minmax": [
+        0.1300290459766984,
+        0.1335775014013052
+      ],
+      "p95_ms": 0.2000279724597931,
+      "p95_ms_minmax": [
+        0.19764754688367245,
+        0.20192808005958796
+      ],
+      "index_MB": 3931.153023,
+      "index_MB_minmax": [
+        2611.166987,
+        3945.981055
+      ],
+      "success_rate": 0.969,
+      "success_rate_minmax": [
+        0.953,
+        0.981
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 6,
+      "method": "blocking",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 6,
+          "method": "blocking",
+          "index_seed": 1701,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1701",
+          "measured": true,
+          "index_bytes": 845385076,
+          "index_MB": 845.385076,
+          "config_id": "joint-d128-a24-swap0",
+          "blocks": [
+            4,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.976,
+          "timeout_rate": 0.0,
+          "median_ms": 0.061350991018116474,
+          "p95_ms": 0.10367339709773656,
+          "max_ms": 0.15023397281765938,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 6,
+          "method": "blocking",
+          "index_seed": 1702,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1702",
+          "measured": true,
+          "index_bytes": 847686504,
+          "index_MB": 847.686504,
+          "config_id": "joint-d128-a24-swap0",
+          "blocks": [
+            4,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.978,
+          "timeout_rate": 0.0,
+          "median_ms": 0.06477697752416134,
+          "p95_ms": 0.10654013603925704,
+          "max_ms": 0.16115093603730202,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 6,
+          "method": "blocking",
+          "index_seed": 1703,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1703",
+          "measured": true,
+          "index_bytes": 846837264,
+          "index_MB": 846.837264,
+          "config_id": "joint-d128-a24-swap0",
+          "blocks": [
+            4,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.967,
+          "timeout_rate": 0.0,
+          "median_ms": 0.0594588927924633,
+          "p95_ms": 0.09124756325036286,
+          "max_ms": 0.13619405217468739,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 0.061350991018116474,
+      "median_ms_minmax": [
+        0.0594588927924633,
+        0.06477697752416134
+      ],
+      "p95_ms": 0.10367339709773656,
+      "p95_ms_minmax": [
+        0.09124756325036286,
+        0.10654013603925704
+      ],
+      "index_MB": 846.837264,
+      "index_MB_minmax": [
+        845.385076,
+        847.686504
+      ],
+      "success_rate": 0.9736666666666666,
+      "success_rate_minmax": [
+        0.967,
+        0.978
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 6,
+      "method": "per_curve-intersection",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 6,
+          "method": "per_curve-intersection",
+          "index_seed": 1701,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1701",
+          "measured": true,
+          "index_bytes": 63281068,
+          "index_MB": 63.281068,
+          "config_id": "per_curve-intersection-d256-L1",
+          "blocks": null,
+          "swapped": false,
+          "L": 1,
+          "delta": 256.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 1.0,
+          "timeout_rate": 0.0,
+          "median_ms": 10.062881396152079,
+          "p95_ms": 13.444552174769338,
+          "max_ms": 23.50942906923592,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 6,
+          "method": "per_curve-intersection",
+          "index_seed": 1702,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1702",
+          "measured": true,
+          "index_bytes": 68151296,
+          "index_MB": 68.151296,
+          "config_id": "per_curve-intersection-d256-L1",
+          "blocks": null,
+          "swapped": false,
+          "L": 1,
+          "delta": 256.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 1.0,
+          "timeout_rate": 0.0,
+          "median_ms": 8.224683930166066,
+          "p95_ms": 9.602023707702756,
+          "max_ms": 12.845233082771301,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 6,
+          "method": "per_curve-intersection",
+          "index_seed": 1703,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1703",
+          "measured": true,
+          "index_bytes": 142403376,
+          "index_MB": 142.403376,
+          "config_id": "per_curve-intersection-d128-L2",
+          "blocks": null,
+          "swapped": false,
+          "L": 2,
+          "delta": 128.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 0.992,
+          "timeout_rate": 0.0,
+          "median_ms": 10.045875562354922,
+          "p95_ms": 12.641675339546053,
+          "max_ms": 15.747712925076485,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 10.045875562354922,
+      "median_ms_minmax": [
+        8.224683930166066,
+        10.062881396152079
+      ],
+      "p95_ms": 12.641675339546053,
+      "p95_ms_minmax": [
+        9.602023707702756,
+        13.444552174769338
+      ],
+      "index_MB": 68.151296,
+      "index_MB_minmax": [
+        63.281068,
+        142.403376
+      ],
+      "success_rate": 0.9973333333333333,
+      "success_rate_minmax": [
+        0.992,
+        1.0
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 6,
+      "method": "probe_all",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 6,
+          "method": "probe_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1701",
+          "measured": true,
+          "index_bytes": 39004698,
+          "index_MB": 39.004698,
+          "config_id": "joint-d128-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.967,
+          "timeout_rate": 0.0,
+          "median_ms": 0.16067898832261562,
+          "p95_ms": 0.22154999896883965,
+          "max_ms": 0.3591938875615597,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 6,
+          "method": "probe_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1702",
+          "measured": true,
+          "index_bytes": 39004698,
+          "index_MB": 39.004698,
+          "config_id": "joint-d128-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.983,
+          "timeout_rate": 0.0,
+          "median_ms": 0.1625079894438386,
+          "p95_ms": 0.2246872405521571,
+          "max_ms": 0.32937200739979744,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 6,
+          "method": "probe_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1703",
+          "measured": true,
+          "index_bytes": 39004698,
+          "index_MB": 39.004698,
+          "config_id": "joint-d128-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.962,
+          "timeout_rate": 0.0,
+          "median_ms": 0.15177309978753328,
+          "p95_ms": 0.209220964461565,
+          "max_ms": 0.3140110056847334,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 0.16067898832261562,
+      "median_ms_minmax": [
+        0.15177309978753328,
+        0.1625079894438386
+      ],
+      "p95_ms": 0.22154999896883965,
+      "p95_ms_minmax": [
+        0.209220964461565,
+        0.2246872405521571
+      ],
+      "index_MB": 39.004698,
+      "index_MB_minmax": [
+        39.004698,
+        39.004698
+      ],
+      "success_rate": 0.9706666666666667,
+      "success_rate_minmax": [
+        0.962,
+        0.983
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 6,
+      "method": "store_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 6,
+          "method": "store_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: construction RAM estimate"
+          ]
+        },
+        {
+          "k": 6,
+          "method": "store_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: construction RAM estimate"
+          ]
+        },
+        {
+          "k": 6,
+          "method": "store_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 3072000000,
+          "case": "conjunctive-n1000000-k6-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: construction RAM estimate"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 7,
+      "method": "blocking",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 7,
+          "method": "blocking",
+          "index_seed": 1701,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1701",
+          "measured": true,
+          "index_bytes": 1708564017,
+          "index_MB": 1708.564017,
+          "config_id": "joint-d128-a48-swap0",
+          "blocks": [
+            4,
+            2,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.965,
+          "timeout_rate": 0.0,
+          "median_ms": 0.08289504330605268,
+          "p95_ms": 0.10110854636877775,
+          "max_ms": 0.13665598817169666,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 7,
+          "method": "blocking",
+          "index_seed": 1702,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1702",
+          "measured": true,
+          "index_bytes": 1710568733,
+          "index_MB": 1710.568733,
+          "config_id": "joint-d128-a48-swap0",
+          "blocks": [
+            4,
+            2,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.966,
+          "timeout_rate": 0.0,
+          "median_ms": 0.08293101564049721,
+          "p95_ms": 0.10147467255592346,
+          "max_ms": 0.1329910010099411,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 7,
+          "method": "blocking",
+          "index_seed": 1703,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1703",
+          "measured": true,
+          "index_bytes": 1715774209,
+          "index_MB": 1715.774209,
+          "config_id": "joint-d128-a48-swap0",
+          "blocks": [
+            4,
+            2,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.957,
+          "timeout_rate": 0.0,
+          "median_ms": 0.08272600825875998,
+          "p95_ms": 0.10090598370879889,
+          "max_ms": 0.12403796426951885,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 0.08289504330605268,
+      "median_ms_minmax": [
+        0.08272600825875998,
+        0.08293101564049721
+      ],
+      "p95_ms": 0.10110854636877775,
+      "p95_ms_minmax": [
+        0.10090598370879889,
+        0.10147467255592346
+      ],
+      "index_MB": 1710.568733,
+      "index_MB_minmax": [
+        1708.564017,
+        1715.774209
+      ],
+      "success_rate": 0.9626666666666667,
+      "success_rate_minmax": [
+        0.957,
+        0.966
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 7,
+      "method": "per_curve-intersection",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 7,
+          "method": "per_curve-intersection",
+          "index_seed": 1701,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1701",
+          "measured": true,
+          "index_bytes": 253898792,
+          "index_MB": 253.898792,
+          "config_id": "per_curve-intersection-d64-L3",
+          "blocks": null,
+          "swapped": false,
+          "L": 3,
+          "delta": 64.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 0.992,
+          "timeout_rate": 0.0,
+          "median_ms": 11.426204000599682,
+          "p95_ms": 12.379185168538243,
+          "max_ms": 13.072742847725749,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 7,
+          "method": "per_curve-intersection",
+          "index_seed": 1702,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1702",
+          "measured": true,
+          "index_bytes": 169283708,
+          "index_MB": 169.283708,
+          "config_id": "per_curve-intersection-d64-L2",
+          "blocks": null,
+          "swapped": false,
+          "L": 2,
+          "delta": 64.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 0.944,
+          "timeout_rate": 0.0,
+          "median_ms": 9.097936446778476,
+          "p95_ms": 9.92621126351878,
+          "max_ms": 10.678678983822465,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 7,
+          "method": "per_curve-intersection",
+          "index_seed": 1703,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1703",
+          "measured": true,
+          "index_bytes": 167354900,
+          "index_MB": 167.3549,
+          "config_id": "per_curve-intersection-d128-L2",
+          "blocks": null,
+          "swapped": false,
+          "L": 2,
+          "delta": 128.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 0.976,
+          "timeout_rate": 0.0,
+          "median_ms": 9.79303300846368,
+          "p95_ms": 10.611383151262999,
+          "max_ms": 11.592985829338431,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 9.79303300846368,
+      "median_ms_minmax": [
+        9.097936446778476,
+        11.426204000599682
+      ],
+      "p95_ms": 10.611383151262999,
+      "p95_ms_minmax": [
+        9.92621126351878,
+        12.379185168538243
+      ],
+      "index_MB": 169.283708,
+      "index_MB_minmax": [
+        167.3549,
+        253.898792
+      ],
+      "success_rate": 0.9706666666666667,
+      "success_rate_minmax": [
+        0.944,
+        0.992
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 7,
+      "method": "probe_all",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 7,
+          "method": "probe_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1701",
+          "measured": true,
+          "index_bytes": 39035733,
+          "index_MB": 39.035733,
+          "config_id": "joint-d128-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 128.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.959,
+          "timeout_rate": 0.0,
+          "median_ms": 0.5836050258949399,
+          "p95_ms": 0.6274265004321933,
+          "max_ms": 1.0329780634492636,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 7,
+          "method": "probe_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1702",
+          "measured": true,
+          "index_bytes": 26035617,
+          "index_MB": 26.035617,
+          "config_id": "joint-d256-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 2,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.927,
+          "timeout_rate": 0.0,
+          "median_ms": 0.42636506259441376,
+          "p95_ms": 0.5082820658572018,
+          "max_ms": 0.7288430351763964,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 7,
+          "method": "probe_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1703",
+          "measured": true,
+          "index_bytes": 26035617,
+          "index_MB": 26.035617,
+          "config_id": "joint-d256-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 2,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.99,
+          "timeout_rate": 0.0,
+          "median_ms": 0.4355199635028839,
+          "p95_ms": 0.510883005335927,
+          "max_ms": 0.7480939384549856,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 0.4355199635028839,
+      "median_ms_minmax": [
+        0.42636506259441376,
+        0.5836050258949399
+      ],
+      "p95_ms": 0.510883005335927,
+      "p95_ms_minmax": [
+        0.5082820658572018,
+        0.6274265004321933
+      ],
+      "index_MB": 26.035617,
+      "index_MB_minmax": [
+        26.035617,
+        39.035733
+      ],
+      "success_rate": 0.9586666666666668,
+      "success_rate_minmax": [
+        0.927,
+        0.99
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 7,
+      "method": "store_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 7,
+          "method": "store_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 7,
+          "method": "store_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 7,
+          "method": "store_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 3584000000,
+          "case": "conjunctive-n1000000-k7-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 8,
+      "method": "blocking",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 8,
+          "method": "blocking",
+          "index_seed": 1701,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1701",
+          "measured": true,
+          "index_bytes": 5052476572,
+          "index_MB": 5052.476572,
+          "config_id": "joint-d256-a240-swap0",
+          "blocks": [
+            5,
+            2,
+            1
+          ],
+          "swapped": false,
+          "L": 2,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.963,
+          "timeout_rate": 0.0,
+          "median_ms": 0.12809992767870426,
+          "p95_ms": 0.2149020903743803,
+          "max_ms": 0.3608481492847204,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 8,
+          "method": "blocking",
+          "index_seed": 1702,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1702",
+          "measured": true,
+          "index_bytes": 7543312696,
+          "index_MB": 7543.312696,
+          "config_id": "joint-d256-a240-swap0",
+          "blocks": [
+            5,
+            2,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.99,
+          "timeout_rate": 0.0,
+          "median_ms": 0.16068306285887957,
+          "p95_ms": 0.2556900028139353,
+          "max_ms": 0.4108441062271595,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 8,
+          "method": "blocking",
+          "index_seed": 1703,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1703",
+          "measured": true,
+          "index_bytes": 4951711532,
+          "index_MB": 4951.711532,
+          "config_id": "joint-d256-a240-swap0",
+          "blocks": [
+            5,
+            2,
+            1
+          ],
+          "swapped": false,
+          "L": 2,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.952,
+          "timeout_rate": 0.0,
+          "median_ms": 0.12207392137497663,
+          "p95_ms": 0.2311712247319519,
+          "max_ms": 0.3691418096423149,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 0.12809992767870426,
+      "median_ms_minmax": [
+        0.12207392137497663,
+        0.16068306285887957
+      ],
+      "p95_ms": 0.2311712247319519,
+      "p95_ms_minmax": [
+        0.2149020903743803,
+        0.2556900028139353
+      ],
+      "index_MB": 5052.476572,
+      "index_MB_minmax": [
+        4951.711532,
+        7543.312696
+      ],
+      "success_rate": 0.9683333333333333,
+      "success_rate_minmax": [
+        0.952,
+        0.99
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 8,
+      "method": "per_curve-intersection",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 8,
+          "method": "per_curve-intersection",
+          "index_seed": 1701,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1701",
+          "measured": true,
+          "index_bytes": 287675376,
+          "index_MB": 287.675376,
+          "config_id": "per_curve-intersection-d64-L3",
+          "blocks": null,
+          "swapped": false,
+          "L": 3,
+          "delta": 64.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 0.974,
+          "timeout_rate": 0.0,
+          "median_ms": 14.771366957575083,
+          "p95_ms": 18.246395606547594,
+          "max_ms": 21.19089593179524,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 8,
+          "method": "per_curve-intersection",
+          "index_seed": 1702,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1702",
+          "measured": true,
+          "index_bytes": 289371280,
+          "index_MB": 289.37128,
+          "config_id": "per_curve-intersection-d64-L3",
+          "blocks": null,
+          "swapped": false,
+          "L": 3,
+          "delta": 64.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 1.0,
+          "timeout_rate": 0.0,
+          "median_ms": 13.52392602711916,
+          "p95_ms": 14.728273125365376,
+          "max_ms": 15.769658843055367,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 8,
+          "method": "per_curve-intersection",
+          "index_seed": 1703,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1703",
+          "measured": true,
+          "index_bytes": 288170740,
+          "index_MB": 288.17074,
+          "config_id": "per_curve-intersection-d64-L3",
+          "blocks": null,
+          "swapped": false,
+          "L": 3,
+          "delta": 64.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 1.0,
+          "timeout_rate": 0.0,
+          "median_ms": 13.116396614350379,
+          "p95_ms": 14.343459845986215,
+          "max_ms": 15.567057998850942,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 13.52392602711916,
+      "median_ms_minmax": [
+        13.116396614350379,
+        14.771366957575083
+      ],
+      "p95_ms": 14.728273125365376,
+      "p95_ms_minmax": [
+        14.343459845986215,
+        18.246395606547594
+      ],
+      "index_MB": 288.17074,
+      "index_MB_minmax": [
+        287.675376,
+        289.37128
+      ],
+      "success_rate": 0.9913333333333334,
+      "success_rate_minmax": [
+        0.974,
+        1.0
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 8,
+      "method": "probe_all",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 8,
+          "method": "probe_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1701",
+          "measured": true,
+          "index_bytes": 39323092,
+          "index_MB": 39.323092,
+          "config_id": "joint-d256-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.99,
+          "timeout_rate": 0.0,
+          "median_ms": 4.494443070143461,
+          "p95_ms": 4.770342307165265,
+          "max_ms": 5.162338027730584,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 8,
+          "method": "probe_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1702",
+          "measured": true,
+          "index_bytes": 39323092,
+          "index_MB": 39.323092,
+          "config_id": "joint-d256-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.986,
+          "timeout_rate": 0.0,
+          "median_ms": 4.723126417957246,
+          "p95_ms": 5.113392835482955,
+          "max_ms": 6.56471005640924,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 8,
+          "method": "probe_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1703",
+          "measured": true,
+          "index_bytes": 26322960,
+          "index_MB": 26.32296,
+          "config_id": "joint-d256-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 2,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.947,
+          "timeout_rate": 0.0,
+          "median_ms": 2.989158034324646,
+          "p95_ms": 3.1613759230822325,
+          "max_ms": 3.4386070910841227,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 4.494443070143461,
+      "median_ms_minmax": [
+        2.989158034324646,
+        4.723126417957246
+      ],
+      "p95_ms": 4.770342307165265,
+      "p95_ms_minmax": [
+        3.1613759230822325,
+        5.113392835482955
+      ],
+      "index_MB": 39.323092,
+      "index_MB_minmax": [
+        26.32296,
+        39.323092
+      ],
+      "success_rate": 0.9743333333333334,
+      "success_rate_minmax": [
+        0.947,
+        0.99
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 8,
+      "method": "store_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 8,
+          "method": "store_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 8,
+          "method": "store_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 8,
+          "method": "store_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 4096000000,
+          "case": "conjunctive-n1000000-k8-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 9,
+      "method": "blocking",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 9,
+          "method": "blocking",
+          "index_seed": 1701,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1701",
+          "measured": true,
+          "index_bytes": 3263689058,
+          "index_MB": 3263.689058,
+          "config_id": "joint-d256-a96-swap0",
+          "blocks": [
+            4,
+            2,
+            2,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.986,
+          "timeout_rate": 0.0,
+          "median_ms": 1.6357101267203689,
+          "p95_ms": 1.735456963069737,
+          "max_ms": 1.862844219431281,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 9,
+          "method": "blocking",
+          "index_seed": 1702,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1702",
+          "measured": true,
+          "index_bytes": 2176592786,
+          "index_MB": 2176.592786,
+          "config_id": "joint-d256-a96-swap0",
+          "blocks": [
+            4,
+            2,
+            2,
+            1
+          ],
+          "swapped": false,
+          "L": 2,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.951,
+          "timeout_rate": 0.0,
+          "median_ms": 1.1024679988622665,
+          "p95_ms": 1.1687871650792658,
+          "max_ms": 1.3588268775492907,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 9,
+          "method": "blocking",
+          "index_seed": 1703,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1703",
+          "measured": true,
+          "index_bytes": 2213150778,
+          "index_MB": 2213.150778,
+          "config_id": "joint-d256-a96-swap0",
+          "blocks": [
+            4,
+            2,
+            2,
+            1
+          ],
+          "swapped": false,
+          "L": 2,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.945,
+          "timeout_rate": 0.0,
+          "median_ms": 1.095316489227116,
+          "p95_ms": 1.3035956071689725,
+          "max_ms": 1.382367918267846,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 1.1024679988622665,
+      "median_ms_minmax": [
+        1.095316489227116,
+        1.6357101267203689
+      ],
+      "p95_ms": 1.3035956071689725,
+      "p95_ms_minmax": [
+        1.1687871650792658,
+        1.735456963069737
+      ],
+      "index_MB": 2213.150778,
+      "index_MB_minmax": [
+        2176.592786,
+        3263.689058
+      ],
+      "success_rate": 0.9606666666666666,
+      "success_rate_minmax": [
+        0.945,
+        0.986
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 9,
+      "method": "per_curve-intersection",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 9,
+          "method": "per_curve-intersection",
+          "index_seed": 1701,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1701",
+          "measured": true,
+          "index_bytes": 214288408,
+          "index_MB": 214.288408,
+          "config_id": "per_curve-intersection-d128-L2",
+          "blocks": null,
+          "swapped": false,
+          "L": 2,
+          "delta": 128.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 0.999,
+          "timeout_rate": 0.0,
+          "median_ms": 12.312436942011118,
+          "p95_ms": 14.481695368885992,
+          "max_ms": 16.479840967804193,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 9,
+          "method": "per_curve-intersection",
+          "index_seed": 1702,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1702",
+          "measured": true,
+          "index_bytes": 213585788,
+          "index_MB": 213.585788,
+          "config_id": "per_curve-intersection-d128-L2",
+          "blocks": null,
+          "swapped": false,
+          "L": 2,
+          "delta": 128.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 1.0,
+          "timeout_rate": 0.0,
+          "median_ms": 13.997541507706046,
+          "p95_ms": 16.93364621605724,
+          "max_ms": 20.030417013913393,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 9,
+          "method": "per_curve-intersection",
+          "index_seed": 1703,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1703",
+          "measured": true,
+          "index_bytes": 434647772,
+          "index_MB": 434.647772,
+          "config_id": "per_curve-intersection-d64-L4",
+          "blocks": null,
+          "swapped": false,
+          "L": 4,
+          "delta": 64.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 0.995,
+          "timeout_rate": 0.0,
+          "median_ms": 17.67398789525032,
+          "p95_ms": 20.173609594348818,
+          "max_ms": 21.666802000254393,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 13.997541507706046,
+      "median_ms_minmax": [
+        12.312436942011118,
+        17.67398789525032
+      ],
+      "p95_ms": 16.93364621605724,
+      "p95_ms_minmax": [
+        14.481695368885992,
+        20.173609594348818
+      ],
+      "index_MB": 214.288408,
+      "index_MB_minmax": [
+        213.585788,
+        434.647772
+      ],
+      "success_rate": 0.9980000000000001,
+      "success_rate_minmax": [
+        0.995,
+        1.0
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 9,
+      "method": "probe_all",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 9,
+          "method": "probe_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1701",
+          "measured": true,
+          "index_bytes": 42266535,
+          "index_MB": 42.266535,
+          "config_id": "joint-d256-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.975,
+          "timeout_rate": 0.0,
+          "median_ms": 42.88284957874566,
+          "p95_ms": 46.3128917501308,
+          "max_ms": 58.35772608406842,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 9,
+          "method": "probe_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1702",
+          "measured": true,
+          "index_bytes": 42266535,
+          "index_MB": 42.266535,
+          "config_id": "joint-d256-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.992,
+          "timeout_rate": 0.0,
+          "median_ms": 44.09826151095331,
+          "p95_ms": 47.776572639122605,
+          "max_ms": 56.17481586523354,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 9,
+          "method": "probe_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1703",
+          "measured": true,
+          "index_bytes": 29266387,
+          "index_MB": 29.266387,
+          "config_id": "joint-d256-a1-swap0",
+          "blocks": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 2,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.944,
+          "timeout_rate": 0.0,
+          "median_ms": 27.30248251464218,
+          "p95_ms": 28.40511915273964,
+          "max_ms": 30.06746293976903,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 42.88284957874566,
+      "median_ms_minmax": [
+        27.30248251464218,
+        44.09826151095331
+      ],
+      "p95_ms": 46.3128917501308,
+      "p95_ms_minmax": [
+        28.40511915273964,
+        47.776572639122605
+      ],
+      "index_MB": 42.266535,
+      "index_MB_minmax": [
+        29.266387,
+        42.266535
+      ],
+      "success_rate": 0.9703333333333334,
+      "success_rate_minmax": [
+        0.944,
+        0.992
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 9,
+      "method": "store_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 9,
+          "method": "store_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 9,
+          "method": "store_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 9,
+          "method": "store_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 4608000000,
+          "case": "conjunctive-n1000000-k9-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 10,
+      "method": "blocking",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 10,
+          "method": "blocking",
+          "index_seed": 1701,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1701",
+          "measured": true,
+          "index_bytes": 3224610736,
+          "index_MB": 3224.610736,
+          "config_id": "joint-d256-a96-swap0",
+          "blocks": [
+            4,
+            2,
+            2,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.987,
+          "timeout_rate": 0.0,
+          "median_ms": 14.385532587766647,
+          "p95_ms": 15.737406362313777,
+          "max_ms": 17.11023598909378,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 10,
+          "method": "blocking",
+          "index_seed": 1702,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1702",
+          "measured": true,
+          "index_bytes": 3297483872,
+          "index_MB": 3297.483872,
+          "config_id": "joint-d256-a96-swap0",
+          "blocks": [
+            4,
+            2,
+            2,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 3,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.98,
+          "timeout_rate": 0.0,
+          "median_ms": 14.371910947375,
+          "p95_ms": 15.183883090503514,
+          "max_ms": 15.555457910522819,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 10,
+          "method": "blocking",
+          "index_seed": 1703,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1703",
+          "measured": true,
+          "index_bytes": 2202309460,
+          "index_MB": 2202.30946,
+          "config_id": "joint-d256-a96-swap0",
+          "blocks": [
+            4,
+            2,
+            2,
+            1,
+            1
+          ],
+          "swapped": false,
+          "L": 2,
+          "delta": 256.0,
+          "scratch_bytes": 12000000,
+          "success_rate": 0.938,
+          "timeout_rate": 0.0,
+          "median_ms": 9.414571453817189,
+          "p95_ms": 9.990312019363046,
+          "max_ms": 10.208969935774803,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 14.371910947375,
+      "median_ms_minmax": [
+        9.414571453817189,
+        14.385532587766647
+      ],
+      "p95_ms": 15.183883090503514,
+      "p95_ms_minmax": [
+        9.990312019363046,
+        15.737406362313777
+      ],
+      "index_MB": 3224.610736,
+      "index_MB_minmax": [
+        2202.30946,
+        3297.483872
+      ],
+      "success_rate": 0.9683333333333334,
+      "success_rate_minmax": [
+        0.938,
+        0.987
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 10,
+      "method": "per_curve-intersection",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 10,
+          "method": "per_curve-intersection",
+          "index_seed": 1701,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1701",
+          "measured": true,
+          "index_bytes": 360412160,
+          "index_MB": 360.41216,
+          "config_id": "per_curve-intersection-d64-L3",
+          "blocks": null,
+          "swapped": false,
+          "L": 3,
+          "delta": 64.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 0.983,
+          "timeout_rate": 0.0,
+          "median_ms": 17.336209071800113,
+          "p95_ms": 20.17430926207453,
+          "max_ms": 23.11440510675311,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 10,
+          "method": "per_curve-intersection",
+          "index_seed": 1702,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1702",
+          "measured": true,
+          "index_bytes": 361016656,
+          "index_MB": 361.016656,
+          "config_id": "per_curve-intersection-d64-L3",
+          "blocks": null,
+          "swapped": false,
+          "L": 3,
+          "delta": 64.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 0.975,
+          "timeout_rate": 0.0,
+          "median_ms": 16.040517948567867,
+          "p95_ms": 18.227782822214067,
+          "max_ms": 19.801626913249493,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 10,
+          "method": "per_curve-intersection",
+          "index_seed": 1703,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1703",
+          "measured": true,
+          "index_bytes": 230026548,
+          "index_MB": 230.026548,
+          "config_id": "per_curve-intersection-d128-L2",
+          "blocks": null,
+          "swapped": false,
+          "L": 2,
+          "delta": 128.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 0.994,
+          "timeout_rate": 0.0,
+          "median_ms": 16.415063408203423,
+          "p95_ms": 18.897991918493062,
+          "max_ms": 21.022530971094966,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 16.415063408203423,
+      "median_ms_minmax": [
+        16.040517948567867,
+        17.336209071800113
+      ],
+      "p95_ms": 18.897991918493062,
+      "p95_ms_minmax": [
+        18.227782822214067,
+        20.17430926207453
+      ],
+      "index_MB": 360.41216,
+      "index_MB_minmax": [
+        230.026548,
+        361.016656
+      ],
+      "success_rate": 0.984,
+      "success_rate_minmax": [
+        0.975,
+        0.994
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 10,
+      "method": "probe_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 10,
+          "method": "probe_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 10,
+          "method": "probe_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 10,
+          "method": "probe_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 10,
+      "method": "store_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 10,
+          "method": "store_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 10,
+          "method": "store_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 10,
+          "method": "store_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 5120000000,
+          "case": "conjunctive-n1000000-k10-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 11,
+      "method": "blocking",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 11,
+          "method": "blocking",
+          "index_seed": 1701,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity",
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 11,
+          "method": "blocking",
+          "index_seed": 1702,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity",
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 11,
+          "method": "blocking",
+          "index_seed": 1703,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity",
+            "excluded: measured serving-index storage",
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 11,
+      "method": "per_curve-intersection",
+      "feasible": true,
+      "all_seeds_measured": true,
+      "seeds": [
+        {
+          "k": 11,
+          "method": "per_curve-intersection",
+          "index_seed": 1701,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1701",
+          "measured": true,
+          "index_bytes": 263895528,
+          "index_MB": 263.895528,
+          "config_id": "per_curve-intersection-d64-L2",
+          "blocks": null,
+          "swapped": false,
+          "L": 2,
+          "delta": 64.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 0.949,
+          "timeout_rate": 0.0,
+          "median_ms": 14.073509024456143,
+          "p95_ms": 15.353160351514816,
+          "max_ms": 16.509087989106774,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 11,
+          "method": "per_curve-intersection",
+          "index_seed": 1702,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1702",
+          "measured": true,
+          "index_bytes": 397191464,
+          "index_MB": 397.191464,
+          "config_id": "per_curve-intersection-d64-L3",
+          "blocks": null,
+          "swapped": false,
+          "L": 3,
+          "delta": 64.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 0.953,
+          "timeout_rate": 0.0,
+          "median_ms": 17.471191473305225,
+          "p95_ms": 19.803088146727532,
+          "max_ms": 21.44710486754775,
+          "query_count": 1000,
+          "feasible": true
+        },
+        {
+          "k": 11,
+          "method": "per_curve-intersection",
+          "index_seed": 1703,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1703",
+          "measured": true,
+          "index_bytes": 257091052,
+          "index_MB": 257.091052,
+          "config_id": "per_curve-intersection-d128-L2",
+          "blocks": null,
+          "swapped": false,
+          "L": 2,
+          "delta": 128.0,
+          "scratch_bytes": 22000000,
+          "success_rate": 0.982,
+          "timeout_rate": 0.0,
+          "median_ms": 16.909961588680744,
+          "p95_ms": 19.916155107785016,
+          "max_ms": 22.588538005948067,
+          "query_count": 1000,
+          "feasible": true
+        }
+      ],
+      "median_ms": 16.909961588680744,
+      "median_ms_minmax": [
+        14.073509024456143,
+        17.471191473305225
+      ],
+      "p95_ms": 19.803088146727532,
+      "p95_ms_minmax": [
+        15.353160351514816,
+        19.916155107785016
+      ],
+      "index_MB": 263.895528,
+      "index_MB_minmax": [
+        257.091052,
+        397.191464
+      ],
+      "success_rate": 0.9613333333333333,
+      "success_rate_minmax": [
+        0.949,
+        0.982
+      ],
+      "timeout_rate": 0.0,
+      "timeout_rate_minmax": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "k": 11,
+      "method": "probe_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 11,
+          "method": "probe_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 11,
+          "method": "probe_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        },
+        {
+          "k": 11,
+          "method": "probe_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "rejected: on-time tuning recall"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 11,
+      "method": "store_all",
+      "feasible": false,
+      "all_seeds_measured": false,
+      "seeds": [
+        {
+          "k": 11,
+          "method": "store_all",
+          "index_seed": 1701,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1701",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 11,
+          "method": "store_all",
+          "index_seed": 1702,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1702",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        },
+        {
+          "k": 11,
+          "method": "store_all",
+          "index_seed": 1703,
+          "raw_curve_bytes": 5632000000,
+          "case": "conjunctive-n1000000-k11-seed1703",
+          "measured": false,
+          "feasible": false,
+          "reasons": [
+            "excluded: integer capacity"
+          ]
+        }
+      ]
+    }
+  ],
+  "largest_feasible_tested_k": {
+    "blocking": 10,
+    "store_all": 5,
+    "probe_all": 9,
+    "per_curve-intersection": 11
+  },
+  "not_run_ks": [
+    12
+  ],
+  "artifacts": {
+    "conjunctive-n1000000-k4-seed1701/dataset.json": "b3dd1e4d47e096b58abd76864275a5c416a68e5aafc1939db54efd1c1b54c939",
+    "conjunctive-n1000000-k4-seed1701/ground-truth.npz": "12663e0108d51e372a0393ea2ab18ede68d32218b424da34de5d475da51d5ade",
+    "conjunctive-n1000000-k4-seed1701/tuning-configurations.json": "9d7813daca358f59b5b0a96f6b218d60bf301da9a494c50c4ecefa76bcc9d9c4",
+    "conjunctive-n1000000-k4-seed1701/tuning-queries.csv": "d4cc38ce94a0324961f6ccc36c95dba008c5b9a55918cf4becc1d519aba055dd",
+    "conjunctive-n1000000-k4-seed1701/frozen-main-selections.json": "9cb005f9d802292496feba1704f6a1dadc8aa0b1a0b8705008c70e430fdc6c08",
+    "conjunctive-n1000000-k4-seed1701/main-results.json": "c7cb460f464811c2fd42047cae1bda2b99be2b12a6880e71fcf345aa2eba542b",
+    "conjunctive-n1000000-k4-seed1701/test-queries.csv": "743a7a58d1d0c8be23593c1975a3e51d3a32f31c3ae551822e7c4f335406838b",
+    "conjunctive-n1000000-k4-seed1701/resources.json": "c11a4b9c88bb4d371cc1383be17320affc3622b940355b0babb9b28b5d5385f0",
+    "conjunctive-n1000000-k4-seed1702/dataset.json": "484dd9fb6d6a472d0c44ef7d9f8df9e3b0300d2d4de457de579eb294a3dea43a",
+    "conjunctive-n1000000-k4-seed1702/ground-truth.npz": "12663e0108d51e372a0393ea2ab18ede68d32218b424da34de5d475da51d5ade",
+    "conjunctive-n1000000-k4-seed1702/tuning-configurations.json": "9bcdcf90ea0a01bc15c3642b7558f7beccce6625ec18bdf1b2ad995a6b94f824",
+    "conjunctive-n1000000-k4-seed1702/tuning-queries.csv": "9d743b71e7b163f370d0d7231bf4bbe227e2dd321dab539770a8f9ff834ac390",
+    "conjunctive-n1000000-k4-seed1702/frozen-main-selections.json": "8b20a518449b00e976a9835ac180cc6edb5f866834d9bb1c0480a0adc75ab629",
+    "conjunctive-n1000000-k4-seed1702/main-results.json": "ad66a5377ec9cad39f95d0ff62ed61d0bdcd51b4f97b769bdcd04f5f7aaa258e",
+    "conjunctive-n1000000-k4-seed1702/test-queries.csv": "537b7bb1a7cd1816694bc5b8cbaf94409963641d687168501edb9f2caddf3b73",
+    "conjunctive-n1000000-k4-seed1702/resources.json": "2005afbad6f539e0a47abcbf8e5831bbd79d786a3396a39fae626ad11120e6e0",
+    "conjunctive-n1000000-k4-seed1703/dataset.json": "9bfab37b134622f1f96b866dd46dbf4140ab3f3167b035638d54ef461cec128f",
+    "conjunctive-n1000000-k4-seed1703/ground-truth.npz": "12663e0108d51e372a0393ea2ab18ede68d32218b424da34de5d475da51d5ade",
+    "conjunctive-n1000000-k4-seed1703/tuning-configurations.json": "6b23796ddb45e377b414384073f8591c774e85aa59baf9aeee2f054d1bbbdfd2",
+    "conjunctive-n1000000-k4-seed1703/tuning-queries.csv": "95fd41e497545b7fb23935001a2c6dd2979fccb9dc75f50792ef4b9c3a68d6c5",
+    "conjunctive-n1000000-k4-seed1703/frozen-main-selections.json": "b54c9ff38c83ee31d0bffb2675b4be50087755d384d8ddbb4d4b13e2029f8f39",
+    "conjunctive-n1000000-k4-seed1703/main-results.json": "506d4e467b0be69c02de8178709f3c342641df92839fb1cc77a0c2f084d0a1e3",
+    "conjunctive-n1000000-k4-seed1703/test-queries.csv": "de9104372edf1476a73f31b6dbac13bf76eef734423fe87e02f5ce91fe771b09",
+    "conjunctive-n1000000-k4-seed1703/resources.json": "9daef54e240518dcfc2971b874d2776f7ce9473fc26a3cafe95ce0198607a916",
+    "conjunctive-n1000000-k5-seed1701/dataset.json": "860bd17487f1d3dddf33ab5456c8624e950f6c8df07a7231bb478cf076c71781",
+    "conjunctive-n1000000-k5-seed1701/ground-truth.npz": "c7d9aa4e1b8e1e9581d4e88efddde4c09ad899bc5e5c95fd34f2315271181ef0",
+    "conjunctive-n1000000-k5-seed1701/tuning-configurations.json": "c00a3e13a2d227543f514c8392264ba0a964d555253b2ec7c4e7a0698aa99458",
+    "conjunctive-n1000000-k5-seed1701/tuning-queries.csv": "5974be11b2517277bbac2169e1dd4563836b427f81df74ef595f0d12d0e12638",
+    "conjunctive-n1000000-k5-seed1701/frozen-main-selections.json": "41ac50fd5f6e1a3d2bb7c93a5a4bacf76c33ed2d81e0122fdb4df3fb11aa6609",
+    "conjunctive-n1000000-k5-seed1701/main-results.json": "70641f511b70c1e05731be8db17e8352401a8851765934fd2921342da1d7d68a",
+    "conjunctive-n1000000-k5-seed1701/test-queries.csv": "30dd8ba6e57795a149055f3c3433a821fa533ae9f3cafed505d3d6b32a13b5db",
+    "conjunctive-n1000000-k5-seed1701/resources.json": "af1d08d6307ae8d03298ffa6633d542d8a27247f247e38e5a4adfa3107cdd94a",
+    "conjunctive-n1000000-k5-seed1702/dataset.json": "35c9c5964bb78fc02d72147a87e5fba235ee4cc89d852ccd14e287c0b1f5096c",
+    "conjunctive-n1000000-k5-seed1702/ground-truth.npz": "c7d9aa4e1b8e1e9581d4e88efddde4c09ad899bc5e5c95fd34f2315271181ef0",
+    "conjunctive-n1000000-k5-seed1702/tuning-configurations.json": "3178a23a286800e96637b68bbdc8baae4b9b504b078ce11537fc26c592448983",
+    "conjunctive-n1000000-k5-seed1702/tuning-queries.csv": "f1d9f8b75b6e0b681429c110d5d3a937630e4ccbd47d2389b5b140db88fb751d",
+    "conjunctive-n1000000-k5-seed1702/frozen-main-selections.json": "8f802d67fddfac7c552b997f4b87fb5675748ccdaeeec7cb14f1538e7eee866c",
+    "conjunctive-n1000000-k5-seed1702/main-results.json": "4dfb796255ab50382e19a7cfaa5c8895deffcf758cf3407b0124a572cfe47e70",
+    "conjunctive-n1000000-k5-seed1702/test-queries.csv": "ed1845371436b49b9cb127114fd04a88c84528be661c85639172b30defe1e9a9",
+    "conjunctive-n1000000-k5-seed1702/resources.json": "42f9b52612ee6076a3a785aabbf7a5a49e73c04b4a92731326346d02aa4efcad",
+    "conjunctive-n1000000-k5-seed1703/dataset.json": "28c28811a33fc683e7c07efc3ec2ecb98382abe42d59b8e192d761eac8e53dfa",
+    "conjunctive-n1000000-k5-seed1703/ground-truth.npz": "c7d9aa4e1b8e1e9581d4e88efddde4c09ad899bc5e5c95fd34f2315271181ef0",
+    "conjunctive-n1000000-k5-seed1703/tuning-configurations.json": "d4dc029a3e353b6846c7e483f628df50a0074bd5b1214d20b765b5909b3f561c",
+    "conjunctive-n1000000-k5-seed1703/tuning-queries.csv": "10089d48b78b13250b9a9da37dda68128f54b6a7b7e97a661d4b0163e09d27ab",
+    "conjunctive-n1000000-k5-seed1703/frozen-main-selections.json": "3e20f076c3f506c44bcdba4bd3c907cd59f3146be8226e2a1c6ec9b571649049",
+    "conjunctive-n1000000-k5-seed1703/main-results.json": "b2b45c4713a2445ab914f666a827e7d77875a4c245ac3fbe5644974abf4e4bbf",
+    "conjunctive-n1000000-k5-seed1703/test-queries.csv": "0633f4820c8ea534f26257cd11baffca418a13b58e518d38a99468d50a2959d8",
+    "conjunctive-n1000000-k5-seed1703/resources.json": "4e513d6225e05da1d6f97c444015892cab97aec6c0812107109e87e945c66632",
+    "conjunctive-n1000000-k6-seed1701/dataset.json": "9188512f4a62db1a3a3e698b107292f92746b923542ad142617ee3adcd0776da",
+    "conjunctive-n1000000-k6-seed1701/ground-truth.npz": "4678c98d9244ba54330681ae2f385156962c052a54910d82862fe4a2a368c1e4",
+    "conjunctive-n1000000-k6-seed1701/tuning-configurations.json": "8518e540c41f4e66183d00b882d5f84442c25b35a34fcc799a8fbc5bd64ba7ed",
+    "conjunctive-n1000000-k6-seed1701/tuning-queries.csv": "f02d4f20c3c340481ea4440d77b4285abd93f66d67c065478d860c50ff045b03",
+    "conjunctive-n1000000-k6-seed1701/frozen-main-selections.json": "853e2fd1ef2a4b1393227d8a4c8c59e01e9fd818983ab010f947658216bd095d",
+    "conjunctive-n1000000-k6-seed1701/main-results.json": "c6cd03da53a65b7a11535d551fbcedda698f86c80007be0030d077c4ebeb1beb",
+    "conjunctive-n1000000-k6-seed1701/test-queries.csv": "96ce2c63b72ccb358d4018aedf8aeda67661c7ba258acdf7b3de7de4d143bb23",
+    "conjunctive-n1000000-k6-seed1701/resources.json": "3ca7dc6be9ceb88f4b4e1e97448acf155348f8fcf12932c03a9beb33b99d62f8",
+    "conjunctive-n1000000-k6-seed1702/dataset.json": "99e1dd5615d1d4abee6c0db554c239abd7e046691a25edaf4fc3f8ed2370e4fc",
+    "conjunctive-n1000000-k6-seed1702/ground-truth.npz": "4678c98d9244ba54330681ae2f385156962c052a54910d82862fe4a2a368c1e4",
+    "conjunctive-n1000000-k6-seed1702/tuning-configurations.json": "2c56ef0ceea28272d324e0faa0a081c929876d0a865640b261b33c320b8a7e6e",
+    "conjunctive-n1000000-k6-seed1702/tuning-queries.csv": "38714a2ff08f89c981d0d3f9f9e9e224173476fbc611953cf5a5053f286e1cac",
+    "conjunctive-n1000000-k6-seed1702/frozen-main-selections.json": "b214d17f1b79094099fd8dda096ac0aa6ea5f067b8cdbb529f510580e913feb9",
+    "conjunctive-n1000000-k6-seed1702/main-results.json": "72102ed9c7217b2418b72831df73768b03fa8d8018b83baf42ddd1c78e042125",
+    "conjunctive-n1000000-k6-seed1702/test-queries.csv": "ee44c5f83b1a735f9d0cdcdf28d5839e0b65abafa1193b47206d999ede66c785",
+    "conjunctive-n1000000-k6-seed1702/resources.json": "33b5e0d0cd4de306ba1d9b009dde5659c95d031a4bed968ab1c21b6251501acf",
+    "conjunctive-n1000000-k6-seed1703/dataset.json": "cbf65a07f8c9a87cd4c34fabdec80af7b1d03ecc4cef3c4b2af753b2ceccc5c4",
+    "conjunctive-n1000000-k6-seed1703/ground-truth.npz": "4678c98d9244ba54330681ae2f385156962c052a54910d82862fe4a2a368c1e4",
+    "conjunctive-n1000000-k6-seed1703/tuning-configurations.json": "610313f5a0176b161102264599168f15dfb9aa908c22e79df2322dcf2b3a2089",
+    "conjunctive-n1000000-k6-seed1703/tuning-queries.csv": "14edfb343a106713e997c808e6c83d6e8c268a6f6cbe093b8b212772a79b8fd4",
+    "conjunctive-n1000000-k6-seed1703/frozen-main-selections.json": "1e62160d6265974af5d255ef4f87f0a3138b80f3f5dc0471dfd3e833cdf64e22",
+    "conjunctive-n1000000-k6-seed1703/main-results.json": "599ac1972a72c9a3fa50def1115eaff8903e512390811d30527b1e8354c601ca",
+    "conjunctive-n1000000-k6-seed1703/test-queries.csv": "0101855b9daa4c77e521ee5f196545d6f8b57cd02cb85905833bd5ea34fff9c7",
+    "conjunctive-n1000000-k6-seed1703/resources.json": "1ccbd76bf6bdc75e846ba03cc1050634f10b9de2c547802562430ee85c600fdf",
+    "conjunctive-n1000000-k7-seed1701/dataset.json": "dfa2df2b8b1be5097708f138475cb70b8e11af5f2e7e29c1c8fc393607351df6",
+    "conjunctive-n1000000-k7-seed1701/ground-truth.npz": "98128d5697d612b80717ebe38f04364e94685b15a5fbd038a2e2753bc86d47c1",
+    "conjunctive-n1000000-k7-seed1701/tuning-configurations.json": "6cb1ef67ea11a0e97237db1eb24f9794f857695a3887ae7f6aaff32bb7ef814c",
+    "conjunctive-n1000000-k7-seed1701/tuning-queries.csv": "43b4e251407ba773c86c56e1556c1a4ab78668c36a293450e2e22812fdb2949f",
+    "conjunctive-n1000000-k7-seed1701/frozen-main-selections.json": "d5ceed9c5712bb2cb203089bf1f8d3df772c7e1ae3931696877a36a57d0606c9",
+    "conjunctive-n1000000-k7-seed1701/main-results.json": "34cea95ce0936243d2144457519c3570f4523cd37b49a82e8b9e9c98af70eb36",
+    "conjunctive-n1000000-k7-seed1701/test-queries.csv": "090fa0aebf9694362e2ae6919126dab1a583a5cd84c7ba680292f903d77d25e6",
+    "conjunctive-n1000000-k7-seed1701/resources.json": "d13d04da9949ffea441991be2a65ebcbceb1567a74238c95f2105b716498ee91",
+    "conjunctive-n1000000-k7-seed1702/dataset.json": "cbfd8d0ee1e7ef152b0703c21569e3e2825a3162d1bcf5794d0a138f8cdcc6a6",
+    "conjunctive-n1000000-k7-seed1702/ground-truth.npz": "98128d5697d612b80717ebe38f04364e94685b15a5fbd038a2e2753bc86d47c1",
+    "conjunctive-n1000000-k7-seed1702/tuning-configurations.json": "b411b53e57b12ed037744fc8e81dae643ec048fafbdc7fbc8124f868d40638b3",
+    "conjunctive-n1000000-k7-seed1702/tuning-queries.csv": "cfd3a1e690850b3280c3e13eae3c697546d633415478cdb0bd0c6e2ecf67f3d3",
+    "conjunctive-n1000000-k7-seed1702/frozen-main-selections.json": "d25932e8972e3288acb8b367ea5694eb8ff0497c9a2ee86ecd05c43c21a0e424",
+    "conjunctive-n1000000-k7-seed1702/main-results.json": "f5b30180bdc1247543d417fae8510643d11b23ab660ae97de514b3f466430a4a",
+    "conjunctive-n1000000-k7-seed1702/test-queries.csv": "caf869055a58638f1a62a66105cc13032b79bce3f635bbfc03df4d42c481cc6e",
+    "conjunctive-n1000000-k7-seed1702/resources.json": "68c187e4176fdaa01bc39ec44a0eb6807d55d10f3f32c4e7978b93ae34486f41",
+    "conjunctive-n1000000-k7-seed1703/dataset.json": "e7d4a1edcdde1bd62d3293a24e5753ed2c8e45f3f420b9f273b1f1cb58c3aa90",
+    "conjunctive-n1000000-k7-seed1703/ground-truth.npz": "98128d5697d612b80717ebe38f04364e94685b15a5fbd038a2e2753bc86d47c1",
+    "conjunctive-n1000000-k7-seed1703/tuning-configurations.json": "82fc0c8d8fdc958b9d8117cf880469d5609e77f53ec85b53ea850fb0fa688d16",
+    "conjunctive-n1000000-k7-seed1703/tuning-queries.csv": "c92b5b8b7e3d5bdc1471498ef7e720b9d7b7c8622a104b17761cbe7dd9d7b6b0",
+    "conjunctive-n1000000-k7-seed1703/frozen-main-selections.json": "9a0f5baca06be69c538b86ef598812b018f4548dfc24c9d4719b9032e739e589",
+    "conjunctive-n1000000-k7-seed1703/main-results.json": "cb1cf106f4e13003f4dae0ce66b2c0fe45c57288c336084598ee00a1e22e82a1",
+    "conjunctive-n1000000-k7-seed1703/test-queries.csv": "556d03d3346083b4bc9d759609659ffb02219e23d0227b94b0548a4bd9a459b0",
+    "conjunctive-n1000000-k7-seed1703/resources.json": "ba6475686e88099931810e6f4e0a749810bb57112d33d04e2ee077a39be1357d",
+    "conjunctive-n1000000-k8-seed1701/dataset.json": "258dfa0eb3c9144a6ab23ab858e4de0077f1778977d2501503fb3f0f02487b37",
+    "conjunctive-n1000000-k8-seed1701/ground-truth.npz": "67b847d29ee93ba9ccefc8adbf79d75880a8643b1515133be3c4d82e7735dc58",
+    "conjunctive-n1000000-k8-seed1701/tuning-configurations.json": "97b18d1040f20b6e7d4d08b09f66550ad60d5781ef5b6965135ec3bce08c0ced",
+    "conjunctive-n1000000-k8-seed1701/tuning-queries.csv": "455da9726c8abd7d01a2ae0c07b49e4dfbc27ec07af8cbd11d942f56f832425c",
+    "conjunctive-n1000000-k8-seed1701/frozen-main-selections.json": "b60a39380d5cb2eaa84c726dfdddfa462fcd17d1dbc66082baddd85e61ce49a8",
+    "conjunctive-n1000000-k8-seed1701/main-results.json": "62f93f88ff3b79f0ab1d5f1e492c90e8d96b347e067fd76703b1f48d0d340892",
+    "conjunctive-n1000000-k8-seed1701/test-queries.csv": "47d55ca65c367a33250ae2e84b84baec090b454c8a8f16c6c58339e909946c49",
+    "conjunctive-n1000000-k8-seed1701/resources.json": "f3286ddf3f5fa1220e2997734c4ef5e6b0bfdf1062b5bfb2c2f6cb360e995f03",
+    "conjunctive-n1000000-k8-seed1702/dataset.json": "e47214c6b782d6a38d664ac772aacf37fb1ecf5f4b1b31a612d99147cd3abf3b",
+    "conjunctive-n1000000-k8-seed1702/ground-truth.npz": "67b847d29ee93ba9ccefc8adbf79d75880a8643b1515133be3c4d82e7735dc58",
+    "conjunctive-n1000000-k8-seed1702/tuning-configurations.json": "341cb1e90d63c1810fded009348f6596ae0dc9e533ff9a8b442151d4f8e7a4df",
+    "conjunctive-n1000000-k8-seed1702/tuning-queries.csv": "4fb8a10e482306cb0009b58b2c61bffe6d5df2ce7a69c1f3e612ee2b520b6a77",
+    "conjunctive-n1000000-k8-seed1702/frozen-main-selections.json": "0cc505e6ae286333af804d702e3b469325230891e116c6e14d4b22ed1a2e55d2",
+    "conjunctive-n1000000-k8-seed1702/main-results.json": "6c409bf21557084f1418c89ca5cfb117d81148c49b249b9222d0dab743176382",
+    "conjunctive-n1000000-k8-seed1702/test-queries.csv": "18cfd375ab48ded13fcdca710d217c92d316258b66aa67f10349854ad0bda294",
+    "conjunctive-n1000000-k8-seed1702/resources.json": "f7047c71882af7479da6057ed55a54fd7da5537bfdfae986a448991941a0f9f2",
+    "conjunctive-n1000000-k8-seed1703/dataset.json": "76ca0230392620ac45fbf0a829f8964c430824d20e0ac65ef841c69863230c7f",
+    "conjunctive-n1000000-k8-seed1703/ground-truth.npz": "67b847d29ee93ba9ccefc8adbf79d75880a8643b1515133be3c4d82e7735dc58",
+    "conjunctive-n1000000-k8-seed1703/tuning-configurations.json": "42fc72f2e427427633cad7c293c7942d2628a030c2d9e471e3570860a915b96f",
+    "conjunctive-n1000000-k8-seed1703/tuning-queries.csv": "08177065dd802fba60a5acd05952d2035ce2d6dae5fcae8ad4df49863eac9b16",
+    "conjunctive-n1000000-k8-seed1703/frozen-main-selections.json": "3091bcabb00c4e036e0af4496b7822e4f63f0af63afc2840b7bfdffebafc7f75",
+    "conjunctive-n1000000-k8-seed1703/main-results.json": "123f41f48405fd353670869f081c8223c2bc0286712694b439dd1c2fc26509ad",
+    "conjunctive-n1000000-k8-seed1703/test-queries.csv": "ca4786dabcb7f99e339df112497370b5911edfcd80789ff54d67f6fbcbff282c",
+    "conjunctive-n1000000-k8-seed1703/resources.json": "994e7254b859bb5e6c81321aa9eb8670d5b00ca17b9c88932ea09b7c50b82a96",
+    "conjunctive-n1000000-k9-seed1701/dataset.json": "73db07e46e6b3759464eb6854df3ac3fa894c773fe300c2a664f64bc87783c4f",
+    "conjunctive-n1000000-k9-seed1701/ground-truth.npz": "ae3e2c78b25900cb1674f881c5513a197865f50cde8204c9d1993301b7121acf",
+    "conjunctive-n1000000-k9-seed1701/tuning-configurations.json": "1e2b6b8b44253bc77e51d1aa5891e766c4a1676730daed56ba97449cb24de209",
+    "conjunctive-n1000000-k9-seed1701/tuning-queries.csv": "387522706ef8c51baccdb329ad6035b43cdcfc548c2bce8f0662ac6a35ae50e9",
+    "conjunctive-n1000000-k9-seed1701/frozen-main-selections.json": "6f9826f67c4ccd8f679eeb9ed35459204dc01876254e17c939ff440db96e9646",
+    "conjunctive-n1000000-k9-seed1701/main-results.json": "d211660315252f60001d25794e18df609114f7ef312cee16ee779800ee53de42",
+    "conjunctive-n1000000-k9-seed1701/test-queries.csv": "13b58d071455682e86f9259136898aa94a4ddc3e52d03b98ce5f455748b9211c",
+    "conjunctive-n1000000-k9-seed1701/resources.json": "74d553815ed6f27de6aa43e8307d6ec9ed89951daa23cf3b5d4d70e1c810997b",
+    "conjunctive-n1000000-k9-seed1702/dataset.json": "8688d72fdbb6f20e3d82f41a05ee00685d2702379990e287c038790dc9ccf8f6",
+    "conjunctive-n1000000-k9-seed1702/ground-truth.npz": "ae3e2c78b25900cb1674f881c5513a197865f50cde8204c9d1993301b7121acf",
+    "conjunctive-n1000000-k9-seed1702/tuning-configurations.json": "984a41f0a8f89b9d219b0f665722e7e01f46bfb8032d6d4e5a781b7aee70a3f0",
+    "conjunctive-n1000000-k9-seed1702/tuning-queries.csv": "4acce79f2d9eb4e5887e2bda313738161a94a2dc7f61c8d22e0de8491a4cd980",
+    "conjunctive-n1000000-k9-seed1702/frozen-main-selections.json": "52a26eef2240f6f2a4625534b09986175a68dcce9a38d68f69991965d880b534",
+    "conjunctive-n1000000-k9-seed1702/main-results.json": "8733b71cac69f1ea79db45f34c2916692fd20612f25ed0f14abdb7bb6c2e83e0",
+    "conjunctive-n1000000-k9-seed1702/test-queries.csv": "a141a5a89b48f592778a9ca9b83fc8079aed577d32fddddd607410c3d411e56b",
+    "conjunctive-n1000000-k9-seed1702/resources.json": "999c9e1a9f344e089353424c5ec73d1e5fc257c02b1d4eb0d4f1b18a5e231cc5",
+    "conjunctive-n1000000-k9-seed1703/dataset.json": "e8e48af090c9b2bc37f74942e2504a2134f0f839d6308ad09d523ccb1a8bd53d",
+    "conjunctive-n1000000-k9-seed1703/ground-truth.npz": "ae3e2c78b25900cb1674f881c5513a197865f50cde8204c9d1993301b7121acf",
+    "conjunctive-n1000000-k9-seed1703/tuning-configurations.json": "36199708c0c99c0c23d671df6a3958d8298d152d5eccf56002b025c1f5e70e11",
+    "conjunctive-n1000000-k9-seed1703/tuning-queries.csv": "87c6427f54357a288a4a7e2ab34dcc44525fea7c1dea451c9d8401bde60d031b",
+    "conjunctive-n1000000-k9-seed1703/frozen-main-selections.json": "21834127fcc3e664be9b9937d306bc40bc05437081cab6bad62a5a858f82fba7",
+    "conjunctive-n1000000-k9-seed1703/main-results.json": "b762e3175e7a1dfafac042213a966e6427c01f580f7d5f3aba9b14f7e2b02ee8",
+    "conjunctive-n1000000-k9-seed1703/test-queries.csv": "79b9b9ef63c97ff0301dbd264bb2738005012bda26b4649d657c8fb1655afa3b",
+    "conjunctive-n1000000-k9-seed1703/resources.json": "8fc9d0f435e9dd25cf0a63249fdd2f82509d2154277da227a0341079ac1f9a98",
+    "conjunctive-n1000000-k10-seed1701/dataset.json": "fc304567fb8cc651ccebd9abdd1ce6444d6fe7664b4b207dc01928edcc2f0a31",
+    "conjunctive-n1000000-k10-seed1701/ground-truth.npz": "49c99d28b7653b610b7ae653b55c2982a93fd015e11fa02f383adf0ff36917a0",
+    "conjunctive-n1000000-k10-seed1701/tuning-configurations.json": "c1af49a06564f0132cf134871623e28615af40fa7e7336f2f3fbe483e6c86773",
+    "conjunctive-n1000000-k10-seed1701/tuning-queries.csv": "178cd418d3651976f7c629510568972a373b755d374bc34d63bbdfc12d01eb32",
+    "conjunctive-n1000000-k10-seed1701/frozen-main-selections.json": "9ac58b44b6929ce7727dc4060159f58bd7e980347a2c990bdd6e89e5608e1117",
+    "conjunctive-n1000000-k10-seed1701/main-results.json": "8d2357d96770e7d4e3bbc99bbe11c279b3906959bd01a140c8b63591837bfa74",
+    "conjunctive-n1000000-k10-seed1701/test-queries.csv": "866f572560a5742c53ee729d86cfa7a191ecf48e538989933768d75a48574e5a",
+    "conjunctive-n1000000-k10-seed1701/resources.json": "22b912c56f96e51e2926af0a2768719198de6428cd5e1c600d893643408a687e",
+    "conjunctive-n1000000-k10-seed1702/dataset.json": "e6e262b328dd6fa0f566a0a70b079e85851333af2e33a32b058e7cc47e13a030",
+    "conjunctive-n1000000-k10-seed1702/ground-truth.npz": "49c99d28b7653b610b7ae653b55c2982a93fd015e11fa02f383adf0ff36917a0",
+    "conjunctive-n1000000-k10-seed1702/tuning-configurations.json": "1e57947b625031f75c50f643959da5e3b12a140048d4e907ef59da32535efbeb",
+    "conjunctive-n1000000-k10-seed1702/tuning-queries.csv": "9e1de5892a70870236f4feadb221270e6f12214d26e2c56f7147b383639c895a",
+    "conjunctive-n1000000-k10-seed1702/frozen-main-selections.json": "dc85816d00bb0822f158fab2e62cc458c5343bff754a02fda14f620be2e24b54",
+    "conjunctive-n1000000-k10-seed1702/main-results.json": "ce2bbff2da4d01f19b5582c23d4657289572ef4324f697228b60688a021724a0",
+    "conjunctive-n1000000-k10-seed1702/test-queries.csv": "d8c89740ab8261cb57dd1c0eac251b2ba0f52c109fb2150f1ae3d1b3bc7f3694",
+    "conjunctive-n1000000-k10-seed1702/resources.json": "a27ef3ba4d698392a9e76b752617f6b7ea1d4368fcc847b70ff177bd426ce670",
+    "conjunctive-n1000000-k10-seed1703/dataset.json": "58144aada27ca425e4336a5b11cae078f87ea448f610703db405eb6e6b9fc80b",
+    "conjunctive-n1000000-k10-seed1703/ground-truth.npz": "49c99d28b7653b610b7ae653b55c2982a93fd015e11fa02f383adf0ff36917a0",
+    "conjunctive-n1000000-k10-seed1703/tuning-configurations.json": "b6b7cb90729e28e55a2769a0c842642775037d55b3d4a8186c19c1d97ce86657",
+    "conjunctive-n1000000-k10-seed1703/tuning-queries.csv": "5ecc3826019ed363f715592933bdc30405ba4100f916348d2cdd051a0075cd7b",
+    "conjunctive-n1000000-k10-seed1703/frozen-main-selections.json": "cb655b33de65255f72c20c7fc97599f8351b9af62e627a729adcbead94984a0e",
+    "conjunctive-n1000000-k10-seed1703/main-results.json": "243db4c36d8dab143d1a0e77b5a7f6e93d44c31fa63b5bd804d0dc6c29dc978a",
+    "conjunctive-n1000000-k10-seed1703/test-queries.csv": "24d08607c49d19f750317919402f01fce098fd04dee51677164f8079af219c53",
+    "conjunctive-n1000000-k10-seed1703/resources.json": "9d9a69be80e75cf038941c16bc3e21c484db45ccae8986b8e7799f266522cb52",
+    "conjunctive-n1000000-k11-seed1701/dataset.json": "46b9d5d62a130de2ea5893aecded5106c51cd2fc83191f6c5fb4c1766f975d7a",
+    "conjunctive-n1000000-k11-seed1701/ground-truth.npz": "75188f0abd3c096d2d1bf1f590295656157edbffe54cefe0947272ecd9015eb8",
+    "conjunctive-n1000000-k11-seed1701/tuning-configurations.json": "58dbed787feef507f4371940b025e4452a70c1da9a2d6ddfd980399f06f385bc",
+    "conjunctive-n1000000-k11-seed1701/tuning-queries.csv": "73fa3e08844e5c89694a83107281ce0fecfcad508548ee0b1a9381d269f5bc54",
+    "conjunctive-n1000000-k11-seed1701/frozen-main-selections.json": "7860a5186be47268680adc3d5f37bd61725fa237cb844e3b9fc6d09c022cb418",
+    "conjunctive-n1000000-k11-seed1701/main-results.json": "d2af1de008d7b5b62aa4339e9b4d142c0390a61932e18b47f0e08325d6a400f8",
+    "conjunctive-n1000000-k11-seed1701/test-queries.csv": "2d30b1c197ab6c651f93339351dfce80b04cc5721a3b251070db8d60fa61ccc9",
+    "conjunctive-n1000000-k11-seed1701/resources.json": "e0650f5d75ba9fa55ab557d4873db1c369c71bd4c1215d0d3860d5c9233eb8cd",
+    "conjunctive-n1000000-k11-seed1702/dataset.json": "6d7bde36dbffea14fd9fbf6716bc1f31812b1afe43e30997b23b58c36d3c1f92",
+    "conjunctive-n1000000-k11-seed1702/ground-truth.npz": "75188f0abd3c096d2d1bf1f590295656157edbffe54cefe0947272ecd9015eb8",
+    "conjunctive-n1000000-k11-seed1702/tuning-configurations.json": "33b6a1c558eb06f9bfb0f167be0b73f7837da66f72021b0cd0069308dfbcac2f",
+    "conjunctive-n1000000-k11-seed1702/tuning-queries.csv": "722ff2f5bb63a3a4d3624332b9d0c13fb91ecf652d63bac0c355e0262bc7b3e3",
+    "conjunctive-n1000000-k11-seed1702/frozen-main-selections.json": "39ff0610ec6b26b3e327076fb2ba169d4a261ee5e815c5b307c97278dd2b7fee",
+    "conjunctive-n1000000-k11-seed1702/main-results.json": "869dc64d22d6649ac8cd383b4459c69deffc13b563c5ef09f842f4edef0a7ad9",
+    "conjunctive-n1000000-k11-seed1702/test-queries.csv": "acd2a012e0e12a1a0f4730bf5cdfbd0074af098af7eaaefc7df6ded7ae3a347b",
+    "conjunctive-n1000000-k11-seed1702/resources.json": "ac0c80952f911501e364fd78b85d48650f5e4351274f61de0af7b2885576ca51",
+    "conjunctive-n1000000-k11-seed1703/dataset.json": "84b9e2b1a3c813896dbd8e23fd08519a9a9e2a52536c406f3088ccd9a1dcb4eb",
+    "conjunctive-n1000000-k11-seed1703/ground-truth.npz": "75188f0abd3c096d2d1bf1f590295656157edbffe54cefe0947272ecd9015eb8",
+    "conjunctive-n1000000-k11-seed1703/tuning-configurations.json": "c741c769849d1b8e1a8bf5e3bd29e063ddb92a7fb2f37bb9ef9400b56a432a7b",
+    "conjunctive-n1000000-k11-seed1703/tuning-queries.csv": "91cede53430cefbf9b7ef7bc6b7470fe315af103e702bf04ca0d91317585f064",
+    "conjunctive-n1000000-k11-seed1703/frozen-main-selections.json": "ec9e6a45e40c8a4116f317f6de2906bfd765ee319b6cd4597a3f0eef3a3abd07",
+    "conjunctive-n1000000-k11-seed1703/main-results.json": "2b23507560768b7c3c9fc84a1cbd6e64dbacb945b318e78f423ab4092a1a6185",
+    "conjunctive-n1000000-k11-seed1703/test-queries.csv": "bbf2f4ba12caf6841c9f1d5c758c0bcb9ed18d87fb2cc838f72a8ec92eddb1df",
+    "conjunctive-n1000000-k11-seed1703/resources.json": "821e391ff8ce8949a0b720b30631a83e9eba3718d82bd2d54fb7a133409b0bdf"
+  },
+  "publisher_sha256": "f3b662bd9662963f4a8468d2b4c148c9d0aa883cadd1d8c3aa059091bbbd955a",
+  "notes": [
+    "Maximum is over the tested object counts and configuration shortlist only.",
+    "Every seed must meet both allocated-index and exact-NN-within-deadline requirements.",
+    "Raw curves and query scratch are excluded from the serving-index budget.",
+    "No configurations are substituted after held-out evaluation."
+  ]
+}

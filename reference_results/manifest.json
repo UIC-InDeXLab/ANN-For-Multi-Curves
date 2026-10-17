@@ -1,0 +1,115 @@
+{
+  "note": "Aggregate measurements are unchanged. Personal paths and host metadata were removed; original and released hashes identify both byte representations.",
+  "reports": {
+    "approximation": {
+      "source": "fresh-approximation-final-20261012/approximation-summary.json",
+      "original_sha256": "f224409c218d33285dbf2ae52031877dd226af1a688fb02fd7601c2233caff7f",
+      "released_sha256": "f224409c218d33285dbf2ae52031877dd226af1a688fb02fd7601c2233caff7f"
+    },
+    "comparison": {
+      "source": "fresh-synthetic-expanded-20261012/replicated-summary.json",
+      "original_sha256": "9d83482779568a327538304b44800cb9909c7456ad2418d44d459f6f30d38c62",
+      "released_sha256": "9d83482779568a327538304b44800cb9909c7456ad2418d44d459f6f30d38c62"
+    },
+    "scaling": {
+      "source": "fresh-synthetic-scaleup-20261013/replicated-summary.json",
+      "original_sha256": "5135103972eed26700ab2ee6b3c8a83615a5a50b69fc65d91ee643c975cc094a",
+      "released_sha256": "5135103972eed26700ab2ee6b3c8a83615a5a50b69fc65d91ee643c975cc094a"
+    },
+    "selectivity": {
+      "source": "fresh-selectivity-expanded-20261013/intersection-summary.json",
+      "original_sha256": "90c7c751b58b9dd9ce8eabf0892794468c8454fe78d617463d968ab9db3bea7c",
+      "released_sha256": "90c7c751b58b9dd9ce8eabf0892794468c8454fe78d617463d968ab9db3bea7c"
+    },
+    "nba": {
+      "source": "nba-full-20261012/replicated-summary.json",
+      "original_sha256": "9059c7dfaa895edb1c79c71df9aadd28544554d93ba3f523364a238fafe828d6",
+      "released_sha256": "ec9ed6cb7517ad330afa35851a4f57f6456c5711b775999600ab79be706f5378"
+    },
+    "collision": {
+      "source": "collision-20261015/summary.json",
+      "original_sha256": "1ff9f94b83caa0755af6a1ee53a0a1d2033c94e6cdffad5783463061e1e21496",
+      "released_sha256": "1ff9f94b83caa0755af6a1ee53a0a1d2033c94e6cdffad5783463061e1e21496"
+    },
+    "matched-recall": {
+      "source": "matched-recall-20261015/summary.json",
+      "original_sha256": "e71fa9241c6e86f59afbfa58d1706b538a094d730119fe04b445d0e02252f8b5",
+      "released_sha256": "e71fa9241c6e86f59afbfa58d1706b538a094d730119fe04b445d0e02252f8b5"
+    },
+    "build-time": {
+      "source": "build-time-20261015/summary.json",
+      "original_sha256": "8a05301ce7540399d3f241682324af8859df4748110b24905b0622858d0d485a",
+      "released_sha256": "8a05301ce7540399d3f241682324af8859df4748110b24905b0622858d0d485a"
+    },
+    "nba-selectivity": {
+      "source": "nba-selectivity-20261015/summary.json",
+      "original_sha256": "aeb1ef096a47cc2f55d42c7fd02049b3305775b28972cfdb5da17c7845fc2e05",
+      "released_sha256": "f8d5bac4c191d808cc7763ecbb354dc64b07fc3025da170972750d6ec177dd9f"
+    },
+    "dtw": {
+      "source": "dtw-20261014/paper/dtw-summary.json",
+      "original_sha256": "4d6dca307588f03efa2bb8f62aa04d452b2bbf6e3356290fbab0c9c20f946c96",
+      "released_sha256": "b57238ffb43d4ee57fa0fcc420212232c7af74ffd10f67e11412f0a7ec6e1a9c"
+    },
+    "frontier": {
+      "source": "frontier-20261016/summary.json",
+      "original_sha256": "19c60a3c3eb427362af8d7e0bb1dadc0000aab23f8be405acf73b5c9a0f09d78",
+      "released_sha256": "19c60a3c3eb427362af8d7e0bb1dadc0000aab23f8be405acf73b5c9a0f09d78"
+    },
+    "feasibility": {
+      "source": "fresh-feasibility-20261014",
+      "released_sha256": "b44adc5fab0eced91511288fab96429ec948ebed7ff058d8831237df830c47a3",
+      "note": "Derived from per-query records with the configured unrun k=12 exclusion where applicable"
+    },
+    "budget-256mb-1ms": {
+      "source": "feasibility-256mb-1ms-20261015",
+      "released_sha256": "65e54423b1c433fd94276844525ab7466a40d90ab20676561b6dc58314b00843",
+      "note": "Derived from per-query records with the configured unrun k=12 exclusion where applicable"
+    },
+    "budget-16gb-10ms": {
+      "source": "feasibility-16gb-10ms-20261015",
+      "released_sha256": "fff2a3bb938828c89f5db4e2ddd037dcdb842744569e38fdc95745293722ddb2",
+      "note": "Derived from per-query records with the configured unrun k=12 exclusion where applicable"
+    },
+    "budget-16gb-100ms": {
+      "source": "feasibility-16gb-100ms-20261015",
+      "released_sha256": "63959eb4877e6396caf36470fa6748928c20fbfbbab28ec1ac00cb767f208a7f",
+      "note": "Derived from per-query records with the configured unrun k=12 exclusion where applicable"
+    },
+    "dataset-seed-b-20261015": {
+      "source": "dataset-seed-b-20261015/replicated-summary.json",
+      "original_sha256": "45d470f61d4ab6864a30bb7c8b8c15e655f27dc3162acae888432ba97cc612d4",
+      "released_sha256": "45d470f61d4ab6864a30bb7c8b8c15e655f27dc3162acae888432ba97cc612d4"
+    },
+    "dataset-seed-c-20261015": {
+      "source": "dataset-seed-c-20261015/replicated-summary.json",
+      "original_sha256": "a4945cddd9ab03521f7647ad60e1f6b19d9f35a86d36705720b7f1ecce9f6948",
+      "released_sha256": "a4945cddd9ab03521f7647ad60e1f6b19d9f35a86d36705720b7f1ecce9f6948"
+    },
+    "sensitivity-m16-20261015": {
+      "source": "sensitivity-m16-20261015/replicated-summary.json",
+      "original_sha256": "9492ab0bd028a20d7149de9ef73e8b32c12e6e97f2a3faa4279f173cb123048a",
+      "released_sha256": "9492ab0bd028a20d7149de9ef73e8b32c12e6e97f2a3faa4279f173cb123048a"
+    },
+    "sensitivity-m64-20261015": {
+      "source": "sensitivity-m64-20261015/replicated-summary.json",
+      "original_sha256": "4bd518dc94189bb27ac31af3e1b791e862365b6a8ac263b5b929e8b482c05605",
+      "released_sha256": "4bd518dc94189bb27ac31af3e1b791e862365b6a8ac263b5b929e8b482c05605"
+    },
+    "sensitivity-rho025-20261015": {
+      "source": "sensitivity-rho025-20261015/replicated-summary.json",
+      "original_sha256": "12dade90a1a947e064704dba00e7c20ce141dcf8e30db20c460d4e6c30c90ebd",
+      "released_sha256": "12dade90a1a947e064704dba00e7c20ce141dcf8e30db20c460d4e6c30c90ebd"
+    },
+    "sensitivity-rho100-20261015": {
+      "source": "sensitivity-rho100-20261015/replicated-summary.json",
+      "original_sha256": "062bf4933ecd9ab1809e430d20355d66fc1e4e20daefb8ae534182efa3d627b1",
+      "released_sha256": "062bf4933ecd9ab1809e430d20355d66fc1e4e20daefb8ae534182efa3d627b1"
+    },
+    "auxiliary": {
+      "source": "per-query graph-baseline and first-hit records",
+      "released_sha256": "127c270302ac311759f2cf0588dc98b2c56ce654158519b185e65b586b627c2b",
+      "note": "Per-seed numerical aggregates computed by the original loaders; NBA first-hit records excluded"
+    }
+  }
+}
