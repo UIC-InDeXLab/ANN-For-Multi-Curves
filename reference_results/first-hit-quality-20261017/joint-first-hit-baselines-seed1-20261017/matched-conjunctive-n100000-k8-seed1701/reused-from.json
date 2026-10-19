@@ -1,0 +1,12 @@
+{
+  "source": "results/first-hit-quality-followup-20261017/matched-conjunctive-n100000-k8-seed1701",
+  "artifacts": {
+    "dataset.json": "7083657e366f038fdc06890d84cbdad0ced2deef67715f836693eee831196048",
+    "frozen-selections.json": "de745bc8183d405c607770cd52fa0e48a1a02df1e432746159ef4b513050fdcf",
+    "tuning-configurations.json": "d4407fbb0c32165d48c99e7a810b846463764ca9dd71667ce29a030832db6452",
+    "main-results.json": "97f604ba496c33c764971e766fe468e4772f6b853cae6b3c33d982992be427a0",
+    "test-queries.csv": "31cf9c0062fb3bae1a38ed07cd3c46d84a415ffd8d81d571a502051aa97775d1",
+    "excluded.json": "514f7579895468f943f6b669f0b6a007cb520c5bc086222f9a76e8fca6faa455"
+  },
+  "policy": "Reuse complete canonical families; add only the requested method aliases"
+}

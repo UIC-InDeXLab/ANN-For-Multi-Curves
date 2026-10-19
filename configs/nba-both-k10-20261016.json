@@ -1,0 +1,26 @@
+{
+ "experiment": "nba-offense-defense-k10",
+ "stage": "nba-both-teams-k10",
+ "synthetic_config": "synthetic-expanded-20261012.json",
+ "data_root": "data/nba-both-20261016",
+ "case": {
+  "id": "nba-both-k10",
+  "n": 23805,
+  "k": 10
+ },
+ "index_seeds": [
+  2301,
+  2302,
+  2303
+ ],
+ "deltas": [
+  16.0,
+  32.0,
+  64.0,
+  128.0
+ ],
+ "Lmax": 64,
+ "index_budget_bytes": 12000000000,
+ "peak_ram_cap_bytes": 48000000000,
+ "dataset_seed": 2026101223
+}

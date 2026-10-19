@@ -1,0 +1,8 @@
+{
+  "method": "4+1+1+1+1",
+  "seed": 1701,
+  "phase": "test",
+  "delta": 64.0,
+  "L": 8,
+  "completed_queries": 1000
+}

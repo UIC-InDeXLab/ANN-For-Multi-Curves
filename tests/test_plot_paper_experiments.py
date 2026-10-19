@@ -22,6 +22,27 @@ from fresh.nba_full import digest
 
 
 class CompactPaperTests(unittest.TestCase):
+    @unittest.skipUnless(shutil.which("kpsewhich"), "Paper figures use the configured fonts")
+    def test_verified_feasibility_plot_identifies_candidate_list_modes(self):
+        from fresh.plot_experiment_figures import FEASIBILITY_METHODS, feasibility
+        groups = [dict(k=4, method=method, feasible=True, all_seeds_measured=True,
+                       index_MB=100, index_MB_minmax=[95, 105],
+                       median_ms=1, median_ms_minmax=[.9, 1.1])
+                  for method in FEASIBILITY_METHODS]
+        report = dict(config=dict(cases=[dict(k=4)]), groups=groups)
+
+        def inspect_figure(fig, destination, **kwargs):
+            labels = [text.get_text() for text in fig.legends[0].get_texts()]
+            self.assertEqual(labels, ["Blocking (CL)", "Store-all (CL)", "Probe-all (CL)", "Intersection"])
+            self.assertEqual(fig.axes[0].get_title(), "(a) Verified-index feasibility")
+            for ax in fig.axes:
+                self.assertEqual(ax.get_xlabel(), "Curves per multi-curve $k$")
+            plt.close(fig)
+
+        with patch("fresh.plot_experiment_figures._save_close", side_effect=inspect_figure) as save:
+            feasibility(report, Path("verified-feasibility.pdf"))
+        save.assert_called_once()
+
     def test_legacy_star_input_is_collinear_with_alternating_endpoint_visits(self):
         import numpy as np
         stored,query,_=star_pair(2,32,2,512,1)

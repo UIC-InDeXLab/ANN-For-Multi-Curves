@@ -1,0 +1,15 @@
+{
+  "case": "conjunctive-n100000-k4",
+  "n": 100000,
+  "queries": 1000,
+  "metric": "discrete-Frechet-bottleneck",
+  "source": "5151ed26a2d258f7995d3662c9401b9dad6b76de393bfdf727903031871a8076",
+  "distance_source": "d58e8492d0cb9c6919d23d3afcca22ec08f14a33b9d6ddcf3b1273c2094bea7b",
+  "reference": "results/fresh-synthetic-expanded-20261012/conjunctive-n100000-k4-seed1701",
+  "ground_truth_sha256": "808840d50cd8e155f107b26af78b8aaf9beeba2ffa85feb4b0a3ffdaf9611fa4",
+  "dataset_sha256": "8808b8b4dd3ccf45f1532b459fc10c7d10dbdb05dbb6cb76da8c1c3c40a73316",
+  "queries_sha256": "dc35f7451c81c654190a0704134299f463071158936139e704beb94a65076866",
+  "factor": 1.25,
+  "threads": 4,
+  "evaluated_database_entries": "all"
+}

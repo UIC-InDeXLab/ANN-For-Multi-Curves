@@ -1,0 +1,116 @@
+[
+  {
+    "job": "scaleup-conjunctive-n5000000-k8-seed1701",
+    "root": "results/joint-first-hit-baselines-seed1-20261017",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "scaleup-rare-n5000000-k8-seed1701",
+    "root": "results/joint-first-hit-baselines-seed1-20261017",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "replication-b-conjunctive-n100000-k8-seed1701",
+    "root": "results/joint-first-hit-baselines-seed1-20261017",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "replication-b-rare-n100000-k8-seed1701",
+    "root": "results/joint-first-hit-baselines-seed1-20261017",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "replication-c-conjunctive-n100000-k8-seed1701",
+    "root": "results/joint-first-hit-baselines-seed1-20261017",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "replication-c-rare-n100000-k8-seed1701",
+    "root": "results/joint-first-hit-baselines-seed1-20261017",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "sensitivity-m16-conjunctive-n100000-k8-seed1701",
+    "root": "results/joint-first-hit-baselines-seed1-20261017",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "sensitivity-m16-rare-n100000-k8-seed1701",
+    "root": "results/joint-first-hit-baselines-seed1-20261017",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "sensitivity-m64-conjunctive-n100000-k8-seed1701",
+    "root": "results/joint-first-hit-baselines-seed1-20261017",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "sensitivity-m64-rare-n100000-k8-seed1701",
+    "root": "results/joint-first-hit-baselines-seed1-20261017",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "sensitivity-rho025-conjunctive-n100000-k8-seed1701",
+    "root": "results/joint-first-hit-baselines-seed1-20261017",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "sensitivity-rho025-rare-n100000-k8-seed1701",
+    "root": "results/joint-first-hit-baselines-seed1-20261017",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "sensitivity-rho100-conjunctive-n100000-k8-seed1701",
+    "root": "results/joint-first-hit-baselines-seed1-20261017",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "sensitivity-rho100-rare-n100000-k8-seed1701",
+    "root": "results/joint-first-hit-baselines-seed1-20261017",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "dtw-common-n100000-k8-seed1701",
+    "root": "results/joint-first-hit-baselines-seed1-20261017",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "dtw-rare-n100000-k8-seed1701",
+    "root": "results/joint-first-hit-baselines-seed1-20261017",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "matched-conjunctive-n100000-k8-seed1701",
+    "root": "results/joint-first-hit-baselines-seed1-20261017",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "matched-rare-n100000-k8-seed1701",
+    "root": "results/joint-first-hit-baselines-seed1-20261017",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "scaleup-conjunctive-n2000000-k8-seed1701",
+    "root": "results/joint-first-hit-baselines-seed1-20261017",
+    "status": "complete",
+    "returncode": 0
+  }
+]

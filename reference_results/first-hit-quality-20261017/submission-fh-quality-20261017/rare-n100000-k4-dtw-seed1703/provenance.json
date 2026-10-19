@@ -1,0 +1,223 @@
+{
+  "job": {
+    "id": "rare-n100000-k4-dtw-seed1703",
+    "group": "dtw",
+    "case": {
+      "id": "rare-n100000-k4-seed1703",
+      "case_id": "rare-n100000-k4",
+      "kind": "rare",
+      "n": 100000,
+      "k": 4,
+      "index_seed": 1703,
+      "frequency": 0.005,
+      "paths": 798
+    },
+    "case_id": "rare-n100000-k4",
+    "reference_root": "results/quality-references/dtw-20261014",
+    "reference_job": "rare-n100000-k4-seed1703",
+    "metric": "dtw",
+    "nba_data": "data/nba-dtw-20261014",
+    "methods": [
+      "blocking"
+    ],
+    "study": "dtw",
+    "seed": 1703,
+    "frontier": false,
+    "include_weights": false,
+    "frozen_family": {
+      "blocks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "swapped": false
+    },
+    "protocol_overrides": {
+      "quality_deltas": [
+        8,
+        16,
+        32,
+        64,
+        128,
+        256
+      ]
+    }
+  },
+  "protocol": {
+    "experiment": "empirical-DTW-extension",
+    "stage": "DTW-reranking-and-ground-truth-three-index-seeds",
+    "curve_metric": "unconstrained DTW with sum of Euclidean point costs",
+    "multicurve_metric": "minimum over curve bijections of maximum pairwise DTW",
+    "length_normalization": false,
+    "claim_scope": "empirical validation only; no transfer of Frechet collision or approximation guarantees",
+    "dataset_seed": 2026101217,
+    "synthetic_index_seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "nba_index_seeds": [
+      2301,
+      2302,
+      2303
+    ],
+    "m": 32,
+    "d": 2,
+    "rho": 0.5,
+    "target_recall": 0.9,
+    "tuning_acceptance_recall": 0.95,
+    "tuning_queries": 500,
+    "test_queries": 1000,
+    "warmup_queries": 10,
+    "planted_per_query": 1,
+    "plant_anchor_n": 100000,
+    "deltas": [
+      64.0,
+      128.0,
+      256.0
+    ],
+    "Lmax": 64,
+    "blocking_storage_multipliers": [
+      1,
+      6,
+      24,
+      96
+    ],
+    "include_balanced_in_ablation": true,
+    "nba_blockings": [
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        2,
+        2,
+        1
+      ]
+    ],
+    "nba_deltas": [
+      8.0,
+      16.0,
+      32.0,
+      64.0
+    ],
+    "blocking_main_latency_weight": 1.0,
+    "cost_memory_scale_bytes": 100000000,
+    "cost_latency_scale_seconds": 0.001,
+    "blocking_selection": "minimum tuning M/100MB + median_T/1ms among DTW tuning-qualified configurations",
+    "baseline_selection": "fastest DTW tuning-qualified configuration under the same index budget",
+    "posting_compression": "unique (fingerprint,parent) postings for every method",
+    "index_budget_bytes": 24000000000,
+    "peak_ram_cap_bytes": 48000000000,
+    "minimum_available_ram_bytes": 16000000000,
+    "query_deadline_seconds": 60,
+    "build_deadline_seconds": 1800,
+    "run_cap_seconds": 172800,
+    "monitor_interval_seconds": 1,
+    "pin_core": 20,
+    "build_threads": 48,
+    "probe_chunk": 100000,
+    "verification_chunk": 1000,
+    "c_success_factors": [
+      1.0,
+      1.01,
+      1.05,
+      1.1,
+      1.5,
+      2.0,
+      5.0
+    ],
+    "synthetic_reference": "../csexp/results/fresh-synthetic-expanded-20261012",
+    "nba_data": "../data/nba-dtw-20261014",
+    "nba_dataset_sha256": "d498127da87c195c61a7e315e78060512a1939ad376404cd4ce8058719a824fb",
+    "nba_reference_artifacts": {
+      "tune-ground-truth.npz": "ade7961571a612d5ab09fd9fe3c2dff2e299dfdd502c02b61a3bb4a18fdaacb2",
+      "test-ground-truth.npz": "62071411cfafa3609367be9722d367e996d210d3bc7347c07afd44263eb62ba9"
+    },
+    "cases": [
+      {
+        "id": "common-n100000-k4",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 4,
+        "frequency": 0.18
+      },
+      {
+        "id": "common-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "frequency": 0.18
+      },
+      {
+        "id": "rare-n100000-k4",
+        "kind": "rare",
+        "n": 100000,
+        "k": 4,
+        "frequency": 0.005
+      },
+      {
+        "id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "frequency": 0.005
+      },
+      {
+        "id": "nba-n23805-k5",
+        "kind": "nba",
+        "n": 23805,
+        "k": 5
+      }
+    ],
+    "quality_Lmax": 64,
+    "tuning_objective": "A1.25, A1.1, coverage, mean ratio, serving memory",
+    "job_timeout_seconds": 86400,
+    "quality_deltas": [
+      8,
+      16,
+      32,
+      64,
+      128,
+      256
+    ]
+  },
+  "dataset": {
+    "paths": 798,
+    "nominal_background_path_frequency": 0.005003117145873648,
+    "planted_sets": 1510,
+    "planted_fraction": 0.0151,
+    "planted_per_query": 1,
+    "dataset_seed": 2026101619,
+    "dataset_sha256": "0ffeb2c80377e8b8bcdf18c8ed385d4390414c8f47e2dd37ec41f47319ab6fa9",
+    "queries_sha256": "2493442c2108803a67c8279fa408675080205fa79ed0a36cde1c2e14c1f67fd2",
+    "raw_curve_bytes": 204800000,
+    "frechet_reference": "../csexp/results/fresh-synthetic-expanded-20261012/rare-n100000-k4-seed1701",
+    "frechet_reference_sha256": "e2b2a6668cdb4f26dc3f740156b4b32ba1c181a2d4511e34f8d179fbf709983c",
+    "initial_parent_policy": "Frechet NN is only a DTW upper-bound candidate",
+    "id": "rare-n100000-k4-seed1703",
+    "kind": "rare",
+    "n": 100000,
+    "k": 4,
+    "frequency": 0.005,
+    "case_id": "rare-n100000-k4",
+    "index_seed": 1703,
+    "metric": "unconstrained DTW with sum of Euclidean point costs",
+    "cached_ground_truth": true,
+    "mean_test_dtw_optimum": 15.742493913688573,
+    "frechet_parent_not_dtw_optimal": 0.0,
+    "exact_ground_truth_sha256": "8d6400d7979fce9043e9ae54594d68680cdfa8f5ad078032dded559a125b6f7e"
+  },
+  "metric": "dtw",
+  "index_seed": 1703,
+  "source_revision": "772364be0e07ed6ca40603e0de71bcc7a9addd10",
+  "source_sha256": "fed70788da2b721343b5a9f52ed2a773892d5616f9c16c016263bca0008b17bf",
+  "actual_numba_threads": 48,
+  "pin_core": "20",
+  "selection": "maximize tuning A1.25, then A1.1, coverage; minimize mean ratio and serving storage"
+}

@@ -1,0 +1,2273 @@
+{
+  "experiment": "missing-first-hit-distance-quality-studies",
+  "protocol": {
+    "quality_deltas": [
+      8,
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "quality_Lmax": 16,
+    "tuning_acceptance_recall": 0.95,
+    "heavy_probe_threshold": 500000,
+    "heavy_deltas": [
+      64,
+      128,
+      256
+    ],
+    "heavy_L_max": 6,
+    "index_budget_bytes": 24000000000,
+    "peak_ram_cap_bytes": 48000000000,
+    "query_deadline_seconds": 60,
+    "build_deadline_seconds": 1800,
+    "probe_chunk": 100000,
+    "monitor_interval_seconds": 1,
+    "job_timeout_seconds": 86400,
+    "build_threads": 48,
+    "pin_core": 20
+  },
+  "budget_protocol": {
+    "experiment": "first-hit-hard-budget-object-count-feasibility",
+    "stage": "first-hit-four-budgets",
+    "dataset_seed": 2026101217,
+    "index_seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "m": 32,
+    "d": 2,
+    "rho": 0.5,
+    "relevance_radius": 1.5,
+    "target_recall": 0.9,
+    "tuning_acceptance_recall": 0.95,
+    "tuning_queries": 500,
+    "test_queries": 1000,
+    "warmup_queries": 10,
+    "planted_per_query": 1,
+    "plant_anchor_n": 100000,
+    "deltas": [
+      64.0,
+      128.0,
+      256.0
+    ],
+    "blocking_storage_multipliers": [
+      1,
+      6,
+      24,
+      96
+    ],
+    "include_balanced_in_ablation": true,
+    "blocking_main_latency_weight": 1.0,
+    "ablation_latency_weights": [
+      1.0
+    ],
+    "cost_memory_scale_bytes": 100000000,
+    "cost_latency_scale_seconds": 0.001,
+    "blocking_selection": "fastest full tuning median among configurations within the hard allocated-index budget and reaching 95% exact-NN success within the per-query deadline",
+    "baseline_selection": "fastest full tuning median among configurations within the same hard allocated-index budget and reaching 95% exact-NN success within the per-query deadline",
+    "tuning_guard_note": "95% empirical tuning is a conservative selection guard for a 90% held-out exact-NN-within-deadline requirement; it is not a population-recall certificate.",
+    "posting_compression": "unique (fingerprint,parent) per table for every indexed method",
+    "peak_ram_cap_bytes": 48000000000,
+    "minimum_available_ram_bytes": 16000000000,
+    "compilation_deadline_seconds": 60,
+    "build_deadline_seconds": 1800,
+    "run_cap_seconds": 172800,
+    "monitor_interval_seconds": 1,
+    "pin_core": 20,
+    "build_threads": 48,
+    "probe_chunk": 10000,
+    "verification_chunk": 1000,
+    "feasibility_scope": "largest feasible TESTED k in 4..12; every required index seed must meet the serving-index budget and 90% exact-NN success within 10 ms; raw curves and scratch RAM are separate",
+    "cases": [
+      {
+        "id": "conjunctive-n1000000-k4",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 4,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k5",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 5,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k6",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 6,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k7",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 7,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k8",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 8,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k9",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 9,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k10",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 10,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k11",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 11,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k12",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 12,
+        "frequency": 0.18
+      }
+    ],
+    "reference_results_root": "results/quality-references/fresh-feasibility-20261014",
+    "budgets": [
+      {
+        "name": "1gb-10ms",
+        "index_budget_bytes": 1000000000,
+        "query_deadline_seconds": 0.01
+      },
+      {
+        "name": "256mb-1ms",
+        "index_budget_bytes": 256000000,
+        "query_deadline_seconds": 0.001
+      },
+      {
+        "name": "16gb-10ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.01
+      },
+      {
+        "name": "16gb-100ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.1
+      }
+    ],
+    "L_max": 8,
+    "L_grid": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8
+    ],
+    "required_success": 0.9
+  },
+  "selection_note": "Preserve the historical exact-neighbor tuning target; this is not retuning to a test-set quality threshold.",
+  "quality_note": "Report both 1.1 and 1.25 approximation success over all queries; condition ratio means and tails on returned answers.",
+  "jobs": [
+    {
+      "id": "replication-b-conjunctive-n100000-k8-seed1701",
+      "group": "replication-b",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1701",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/dataset-seed-b-20261015",
+      "reference_job": "conjunctive-n100000-k8-seed1701"
+    },
+    {
+      "id": "replication-b-conjunctive-n100000-k8-seed1702",
+      "group": "replication-b",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1702",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/dataset-seed-b-20261015",
+      "reference_job": "conjunctive-n100000-k8-seed1702"
+    },
+    {
+      "id": "replication-b-conjunctive-n100000-k8-seed1703",
+      "group": "replication-b",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1703",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/dataset-seed-b-20261015",
+      "reference_job": "conjunctive-n100000-k8-seed1703"
+    },
+    {
+      "id": "replication-b-rare-n100000-k8-seed1701",
+      "group": "replication-b",
+      "case": {
+        "id": "rare-n100000-k8-seed1701",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/dataset-seed-b-20261015",
+      "reference_job": "rare-n100000-k8-seed1701"
+    },
+    {
+      "id": "replication-b-rare-n100000-k8-seed1702",
+      "group": "replication-b",
+      "case": {
+        "id": "rare-n100000-k8-seed1702",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/dataset-seed-b-20261015",
+      "reference_job": "rare-n100000-k8-seed1702"
+    },
+    {
+      "id": "replication-b-rare-n100000-k8-seed1703",
+      "group": "replication-b",
+      "case": {
+        "id": "rare-n100000-k8-seed1703",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/dataset-seed-b-20261015",
+      "reference_job": "rare-n100000-k8-seed1703"
+    },
+    {
+      "id": "replication-c-conjunctive-n100000-k8-seed1701",
+      "group": "replication-c",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1701",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/dataset-seed-c-20261015",
+      "reference_job": "conjunctive-n100000-k8-seed1701"
+    },
+    {
+      "id": "replication-c-conjunctive-n100000-k8-seed1702",
+      "group": "replication-c",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1702",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/dataset-seed-c-20261015",
+      "reference_job": "conjunctive-n100000-k8-seed1702"
+    },
+    {
+      "id": "replication-c-conjunctive-n100000-k8-seed1703",
+      "group": "replication-c",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1703",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/dataset-seed-c-20261015",
+      "reference_job": "conjunctive-n100000-k8-seed1703"
+    },
+    {
+      "id": "replication-c-rare-n100000-k8-seed1701",
+      "group": "replication-c",
+      "case": {
+        "id": "rare-n100000-k8-seed1701",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/dataset-seed-c-20261015",
+      "reference_job": "rare-n100000-k8-seed1701"
+    },
+    {
+      "id": "replication-c-rare-n100000-k8-seed1702",
+      "group": "replication-c",
+      "case": {
+        "id": "rare-n100000-k8-seed1702",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/dataset-seed-c-20261015",
+      "reference_job": "rare-n100000-k8-seed1702"
+    },
+    {
+      "id": "replication-c-rare-n100000-k8-seed1703",
+      "group": "replication-c",
+      "case": {
+        "id": "rare-n100000-k8-seed1703",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/dataset-seed-c-20261015",
+      "reference_job": "rare-n100000-k8-seed1703"
+    },
+    {
+      "id": "sensitivity-m16-conjunctive-n100000-k8-seed1701",
+      "group": "sensitivity-m16",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1701",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-m16-20261015",
+      "reference_job": "conjunctive-n100000-k8-seed1701"
+    },
+    {
+      "id": "sensitivity-m16-conjunctive-n100000-k8-seed1702",
+      "group": "sensitivity-m16",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1702",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-m16-20261015",
+      "reference_job": "conjunctive-n100000-k8-seed1702"
+    },
+    {
+      "id": "sensitivity-m16-conjunctive-n100000-k8-seed1703",
+      "group": "sensitivity-m16",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1703",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-m16-20261015",
+      "reference_job": "conjunctive-n100000-k8-seed1703"
+    },
+    {
+      "id": "sensitivity-m16-rare-n100000-k8-seed1701",
+      "group": "sensitivity-m16",
+      "case": {
+        "id": "rare-n100000-k8-seed1701",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-m16-20261015",
+      "reference_job": "rare-n100000-k8-seed1701"
+    },
+    {
+      "id": "sensitivity-m16-rare-n100000-k8-seed1702",
+      "group": "sensitivity-m16",
+      "case": {
+        "id": "rare-n100000-k8-seed1702",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-m16-20261015",
+      "reference_job": "rare-n100000-k8-seed1702"
+    },
+    {
+      "id": "sensitivity-m16-rare-n100000-k8-seed1703",
+      "group": "sensitivity-m16",
+      "case": {
+        "id": "rare-n100000-k8-seed1703",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-m16-20261015",
+      "reference_job": "rare-n100000-k8-seed1703"
+    },
+    {
+      "id": "sensitivity-m64-conjunctive-n100000-k8-seed1701",
+      "group": "sensitivity-m64",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1701",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-m64-20261015",
+      "reference_job": "conjunctive-n100000-k8-seed1701"
+    },
+    {
+      "id": "sensitivity-m64-conjunctive-n100000-k8-seed1702",
+      "group": "sensitivity-m64",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1702",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-m64-20261015",
+      "reference_job": "conjunctive-n100000-k8-seed1702"
+    },
+    {
+      "id": "sensitivity-m64-conjunctive-n100000-k8-seed1703",
+      "group": "sensitivity-m64",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1703",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-m64-20261015",
+      "reference_job": "conjunctive-n100000-k8-seed1703"
+    },
+    {
+      "id": "sensitivity-m64-rare-n100000-k8-seed1701",
+      "group": "sensitivity-m64",
+      "case": {
+        "id": "rare-n100000-k8-seed1701",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-m64-20261015",
+      "reference_job": "rare-n100000-k8-seed1701"
+    },
+    {
+      "id": "sensitivity-m64-rare-n100000-k8-seed1702",
+      "group": "sensitivity-m64",
+      "case": {
+        "id": "rare-n100000-k8-seed1702",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-m64-20261015",
+      "reference_job": "rare-n100000-k8-seed1702"
+    },
+    {
+      "id": "sensitivity-m64-rare-n100000-k8-seed1703",
+      "group": "sensitivity-m64",
+      "case": {
+        "id": "rare-n100000-k8-seed1703",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-m64-20261015",
+      "reference_job": "rare-n100000-k8-seed1703"
+    },
+    {
+      "id": "sensitivity-rho025-conjunctive-n100000-k8-seed1701",
+      "group": "sensitivity-rho025",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1701",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-rho025-20261015",
+      "reference_job": "conjunctive-n100000-k8-seed1701"
+    },
+    {
+      "id": "sensitivity-rho025-conjunctive-n100000-k8-seed1702",
+      "group": "sensitivity-rho025",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1702",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-rho025-20261015",
+      "reference_job": "conjunctive-n100000-k8-seed1702"
+    },
+    {
+      "id": "sensitivity-rho025-conjunctive-n100000-k8-seed1703",
+      "group": "sensitivity-rho025",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1703",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-rho025-20261015",
+      "reference_job": "conjunctive-n100000-k8-seed1703"
+    },
+    {
+      "id": "sensitivity-rho025-rare-n100000-k8-seed1701",
+      "group": "sensitivity-rho025",
+      "case": {
+        "id": "rare-n100000-k8-seed1701",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-rho025-20261015",
+      "reference_job": "rare-n100000-k8-seed1701"
+    },
+    {
+      "id": "sensitivity-rho025-rare-n100000-k8-seed1702",
+      "group": "sensitivity-rho025",
+      "case": {
+        "id": "rare-n100000-k8-seed1702",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-rho025-20261015",
+      "reference_job": "rare-n100000-k8-seed1702"
+    },
+    {
+      "id": "sensitivity-rho025-rare-n100000-k8-seed1703",
+      "group": "sensitivity-rho025",
+      "case": {
+        "id": "rare-n100000-k8-seed1703",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-rho025-20261015",
+      "reference_job": "rare-n100000-k8-seed1703"
+    },
+    {
+      "id": "sensitivity-rho100-conjunctive-n100000-k8-seed1701",
+      "group": "sensitivity-rho100",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1701",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-rho100-20261015",
+      "reference_job": "conjunctive-n100000-k8-seed1701"
+    },
+    {
+      "id": "sensitivity-rho100-conjunctive-n100000-k8-seed1702",
+      "group": "sensitivity-rho100",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1702",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-rho100-20261015",
+      "reference_job": "conjunctive-n100000-k8-seed1702"
+    },
+    {
+      "id": "sensitivity-rho100-conjunctive-n100000-k8-seed1703",
+      "group": "sensitivity-rho100",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1703",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-rho100-20261015",
+      "reference_job": "conjunctive-n100000-k8-seed1703"
+    },
+    {
+      "id": "sensitivity-rho100-rare-n100000-k8-seed1701",
+      "group": "sensitivity-rho100",
+      "case": {
+        "id": "rare-n100000-k8-seed1701",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-rho100-20261015",
+      "reference_job": "rare-n100000-k8-seed1701"
+    },
+    {
+      "id": "sensitivity-rho100-rare-n100000-k8-seed1702",
+      "group": "sensitivity-rho100",
+      "case": {
+        "id": "rare-n100000-k8-seed1702",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-rho100-20261015",
+      "reference_job": "rare-n100000-k8-seed1702"
+    },
+    {
+      "id": "sensitivity-rho100-rare-n100000-k8-seed1703",
+      "group": "sensitivity-rho100",
+      "case": {
+        "id": "rare-n100000-k8-seed1703",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/sensitivity-rho100-20261015",
+      "reference_job": "rare-n100000-k8-seed1703"
+    },
+    {
+      "id": "dtw-common-n100000-k4-seed1701",
+      "group": "dtw",
+      "case": {
+        "id": "common-n100000-k4-seed1701",
+        "case_id": "common-n100000-k4",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 4,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 21
+      },
+      "case_id": "common-n100000-k4",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "common-n100000-k4-seed1701",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014"
+    },
+    {
+      "id": "dtw-common-n100000-k4-seed1702",
+      "group": "dtw",
+      "case": {
+        "id": "common-n100000-k4-seed1702",
+        "case_id": "common-n100000-k4",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 4,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 21
+      },
+      "case_id": "common-n100000-k4",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "common-n100000-k4-seed1702",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014"
+    },
+    {
+      "id": "dtw-common-n100000-k4-seed1703",
+      "group": "dtw",
+      "case": {
+        "id": "common-n100000-k4-seed1703",
+        "case_id": "common-n100000-k4",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 4,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 21
+      },
+      "case_id": "common-n100000-k4",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "common-n100000-k4-seed1703",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014"
+    },
+    {
+      "id": "dtw-common-n100000-k8-seed1701",
+      "group": "dtw",
+      "case": {
+        "id": "common-n100000-k8-seed1701",
+        "case_id": "common-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "common-n100000-k8",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "common-n100000-k8-seed1701",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014"
+    },
+    {
+      "id": "dtw-common-n100000-k8-seed1702",
+      "group": "dtw",
+      "case": {
+        "id": "common-n100000-k8-seed1702",
+        "case_id": "common-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "common-n100000-k8",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "common-n100000-k8-seed1702",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014"
+    },
+    {
+      "id": "dtw-common-n100000-k8-seed1703",
+      "group": "dtw",
+      "case": {
+        "id": "common-n100000-k8-seed1703",
+        "case_id": "common-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "common-n100000-k8",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "common-n100000-k8-seed1703",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014"
+    },
+    {
+      "id": "dtw-nba-n23805-k5-seed2301",
+      "group": "dtw",
+      "case": {
+        "id": "nba-n23805-k5-seed2301",
+        "case_id": "nba-n23805-k5",
+        "kind": "nba",
+        "n": 23805,
+        "k": 5,
+        "index_seed": 2301
+      },
+      "case_id": "nba-n23805-k5",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "nba-n23805-k5-seed2301",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014",
+      "protocol_overrides": {
+        "quality_deltas": [
+          2,
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      }
+    },
+    {
+      "id": "dtw-nba-n23805-k5-seed2302",
+      "group": "dtw",
+      "case": {
+        "id": "nba-n23805-k5-seed2302",
+        "case_id": "nba-n23805-k5",
+        "kind": "nba",
+        "n": 23805,
+        "k": 5,
+        "index_seed": 2302
+      },
+      "case_id": "nba-n23805-k5",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "nba-n23805-k5-seed2302",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014",
+      "protocol_overrides": {
+        "quality_deltas": [
+          2,
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      }
+    },
+    {
+      "id": "dtw-nba-n23805-k5-seed2303",
+      "group": "dtw",
+      "case": {
+        "id": "nba-n23805-k5-seed2303",
+        "case_id": "nba-n23805-k5",
+        "kind": "nba",
+        "n": 23805,
+        "k": 5,
+        "index_seed": 2303
+      },
+      "case_id": "nba-n23805-k5",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "nba-n23805-k5-seed2303",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014",
+      "protocol_overrides": {
+        "quality_deltas": [
+          2,
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      }
+    },
+    {
+      "id": "dtw-rare-n100000-k4-seed1701",
+      "group": "dtw",
+      "case": {
+        "id": "rare-n100000-k4-seed1701",
+        "case_id": "rare-n100000-k4",
+        "kind": "rare",
+        "n": 100000,
+        "k": 4,
+        "index_seed": 1701,
+        "frequency": 0.005,
+        "paths": 798
+      },
+      "case_id": "rare-n100000-k4",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "rare-n100000-k4-seed1701",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014"
+    },
+    {
+      "id": "dtw-rare-n100000-k4-seed1702",
+      "group": "dtw",
+      "case": {
+        "id": "rare-n100000-k4-seed1702",
+        "case_id": "rare-n100000-k4",
+        "kind": "rare",
+        "n": 100000,
+        "k": 4,
+        "index_seed": 1702,
+        "frequency": 0.005,
+        "paths": 798
+      },
+      "case_id": "rare-n100000-k4",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "rare-n100000-k4-seed1702",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014"
+    },
+    {
+      "id": "dtw-rare-n100000-k4-seed1703",
+      "group": "dtw",
+      "case": {
+        "id": "rare-n100000-k4-seed1703",
+        "case_id": "rare-n100000-k4",
+        "kind": "rare",
+        "n": 100000,
+        "k": 4,
+        "index_seed": 1703,
+        "frequency": 0.005,
+        "paths": 798
+      },
+      "case_id": "rare-n100000-k4",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "rare-n100000-k4-seed1703",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014"
+    },
+    {
+      "id": "dtw-rare-n100000-k8-seed1701",
+      "group": "dtw",
+      "case": {
+        "id": "rare-n100000-k8-seed1701",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "rare-n100000-k8-seed1701",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014"
+    },
+    {
+      "id": "dtw-rare-n100000-k8-seed1702",
+      "group": "dtw",
+      "case": {
+        "id": "rare-n100000-k8-seed1702",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "rare-n100000-k8-seed1702",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014"
+    },
+    {
+      "id": "dtw-rare-n100000-k8-seed1703",
+      "group": "dtw",
+      "case": {
+        "id": "rare-n100000-k8-seed1703",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "rare-n100000-k8-seed1703",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014"
+    },
+    {
+      "id": "lambda-conjunctive-n100000-k8-seed1701",
+      "group": "lambda",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1701",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "conjunctive-n100000-k8-seed1701",
+      "include_weights": true
+    },
+    {
+      "id": "lambda-conjunctive-n100000-k8-seed1702",
+      "group": "lambda",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1702",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "conjunctive-n100000-k8-seed1702",
+      "include_weights": true
+    },
+    {
+      "id": "lambda-conjunctive-n100000-k8-seed1703",
+      "group": "lambda",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1703",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "conjunctive-n100000-k8-seed1703",
+      "include_weights": true
+    },
+    {
+      "id": "lambda-rare-n100000-k8-seed1701",
+      "group": "lambda",
+      "case": {
+        "id": "rare-n100000-k8-seed1701",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "rare-n100000-k8-seed1701",
+      "include_weights": true
+    },
+    {
+      "id": "lambda-rare-n100000-k8-seed1702",
+      "group": "lambda",
+      "case": {
+        "id": "rare-n100000-k8-seed1702",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "rare-n100000-k8-seed1702",
+      "include_weights": true
+    },
+    {
+      "id": "lambda-rare-n100000-k8-seed1703",
+      "group": "lambda",
+      "case": {
+        "id": "rare-n100000-k8-seed1703",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "rare-n100000-k8-seed1703",
+      "include_weights": true
+    },
+    {
+      "id": "lambda-repeated-n100000-k8-seed1701",
+      "group": "lambda",
+      "case": {
+        "id": "repeated-n100000-k8-seed1701",
+        "case_id": "repeated-n100000-k8",
+        "kind": "repeated",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "paths": 4
+      },
+      "case_id": "repeated-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "repeated-n100000-k8-seed1701",
+      "include_weights": true
+    },
+    {
+      "id": "lambda-repeated-n100000-k8-seed1702",
+      "group": "lambda",
+      "case": {
+        "id": "repeated-n100000-k8-seed1702",
+        "case_id": "repeated-n100000-k8",
+        "kind": "repeated",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "paths": 4
+      },
+      "case_id": "repeated-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "repeated-n100000-k8-seed1702",
+      "include_weights": true
+    },
+    {
+      "id": "lambda-repeated-n100000-k8-seed1703",
+      "group": "lambda",
+      "case": {
+        "id": "repeated-n100000-k8-seed1703",
+        "case_id": "repeated-n100000-k8",
+        "kind": "repeated",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "paths": 4
+      },
+      "case_id": "repeated-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "repeated-n100000-k8-seed1703",
+      "include_weights": true
+    },
+    {
+      "id": "matched-conjunctive-n100000-k8-seed1701",
+      "group": "matched",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1701",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "conjunctive-n100000-k8-seed1701",
+      "table_counts": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        12,
+        16,
+        24,
+        32,
+        48,
+        64
+      ]
+    },
+    {
+      "id": "matched-conjunctive-n100000-k8-seed1702",
+      "group": "matched",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1702",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "conjunctive-n100000-k8-seed1702",
+      "table_counts": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        12,
+        16,
+        24,
+        32,
+        48,
+        64
+      ]
+    },
+    {
+      "id": "matched-conjunctive-n100000-k8-seed1703",
+      "group": "matched",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1703",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "conjunctive-n100000-k8-seed1703",
+      "table_counts": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        12,
+        16,
+        24,
+        32,
+        48,
+        64
+      ]
+    },
+    {
+      "id": "matched-rare-n100000-k8-seed1701",
+      "group": "matched",
+      "case": {
+        "id": "rare-n100000-k8-seed1701",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "rare-n100000-k8-seed1701",
+      "table_counts": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        12,
+        16,
+        24,
+        32,
+        48,
+        64
+      ]
+    },
+    {
+      "id": "matched-rare-n100000-k8-seed1702",
+      "group": "matched",
+      "case": {
+        "id": "rare-n100000-k8-seed1702",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "rare-n100000-k8-seed1702",
+      "table_counts": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        12,
+        16,
+        24,
+        32,
+        48,
+        64
+      ]
+    },
+    {
+      "id": "matched-rare-n100000-k8-seed1703",
+      "group": "matched",
+      "case": {
+        "id": "rare-n100000-k8-seed1703",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "rare-n100000-k8-seed1703",
+      "table_counts": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        12,
+        16,
+        24,
+        32,
+        48,
+        64
+      ]
+    },
+    {
+      "id": "scaleup-conjunctive-n2000000-k8-seed1701",
+      "group": "scaleup",
+      "case": {
+        "id": "conjunctive-n2000000-k8-seed1701",
+        "case_id": "conjunctive-n2000000-k8",
+        "kind": "conjunctive",
+        "n": 2000000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n2000000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-scaleup-20261013",
+      "reference_job": "conjunctive-n2000000-k8-seed1701",
+      "include_weights": true,
+      "protocol_overrides": {
+        "quality_deltas": [
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "scaleup-conjunctive-n2000000-k8-seed1702",
+      "group": "scaleup",
+      "case": {
+        "id": "conjunctive-n2000000-k8-seed1702",
+        "case_id": "conjunctive-n2000000-k8",
+        "kind": "conjunctive",
+        "n": 2000000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n2000000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-scaleup-20261013",
+      "reference_job": "conjunctive-n2000000-k8-seed1702",
+      "include_weights": true,
+      "protocol_overrides": {
+        "quality_deltas": [
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "scaleup-conjunctive-n2000000-k8-seed1703",
+      "group": "scaleup",
+      "case": {
+        "id": "conjunctive-n2000000-k8-seed1703",
+        "case_id": "conjunctive-n2000000-k8",
+        "kind": "conjunctive",
+        "n": 2000000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n2000000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-scaleup-20261013",
+      "reference_job": "conjunctive-n2000000-k8-seed1703",
+      "include_weights": true,
+      "protocol_overrides": {
+        "quality_deltas": [
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "scaleup-conjunctive-n5000000-k8-seed1701",
+      "group": "scaleup",
+      "case": {
+        "id": "conjunctive-n5000000-k8-seed1701",
+        "case_id": "conjunctive-n5000000-k8",
+        "kind": "conjunctive",
+        "n": 5000000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n5000000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-scaleup-20261013",
+      "reference_job": "conjunctive-n5000000-k8-seed1701",
+      "include_weights": true,
+      "protocol_overrides": {
+        "quality_deltas": [
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "scaleup-conjunctive-n5000000-k8-seed1702",
+      "group": "scaleup",
+      "case": {
+        "id": "conjunctive-n5000000-k8-seed1702",
+        "case_id": "conjunctive-n5000000-k8",
+        "kind": "conjunctive",
+        "n": 5000000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n5000000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-scaleup-20261013",
+      "reference_job": "conjunctive-n5000000-k8-seed1702",
+      "include_weights": true,
+      "protocol_overrides": {
+        "quality_deltas": [
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "scaleup-conjunctive-n5000000-k8-seed1703",
+      "group": "scaleup",
+      "case": {
+        "id": "conjunctive-n5000000-k8-seed1703",
+        "case_id": "conjunctive-n5000000-k8",
+        "kind": "conjunctive",
+        "n": 5000000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n5000000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-scaleup-20261013",
+      "reference_job": "conjunctive-n5000000-k8-seed1703",
+      "include_weights": true,
+      "protocol_overrides": {
+        "quality_deltas": [
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "scaleup-rare-n5000000-k8-seed1701",
+      "group": "scaleup",
+      "case": {
+        "id": "rare-n5000000-k8-seed1701",
+        "case_id": "rare-n5000000-k8",
+        "kind": "rare",
+        "n": 5000000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n5000000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-scaleup-20261013",
+      "reference_job": "rare-n5000000-k8-seed1701",
+      "include_weights": true,
+      "protocol_overrides": {
+        "quality_deltas": [
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "scaleup-rare-n5000000-k8-seed1702",
+      "group": "scaleup",
+      "case": {
+        "id": "rare-n5000000-k8-seed1702",
+        "case_id": "rare-n5000000-k8",
+        "kind": "rare",
+        "n": 5000000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n5000000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-scaleup-20261013",
+      "reference_job": "rare-n5000000-k8-seed1702",
+      "include_weights": true,
+      "protocol_overrides": {
+        "quality_deltas": [
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "scaleup-rare-n5000000-k8-seed1703",
+      "group": "scaleup",
+      "case": {
+        "id": "rare-n5000000-k8-seed1703",
+        "case_id": "rare-n5000000-k8",
+        "kind": "rare",
+        "n": 5000000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n5000000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-scaleup-20261013",
+      "reference_job": "rare-n5000000-k8-seed1703",
+      "include_weights": true,
+      "protocol_overrides": {
+        "quality_deltas": [
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "frontier-conjunctive-n100000-k8-seed1701",
+      "group": "frontier",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1701",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "conjunctive-n100000-k8-seed1701",
+      "frontier": true
+    },
+    {
+      "id": "frontier-conjunctive-n100000-k8-seed1702",
+      "group": "frontier",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1702",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "conjunctive-n100000-k8-seed1702",
+      "frontier": true
+    },
+    {
+      "id": "frontier-conjunctive-n100000-k8-seed1703",
+      "group": "frontier",
+      "case": {
+        "id": "conjunctive-n100000-k8-seed1703",
+        "case_id": "conjunctive-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "conjunctive-n100000-k8-seed1703",
+      "frontier": true
+    },
+    {
+      "id": "frontier-rare-n100000-k8-seed1701",
+      "group": "frontier",
+      "case": {
+        "id": "rare-n100000-k8-seed1701",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "rare-n100000-k8-seed1701",
+      "frontier": true
+    },
+    {
+      "id": "frontier-rare-n100000-k8-seed1702",
+      "group": "frontier",
+      "case": {
+        "id": "rare-n100000-k8-seed1702",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "rare-n100000-k8-seed1702",
+      "frontier": true
+    },
+    {
+      "id": "frontier-rare-n100000-k8-seed1703",
+      "group": "frontier",
+      "case": {
+        "id": "rare-n100000-k8-seed1703",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/fresh-synthetic-expanded-20261012",
+      "reference_job": "rare-n100000-k8-seed1703",
+      "frontier": true
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k10-seed1701",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k10-seed1701",
+        "case_id": "conjunctive-n1000000-k10",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 10,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 51
+      },
+      "case_id": "conjunctive-n1000000-k10",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k10-seed1701",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k10-seed1702",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k10-seed1702",
+        "case_id": "conjunctive-n1000000-k10",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 10,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 51
+      },
+      "case_id": "conjunctive-n1000000-k10",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k10-seed1702",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k10-seed1703",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k10-seed1703",
+        "case_id": "conjunctive-n1000000-k10",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 10,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 51
+      },
+      "case_id": "conjunctive-n1000000-k10",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k10-seed1703",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k11-seed1701",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k11-seed1701",
+        "case_id": "conjunctive-n1000000-k11",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 11,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 56
+      },
+      "case_id": "conjunctive-n1000000-k11",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k11-seed1701",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k11-seed1702",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k11-seed1702",
+        "case_id": "conjunctive-n1000000-k11",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 11,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 56
+      },
+      "case_id": "conjunctive-n1000000-k11",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k11-seed1702",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k11-seed1703",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k11-seed1703",
+        "case_id": "conjunctive-n1000000-k11",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 11,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 56
+      },
+      "case_id": "conjunctive-n1000000-k11",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k11-seed1703",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k12-seed1701",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k12-seed1701",
+        "case_id": "conjunctive-n1000000-k12",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 12,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 61
+      },
+      "case_id": "conjunctive-n1000000-k12",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k12-seed1701",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k12-seed1702",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k12-seed1702",
+        "case_id": "conjunctive-n1000000-k12",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 12,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 61
+      },
+      "case_id": "conjunctive-n1000000-k12",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k12-seed1702",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k12-seed1703",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k12-seed1703",
+        "case_id": "conjunctive-n1000000-k12",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 12,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 61
+      },
+      "case_id": "conjunctive-n1000000-k12",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k12-seed1703",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k4-seed1701",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k4-seed1701",
+        "case_id": "conjunctive-n1000000-k4",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 4,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 21
+      },
+      "case_id": "conjunctive-n1000000-k4",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k4-seed1701",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k4-seed1702",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k4-seed1702",
+        "case_id": "conjunctive-n1000000-k4",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 4,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 21
+      },
+      "case_id": "conjunctive-n1000000-k4",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k4-seed1702",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k4-seed1703",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k4-seed1703",
+        "case_id": "conjunctive-n1000000-k4",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 4,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 21
+      },
+      "case_id": "conjunctive-n1000000-k4",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k4-seed1703",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k5-seed1701",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k5-seed1701",
+        "case_id": "conjunctive-n1000000-k5",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 5,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 26
+      },
+      "case_id": "conjunctive-n1000000-k5",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k5-seed1701",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k5-seed1702",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k5-seed1702",
+        "case_id": "conjunctive-n1000000-k5",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 5,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 26
+      },
+      "case_id": "conjunctive-n1000000-k5",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k5-seed1702",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k5-seed1703",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k5-seed1703",
+        "case_id": "conjunctive-n1000000-k5",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 5,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 26
+      },
+      "case_id": "conjunctive-n1000000-k5",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k5-seed1703",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k6-seed1701",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k6-seed1701",
+        "case_id": "conjunctive-n1000000-k6",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 6,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 31
+      },
+      "case_id": "conjunctive-n1000000-k6",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k6-seed1701",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k6-seed1702",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k6-seed1702",
+        "case_id": "conjunctive-n1000000-k6",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 6,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 31
+      },
+      "case_id": "conjunctive-n1000000-k6",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k6-seed1702",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k6-seed1703",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k6-seed1703",
+        "case_id": "conjunctive-n1000000-k6",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 6,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 31
+      },
+      "case_id": "conjunctive-n1000000-k6",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k6-seed1703",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k7-seed1701",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k7-seed1701",
+        "case_id": "conjunctive-n1000000-k7",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 7,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 36
+      },
+      "case_id": "conjunctive-n1000000-k7",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k7-seed1701",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k7-seed1702",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k7-seed1702",
+        "case_id": "conjunctive-n1000000-k7",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 7,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 36
+      },
+      "case_id": "conjunctive-n1000000-k7",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k7-seed1702",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k7-seed1703",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k7-seed1703",
+        "case_id": "conjunctive-n1000000-k7",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 7,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 36
+      },
+      "case_id": "conjunctive-n1000000-k7",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k7-seed1703",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k8-seed1701",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k8-seed1701",
+        "case_id": "conjunctive-n1000000-k8",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n1000000-k8",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k8-seed1701",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k8-seed1702",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k8-seed1702",
+        "case_id": "conjunctive-n1000000-k8",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n1000000-k8",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k8-seed1702",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k8-seed1703",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k8-seed1703",
+        "case_id": "conjunctive-n1000000-k8",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "conjunctive-n1000000-k8",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k8-seed1703",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k9-seed1701",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k9-seed1701",
+        "case_id": "conjunctive-n1000000-k9",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 9,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 46
+      },
+      "case_id": "conjunctive-n1000000-k9",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k9-seed1701",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k9-seed1702",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k9-seed1702",
+        "case_id": "conjunctive-n1000000-k9",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 9,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 46
+      },
+      "case_id": "conjunctive-n1000000-k9",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k9-seed1702",
+      "study_type": "budget"
+    },
+    {
+      "id": "budget-conjunctive-n1000000-k9-seed1703",
+      "group": "budget",
+      "case": {
+        "id": "conjunctive-n1000000-k9-seed1703",
+        "case_id": "conjunctive-n1000000-k9",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 9,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 46
+      },
+      "case_id": "conjunctive-n1000000-k9",
+      "reference_root": "results/quality-references/fresh-feasibility-20261014",
+      "reference_job": "conjunctive-n1000000-k9-seed1703",
+      "study_type": "budget"
+    }
+  ]
+}

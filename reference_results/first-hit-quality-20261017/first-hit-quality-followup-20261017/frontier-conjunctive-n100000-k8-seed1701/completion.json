@@ -1,0 +1,12 @@
+{
+  "completed": 1792299887.5163746,
+  "job": "frontier-conjunctive-n100000-k8-seed1701",
+  "artifacts": {
+    "test-queries.csv": "f71bc6efef07e6a68f345b22d50fb82cfbbb535ead8e587f5486d4cfa230767b",
+    "frozen-selections.json": "ffefbfefd9d45ac49bd290f67162a93d50564705091794d8764a26fea7756622",
+    "excluded.json": "f1d2e7725bf7f735a1b12f20d15dec958f127d1220a37d108c2b29c71bfb9d6c",
+    "main-results.json": "65d4e7ec140f6c8b8bb10fbb4d5d2f64de287ceb6b86257abcc53cef846961ff"
+  },
+  "source_revision": "4362384d5b703046217dfa384a4de3b64e88ea50",
+  "plan_sha256": "2a7c9802da4fc4d9524c4c66cf1cc21ce6d585c03def2c2b142b6daa21b13833"
+}

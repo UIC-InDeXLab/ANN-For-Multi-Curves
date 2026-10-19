@@ -1,0 +1,8 @@
+{
+  "case": "frequency-650-n100000-k8",
+  "database_entries_processed": 100000,
+  "database_entries_total": 100000,
+  "elapsed_seconds": 57.503493216994684,
+  "phase": "counting",
+  "queries": 1000
+}

@@ -1,0 +1,12 @@
+{
+  "source": "results/first-hit-quality-followup-20261017/dtw-rare-n100000-k8-seed1701",
+  "artifacts": {
+    "dataset.json": "ad320fb54de0570e32b3ad533a4dfb9b455dee393870a9e1fabedc0cc4defbe3",
+    "frozen-selections.json": "5f74b956210aec0949c2650828f44d0333c07107b8b4815d9dd554cd7c0e1f56",
+    "tuning-configurations.json": "a49d339e94b63f3faa35c5d5872a028d4f5da8ec3e7a50739206d92eea64ddde",
+    "main-results.json": "c6fd4cc300f42346a6c7702e05cc1ea508a7edbfcfc6148521bf7b8bcbba4767",
+    "test-queries.csv": "c95ef29a731cf65c6ff031f4047f763ae041df1abfee7b9a9923df6836a18e4d",
+    "excluded.json": "8ac4e39aef42aaea099b0cc4f458849779623ad44baca14215083591c59594a5"
+  },
+  "policy": "Reuse complete canonical families; add only the requested method aliases"
+}

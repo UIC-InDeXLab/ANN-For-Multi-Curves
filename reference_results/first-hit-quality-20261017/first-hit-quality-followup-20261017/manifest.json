@@ -1,0 +1,32 @@
+{
+  "commit": "5275e358be87c05890e89952f9676d1a5a859137",
+  "plan_sha256": "e990d67cf99011c66ca34c3efa6839b451491eccd16d6f55d8d48efba2144c21",
+  "protocol": {
+    "quality_deltas": [
+      8,
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "quality_Lmax": 16,
+    "tuning_acceptance_recall": 0.95,
+    "heavy_probe_threshold": 500000,
+    "heavy_deltas": [
+      64,
+      128,
+      256
+    ],
+    "heavy_L_max": 6,
+    "index_budget_bytes": 24000000000,
+    "peak_ram_cap_bytes": 48000000000,
+    "query_deadline_seconds": 60,
+    "build_deadline_seconds": 1800,
+    "probe_chunk": 100000,
+    "monitor_interval_seconds": 1,
+    "job_timeout_seconds": 86400,
+    "build_threads": 48,
+    "pin_core": 20
+  }
+}

@@ -1,0 +1,127 @@
+[
+  {
+    "job": "replication-b-conjunctive-n100000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "replication-b-rare-n100000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "replication-c-conjunctive-n100000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "replication-c-rare-n100000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "sensitivity-m16-conjunctive-n100000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "sensitivity-m16-rare-n100000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "sensitivity-m64-conjunctive-n100000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "sensitivity-m64-rare-n100000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "sensitivity-rho025-conjunctive-n100000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "sensitivity-rho025-rare-n100000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "sensitivity-rho100-conjunctive-n100000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "sensitivity-rho100-rare-n100000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "dtw-common-n100000-k4-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "dtw-common-n100000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "dtw-nba-n23805-k5-seed2301",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "dtw-rare-n100000-k4-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "dtw-rare-n100000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "lambda-conjunctive-n100000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "lambda-rare-n100000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "lambda-repeated-n100000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "matched-conjunctive-n100000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "matched-rare-n100000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "scaleup-conjunctive-n2000000-k8-seed1701",
+    "status": "complete",
+    "reused": true
+  },
+  {
+    "job": "scaleup-conjunctive-n5000000-k8-seed1701",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "scaleup-rare-n5000000-k8-seed1701",
+    "status": "complete",
+    "returncode": 0
+  }
+]

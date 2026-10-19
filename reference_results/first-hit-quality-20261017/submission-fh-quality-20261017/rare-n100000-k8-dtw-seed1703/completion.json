@@ -1,0 +1,15 @@
+{
+  "job": "rare-n100000-k8-dtw-seed1703",
+  "source_revision": "772364be0e07ed6ca40603e0de71bcc7a9addd10",
+  "completed": 1792302690.1402142,
+  "artifacts": {
+    "provenance.json": "085d51a2924ef172183c57c4107f9cad3a894248f1ad7aa3756b156bff642f0e",
+    "dataset.json": "2a88ebbf7aebac00f320d0a0e97302b88f5ff38291249b79531fd7551e1e758f",
+    "tuning-configurations.json": "9896768a8a78678faf5eaba9975ba180bd1683da15f33abc21afd6433ab05330",
+    "tuning-queries.csv": "dda4ddaebeb821357b01563849280068770fd4e3c4c378ce461b667b17dca63f",
+    "frozen-selections.json": "920cbbd2eda62d0ea74094a2e0940a9161eeb0018e2c6c68089a047a1c4d6b9d",
+    "selection-frozen-before-test.json": "5be314af633ea56a814ac98cf277eb87f790fb55986b9934c88bf4afcc82bce0",
+    "main-results.json": "86ce9e5bef5bbfb545eb24f8e3ef6373bb2845d8fae3ecb5651dee998bb8b123",
+    "test-queries.csv": "8dd399aebf0daa284a2ca8ed1f82c1b742287e16377c60ef7772806a97023595"
+  }
+}

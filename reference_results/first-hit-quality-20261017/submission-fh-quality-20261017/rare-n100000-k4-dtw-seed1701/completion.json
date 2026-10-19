@@ -1,0 +1,15 @@
+{
+  "job": "rare-n100000-k4-dtw-seed1701",
+  "source_revision": "772364be0e07ed6ca40603e0de71bcc7a9addd10",
+  "completed": 1792302076.4742668,
+  "artifacts": {
+    "provenance.json": "589613dd08652f97ab11879782406d4727b0bab663fb2ec74b6b8a6a8a9daf03",
+    "dataset.json": "b20e3a716b7a3188eab50b4a17add0802967b8875eff7c8412bd3b2f794de7d4",
+    "tuning-configurations.json": "4bc28a103f4d03fdfc9ff2436c0704b21fe68d68f2a9016e4dbf85bb6ae8fccf",
+    "tuning-queries.csv": "d126fbc95094818f9eb18bfb34e53d86308cf8eb5731f45101597473555d3219",
+    "frozen-selections.json": "b70831a69f92564590afe79afa00724703e137b9d24b6f7c4a924dff68624d42",
+    "selection-frozen-before-test.json": "63dbe96b264a25924c409c0a9eb522b5eefa003d967dff91cc958056ecbcc169",
+    "main-results.json": "4c133b131eac56f3bb98b4d0387a1137eb734c599348f37f9388615cc0259c2f",
+    "test-queries.csv": "29487b8f04f1057fbbb661f7ed11fcade02be92b97d7fde9b22ddab08a2abc70"
+  }
+}

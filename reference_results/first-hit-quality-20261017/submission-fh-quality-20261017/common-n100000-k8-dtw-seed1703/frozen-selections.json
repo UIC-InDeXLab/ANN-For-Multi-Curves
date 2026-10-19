@@ -1,0 +1,24 @@
+{
+  "blocking": {
+    "family": "3+1+1+1+1+1",
+    "blocks": [
+      3,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "blocking"
+    ],
+    "delta": 64.0,
+    "L": 22,
+    "index_bytes": 166958888,
+    "tuning_a125": 1.0,
+    "tuning_a110": 1.0,
+    "tuning_coverage": 1.0,
+    "tuning_mean_ratio": 1.0
+  }
+}

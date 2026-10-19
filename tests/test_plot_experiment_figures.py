@@ -380,17 +380,17 @@ def test_feasibility_layout_and_y_data(capture_plot, feasibility_report):
         FULL_WIDTH - FEASIBILITY_WIDTH_NUDGE, FEASIBILITY_HEIGHT
     )
     assert [ax.get_title() for ax in fig.axes] == [
-        "(a) Feasible in all seeds",
+        "(a) Verified-index feasibility",
         "(b) Allocated index size",
         "(c) Median query time",
     ]
     memory = {line.get_label(): list(line.get_ydata()) for line in fig.axes[1].lines if line.get_label() != "_nolegend_"}
     latency = {line.get_label(): list(line.get_ydata()) for line in fig.axes[2].lines if line.get_label() != "_nolegend_"}
-    assert memory["Blocking"] == [400, 500, 600, 700, 800, 900]
-    assert memory["Store-all"] == [1200]
-    assert memory["Probe-all"] == [120, 150, 180, 210, 240]
+    assert memory["Blocking (CL)"] == [400, 500, 600, 700, 800, 900]
+    assert memory["Store-all (CL)"] == [1200]
+    assert memory["Probe-all (CL)"] == [120, 150, 180, 210, 240]
     assert memory["Intersection"] == [240, 300]
-    assert latency["Blocking"] == pytest.approx([0.8, 1.0, 1.2, 1.4, 1.6, 1.8])
+    assert latency["Blocking (CL)"] == pytest.approx([0.8, 1.0, 1.2, 1.4, 1.6, 1.8])
     assert sum(line.get_marker() == "x" for line in fig.axes[0].lines) > 0
 
 

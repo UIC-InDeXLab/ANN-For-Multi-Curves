@@ -1,0 +1,16 @@
+{
+  "case": "conjunctive-n100000-k10",
+  "chunk_entries": 16384,
+  "dataset_sha256": "9a4c8d0d9484ca474d0fb35621c9ac10c787766945a04793df7f06bd6c23f1cc",
+  "factor": 1.25,
+  "generator_source": "903f264a030a2a0b2f8fc3c4cf4f2fe9d59c34093f56a8092cdbffa82239002b",
+  "ground_truth_sha256": "49c99d28b7653b610b7ae653b55c2982a93fd015e11fa02f383adf0ff36917a0",
+  "method": "exact distance with sound endpoint rejection; every database entry considered",
+  "n": 100000,
+  "queries": 1000,
+  "queries_sha256": "e68a1a8f1891254d1694d8c7b11d127af4c5de1fc25c55436539f6d989596904",
+  "reference": "results/fresh-synthetic-expanded-20261012/conjunctive-n100000-k10-seed1701",
+  "source": "87f81bc54d130b17d1f1120c9c18db1038c7a5189f699850e7eb6e8f2247c0dd",
+  "threads": 2,
+  "tolerance": 1e-08
+}

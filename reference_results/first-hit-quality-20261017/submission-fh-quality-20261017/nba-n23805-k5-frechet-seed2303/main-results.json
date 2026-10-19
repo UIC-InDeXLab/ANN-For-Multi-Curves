@@ -1,0 +1,159 @@
+[
+  {
+    "case_id": "nba-n23805-k5",
+    "study": "nba",
+    "metric": "frechet",
+    "index_seed": 2303,
+    "display_method": "blocking",
+    "status": "complete",
+    "quality_tuned": true,
+    "blocks": [
+      2,
+      1,
+      1,
+      1
+    ],
+    "swapped": true,
+    "delta": 24.0,
+    "L": 61,
+    "index_bytes": 1015283472,
+    "tuning": {
+      "family": "2+1+1+1T",
+      "blocks": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "swapped": true,
+      "labels": [
+        "blocking"
+      ],
+      "delta": 24.0,
+      "L": 61,
+      "index_bytes": 1015283472,
+      "tuning_a125": 0.168,
+      "tuning_a110": 0.064,
+      "tuning_coverage": 0.944,
+      "tuning_mean_ratio": 1.5929164280433576
+    },
+    "queries": 1000,
+    "returned": 925,
+    "empty_rate": 0.07499999999999996,
+    "timeout_rate": 0.0,
+    "success_110": 0.058,
+    "success_125": 0.144,
+    "exact_rate": 0.028,
+    "median_ms": 0.007841503247618675,
+    "p95_ms": 0.1558543648570776,
+    "median_ratio": 1.5430609487902758,
+    "p95_ratio": 2.229776962429032,
+    "p99_ratio": 2.6878722603211793,
+    "mean_ratio": 1.593038915307862,
+    "max_ratio": 3.012620602527868
+  },
+  {
+    "case_id": "nba-n23805-k5",
+    "study": "nba",
+    "metric": "frechet",
+    "index_seed": 2303,
+    "display_method": "probe_all",
+    "status": "complete",
+    "quality_tuned": true,
+    "blocks": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "delta": 24.0,
+    "L": 61,
+    "index_bytes": 18795443,
+    "tuning": {
+      "family": "1+1+1+1+1",
+      "blocks": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "swapped": false,
+      "labels": [
+        "blocking",
+        "probe_all"
+      ],
+      "delta": 24.0,
+      "L": 61,
+      "index_bytes": 18795443,
+      "tuning_a125": 0.124,
+      "tuning_a110": 0.044,
+      "tuning_coverage": 0.944,
+      "tuning_mean_ratio": 1.643895688731286
+    },
+    "queries": 1000,
+    "returned": 946,
+    "empty_rate": 0.05400000000000005,
+    "timeout_rate": 0.0,
+    "success_110": 0.054,
+    "success_125": 0.129,
+    "exact_rate": 0.022,
+    "median_ms": 0.013419892638921738,
+    "p95_ms": 0.5536306067369878,
+    "median_ratio": 1.577310490167738,
+    "p95_ratio": 2.2847123408927175,
+    "p99_ratio": 2.633076117762552,
+    "mean_ratio": 1.6188327449807232,
+    "max_ratio": 3.540439916604598
+  },
+  {
+    "case_id": "nba-n23805-k5",
+    "study": "nba",
+    "metric": "frechet",
+    "index_seed": 2303,
+    "display_method": "store_all",
+    "status": "complete",
+    "quality_tuned": true,
+    "blocks": [
+      5
+    ],
+    "swapped": false,
+    "delta": 24.0,
+    "L": 63,
+    "index_bytes": 1999584111,
+    "tuning": {
+      "family": "5",
+      "blocks": [
+        5
+      ],
+      "swapped": false,
+      "labels": [
+        "blocking",
+        "store_all"
+      ],
+      "delta": 24.0,
+      "L": 63,
+      "index_bytes": 1999584111,
+      "tuning_a125": 0.146,
+      "tuning_a110": 0.058,
+      "tuning_coverage": 0.944,
+      "tuning_mean_ratio": 1.601467588546561
+    },
+    "queries": 1000,
+    "returned": 920,
+    "empty_rate": 0.07999999999999996,
+    "timeout_rate": 0.0,
+    "success_110": 0.069,
+    "success_125": 0.17,
+    "exact_rate": 0.031,
+    "median_ms": 0.0078519806265831,
+    "p95_ms": 0.12594041181728244,
+    "median_ratio": 1.5410552473613932,
+    "p95_ratio": 2.237148670375178,
+    "p99_ratio": 2.6850997122162994,
+    "mean_ratio": 1.5847936513260028,
+    "max_ratio": 3.6261363815043284
+  }
+]

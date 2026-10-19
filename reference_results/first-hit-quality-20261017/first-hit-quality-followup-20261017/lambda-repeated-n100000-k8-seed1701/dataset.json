@@ -1,0 +1,23 @@
+{
+  "paths": 4,
+  "nominal_background_path_frequency": 0.8998870849609375,
+  "planted_sets": 1510,
+  "planted_fraction": 0.0151,
+  "planted_per_query": 1,
+  "dataset_seed": 2026102020,
+  "dataset_sha256": "ba7f85b328e318ed82689daef57909a147def8ddb3e8d67e2d2446b429990a7f",
+  "queries_sha256": "5c165e9a39cf33c41a8dd4aaa96e22bef2192914f2ef5d6799f3d9062606f7b2",
+  "raw_curve_bytes": 409600000,
+  "id": "repeated-n100000-k8-seed1701",
+  "kind": "repeated",
+  "n": 100000,
+  "k": 8,
+  "index_seed": 1701,
+  "case_id": "repeated-n100000-k8",
+  "preparation_seconds": 10.270418030093424,
+  "mean_test_nn_distance": 0.8260421444366245,
+  "mean_test_relevant_sets": 1510.604,
+  "reference": "results/quality-references/fresh-synthetic-expanded-20261012/repeated-n100000-k8-seed1701",
+  "exact_ground_truth_sha256": "67337f60ef5c769fe0ff14b2058f3a39b5139c4769c9cc8d9b8558a315111b1f",
+  "metric": "frechet"
+}

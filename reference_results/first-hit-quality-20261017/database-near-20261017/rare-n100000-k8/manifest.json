@@ -1,0 +1,16 @@
+{
+  "case": "rare-n100000-k8",
+  "chunk_entries": 16384,
+  "dataset_sha256": "4405e6795ab888be2f4b9e41eb2790a966adec3c285a779ac49b8c96ae42e69b",
+  "factor": 1.25,
+  "generator_source": "903f264a030a2a0b2f8fc3c4cf4f2fe9d59c34093f56a8092cdbffa82239002b",
+  "ground_truth_sha256": "fbb798bb9e56975e94c4e1e056fceefc8ff26d630e69a6688f7200fa77988ee5",
+  "method": "exact distance with sound endpoint rejection; every database entry considered",
+  "n": 100000,
+  "queries": 1000,
+  "queries_sha256": "f9a5a6df794d0e76078d169f67b53e6a0ff660987ed96a40c979d2cc2b4e8d62",
+  "reference": "results/fresh-synthetic-expanded-20261012/rare-n100000-k8-seed1701",
+  "source": "87f81bc54d130b17d1f1120c9c18db1038c7a5189f699850e7eb6e8f2247c0dd",
+  "threads": 2,
+  "tolerance": 1e-08
+}

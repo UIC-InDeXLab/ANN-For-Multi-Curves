@@ -1,0 +1,8 @@
+{
+  "case": "rare-n100000-k8",
+  "database_entries_processed": 100000,
+  "database_entries_total": 100000,
+  "elapsed_seconds": 14.963641904003453,
+  "phase": "counting",
+  "queries": 1000
+}

@@ -1,0 +1,10 @@
+{
+  "completed": 1792290706.6396294,
+  "job": "lambda-conjunctive-n100000-k8-seed1701",
+  "artifacts": {
+    "test-queries.csv": "08ea0c668d7e88a19da749ba772086649f0de53c2d4cb55a2a3f3ed326d0a727",
+    "frozen-selections.json": "21ec9fdfe87c52814fcc61cccf3f6bca09956c354a3a9b78714fcf4e0dacb74d",
+    "excluded.json": "514f7579895468f943f6b669f0b6a007cb520c5bc086222f9a76e8fca6faa455",
+    "main-results.json": "7d5cfde0dc1a350620569b534e132c2c2f908379fdb1b1849146eded37b34627"
+  }
+}

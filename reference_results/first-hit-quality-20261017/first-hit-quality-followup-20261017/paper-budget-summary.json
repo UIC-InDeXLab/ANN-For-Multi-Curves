@@ -1,0 +1,795 @@
+{
+  "cases": {
+    "10": [
+      1701
+    ],
+    "11": [
+      1701
+    ],
+    "12": [
+      1701
+    ]
+  },
+  "outcomes": [
+    {
+      "k": 10,
+      "budget": "1gb-10ms",
+      "method": "cl_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "1gb-10ms",
+        "index_budget_bytes": 1000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 10,
+      "budget": "1gb-10ms",
+      "method": "fh_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "1gb-10ms",
+        "index_budget_bytes": 1000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 10,
+      "budget": "1gb-10ms",
+      "method": "fh_probe_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "1gb-10ms",
+        "index_budget_bytes": 1000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 10,
+      "budget": "1gb-10ms",
+      "method": "fh_store_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "1gb-10ms",
+        "index_budget_bytes": 1000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 10,
+      "budget": "256mb-1ms",
+      "method": "cl_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "256mb-1ms",
+        "index_budget_bytes": 256000000,
+        "query_deadline_seconds": 0.001
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 10,
+      "budget": "256mb-1ms",
+      "method": "fh_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "256mb-1ms",
+        "index_budget_bytes": 256000000,
+        "query_deadline_seconds": 0.001
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 10,
+      "budget": "256mb-1ms",
+      "method": "fh_probe_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "256mb-1ms",
+        "index_budget_bytes": 256000000,
+        "query_deadline_seconds": 0.001
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 10,
+      "budget": "256mb-1ms",
+      "method": "fh_store_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "256mb-1ms",
+        "index_budget_bytes": 256000000,
+        "query_deadline_seconds": 0.001
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 10,
+      "budget": "16gb-10ms",
+      "method": "cl_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-10ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 10,
+      "budget": "16gb-10ms",
+      "method": "fh_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-10ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 10,
+      "budget": "16gb-10ms",
+      "method": "fh_probe_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-10ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 10,
+      "budget": "16gb-10ms",
+      "method": "fh_store_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-10ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 10,
+      "budget": "16gb-100ms",
+      "method": "cl_blocking",
+      "tested": true,
+      "feasible": true,
+      "seeds": 1,
+      "metrics": {
+        "seeds": 1,
+        "seed_ids": [
+          1701
+        ],
+        "queries": 1000,
+        "returned": 999,
+        "median_ms": 14.18973202817142,
+        "latency_range": [
+          14.18973202817142,
+          14.18973202817142
+        ],
+        "index_mb": 3224.610736,
+        "index_range": [
+          3224.610736,
+          3224.610736
+        ],
+        "mean_ratio": 3.2009658728991264,
+        "max_ratio": 227.66278868162163,
+        "a110": 0.987,
+        "a125": 0.987,
+        "empty": 0.0010000000000000009,
+        "min_a125": 0.987,
+        "candidates": 4.123,
+        "probes": 113400.0,
+        "postings": 9.554,
+        "median_ratio": 1.0,
+        "p95_ratio": 1.0,
+        "p99_ratio": 144.00746525055914,
+        "p95_ms": 15.15497592044994
+      },
+      "limits": {
+        "name": "16gb-100ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.1
+      },
+      "status": "yes"
+    },
+    {
+      "k": 10,
+      "budget": "16gb-100ms",
+      "method": "fh_blocking",
+      "tested": true,
+      "feasible": true,
+      "seeds": 1,
+      "metrics": {
+        "seeds": 1,
+        "seed_ids": [
+          1701
+        ],
+        "queries": 1000,
+        "returned": 984,
+        "median_ms": 4.199719987809658,
+        "latency_range": [
+          4.199719987809658,
+          4.199719987809658
+        ],
+        "index_mb": 6914.662872,
+        "index_range": [
+          6914.662872,
+          6914.662872
+        ],
+        "mean_ratio": 1.0,
+        "max_ratio": 1.0,
+        "a110": 0.984,
+        "a125": 0.984,
+        "empty": 0.016000000000000014,
+        "min_a125": 0.984,
+        "candidates": 0.984,
+        "probes": 51117.273,
+        "postings": 0.984,
+        "median_ratio": 1.0,
+        "p95_ratio": 1.0,
+        "p99_ratio": 1.0,
+        "p95_ms": 21.036598819773644
+      },
+      "limits": {
+        "name": "16gb-100ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.1
+      },
+      "status": "yes"
+    },
+    {
+      "k": 10,
+      "budget": "16gb-100ms",
+      "method": "fh_probe_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-100ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.1
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 10,
+      "budget": "16gb-100ms",
+      "method": "fh_store_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-100ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.1
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 11,
+      "budget": "1gb-10ms",
+      "method": "cl_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "1gb-10ms",
+        "index_budget_bytes": 1000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 11,
+      "budget": "1gb-10ms",
+      "method": "fh_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "1gb-10ms",
+        "index_budget_bytes": 1000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 11,
+      "budget": "1gb-10ms",
+      "method": "fh_probe_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "1gb-10ms",
+        "index_budget_bytes": 1000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 11,
+      "budget": "1gb-10ms",
+      "method": "fh_store_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "1gb-10ms",
+        "index_budget_bytes": 1000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 11,
+      "budget": "256mb-1ms",
+      "method": "cl_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "256mb-1ms",
+        "index_budget_bytes": 256000000,
+        "query_deadline_seconds": 0.001
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 11,
+      "budget": "256mb-1ms",
+      "method": "fh_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "256mb-1ms",
+        "index_budget_bytes": 256000000,
+        "query_deadline_seconds": 0.001
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 11,
+      "budget": "256mb-1ms",
+      "method": "fh_probe_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "256mb-1ms",
+        "index_budget_bytes": 256000000,
+        "query_deadline_seconds": 0.001
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 11,
+      "budget": "256mb-1ms",
+      "method": "fh_store_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "256mb-1ms",
+        "index_budget_bytes": 256000000,
+        "query_deadline_seconds": 0.001
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 11,
+      "budget": "16gb-10ms",
+      "method": "cl_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-10ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 11,
+      "budget": "16gb-10ms",
+      "method": "fh_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-10ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 11,
+      "budget": "16gb-10ms",
+      "method": "fh_probe_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-10ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 11,
+      "budget": "16gb-10ms",
+      "method": "fh_store_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-10ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 11,
+      "budget": "16gb-100ms",
+      "method": "cl_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-100ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.1
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 11,
+      "budget": "16gb-100ms",
+      "method": "fh_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-100ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.1
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 11,
+      "budget": "16gb-100ms",
+      "method": "fh_probe_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-100ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.1
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 11,
+      "budget": "16gb-100ms",
+      "method": "fh_store_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-100ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.1
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 12,
+      "budget": "1gb-10ms",
+      "method": "cl_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "1gb-10ms",
+        "index_budget_bytes": 1000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 12,
+      "budget": "1gb-10ms",
+      "method": "fh_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "1gb-10ms",
+        "index_budget_bytes": 1000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 12,
+      "budget": "1gb-10ms",
+      "method": "fh_probe_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "1gb-10ms",
+        "index_budget_bytes": 1000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 12,
+      "budget": "1gb-10ms",
+      "method": "fh_store_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "1gb-10ms",
+        "index_budget_bytes": 1000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 12,
+      "budget": "256mb-1ms",
+      "method": "cl_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "256mb-1ms",
+        "index_budget_bytes": 256000000,
+        "query_deadline_seconds": 0.001
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 12,
+      "budget": "256mb-1ms",
+      "method": "fh_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "256mb-1ms",
+        "index_budget_bytes": 256000000,
+        "query_deadline_seconds": 0.001
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 12,
+      "budget": "256mb-1ms",
+      "method": "fh_probe_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "256mb-1ms",
+        "index_budget_bytes": 256000000,
+        "query_deadline_seconds": 0.001
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 12,
+      "budget": "256mb-1ms",
+      "method": "fh_store_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "256mb-1ms",
+        "index_budget_bytes": 256000000,
+        "query_deadline_seconds": 0.001
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 12,
+      "budget": "16gb-10ms",
+      "method": "cl_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-10ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 12,
+      "budget": "16gb-10ms",
+      "method": "fh_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-10ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 12,
+      "budget": "16gb-10ms",
+      "method": "fh_probe_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-10ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 12,
+      "budget": "16gb-10ms",
+      "method": "fh_store_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-10ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.01
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 12,
+      "budget": "16gb-100ms",
+      "method": "cl_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-100ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.1
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 12,
+      "budget": "16gb-100ms",
+      "method": "fh_blocking",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-100ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.1
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 12,
+      "budget": "16gb-100ms",
+      "method": "fh_probe_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-100ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.1
+      },
+      "status": "NQ"
+    },
+    {
+      "k": 12,
+      "budget": "16gb-100ms",
+      "method": "fh_store_all",
+      "tested": false,
+      "feasible": false,
+      "seeds": 1,
+      "metrics": null,
+      "limits": {
+        "name": "16gb-100ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.1
+      },
+      "status": "NQ"
+    }
+  ]
+}

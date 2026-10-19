@@ -1,0 +1,1200 @@
+[
+  {
+    "family": "3+1+1+1+1+1",
+    "blocks": [
+      3,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "blocking"
+    ],
+    "stored": 6,
+    "probed": 6720,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1703,
+    "candidates": [
+      {
+        "delta": 8.0,
+        "L": 1,
+        "tuning_recall": 0.0,
+        "bytes": 7849512
+      },
+      {
+        "delta": 8.0,
+        "L": 2,
+        "tuning_recall": 0.0,
+        "bytes": 15639948
+      },
+      {
+        "delta": 8.0,
+        "L": 3,
+        "tuning_recall": 0.0,
+        "bytes": 23432372
+      },
+      {
+        "delta": 8.0,
+        "L": 4,
+        "tuning_recall": 0.0,
+        "bytes": 31225536
+      },
+      {
+        "delta": 8.0,
+        "L": 5,
+        "tuning_recall": 0.0,
+        "bytes": 39017168
+      },
+      {
+        "delta": 8.0,
+        "L": 6,
+        "tuning_recall": 0.0,
+        "bytes": 46810776
+      },
+      {
+        "delta": 8.0,
+        "L": 7,
+        "tuning_recall": 0.0,
+        "bytes": 54600416
+      },
+      {
+        "delta": 8.0,
+        "L": 8,
+        "tuning_recall": 0.0,
+        "bytes": 62392136
+      },
+      {
+        "delta": 8.0,
+        "L": 9,
+        "tuning_recall": 0.0,
+        "bytes": 70182700
+      },
+      {
+        "delta": 8.0,
+        "L": 10,
+        "tuning_recall": 0.0,
+        "bytes": 77972588
+      },
+      {
+        "delta": 8.0,
+        "L": 11,
+        "tuning_recall": 0.0,
+        "bytes": 85763880
+      },
+      {
+        "delta": 8.0,
+        "L": 12,
+        "tuning_recall": 0.0,
+        "bytes": 93555796
+      },
+      {
+        "delta": 8.0,
+        "L": 13,
+        "tuning_recall": 0.0,
+        "bytes": 101349804
+      },
+      {
+        "delta": 8.0,
+        "L": 14,
+        "tuning_recall": 0.0,
+        "bytes": 109140396
+      },
+      {
+        "delta": 8.0,
+        "L": 15,
+        "tuning_recall": 0.0,
+        "bytes": 116930468
+      },
+      {
+        "delta": 8.0,
+        "L": 16,
+        "tuning_recall": 0.0,
+        "bytes": 124722240
+      },
+      {
+        "delta": 16.0,
+        "L": 1,
+        "tuning_recall": 0.002,
+        "bytes": 7782004
+      },
+      {
+        "delta": 16.0,
+        "L": 2,
+        "tuning_recall": 0.004,
+        "bytes": 15507908
+      },
+      {
+        "delta": 16.0,
+        "L": 3,
+        "tuning_recall": 0.004,
+        "bytes": 23247264
+      },
+      {
+        "delta": 16.0,
+        "L": 4,
+        "tuning_recall": 0.012,
+        "bytes": 30985424
+      },
+      {
+        "delta": 16.0,
+        "L": 5,
+        "tuning_recall": 0.014,
+        "bytes": 38719320
+      },
+      {
+        "delta": 16.0,
+        "L": 6,
+        "tuning_recall": 0.018,
+        "bytes": 46453944
+      },
+      {
+        "delta": 16.0,
+        "L": 7,
+        "tuning_recall": 0.02,
+        "bytes": 54192808
+      },
+      {
+        "delta": 16.0,
+        "L": 8,
+        "tuning_recall": 0.022,
+        "bytes": 61932128
+      },
+      {
+        "delta": 16.0,
+        "L": 9,
+        "tuning_recall": 0.024,
+        "bytes": 69668456
+      },
+      {
+        "delta": 16.0,
+        "L": 10,
+        "tuning_recall": 0.026,
+        "bytes": 77398192
+      },
+      {
+        "delta": 16.0,
+        "L": 11,
+        "tuning_recall": 0.032,
+        "bytes": 85144152
+      },
+      {
+        "delta": 16.0,
+        "L": 12,
+        "tuning_recall": 0.034,
+        "bytes": 92877752
+      },
+      {
+        "delta": 16.0,
+        "L": 13,
+        "tuning_recall": 0.036,
+        "bytes": 100621528
+      },
+      {
+        "delta": 16.0,
+        "L": 14,
+        "tuning_recall": 0.038,
+        "bytes": 108358404
+      },
+      {
+        "delta": 16.0,
+        "L": 15,
+        "tuning_recall": 0.038,
+        "bytes": 116098412
+      },
+      {
+        "delta": 16.0,
+        "L": 16,
+        "tuning_recall": 0.04,
+        "bytes": 123825340
+      },
+      {
+        "delta": 32.0,
+        "L": 1,
+        "tuning_recall": 0.082,
+        "bytes": 7721188
+      },
+      {
+        "delta": 32.0,
+        "L": 2,
+        "tuning_recall": 0.15,
+        "bytes": 15365996
+      },
+      {
+        "delta": 32.0,
+        "L": 3,
+        "tuning_recall": 0.214,
+        "bytes": 23032880
+      },
+      {
+        "delta": 32.0,
+        "L": 4,
+        "tuning_recall": 0.294,
+        "bytes": 30663816
+      },
+      {
+        "delta": 32.0,
+        "L": 5,
+        "tuning_recall": 0.344,
+        "bytes": 38329788
+      },
+      {
+        "delta": 32.0,
+        "L": 6,
+        "tuning_recall": 0.396,
+        "bytes": 45980368
+      },
+      {
+        "delta": 32.0,
+        "L": 7,
+        "tuning_recall": 0.446,
+        "bytes": 53646040
+      },
+      {
+        "delta": 32.0,
+        "L": 8,
+        "tuning_recall": 0.476,
+        "bytes": 61310556
+      },
+      {
+        "delta": 32.0,
+        "L": 9,
+        "tuning_recall": 0.51,
+        "bytes": 68958288
+      },
+      {
+        "delta": 32.0,
+        "L": 10,
+        "tuning_recall": 0.548,
+        "bytes": 76609908
+      },
+      {
+        "delta": 32.0,
+        "L": 11,
+        "tuning_recall": 0.586,
+        "bytes": 84277584
+      },
+      {
+        "delta": 32.0,
+        "L": 12,
+        "tuning_recall": 0.618,
+        "bytes": 91947288
+      },
+      {
+        "delta": 32.0,
+        "L": 13,
+        "tuning_recall": 0.646,
+        "bytes": 99596700
+      },
+      {
+        "delta": 32.0,
+        "L": 14,
+        "tuning_recall": 0.662,
+        "bytes": 107267600
+      },
+      {
+        "delta": 32.0,
+        "L": 15,
+        "tuning_recall": 0.69,
+        "bytes": 114912748
+      },
+      {
+        "delta": 32.0,
+        "L": 16,
+        "tuning_recall": 0.716,
+        "bytes": 122566292
+      },
+      {
+        "delta": 64.0,
+        "L": 1,
+        "tuning_recall": 0.31,
+        "bytes": 7652460
+      },
+      {
+        "delta": 64.0,
+        "L": 2,
+        "tuning_recall": 0.53,
+        "bytes": 15250364
+      },
+      {
+        "delta": 64.0,
+        "L": 3,
+        "tuning_recall": 0.656,
+        "bytes": 22845668
+      },
+      {
+        "delta": 64.0,
+        "L": 4,
+        "tuning_recall": 0.79,
+        "bytes": 30424984
+      },
+      {
+        "delta": 64.0,
+        "L": 5,
+        "tuning_recall": 0.852,
+        "bytes": 38022888
+      },
+      {
+        "delta": 64.0,
+        "L": 6,
+        "tuning_recall": 0.89,
+        "bytes": 45624808
+      },
+      {
+        "delta": 64.0,
+        "L": 7,
+        "tuning_recall": 0.936,
+        "bytes": 53206724
+      },
+      {
+        "delta": 64.0,
+        "L": 8,
+        "tuning_recall": 0.956,
+        "bytes": 60794540
+      },
+      {
+        "delta": 64.0,
+        "L": 9,
+        "tuning_recall": 0.968,
+        "bytes": 68408084
+      },
+      {
+        "delta": 64.0,
+        "L": 10,
+        "tuning_recall": 0.978,
+        "bytes": 75993340
+      },
+      {
+        "delta": 64.0,
+        "L": 11,
+        "tuning_recall": 0.986,
+        "bytes": 83592104
+      },
+      {
+        "delta": 64.0,
+        "L": 12,
+        "tuning_recall": 0.988,
+        "bytes": 91189488
+      },
+      {
+        "delta": 64.0,
+        "L": 13,
+        "tuning_recall": 0.99,
+        "bytes": 98780176
+      },
+      {
+        "delta": 64.0,
+        "L": 14,
+        "tuning_recall": 0.994,
+        "bytes": 106367096
+      },
+      {
+        "delta": 64.0,
+        "L": 15,
+        "tuning_recall": 0.996,
+        "bytes": 113964312
+      },
+      {
+        "delta": 64.0,
+        "L": 16,
+        "tuning_recall": 0.996,
+        "bytes": 121553040
+      },
+      {
+        "delta": 128.0,
+        "L": 1,
+        "tuning_recall": 0.62,
+        "bytes": 7602616
+      },
+      {
+        "delta": 128.0,
+        "L": 2,
+        "tuning_recall": 0.866,
+        "bytes": 15148704
+      },
+      {
+        "delta": 128.0,
+        "L": 3,
+        "tuning_recall": 0.942,
+        "bytes": 22692452
+      },
+      {
+        "delta": 128.0,
+        "L": 4,
+        "tuning_recall": 0.978,
+        "bytes": 30264644
+      },
+      {
+        "delta": 128.0,
+        "L": 5,
+        "tuning_recall": 0.992,
+        "bytes": 37814084
+      },
+      {
+        "delta": 128.0,
+        "L": 6,
+        "tuning_recall": 0.996,
+        "bytes": 45358104
+      },
+      {
+        "delta": 128.0,
+        "L": 7,
+        "tuning_recall": 1.0,
+        "bytes": 52907752
+      },
+      {
+        "delta": 128.0,
+        "L": 8,
+        "tuning_recall": 1.0,
+        "bytes": 60471988
+      },
+      {
+        "delta": 128.0,
+        "L": 9,
+        "tuning_recall": 1.0,
+        "bytes": 68034480
+      },
+      {
+        "delta": 128.0,
+        "L": 10,
+        "tuning_recall": 1.0,
+        "bytes": 75594800
+      },
+      {
+        "delta": 128.0,
+        "L": 11,
+        "tuning_recall": 1.0,
+        "bytes": 83155252
+      },
+      {
+        "delta": 128.0,
+        "L": 12,
+        "tuning_recall": 1.0,
+        "bytes": 90715052
+      },
+      {
+        "delta": 128.0,
+        "L": 13,
+        "tuning_recall": 1.0,
+        "bytes": 98261580
+      },
+      {
+        "delta": 128.0,
+        "L": 14,
+        "tuning_recall": 1.0,
+        "bytes": 105809384
+      },
+      {
+        "delta": 128.0,
+        "L": 15,
+        "tuning_recall": 1.0,
+        "bytes": 113349516
+      },
+      {
+        "delta": 128.0,
+        "L": 16,
+        "tuning_recall": 1.0,
+        "bytes": 120900556
+      },
+      {
+        "delta": 256.0,
+        "L": 1,
+        "tuning_recall": 0.64,
+        "bytes": 7496096
+      },
+      {
+        "delta": 256.0,
+        "L": 2,
+        "tuning_recall": 0.78,
+        "bytes": 14917836
+      },
+      {
+        "delta": 256.0,
+        "L": 3,
+        "tuning_recall": 0.806,
+        "bytes": 22252752
+      },
+      {
+        "delta": 256.0,
+        "L": 4,
+        "tuning_recall": 0.81,
+        "bytes": 29692316
+      },
+      {
+        "delta": 256.0,
+        "L": 5,
+        "tuning_recall": 0.812,
+        "bytes": 37182660
+      },
+      {
+        "delta": 256.0,
+        "L": 6,
+        "tuning_recall": 0.812,
+        "bytes": 44540768
+      },
+      {
+        "delta": 256.0,
+        "L": 7,
+        "tuning_recall": 0.812,
+        "bytes": 51977160
+      },
+      {
+        "delta": 256.0,
+        "L": 8,
+        "tuning_recall": 0.812,
+        "bytes": 59344756
+      },
+      {
+        "delta": 256.0,
+        "L": 9,
+        "tuning_recall": 0.812,
+        "bytes": 66770136
+      },
+      {
+        "delta": 256.0,
+        "L": 10,
+        "tuning_recall": 0.812,
+        "bytes": 74118920
+      },
+      {
+        "delta": 256.0,
+        "L": 11,
+        "tuning_recall": 0.812,
+        "bytes": 81526064
+      },
+      {
+        "delta": 256.0,
+        "L": 12,
+        "tuning_recall": 0.812,
+        "bytes": 88972388
+      },
+      {
+        "delta": 256.0,
+        "L": 13,
+        "tuning_recall": 0.812,
+        "bytes": 96375720
+      },
+      {
+        "delta": 256.0,
+        "L": 14,
+        "tuning_recall": 0.812,
+        "bytes": 103814088
+      },
+      {
+        "delta": 256.0,
+        "L": 15,
+        "tuning_recall": 0.812,
+        "bytes": 111176444
+      },
+      {
+        "delta": 256.0,
+        "L": 16,
+        "tuning_recall": 0.812,
+        "bytes": 118639800
+      }
+    ]
+  },
+  {
+    "family": "1+1+1+1+1+1+1+1",
+    "blocks": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "probe_all"
+    ],
+    "stored": 1,
+    "probed": 40320,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1703,
+    "candidates": [
+      {
+        "delta": 8.0,
+        "L": 1,
+        "tuning_recall": 0.0,
+        "bytes": 1624748
+      },
+      {
+        "delta": 8.0,
+        "L": 2,
+        "tuning_recall": 0.0,
+        "bytes": 2924752
+      },
+      {
+        "delta": 8.0,
+        "L": 3,
+        "tuning_recall": 0.0,
+        "bytes": 4224756
+      },
+      {
+        "delta": 8.0,
+        "L": 4,
+        "tuning_recall": 0.0,
+        "bytes": 5524760
+      },
+      {
+        "delta": 8.0,
+        "L": 5,
+        "tuning_recall": 0.0,
+        "bytes": 6824764
+      },
+      {
+        "delta": 8.0,
+        "L": 6,
+        "tuning_recall": 0.0,
+        "bytes": 8124768
+      },
+      {
+        "delta": 8.0,
+        "L": 7,
+        "tuning_recall": 0.0,
+        "bytes": 9424772
+      },
+      {
+        "delta": 8.0,
+        "L": 8,
+        "tuning_recall": 0.0,
+        "bytes": 10724776
+      },
+      {
+        "delta": 8.0,
+        "L": 9,
+        "tuning_recall": 0.0,
+        "bytes": 12024780
+      },
+      {
+        "delta": 8.0,
+        "L": 10,
+        "tuning_recall": 0.0,
+        "bytes": 13324784
+      },
+      {
+        "delta": 8.0,
+        "L": 11,
+        "tuning_recall": 0.0,
+        "bytes": 14624788
+      },
+      {
+        "delta": 8.0,
+        "L": 12,
+        "tuning_recall": 0.0,
+        "bytes": 15924792
+      },
+      {
+        "delta": 8.0,
+        "L": 13,
+        "tuning_recall": 0.0,
+        "bytes": 17224796
+      },
+      {
+        "delta": 8.0,
+        "L": 14,
+        "tuning_recall": 0.0,
+        "bytes": 18524800
+      },
+      {
+        "delta": 8.0,
+        "L": 15,
+        "tuning_recall": 0.0,
+        "bytes": 19824804
+      },
+      {
+        "delta": 8.0,
+        "L": 16,
+        "tuning_recall": 0.0,
+        "bytes": 21124808
+      },
+      {
+        "delta": 16.0,
+        "L": 1,
+        "tuning_recall": 0.002,
+        "bytes": 1624748
+      },
+      {
+        "delta": 16.0,
+        "L": 2,
+        "tuning_recall": 0.008,
+        "bytes": 2924752
+      },
+      {
+        "delta": 16.0,
+        "L": 3,
+        "tuning_recall": 0.008,
+        "bytes": 4224756
+      },
+      {
+        "delta": 16.0,
+        "L": 4,
+        "tuning_recall": 0.012,
+        "bytes": 5524760
+      },
+      {
+        "delta": 16.0,
+        "L": 5,
+        "tuning_recall": 0.014,
+        "bytes": 6824764
+      },
+      {
+        "delta": 16.0,
+        "L": 6,
+        "tuning_recall": 0.016,
+        "bytes": 8124768
+      },
+      {
+        "delta": 16.0,
+        "L": 7,
+        "tuning_recall": 0.016,
+        "bytes": 9424772
+      },
+      {
+        "delta": 16.0,
+        "L": 8,
+        "tuning_recall": 0.016,
+        "bytes": 10724776
+      },
+      {
+        "delta": 16.0,
+        "L": 9,
+        "tuning_recall": 0.018,
+        "bytes": 12024780
+      },
+      {
+        "delta": 16.0,
+        "L": 10,
+        "tuning_recall": 0.02,
+        "bytes": 13324784
+      },
+      {
+        "delta": 16.0,
+        "L": 11,
+        "tuning_recall": 0.022,
+        "bytes": 14624788
+      },
+      {
+        "delta": 16.0,
+        "L": 12,
+        "tuning_recall": 0.028,
+        "bytes": 15924792
+      },
+      {
+        "delta": 16.0,
+        "L": 13,
+        "tuning_recall": 0.028,
+        "bytes": 17224796
+      },
+      {
+        "delta": 16.0,
+        "L": 14,
+        "tuning_recall": 0.028,
+        "bytes": 18524800
+      },
+      {
+        "delta": 16.0,
+        "L": 15,
+        "tuning_recall": 0.028,
+        "bytes": 19824804
+      },
+      {
+        "delta": 16.0,
+        "L": 16,
+        "tuning_recall": 0.03,
+        "bytes": 21124808
+      },
+      {
+        "delta": 32.0,
+        "L": 1,
+        "tuning_recall": 0.062,
+        "bytes": 1624748
+      },
+      {
+        "delta": 32.0,
+        "L": 2,
+        "tuning_recall": 0.15,
+        "bytes": 2924752
+      },
+      {
+        "delta": 32.0,
+        "L": 3,
+        "tuning_recall": 0.208,
+        "bytes": 4224756
+      },
+      {
+        "delta": 32.0,
+        "L": 4,
+        "tuning_recall": 0.31,
+        "bytes": 5524760
+      },
+      {
+        "delta": 32.0,
+        "L": 5,
+        "tuning_recall": 0.356,
+        "bytes": 6824764
+      },
+      {
+        "delta": 32.0,
+        "L": 6,
+        "tuning_recall": 0.418,
+        "bytes": 8124768
+      },
+      {
+        "delta": 32.0,
+        "L": 7,
+        "tuning_recall": 0.454,
+        "bytes": 9424772
+      },
+      {
+        "delta": 32.0,
+        "L": 8,
+        "tuning_recall": 0.5,
+        "bytes": 10724776
+      },
+      {
+        "delta": 32.0,
+        "L": 9,
+        "tuning_recall": 0.556,
+        "bytes": 12024780
+      },
+      {
+        "delta": 32.0,
+        "L": 10,
+        "tuning_recall": 0.578,
+        "bytes": 13324784
+      },
+      {
+        "delta": 32.0,
+        "L": 11,
+        "tuning_recall": 0.61,
+        "bytes": 14624788
+      },
+      {
+        "delta": 32.0,
+        "L": 12,
+        "tuning_recall": 0.642,
+        "bytes": 15924792
+      },
+      {
+        "delta": 32.0,
+        "L": 13,
+        "tuning_recall": 0.678,
+        "bytes": 17224796
+      },
+      {
+        "delta": 32.0,
+        "L": 14,
+        "tuning_recall": 0.69,
+        "bytes": 18524800
+      },
+      {
+        "delta": 32.0,
+        "L": 15,
+        "tuning_recall": 0.73,
+        "bytes": 19824804
+      },
+      {
+        "delta": 32.0,
+        "L": 16,
+        "tuning_recall": 0.76,
+        "bytes": 21124808
+      },
+      {
+        "delta": 64.0,
+        "L": 1,
+        "tuning_recall": 0.32,
+        "bytes": 1624748
+      },
+      {
+        "delta": 64.0,
+        "L": 2,
+        "tuning_recall": 0.554,
+        "bytes": 2924752
+      },
+      {
+        "delta": 64.0,
+        "L": 3,
+        "tuning_recall": 0.7,
+        "bytes": 4224756
+      },
+      {
+        "delta": 64.0,
+        "L": 4,
+        "tuning_recall": 0.816,
+        "bytes": 5524760
+      },
+      {
+        "delta": 64.0,
+        "L": 5,
+        "tuning_recall": 0.878,
+        "bytes": 6824764
+      },
+      {
+        "delta": 64.0,
+        "L": 6,
+        "tuning_recall": 0.9,
+        "bytes": 8124768
+      },
+      {
+        "delta": 64.0,
+        "L": 7,
+        "tuning_recall": 0.946,
+        "bytes": 9424772
+      },
+      {
+        "delta": 64.0,
+        "L": 8,
+        "tuning_recall": 0.964,
+        "bytes": 10724776
+      },
+      {
+        "delta": 64.0,
+        "L": 9,
+        "tuning_recall": 0.972,
+        "bytes": 12024780
+      },
+      {
+        "delta": 64.0,
+        "L": 10,
+        "tuning_recall": 0.984,
+        "bytes": 13324784
+      },
+      {
+        "delta": 64.0,
+        "L": 11,
+        "tuning_recall": 0.988,
+        "bytes": 14624788
+      },
+      {
+        "delta": 64.0,
+        "L": 12,
+        "tuning_recall": 0.992,
+        "bytes": 15924792
+      },
+      {
+        "delta": 64.0,
+        "L": 13,
+        "tuning_recall": 0.992,
+        "bytes": 17224796
+      },
+      {
+        "delta": 64.0,
+        "L": 14,
+        "tuning_recall": 0.994,
+        "bytes": 18524800
+      },
+      {
+        "delta": 64.0,
+        "L": 15,
+        "tuning_recall": 0.994,
+        "bytes": 19824804
+      },
+      {
+        "delta": 64.0,
+        "L": 16,
+        "tuning_recall": 0.994,
+        "bytes": 21124808
+      },
+      {
+        "delta": 128.0,
+        "L": 1,
+        "tuning_recall": 0.608,
+        "bytes": 1624748
+      },
+      {
+        "delta": 128.0,
+        "L": 2,
+        "tuning_recall": 0.854,
+        "bytes": 2924752
+      },
+      {
+        "delta": 128.0,
+        "L": 3,
+        "tuning_recall": 0.938,
+        "bytes": 4224756
+      },
+      {
+        "delta": 128.0,
+        "L": 4,
+        "tuning_recall": 0.972,
+        "bytes": 5524760
+      },
+      {
+        "delta": 128.0,
+        "L": 5,
+        "tuning_recall": 0.988,
+        "bytes": 6824764
+      },
+      {
+        "delta": 128.0,
+        "L": 6,
+        "tuning_recall": 0.996,
+        "bytes": 8124768
+      },
+      {
+        "delta": 128.0,
+        "L": 7,
+        "tuning_recall": 1.0,
+        "bytes": 9424772
+      },
+      {
+        "delta": 128.0,
+        "L": 8,
+        "tuning_recall": 1.0,
+        "bytes": 10724776
+      },
+      {
+        "delta": 128.0,
+        "L": 9,
+        "tuning_recall": 1.0,
+        "bytes": 12024780
+      },
+      {
+        "delta": 128.0,
+        "L": 10,
+        "tuning_recall": 1.0,
+        "bytes": 13324784
+      },
+      {
+        "delta": 128.0,
+        "L": 11,
+        "tuning_recall": 1.0,
+        "bytes": 14624788
+      },
+      {
+        "delta": 128.0,
+        "L": 12,
+        "tuning_recall": 1.0,
+        "bytes": 15924792
+      },
+      {
+        "delta": 128.0,
+        "L": 13,
+        "tuning_recall": 1.0,
+        "bytes": 17224796
+      },
+      {
+        "delta": 128.0,
+        "L": 14,
+        "tuning_recall": 1.0,
+        "bytes": 18524800
+      },
+      {
+        "delta": 128.0,
+        "L": 15,
+        "tuning_recall": 1.0,
+        "bytes": 19824804
+      },
+      {
+        "delta": 128.0,
+        "L": 16,
+        "tuning_recall": 1.0,
+        "bytes": 21124808
+      },
+      {
+        "delta": 256.0,
+        "L": 1,
+        "tuning_recall": 0.664,
+        "bytes": 1624720
+      },
+      {
+        "delta": 256.0,
+        "L": 2,
+        "tuning_recall": 0.768,
+        "bytes": 2924708
+      },
+      {
+        "delta": 256.0,
+        "L": 3,
+        "tuning_recall": 0.798,
+        "bytes": 4224712
+      },
+      {
+        "delta": 256.0,
+        "L": 4,
+        "tuning_recall": 0.8,
+        "bytes": 5524716
+      },
+      {
+        "delta": 256.0,
+        "L": 5,
+        "tuning_recall": 0.802,
+        "bytes": 6824704
+      },
+      {
+        "delta": 256.0,
+        "L": 6,
+        "tuning_recall": 0.804,
+        "bytes": 8124692
+      },
+      {
+        "delta": 256.0,
+        "L": 7,
+        "tuning_recall": 0.804,
+        "bytes": 9424680
+      },
+      {
+        "delta": 256.0,
+        "L": 8,
+        "tuning_recall": 0.804,
+        "bytes": 10724668
+      },
+      {
+        "delta": 256.0,
+        "L": 9,
+        "tuning_recall": 0.804,
+        "bytes": 12024656
+      },
+      {
+        "delta": 256.0,
+        "L": 10,
+        "tuning_recall": 0.804,
+        "bytes": 13324660
+      },
+      {
+        "delta": 256.0,
+        "L": 11,
+        "tuning_recall": 0.804,
+        "bytes": 14624596
+      },
+      {
+        "delta": 256.0,
+        "L": 12,
+        "tuning_recall": 0.804,
+        "bytes": 15924584
+      },
+      {
+        "delta": 256.0,
+        "L": 13,
+        "tuning_recall": 0.804,
+        "bytes": 17224588
+      },
+      {
+        "delta": 256.0,
+        "L": 14,
+        "tuning_recall": 0.804,
+        "bytes": 18524592
+      },
+      {
+        "delta": 256.0,
+        "L": 15,
+        "tuning_recall": 0.804,
+        "bytes": 19824580
+      },
+      {
+        "delta": 256.0,
+        "L": 16,
+        "tuning_recall": 0.804,
+        "bytes": 21124532
+      }
+    ]
+  }
+]

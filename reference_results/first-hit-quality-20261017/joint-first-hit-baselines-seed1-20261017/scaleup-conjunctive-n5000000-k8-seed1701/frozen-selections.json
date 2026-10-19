@@ -1,0 +1,80 @@
+[
+  {
+    "family": "1+1+1+1+1+1+1+1",
+    "blocks": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "blocking",
+      "lambda=0.1",
+      "lambda=1.0"
+    ],
+    "stored": 1,
+    "probed": 40320,
+    "metric": "frechet",
+    "case_id": "conjunctive-n5000000-k8",
+    "index_seed": 1701,
+    "delta": 64.0,
+    "L": 9,
+    "tuning_recall": 0.954,
+    "bytes": 585324780,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "3+1+1+1+1+1",
+    "blocks": [
+      3,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "lambda=10.0"
+    ],
+    "stored": 6,
+    "probed": 6720,
+    "metric": "frechet",
+    "case_id": "conjunctive-n5000000-k8",
+    "index_seed": 1701,
+    "delta": 64.0,
+    "L": 8,
+    "tuning_recall": 0.952,
+    "bytes": 3031654900,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+1+1+1+1",
+    "blocks": [
+      4,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "lambda=100.0"
+    ],
+    "stored": 24,
+    "probed": 1680,
+    "metric": "frechet",
+    "case_id": "conjunctive-n5000000-k8",
+    "index_seed": 1701,
+    "delta": 64.0,
+    "L": 8,
+    "tuning_recall": 0.958,
+    "bytes": 11779094920,
+    "tuning_target_reached": true
+  }
+]

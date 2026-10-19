@@ -1,0 +1,12 @@
+{
+  "completed": 1792295688.5773401,
+  "job": "replication-c-conjunctive-n100000-k8-seed1701",
+  "artifacts": {
+    "test-queries.csv": "0a617739e3d3128cfaa6480fa35425cf2067a47b4e62b6783ba62334cb6a05d4",
+    "frozen-selections.json": "cff53d542af6a6044595fe5574a7999bee6cc8a32286d284ef7c8094b390c139",
+    "excluded.json": "03da3c9abd298bbedc1ab1eb50f45c517c93c82b1fdcc524c0b3153f14c27ed0",
+    "main-results.json": "61624f469ade58e86fb03a7be59339d11b02a119f904c04fa64f69580fc3072f"
+  },
+  "source_revision": "4362384d5b703046217dfa384a4de3b64e88ea50",
+  "plan_sha256": "0b5aec13f89b5c37f3ebaa196906e27b73745e726d644d2a64f89389b3aa96d9"
+}

@@ -1,0 +1,55 @@
+[
+  {
+    "case_id": "common-n100000-k4",
+    "study": "dtw",
+    "metric": "dtw",
+    "index_seed": 1703,
+    "display_method": "blocking",
+    "status": "complete",
+    "quality_tuned": true,
+    "blocks": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "delta": 64.0,
+    "L": 2,
+    "index_bytes": 2247344,
+    "tuning": {
+      "family": "1+1+1+1",
+      "blocks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "swapped": false,
+      "labels": [
+        "blocking"
+      ],
+      "delta": 64.0,
+      "L": 2,
+      "index_bytes": 2247344,
+      "tuning_a125": 0.996,
+      "tuning_a110": 0.588,
+      "tuning_coverage": 1.0,
+      "tuning_mean_ratio": 1.089928186337645
+    },
+    "queries": 1000,
+    "returned": 1000,
+    "empty_rate": 0.0,
+    "timeout_rate": 0.0,
+    "success_110": 0.585,
+    "success_125": 0.989,
+    "exact_rate": 0.076,
+    "median_ms": 0.0037159770727157593,
+    "p95_ms": 0.005358899943530559,
+    "median_ratio": 1.0862023266347018,
+    "p95_ratio": 1.1935688827138913,
+    "p99_ratio": 1.2503860764084784,
+    "mean_ratio": 1.0901235611021458,
+    "max_ratio": 1.3543220745123545
+  }
+]

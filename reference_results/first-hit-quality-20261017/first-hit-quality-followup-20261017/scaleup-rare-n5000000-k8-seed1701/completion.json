@@ -1,0 +1,12 @@
+{
+  "completed": 1792293131.3278382,
+  "job": "scaleup-rare-n5000000-k8-seed1701",
+  "artifacts": {
+    "test-queries.csv": "189a8717c20370a6559c595fb808fa021e9f04c026017fcdc3374ca8d153bcbc",
+    "frozen-selections.json": "f6619f5539397fd850da6a80ac1562b4b93745e2f96b3fdfd1902a476f1a94d1",
+    "excluded.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "main-results.json": "3dcc65d50a6113bbbf2a4a1fd6afe2062ad6e93855a9baaaed6e3491b619d5dc"
+  },
+  "source_revision": "d3ca821f6b5a950832ba094f283032d791d66e99",
+  "plan_sha256": "2a7c9802da4fc4d9524c4c66cf1cc21ce6d585c03def2c2b142b6daa21b13833"
+}

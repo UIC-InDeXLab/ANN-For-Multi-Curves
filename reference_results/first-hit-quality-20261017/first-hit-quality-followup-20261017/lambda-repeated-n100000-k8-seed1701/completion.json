@@ -1,0 +1,10 @@
+{
+  "completed": 1792290947.874023,
+  "job": "lambda-repeated-n100000-k8-seed1701",
+  "artifacts": {
+    "test-queries.csv": "b635d38beb98be14a2b2e86a2897e4a88a8e8c0b3173f28f5f0cf687b9769809",
+    "frozen-selections.json": "1db1a7f95b7928826f7d39c039c27e2b5af672fd085c616eddd0803dd5af5390",
+    "excluded.json": "ccc480e8c3d8a316560b60ac7617dbd69f269ea0f82101067d5306b8b0076634",
+    "main-results.json": "d600c4c8eefc629ddec09ceaadc86eeb6bfe27c4a095126498144398bd369c73"
+  }
+}

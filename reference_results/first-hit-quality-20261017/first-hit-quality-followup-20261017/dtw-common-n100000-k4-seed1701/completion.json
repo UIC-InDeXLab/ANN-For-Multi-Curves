@@ -1,0 +1,10 @@
+{
+  "completed": 1792290398.5433962,
+  "job": "dtw-common-n100000-k4-seed1701",
+  "artifacts": {
+    "test-queries.csv": "d48d037f12ec8f5fe951f06af52fce10de30fe2687bd24a2cdbf30063570a0f9",
+    "frozen-selections.json": "4a3e69cb450d612d27c40d1331c6c8410571dbb77b88ef8d0eb03759ae020039",
+    "excluded.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "main-results.json": "e1d60f14b192b4435e860ee12607357c4fc43de51cf466eeadb242580aebf9ca"
+  }
+}

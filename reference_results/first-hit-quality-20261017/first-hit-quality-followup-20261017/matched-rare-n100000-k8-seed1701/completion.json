@@ -1,0 +1,10 @@
+{
+  "completed": 1792291084.203458,
+  "job": "matched-rare-n100000-k8-seed1701",
+  "artifacts": {
+    "test-queries.csv": "81eb4699c5896ea23c565466730063fcb382e0c2f6981bbcf7309db29153d6e3",
+    "frozen-selections.json": "e13cb014ef78e8f9324ceec44501c3a3cc963541fd6dc85c95c519b465b6bc3f",
+    "excluded.json": "1f200c7e160558b1617e91e4d83b504dec6c39731e3d6e2742c49c92f350be78",
+    "main-results.json": "45f99dd17e2d9e4dfa050193eb036f82da993d353c6a68685e92ae6f98105289"
+  }
+}

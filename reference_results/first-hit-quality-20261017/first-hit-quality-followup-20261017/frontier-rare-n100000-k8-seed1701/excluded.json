@@ -1,0 +1,136 @@
+[
+  {
+    "family": "8",
+    "blocks": [
+      8
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 40320,
+    "probed": 1,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "status": "not run: peak RAM estimate"
+  },
+  {
+    "family": "7+1",
+    "blocks": [
+      7,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 5040,
+    "probed": 8,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "status": "not built: no table fits index/construction-memory headroom"
+  },
+  {
+    "family": "8",
+    "blocks": [
+      8
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 40320,
+    "probed": 1,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "status": "not run: peak RAM estimate"
+  },
+  {
+    "family": "7+1",
+    "blocks": [
+      7,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 5040,
+    "probed": 8,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "status": "not built: no table fits index/construction-memory headroom"
+  },
+  {
+    "family": "3+1+1+1+1+1T",
+    "blocks": [
+      3,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 6720,
+    "probed": 6,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "status": "not run: peak RAM estimate"
+  },
+  {
+    "family": "2+2+2+1+1T",
+    "blocks": [
+      2,
+      2,
+      2,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 5040,
+    "probed": 8,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "status": "not built: no table fits index/construction-memory headroom"
+  },
+  {
+    "family": "2+2+1+1+1+1T",
+    "blocks": [
+      2,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 10080,
+    "probed": 4,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "status": "not run: peak RAM estimate"
+  },
+  {
+    "family": "2+1+1+1+1+1+1T",
+    "blocks": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 20160,
+    "probed": 2,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "status": "not run: peak RAM estimate"
+  }
+]

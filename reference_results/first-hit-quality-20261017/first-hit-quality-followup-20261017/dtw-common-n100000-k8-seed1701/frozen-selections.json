@@ -1,0 +1,54 @@
+[
+  {
+    "family": "3+1+1+1+1+1",
+    "blocks": [
+      3,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "blocking"
+    ],
+    "stored": 6,
+    "probed": 6720,
+    "metric": "dtw",
+    "case_id": "common-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 3,
+    "tuning_recall": 0.96,
+    "bytes": 22657648,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "1+1+1+1+1+1+1+1",
+    "blocks": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "probe_all"
+    ],
+    "stored": 1,
+    "probed": 40320,
+    "metric": "dtw",
+    "case_id": "common-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.98,
+    "bytes": 5524760,
+    "tuning_target_reached": true
+  }
+]

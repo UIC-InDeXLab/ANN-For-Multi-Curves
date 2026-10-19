@@ -1,0 +1,7 @@
+{
+  "case": "conjunctive-n100000-k6",
+  "complete": true,
+  "database_near_percent": 0.0010680000000000004,
+  "pdf_sha256": "6f28b2674722c294b8864ee8c1d627cf8966c14941e6a34cf1b2ff0f89f7e0fa",
+  "table_sha256": "68b709681751c73c705c3c71cd7e86525eb2a3953dba4cab088109113a70fd65"
+}

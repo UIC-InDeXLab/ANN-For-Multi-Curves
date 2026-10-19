@@ -1,0 +1,9 @@
+{
+  "status": "incomplete: measured peak RAM limit",
+  "active": {
+    "method": "4+1+1+1+1",
+    "seed": 1701,
+    "phase": "building-tuning",
+    "delta": 64
+  }
+}

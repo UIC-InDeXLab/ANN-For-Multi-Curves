@@ -1,0 +1,8 @@
+{
+  "case": "conjunctive-n100000-k10",
+  "database_entries_processed": 100000,
+  "database_entries_total": 100000,
+  "elapsed_seconds": 15.445522943991818,
+  "phase": "counting",
+  "queries": 1000
+}

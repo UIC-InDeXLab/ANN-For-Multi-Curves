@@ -1,0 +1,27 @@
+{
+  "experiment": "nba-exact-scan-20261015",
+  "data_directory": "../data/nba-full-20261012",
+  "warmup_data_directory": "../data/nba-full-20261012",
+  "database_file": "database.npz",
+  "test_file": "test.npz",
+  "ground_truth_file": "test-ground-truth.npz",
+  "warmup_file": "tune.npz",
+  "expected_database_size": 23805,
+  "expected_test_queries": 1000,
+  "k": 5,
+  "m": 32,
+  "d": 2,
+  "warmup_queries": 3,
+  "warmup_source": "first three tuning queries, untimed, matching fresh.nba_full",
+  "verification_chunk": 1000,
+  "query_deadline_seconds": 60.0,
+  "agreement_tolerance": 1e-8,
+  "repetitions": 1,
+  "pin_core": 20,
+  "build_threads": 48,
+  "notes": [
+    "Timed queries use fresh.regimes.verify over the entire database parent list.",
+    "No query may use the audited ground-truth parent id as a pruning hint.",
+    "Warm-up is untimed and uses the same tuning-query policy as fresh.nba_full."
+  ]
+}

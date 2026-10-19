@@ -1,0 +1,13 @@
+{
+  "completed": 1792323265.8334498,
+  "artifacts": {
+    "provenance.json": "0b935c2c87c25d91dcd2af1484e38dcf8d44295ab327d1f58de0ab911d2ba217",
+    "dataset.json": "0718c5c5a0931ac7a74e08f625cc5f7e6802e49eda44f7f1a63d9926df25b0a7",
+    "tuning-configurations.json": "7291b6392f7e82fb069aa17fd11a983696f5a08e86349997d00279a43095f622",
+    "tuning-queries.csv": "346728f12766917988f617fe4b58d9415e9ba3a771ef80a3e4555b3902f7b9e5",
+    "frozen-selections.json": "7c26268b9534644acfa2fc09f6783be241540173272ffcce28f9a9f8114c2348",
+    "selection-frozen-before-test.json": "7ef19d352948d502a9990a5fa10a59b68239e0b9eb0e2c59bb38e717c26ce680",
+    "main-results.json": "62b6a9a3358c85df0ee6a33b372b706927b9f31e32a99274cd75016c7e005f7e",
+    "test-queries.csv": "6c733a82a492c0e8ead8c919fc7556b360becf37cc15aaaeda1d4ce9509a1841"
+  }
+}

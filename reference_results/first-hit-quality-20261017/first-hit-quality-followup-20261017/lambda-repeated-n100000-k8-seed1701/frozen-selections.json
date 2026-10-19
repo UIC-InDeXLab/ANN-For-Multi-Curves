@@ -1,0 +1,78 @@
+[
+  {
+    "family": "4+1+1+1+1",
+    "blocks": [
+      4,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "blocking",
+      "lambda=1.0",
+      "lambda=10.0"
+    ],
+    "stored": 24,
+    "probed": 1680,
+    "metric": "frechet",
+    "case_id": "repeated-n100000-k8",
+    "index_seed": 1701,
+    "delta": 16.0,
+    "L": 1,
+    "tuning_recall": 0.004,
+    "bytes": 28526928,
+    "tuning_target_reached": false
+  },
+  {
+    "family": "1+1+1+1+1+1+1+1",
+    "blocks": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "probe_all",
+      "lambda=0.1"
+    ],
+    "stored": 1,
+    "probed": 40320,
+    "metric": "frechet",
+    "case_id": "repeated-n100000-k8",
+    "index_seed": 1701,
+    "delta": 64.0,
+    "L": 1,
+    "tuning_recall": 0.004,
+    "bytes": 1419868,
+    "tuning_target_reached": false
+  },
+  {
+    "family": "5+2+1",
+    "blocks": [
+      5,
+      2,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "lambda=100.0"
+    ],
+    "stored": 240,
+    "probed": 168,
+    "metric": "frechet",
+    "case_id": "repeated-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 1,
+    "tuning_recall": 0.002,
+    "bytes": 2538908,
+    "tuning_target_reached": false
+  }
+]

@@ -208,7 +208,7 @@ class PerCurve:
                     probes=self.k*L,postings=postings,seconds=time.perf_counter()-started)
 
 
-def dataset(config,case):
+def implicit_dataset(config,case):
     k,n = case["k"],case["n"]
     seed = config["dataset_seed"]+100*k+{"conjunctive":1,"rare":2,"repeated":3}[case["kind"]]
     count = config["tuning_queries"]+config["test_queries"]+config["warmup_queries"]
@@ -230,12 +230,18 @@ def dataset(config,case):
         for p in positions[q*config["planted_per_query"]:(q+1)*config["planted_per_query"]]:
             ids[p] = motifs[q,qrng.permutation(k)]
         queries[q] = queries[q,qrng.permutation(k)]
-    X = Implicit(paths,ids,seed+4,config["rho"]).materialize(np.arange(n))
-    return X,queries,dict(paths=pool,nominal_background_path_frequency=1-(1-1/pool)**k,
-                          planted_sets=len(positions),planted_fraction=len(positions)/n,
-                          planted_per_query=config["planted_per_query"],dataset_seed=seed,
-                          dataset_sha256=arrays_hash(X),queries_sha256=arrays_hash(queries),
-                          raw_curve_bytes=X.nbytes)
+    return Implicit(paths,ids,seed+4,config["rho"]),queries,dict(
+        paths=pool,nominal_background_path_frequency=1-(1-1/pool)**k,
+        planted_sets=len(positions),planted_fraction=len(positions)/n,
+        planted_per_query=config["planted_per_query"],dataset_seed=seed)
+
+
+def dataset(config,case):
+    implicit,queries,info = implicit_dataset(config,case)
+    X = implicit.materialize(np.arange(implicit.n))
+    info.update(dataset_sha256=arrays_hash(X),queries_sha256=arrays_hash(queries),
+                raw_curve_bytes=X.nbytes)
+    return X,queries,info
 
 
 def weighted_cost(row,weight,config):

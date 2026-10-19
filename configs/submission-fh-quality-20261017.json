@@ -1,0 +1,655 @@
+{
+  "experiment": "submission-quality-tuned-FH",
+  "jobs": [
+    {
+      "id": "nba-n23805-k5-frechet-seed2301",
+      "case_id": "nba-n23805-k5",
+      "study": "nba",
+      "metric": "frechet",
+      "seed": 2301,
+      "methods": [
+        "blocking",
+        "probe_all",
+        "store_all"
+      ],
+      "nba_config": "configs/first-entry-nba-20261016.json",
+      "protocol_overrides": {
+        "quality_deltas": [
+          4,
+          8,
+          12,
+          16,
+          24,
+          32,
+          48,
+          64,
+          96
+        ]
+      }
+    },
+    {
+      "id": "common-n100000-k4-dtw-seed1701",
+      "group": "dtw",
+      "case": {
+        "id": "common-n100000-k4-seed1701",
+        "case_id": "common-n100000-k4",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 4,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 21
+      },
+      "case_id": "common-n100000-k4",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "common-n100000-k4-seed1701",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014",
+      "methods": [
+        "blocking"
+      ],
+      "study": "dtw",
+      "seed": 1701,
+      "frontier": false,
+      "include_weights": false,
+      "frozen_family": {
+        "blocks": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "swapped": false
+      },
+      "protocol_overrides": {
+        "quality_deltas": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "common-n100000-k8-dtw-seed1701",
+      "group": "dtw",
+      "case": {
+        "id": "common-n100000-k8-seed1701",
+        "case_id": "common-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "common-n100000-k8",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "common-n100000-k8-seed1701",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014",
+      "methods": [
+        "blocking"
+      ],
+      "study": "dtw",
+      "seed": 1701,
+      "frontier": false,
+      "include_weights": false,
+      "frozen_family": {
+        "blocks": [
+          3,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "swapped": false
+      },
+      "protocol_overrides": {
+        "quality_deltas": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "rare-n100000-k4-dtw-seed1701",
+      "group": "dtw",
+      "case": {
+        "id": "rare-n100000-k4-seed1701",
+        "case_id": "rare-n100000-k4",
+        "kind": "rare",
+        "n": 100000,
+        "k": 4,
+        "index_seed": 1701,
+        "frequency": 0.005,
+        "paths": 798
+      },
+      "case_id": "rare-n100000-k4",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "rare-n100000-k4-seed1701",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014",
+      "methods": [
+        "blocking"
+      ],
+      "study": "dtw",
+      "seed": 1701,
+      "frontier": false,
+      "include_weights": false,
+      "frozen_family": {
+        "blocks": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "swapped": false
+      },
+      "protocol_overrides": {
+        "quality_deltas": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "rare-n100000-k8-dtw-seed1701",
+      "group": "dtw",
+      "case": {
+        "id": "rare-n100000-k8-seed1701",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1701,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "rare-n100000-k8-seed1701",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014",
+      "methods": [
+        "blocking"
+      ],
+      "study": "dtw",
+      "seed": 1701,
+      "frontier": false,
+      "include_weights": false,
+      "frozen_family": {
+        "blocks": [
+          3,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "swapped": false
+      },
+      "protocol_overrides": {
+        "quality_deltas": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "nba-n23805-k5-frechet-seed2302",
+      "case_id": "nba-n23805-k5",
+      "study": "nba",
+      "metric": "frechet",
+      "seed": 2302,
+      "methods": [
+        "blocking",
+        "probe_all",
+        "store_all"
+      ],
+      "nba_config": "configs/first-entry-nba-20261016.json",
+      "protocol_overrides": {
+        "quality_deltas": [
+          4,
+          8,
+          12,
+          16,
+          24,
+          32,
+          48,
+          64,
+          96
+        ]
+      }
+    },
+    {
+      "id": "common-n100000-k4-dtw-seed1702",
+      "group": "dtw",
+      "case": {
+        "id": "common-n100000-k4-seed1702",
+        "case_id": "common-n100000-k4",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 4,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 21
+      },
+      "case_id": "common-n100000-k4",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "common-n100000-k4-seed1702",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014",
+      "methods": [
+        "blocking"
+      ],
+      "study": "dtw",
+      "seed": 1702,
+      "frontier": false,
+      "include_weights": false,
+      "frozen_family": {
+        "blocks": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "swapped": false
+      },
+      "protocol_overrides": {
+        "quality_deltas": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "common-n100000-k8-dtw-seed1702",
+      "group": "dtw",
+      "case": {
+        "id": "common-n100000-k8-seed1702",
+        "case_id": "common-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "common-n100000-k8",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "common-n100000-k8-seed1702",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014",
+      "methods": [
+        "blocking"
+      ],
+      "study": "dtw",
+      "seed": 1702,
+      "frontier": false,
+      "include_weights": false,
+      "frozen_family": {
+        "blocks": [
+          3,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "swapped": false
+      },
+      "protocol_overrides": {
+        "quality_deltas": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "rare-n100000-k4-dtw-seed1702",
+      "group": "dtw",
+      "case": {
+        "id": "rare-n100000-k4-seed1702",
+        "case_id": "rare-n100000-k4",
+        "kind": "rare",
+        "n": 100000,
+        "k": 4,
+        "index_seed": 1702,
+        "frequency": 0.005,
+        "paths": 798
+      },
+      "case_id": "rare-n100000-k4",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "rare-n100000-k4-seed1702",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014",
+      "methods": [
+        "blocking"
+      ],
+      "study": "dtw",
+      "seed": 1702,
+      "frontier": false,
+      "include_weights": false,
+      "frozen_family": {
+        "blocks": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "swapped": false
+      },
+      "protocol_overrides": {
+        "quality_deltas": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "rare-n100000-k8-dtw-seed1702",
+      "group": "dtw",
+      "case": {
+        "id": "rare-n100000-k8-seed1702",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1702,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "rare-n100000-k8-seed1702",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014",
+      "methods": [
+        "blocking"
+      ],
+      "study": "dtw",
+      "seed": 1702,
+      "frontier": false,
+      "include_weights": false,
+      "frozen_family": {
+        "blocks": [
+          4,
+          1,
+          1,
+          1,
+          1
+        ],
+        "swapped": false
+      },
+      "protocol_overrides": {
+        "quality_deltas": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "nba-n23805-k5-frechet-seed2303",
+      "case_id": "nba-n23805-k5",
+      "study": "nba",
+      "metric": "frechet",
+      "seed": 2303,
+      "methods": [
+        "blocking",
+        "probe_all",
+        "store_all"
+      ],
+      "nba_config": "configs/first-entry-nba-20261016.json",
+      "protocol_overrides": {
+        "quality_deltas": [
+          4,
+          8,
+          12,
+          16,
+          24,
+          32,
+          48,
+          64,
+          96
+        ]
+      }
+    },
+    {
+      "id": "common-n100000-k4-dtw-seed1703",
+      "group": "dtw",
+      "case": {
+        "id": "common-n100000-k4-seed1703",
+        "case_id": "common-n100000-k4",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 4,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 21
+      },
+      "case_id": "common-n100000-k4",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "common-n100000-k4-seed1703",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014",
+      "methods": [
+        "blocking"
+      ],
+      "study": "dtw",
+      "seed": 1703,
+      "frontier": false,
+      "include_weights": false,
+      "frozen_family": {
+        "blocks": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "swapped": false
+      },
+      "protocol_overrides": {
+        "quality_deltas": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "common-n100000-k8-dtw-seed1703",
+      "group": "dtw",
+      "case": {
+        "id": "common-n100000-k8-seed1703",
+        "case_id": "common-n100000-k8",
+        "kind": "conjunctive",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.18,
+        "paths": 41
+      },
+      "case_id": "common-n100000-k8",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "common-n100000-k8-seed1703",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014",
+      "methods": [
+        "blocking"
+      ],
+      "study": "dtw",
+      "seed": 1703,
+      "frontier": false,
+      "include_weights": false,
+      "frozen_family": {
+        "blocks": [
+          3,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "swapped": false
+      },
+      "protocol_overrides": {
+        "quality_deltas": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "rare-n100000-k4-dtw-seed1703",
+      "group": "dtw",
+      "case": {
+        "id": "rare-n100000-k4-seed1703",
+        "case_id": "rare-n100000-k4",
+        "kind": "rare",
+        "n": 100000,
+        "k": 4,
+        "index_seed": 1703,
+        "frequency": 0.005,
+        "paths": 798
+      },
+      "case_id": "rare-n100000-k4",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "rare-n100000-k4-seed1703",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014",
+      "methods": [
+        "blocking"
+      ],
+      "study": "dtw",
+      "seed": 1703,
+      "frontier": false,
+      "include_weights": false,
+      "frozen_family": {
+        "blocks": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "swapped": false
+      },
+      "protocol_overrides": {
+        "quality_deltas": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      }
+    },
+    {
+      "id": "rare-n100000-k8-dtw-seed1703",
+      "group": "dtw",
+      "case": {
+        "id": "rare-n100000-k8-seed1703",
+        "case_id": "rare-n100000-k8",
+        "kind": "rare",
+        "n": 100000,
+        "k": 8,
+        "index_seed": 1703,
+        "frequency": 0.005,
+        "paths": 1596
+      },
+      "case_id": "rare-n100000-k8",
+      "reference_root": "results/quality-references/dtw-20261014",
+      "reference_job": "rare-n100000-k8-seed1703",
+      "metric": "dtw",
+      "nba_data": "data/nba-dtw-20261014",
+      "methods": [
+        "blocking"
+      ],
+      "study": "dtw",
+      "seed": 1703,
+      "frontier": false,
+      "include_weights": false,
+      "frozen_family": {
+        "blocks": [
+          3,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "swapped": false
+      },
+      "protocol_overrides": {
+        "quality_deltas": [
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      }
+    }
+  ],
+  "protocol": {
+    "quality_Lmax": 64,
+    "tuning_objective": "A1.25, A1.1, coverage, mean ratio, serving memory",
+    "index_budget_bytes": 24000000000,
+    "peak_ram_cap_bytes": 48000000000,
+    "query_deadline_seconds": 60,
+    "build_deadline_seconds": 1800,
+    "monitor_interval_seconds": 1,
+    "job_timeout_seconds": 86400,
+    "build_threads": 48,
+    "pin_core": 20,
+    "probe_chunk": 100000
+  },
+  "policy": "First seed of NBA and all four DTW cases, then the next seeds; no DTW baselines",
+  "preserve": [
+    "Intersection",
+    "HNSW",
+    "datasets",
+    "query splits",
+    "exact references"
+  ]
+}

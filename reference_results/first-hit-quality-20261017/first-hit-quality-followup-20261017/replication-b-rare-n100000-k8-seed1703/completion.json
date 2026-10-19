@@ -1,0 +1,10 @@
+{
+  "completed": 1792289656.5238476,
+  "job": "replication-b-rare-n100000-k8-seed1703",
+  "artifacts": {
+    "test-queries.csv": "4b18529cb3cba67fbca44fb699e37bcccc32704cf07c311139e89679d1dfbdfe",
+    "frozen-selections.json": "d0f74b13c3c988a0c3b86935b5f7618e6fde0f5e44fe969acb12fcca5f82e989",
+    "excluded.json": "29c8d56a6b9c888f836c401f69735d03d2692491c2a7094c2b054f7b8d520a44",
+    "main-results.json": "4197d657c9021ad64cae6b2d77b3eb7c5a5f5c4f8dd8c12d4499bb56bfc8e3d3"
+  }
+}

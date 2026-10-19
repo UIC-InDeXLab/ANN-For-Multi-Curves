@@ -1,0 +1,18 @@
+{
+  "dataset_sha256": "e36e93ffaf2417ad1d25c547ad83f1d60efecb567811446bdd6476d57152974c",
+  "queries_sha256": "240eb837552e174470fa9b3f0f1e41871d8f9c3b4bbfcc7faa757665ce71a2fe",
+  "raw_curve_bytes": 60940800,
+  "nba_corpus_sha256": "d498127da87c195c61a7e315e78060512a1939ad376404cd4ce8058719a824fb",
+  "nba_reference_artifacts": {
+    "tune-ground-truth.npz": "ade7961571a612d5ab09fd9fe3c2dff2e299dfdd502c02b61a3bb4a18fdaacb2",
+    "test-ground-truth.npz": "62071411cfafa3609367be9722d367e996d210d3bc7347c07afd44263eb62ba9"
+  },
+  "warmup_source": "first database multi-curves",
+  "id": "nba-n23805-k5",
+  "n": 23805,
+  "k": 5,
+  "kind": "nba",
+  "case_id": "nba-n23805-k5",
+  "index_seed": 2301,
+  "metric": "frechet"
+}

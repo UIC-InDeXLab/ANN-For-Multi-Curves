@@ -1,0 +1,111 @@
+[
+  {
+    "case_id": "nba-n23805-k5",
+    "study": "nba",
+    "metric": "frechet",
+    "index_seed": 2301,
+    "display_method": "blocking",
+    "status": "complete",
+    "quality_tuned": true,
+    "blocks": [
+      2,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "delta": 22.0,
+    "L": 138,
+    "index_bytes": 85031296,
+    "tuning": {
+      "family": "2+1+1+1",
+      "blocks": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "swapped": false,
+      "labels": [
+        "blocking"
+      ],
+      "delta": 22.0,
+      "L": 138,
+      "index_bytes": 85031296,
+      "tuning_a125": 0.182,
+      "tuning_a110": 0.084,
+      "tuning_coverage": 0.912,
+      "tuning_mean_ratio": 1.5537155297781668
+    },
+    "queries": 1000,
+    "returned": 904,
+    "empty_rate": 0.09599999999999997,
+    "timeout_rate": 0.0,
+    "success_110": 0.055,
+    "success_125": 0.168,
+    "exact_rate": 0.035,
+    "median_ms": 0.06480398587882519,
+    "p95_ms": 1.8931749640614723,
+    "median_ratio": 1.5166366425544981,
+    "p95_ratio": 2.1791765111073222,
+    "p99_ratio": 2.5227757097604977,
+    "mean_ratio": 1.5523245632953298,
+    "max_ratio": 3.1533820511079758
+  },
+  {
+    "case_id": "nba-n23805-k5",
+    "study": "nba",
+    "metric": "frechet",
+    "index_seed": 2301,
+    "display_method": "probe_all",
+    "status": "complete",
+    "quality_tuned": true,
+    "blocks": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "delta": 24.0,
+    "L": 115,
+    "index_bytes": 35409731,
+    "tuning": {
+      "family": "1+1+1+1+1",
+      "blocks": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "swapped": false,
+      "labels": [
+        "blocking",
+        "probe_all"
+      ],
+      "delta": 24.0,
+      "L": 115,
+      "index_bytes": 35409731,
+      "tuning_a125": 0.154,
+      "tuning_a110": 0.05,
+      "tuning_coverage": 0.966,
+      "tuning_mean_ratio": 1.6212765920569834
+    },
+    "queries": 1000,
+    "returned": 962,
+    "empty_rate": 0.038000000000000034,
+    "timeout_rate": 0.0,
+    "success_110": 0.067,
+    "success_125": 0.144,
+    "exact_rate": 0.031,
+    "median_ms": 0.023306492948904634,
+    "p95_ms": 1.2466224419767944,
+    "median_ratio": 1.5661273375740872,
+    "p95_ratio": 2.2902725558465633,
+    "p99_ratio": 2.593067820933448,
+    "mean_ratio": 1.608174389007528,
+    "max_ratio": 3.1979773559827023
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "family": "1+1+1+1",
+    "blocks": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "blocking",
+      "probe_all"
+    ],
+    "stored": 1,
+    "probed": 24,
+    "metric": "dtw",
+    "case_id": "common-n100000-k4",
+    "index_seed": 1701,
+    "delta": 16.0,
+    "L": 13,
+    "tuning_recall": 0.122,
+    "bytes": 16703196,
+    "tuning_target_reached": false
+  },
+  {
+    "family": "4",
+    "blocks": [
+      4
+    ],
+    "swapped": false,
+    "labels": [
+      "store_all"
+    ],
+    "stored": 24,
+    "probed": 1,
+    "metric": "dtw",
+    "case_id": "common-n100000-k4",
+    "index_seed": 1701,
+    "delta": 16.0,
+    "L": 16,
+    "tuning_recall": 0.1,
+    "bytes": 399785132,
+    "tuning_target_reached": false
+  }
+]

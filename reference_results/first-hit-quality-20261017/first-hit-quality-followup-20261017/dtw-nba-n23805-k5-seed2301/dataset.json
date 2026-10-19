@@ -1,0 +1,32 @@
+{
+  "dataset_sha256": "e36e93ffaf2417ad1d25c547ad83f1d60efecb567811446bdd6476d57152974c",
+  "queries_sha256": "240eb837552e174470fa9b3f0f1e41871d8f9c3b4bbfcc7faa757665ce71a2fe",
+  "raw_curve_bytes": 60940800,
+  "nba_corpus_sha256": "d498127da87c195c61a7e315e78060512a1939ad376404cd4ce8058719a824fb",
+  "nba_source_artifacts": {
+    "database-metadata.json": "179608c7e5e8a145d1285a49bedef787a4f892fa3b16913eb2c3452a0541ac39",
+    "database.npz": "f28f8794a8aab5dc42bb0af4a829464acc6aefdbd3ccec452d132fe0d5b75fa2",
+    "test-metadata.json": "d917653803d408ee5fc9b8ed7fc3315bf296a473dfe6673cc60087a1f65d17ca",
+    "test.npz": "34c84587ad2bed5006a3adf32a4b606de5cb077128fda2bf67c07d26d465d013",
+    "tune-metadata.json": "87b191e92b7e5e0920f18f4176173430cd4474844df09ca036aa1f0c89cae57d",
+    "tune.npz": "841143f3af3381328fcfa1724373aa0e30cc69a63784dd401da97e683a33ec68"
+  },
+  "nba_reference_artifacts": {
+    "tune-ground-truth.npz": "ade7961571a612d5ab09fd9fe3c2dff2e299dfdd502c02b61a3bb4a18fdaacb2",
+    "test-ground-truth.npz": "62071411cfafa3609367be9722d367e996d210d3bc7347c07afd44263eb62ba9"
+  },
+  "warmup_source": "first ten database multi-curves, untimed",
+  "initial_parent_policy": "Frechet NN is only a DTW upper-bound candidate",
+  "id": "nba-n23805-k5-seed2301",
+  "kind": "nba",
+  "n": 23805,
+  "k": 5,
+  "case_id": "nba-n23805-k5",
+  "index_seed": 2301,
+  "metric": "dtw",
+  "cached_ground_truth": false,
+  "mean_test_dtw_optimum": 209.03766121107972,
+  "frechet_parent_not_dtw_optimal": 0.872,
+  "reference": "results/quality-references/dtw-20261014/nba-n23805-k5-seed2301",
+  "exact_ground_truth_sha256": "6142c044d595f70376a0fa5ea2c959a36c4fc1d457916bdff1fee35c79738439"
+}

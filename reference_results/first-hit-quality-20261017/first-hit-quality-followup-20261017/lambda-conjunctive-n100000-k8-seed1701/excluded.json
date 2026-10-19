@@ -1,0 +1,18 @@
+[
+  {
+    "family": "8",
+    "blocks": [
+      8
+    ],
+    "swapped": false,
+    "labels": [
+      "store_all"
+    ],
+    "stored": 40320,
+    "probed": 1,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "status": "not run: peak RAM estimate"
+  }
+]

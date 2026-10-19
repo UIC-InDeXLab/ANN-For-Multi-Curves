@@ -1,0 +1,12 @@
+{
+  "completed": 1792295694.4170249,
+  "job": "sensitivity-m16-rare-n100000-k8-seed1701",
+  "artifacts": {
+    "test-queries.csv": "0aa8404152772e3d494cea6e3bb480da1b0ba7c808f5cd7f8f2a659f7d1c3be3",
+    "frozen-selections.json": "fec16c04b84df24f1eac415e77d71bf42ea5f1a2c1f333c6a92a6c88689d539a",
+    "excluded.json": "1907aa6353879df9225985e79eec918f8d78ffd00cc0278f24d5bb85c3ffb5c6",
+    "main-results.json": "86ece7dc481e66dd0c1ae9e6643d7aefcd2c049f1d087b3cb7edf1a5b99d7b8b"
+  },
+  "source_revision": "4362384d5b703046217dfa384a4de3b64e88ea50",
+  "plan_sha256": "0b5aec13f89b5c37f3ebaa196906e27b73745e726d644d2a64f89389b3aa96d9"
+}

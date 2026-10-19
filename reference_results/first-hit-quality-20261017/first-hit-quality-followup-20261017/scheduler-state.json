@@ -1,0 +1,8 @@
+{
+  "phase": "running",
+  "job": "frontier-conjunctive-n100000-k8-seed1701",
+  "seed_round": 1,
+  "completed": 25,
+  "total": 108,
+  "time": 1792293132.9440393
+}

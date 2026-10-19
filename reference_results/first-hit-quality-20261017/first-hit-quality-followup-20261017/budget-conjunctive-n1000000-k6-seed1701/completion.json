@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "case_id": "conjunctive-n1000000-k6",
+  "seed": 1701,
+  "script_sha256": "3849b47fe884b15cd1e804fc102a2a1c5df7b026ce703419059bb66688059c0d",
+  "frozen_core_revision": "5275e358be87c05890e89952f9676d1a5a859137",
+  "elapsed_seconds": 100.04390307795256,
+  "process_peak_rss_bytes": 6554816512,
+  "artifact_bytes": {
+    "provenance.json": 13631,
+    "family-search.json": 481,
+    "raw-tuning-queries.jsonl": 37845315,
+    "raw-test-queries.jsonl": 1582119,
+    "tuning-configurations.jsonl": 705651,
+    "tuning-configurations.json": 925892,
+    "main-results.json": 23119,
+    "selected-configurations.json": 8003,
+    "active_configuration.json": 69
+  },
+  "artifacts": {
+    "provenance.json": "54cca1fcd9e03656ecef41dbb6bbf393aa597cb6f6098d6c101a53bf997efb7e",
+    "family-search.json": "8d396cc8eb40ffc7e549852934e6ff90a88cfe9aa59c9c8b7bd3d3d0497077e4",
+    "raw-tuning-queries.jsonl": "265984bdbeb50a3f22a929f439c2d0c08a6ea340245595c3a7944de84bb7e7cb",
+    "raw-test-queries.jsonl": "2dbe725022970708b680e45775592f3f9c419cd983ae14adab7dce1aa9b5b4f7",
+    "tuning-configurations.jsonl": "422d7189e1501cc459e4c6f71266c974832dbaf36c606dace1eff5d50ff5cb41",
+    "tuning-configurations.json": "6f65d4dae4d09e568ce9e57161e4b05129afc4363f7f6aaad64f478871f7ade4",
+    "main-results.json": "71b1f656a620ab36c0f5ab23309101add857fa33e17d712e4ee8791b8f1a31ba",
+    "selected-configurations.json": "6b064ccf8ab288794068e4267ca0c2dc017f653d4a8ffc0af621f64f65f72004",
+    "active_configuration.json": "adda0469c2dfe5b96d0c5c4d23f3f89d71c3ad9cbd7e97b1ec29832a3da93b2c"
+  }
+}

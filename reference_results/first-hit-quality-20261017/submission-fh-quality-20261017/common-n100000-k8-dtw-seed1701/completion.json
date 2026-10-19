@@ -1,0 +1,15 @@
+{
+  "job": "common-n100000-k8-dtw-seed1701",
+  "source_revision": "772364be0e07ed6ca40603e0de71bcc7a9addd10",
+  "completed": 1792302066.4308426,
+  "artifacts": {
+    "provenance.json": "6aef32b3c157742d3c7476f029c487391f6432b613d4ef794685c25481b3e821",
+    "dataset.json": "6262489395ab18bcb96a59335f15af6add32447606eb5361e63910242c13589f",
+    "tuning-configurations.json": "4b99e9826055a9ff5254e16061c5f81f9cf16c675af152c8976461b5d6fb4d29",
+    "tuning-queries.csv": "c75f152acfd927cb5aef21ca40033dd17e2e21f758cd0da01fae771488f9eb34",
+    "frozen-selections.json": "801752bed4656f216296852f350a3ee896cbd6baea618e65a868a372704eaa8c",
+    "selection-frozen-before-test.json": "c4484420af4a858b85c39ac9107d4e074a0e3747683f392d6239b0ae9ce06c79",
+    "main-results.json": "4c8034c0dee9091dd19fd832db20a560d831a9f0ab93c895d6848a0491e7c476",
+    "test-queries.csv": "35bc15771912df31181b7ec2df00413a0f18d2f1b5a93628ddbe4154f6be5915"
+  }
+}

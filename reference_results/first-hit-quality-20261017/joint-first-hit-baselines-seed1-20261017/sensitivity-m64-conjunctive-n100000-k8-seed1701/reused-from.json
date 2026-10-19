@@ -1,0 +1,12 @@
+{
+  "source": "results/first-hit-quality-followup-20261017/sensitivity-m64-conjunctive-n100000-k8-seed1701",
+  "artifacts": {
+    "dataset.json": "5b36edf36a4d419b5121daef931e0448cfd3a8f9c30bd588e226e6f20e84a071",
+    "frozen-selections.json": "2f5eac0af8d4fb4be2e6df76f775e26c1847528b491e5c5baaf13cba838b11ef",
+    "tuning-configurations.json": "aab75c944d8051e63604f1909ef8e35d8558b0b78035fc70dd09a1efc907411e",
+    "main-results.json": "da7419b7d743298a08d35a228a78c420d2dd0730ded9b9bdc28b8d3c1ed16f58",
+    "test-queries.csv": "c3fd523a47c407a23ccfba9ea5412b6908d2adc821c5360d4395625f6439340b",
+    "excluded.json": "514f7579895468f943f6b669f0b6a007cb520c5bc086222f9a76e8fca6faa455"
+  },
+  "policy": "Reuse complete canonical families; add only the requested method aliases"
+}

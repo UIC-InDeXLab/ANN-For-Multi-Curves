@@ -1,0 +1,10 @@
+{
+  "completed": 1792290463.3916545,
+  "job": "dtw-nba-n23805-k5-seed2301",
+  "artifacts": {
+    "test-queries.csv": "90b8641be950fb8c21d9fe46bd5c42401750aeaeecff8f576e8673a08e61825a",
+    "frozen-selections.json": "3d802f1a28008642ada84b913221eaf6db02f3384b4619809858daecfc774662",
+    "excluded.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "main-results.json": "ec0ceb0943976f8fc04fcbaab3c938b6b711eba07c20ca1ad230817e9bcadb86"
+  }
+}

@@ -1,0 +1,793 @@
+[
+  {
+    "family": "3+1+1+1+1+1",
+    "blocks": [
+      3,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "blocking"
+    ],
+    "stored": 6,
+    "probed": 6720,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 3,
+    "tuning_recall": 0.96,
+    "bytes": 22657648,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "1+1+1+1+1+1+1+1",
+    "blocks": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 1,
+    "probed": 40320,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.98,
+    "bytes": 5524760,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "7+1",
+    "blocks": [
+      7,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 5040,
+    "probed": 8,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 1,
+    "tuning_recall": 0.6,
+    "bytes": 5156807772,
+    "tuning_target_reached": false
+  },
+  {
+    "family": "7+1T",
+    "blocks": [
+      7,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 8,
+    "probed": 5040,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.974,
+    "bytes": 40826976,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "6+2",
+    "blocks": [
+      6,
+      2
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 1440,
+    "probed": 28,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 3,
+    "tuning_recall": 0.96,
+    "bytes": 4692665812,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "6+2T",
+    "blocks": [
+      6,
+      2
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 28,
+    "probed": 1440,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.972,
+    "bytes": 140728372,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "6+1+1",
+    "blocks": [
+      6,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 720,
+    "probed": 56,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.988,
+    "bytes": 3149362824,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "6+1+1T",
+    "blocks": [
+      6,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 56,
+    "probed": 720,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.968,
+    "bytes": 277143984,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "5+3",
+    "blocks": [
+      5,
+      3
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 720,
+    "probed": 56,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.974,
+    "bytes": 3230298172,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "5+3T",
+    "blocks": [
+      5,
+      3
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 56,
+    "probed": 720,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.97,
+    "bytes": 278765016,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "5+2+1",
+    "blocks": [
+      5,
+      2,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 240,
+    "probed": 168,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.97,
+    "bytes": 1100971892,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "5+2+1T",
+    "blocks": [
+      5,
+      2,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 168,
+    "probed": 240,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.964,
+    "bytes": 817247824,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "5+1+1+1",
+    "blocks": [
+      5,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 120,
+    "probed": 336,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.974,
+    "bytes": 556692968,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "5+1+1+1T",
+    "blocks": [
+      5,
+      1,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 336,
+    "probed": 120,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.97,
+    "bytes": 1595483264,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+4",
+    "blocks": [
+      4,
+      4
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 576,
+    "probed": 70,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.974,
+    "bytes": 2615906988,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+4T",
+    "blocks": [
+      4,
+      4
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 70,
+    "probed": 576,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.962,
+    "bytes": 347488008,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+3+1",
+    "blocks": [
+      4,
+      3,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 144,
+    "probed": 280,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.982,
+    "bytes": 676669084,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+3+1T",
+    "blocks": [
+      4,
+      3,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 280,
+    "probed": 144,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.964,
+    "bytes": 1351201552,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+2+2",
+    "blocks": [
+      4,
+      2,
+      2
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 96,
+    "probed": 420,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.97,
+    "bytes": 455891564,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+2+2T",
+    "blocks": [
+      4,
+      2,
+      2
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 420,
+    "probed": 96,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.966,
+    "bytes": 2007643104,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+2+1+1",
+    "blocks": [
+      4,
+      2,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 48,
+    "probed": 840,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.974,
+    "bytes": 230466000,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+2+1+1T",
+    "blocks": [
+      4,
+      2,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 840,
+    "probed": 48,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.958,
+    "bytes": 3919541528,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+1+1+1+1",
+    "blocks": [
+      4,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 24,
+    "probed": 1680,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 3,
+    "tuning_recall": 0.952,
+    "bytes": 87563612,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+1+1+1+1T",
+    "blocks": [
+      4,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 1680,
+    "probed": 24,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.966,
+    "bytes": 7590313872,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "3+3+2",
+    "blocks": [
+      3,
+      3,
+      2
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 72,
+    "probed": 560,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 3,
+    "tuning_recall": 0.954,
+    "bytes": 259267852,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "3+3+2T",
+    "blocks": [
+      3,
+      3,
+      2
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 560,
+    "probed": 72,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 3,
+    "tuning_recall": 0.956,
+    "bytes": 2000559300,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "3+3+1+1",
+    "blocks": [
+      3,
+      3,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 36,
+    "probed": 1120,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 3,
+    "tuning_recall": 0.956,
+    "bytes": 131081544,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "3+3+1+1T",
+    "blocks": [
+      3,
+      3,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 1120,
+    "probed": 36,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 3,
+    "tuning_recall": 0.958,
+    "bytes": 3904223168,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "3+2+2+1",
+    "blocks": [
+      3,
+      2,
+      2,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 24,
+    "probed": 1680,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 3,
+    "tuning_recall": 0.97,
+    "bytes": 88371300,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "3+2+2+1T",
+    "blocks": [
+      3,
+      2,
+      2,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 1680,
+    "probed": 24,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 3,
+    "tuning_recall": 0.958,
+    "bytes": 5792256856,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "3+2+1+1+1",
+    "blocks": [
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 12,
+    "probed": 3360,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 3,
+    "tuning_recall": 0.958,
+    "bytes": 44713264,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "3+2+1+1+1T",
+    "blocks": [
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 3360,
+    "probed": 12,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 3,
+    "tuning_recall": 0.958,
+    "bytes": 11210550208,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "2+2+2+2",
+    "blocks": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 16,
+    "probed": 2520,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.97,
+    "bytes": 79558840,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "2+2+2+2T",
+    "blocks": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 2520,
+    "probed": 16,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.97,
+    "bytes": 11413872856,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "2+2+2+1+1",
+    "blocks": [
+      2,
+      2,
+      2,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 8,
+    "probed": 5040,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.966,
+    "bytes": 40247084,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "2+2+2+1+1T",
+    "blocks": [
+      2,
+      2,
+      2,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 5040,
+    "probed": 8,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 1,
+    "tuning_recall": 0.618,
+    "bytes": 4669040688,
+    "tuning_target_reached": false
+  },
+  {
+    "family": "2+2+1+1+1+1",
+    "blocks": [
+      2,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 4,
+    "probed": 10080,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.968,
+    "bytes": 20420668,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "2+1+1+1+1+1+1",
+    "blocks": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 2,
+    "probed": 20160,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "delta": 128.0,
+    "L": 4,
+    "tuning_recall": 0.972,
+    "bytes": 10441272,
+    "tuning_target_reached": true
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "uniform": {
+    "kind": "uniform",
+    "schedule": [
+      {
+        "delta": 22,
+        "L": 768,
+        "index_bytes": 473266584
+      }
+    ],
+    "index_bytes": 473266584,
+    "tuning_a125": 0.21,
+    "tuning_a110": 0.092,
+    "tuning_coverage": 0.968,
+    "tuning_mean_ratio": 1.5361398530258683
+  },
+  "cascade": {
+    "kind": "cascade",
+    "schedule": [
+      {
+        "delta": 16,
+        "L": 512,
+        "index_bytes": 316851072
+      },
+      {
+        "delta": 20,
+        "L": 128,
+        "index_bytes": 79093808
+      },
+      {
+        "delta": 22,
+        "L": 128,
+        "index_bytes": 78871536
+      }
+    ],
+    "index_bytes": 474816416,
+    "tuning_a125": 0.416,
+    "tuning_a110": 0.206,
+    "tuning_coverage": 0.928,
+    "tuning_mean_ratio": 1.3176711899810458
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "peak_process_bytes": 621559808,
+  "sampled_peak_rss_by_configuration": {
+    "preparation-seednone": 218906624,
+    "1+1+1+1-seed1703": 564142080,
+    "blocking-seed1703": 519589888
+  },
+  "monitor_interval_seconds": 1,
+  "elapsed_seconds": 10.00339404004626,
+  "returncode": 0,
+  "interruption": null
+}

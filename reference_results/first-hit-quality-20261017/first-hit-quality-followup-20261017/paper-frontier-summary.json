@@ -1,0 +1,302 @@
+{
+  "conjunctive": {
+    "measured": 38,
+    "qualified": 36,
+    "spearman_a_size": 0.9971033667398767,
+    "spearman_b_latency": 0.9950435018118149,
+    "probe": {
+      "seeds": 1,
+      "seed_ids": [
+        1701
+      ],
+      "queries": 1000,
+      "returned": 985,
+      "median_ms": 0.921474420465529,
+      "latency_range": [
+        0.921474420465529,
+        0.921474420465529
+      ],
+      "index_mb": 5.523224,
+      "index_range": [
+        5.523224,
+        5.523224
+      ],
+      "mean_ratio": 1.0000896333149325,
+      "max_ratio": 1.088288815208554,
+      "a110": 0.985,
+      "a125": 0.985,
+      "empty": 0.015000000000000015,
+      "min_a125": 0.985,
+      "candidates": null,
+      "probes": 43009.388,
+      "postings": null,
+      "median_ratio": 1.0,
+      "p95_ratio": 1.0,
+      "p99_ratio": 1.0,
+      "family": "1+1+1+1+1+1+1+1",
+      "blocks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "swapped": false,
+      "a": 1,
+      "b": 40320,
+      "delta": 128.0,
+      "L": 4
+    },
+    "fastest": {
+      "seeds": 1,
+      "seed_ids": [
+        1701
+      ],
+      "queries": 1000,
+      "returned": 977,
+      "median_ms": 0.005602953024208546,
+      "latency_range": [
+        0.005602953024208546,
+        0.005602953024208546
+      ],
+      "index_mb": 11413.87132,
+      "index_range": [
+        11413.87132,
+        11413.87132
+      ],
+      "mean_ratio": 1.1941148429223036,
+      "max_ratio": 83.38384784371462,
+      "a110": 0.974,
+      "a125": 0.974,
+      "empty": 0.02300000000000002,
+      "min_a125": 0.974,
+      "candidates": null,
+      "probes": 18.909,
+      "postings": null,
+      "median_ratio": 1.0,
+      "p95_ratio": 1.0,
+      "p99_ratio": 1.0,
+      "family": "2+2+2+2T",
+      "blocks": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "swapped": true,
+      "a": 2520,
+      "b": 16,
+      "delta": 128.0,
+      "L": 4
+    },
+    "largest_stored": {
+      "seeds": 1,
+      "seed_ids": [
+        1701
+      ],
+      "queries": 1000,
+      "returned": 929,
+      "median_ms": 0.006364542059600353,
+      "latency_range": [
+        0.006364542059600353,
+        0.006364542059600353
+      ],
+      "index_mb": 11210.548544,
+      "index_range": [
+        11210.548544,
+        11210.548544
+      ],
+      "mean_ratio": 1.0000950363995786,
+      "max_ratio": 1.088288815208554,
+      "a110": 0.929,
+      "a125": 0.929,
+      "empty": 0.07099999999999995,
+      "min_a125": 0.929,
+      "candidates": null,
+      "probes": 13.803,
+      "postings": null,
+      "median_ratio": 1.0,
+      "p95_ratio": 1.0,
+      "p99_ratio": 1.0,
+      "family": "3+2+1+1+1T",
+      "blocks": [
+        3,
+        2,
+        1,
+        1,
+        1
+      ],
+      "swapped": true,
+      "a": 3360,
+      "b": 12,
+      "delta": 128.0,
+      "L": 3
+    },
+    "speedup": 164.46227845997217,
+    "qualified_a125_range": [
+      0.923,
+      0.985
+    ],
+    "index_range_mb": [
+      5.523224,
+      11413.87132
+    ],
+    "latency_range_ms": [
+      0.005602953024208546,
+      0.921474420465529
+    ]
+  },
+  "rare": {
+    "measured": 36,
+    "qualified": 36,
+    "spearman_a_size": 0.996717142065865,
+    "spearman_b_latency": 0.9936273446737725,
+    "probe": {
+      "seeds": 1,
+      "seed_ids": [
+        1701
+      ],
+      "queries": 1000,
+      "returned": 987,
+      "median_ms": 0.7498720660805702,
+      "latency_range": [
+        0.7498720660805702,
+        0.7498720660805702
+      ],
+      "index_mb": 4.223092,
+      "index_range": [
+        4.223092,
+        4.223092
+      ],
+      "mean_ratio": 4.023322465635574,
+      "max_ratio": 291.3749238375577,
+      "a110": 0.974,
+      "a125": 0.974,
+      "empty": 0.01300000000000001,
+      "min_a125": 0.974,
+      "candidates": null,
+      "probes": 31471.706,
+      "postings": null,
+      "median_ratio": 1.0,
+      "p95_ratio": 1.0,
+      "p99_ratio": 202.97762060265308,
+      "family": "1+1+1+1+1+1+1+1",
+      "blocks": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "swapped": false,
+      "a": 1,
+      "b": 40320,
+      "delta": 256.0,
+      "L": 3
+    },
+    "fastest": {
+      "seeds": 1,
+      "seed_ids": [
+        1701
+      ],
+      "queries": 1000,
+      "returned": 988,
+      "median_ms": 0.004997476935386658,
+      "latency_range": [
+        0.004997476935386658,
+        0.004997476935386658
+      ],
+      "index_mb": 8959.83026,
+      "index_range": [
+        8959.83026,
+        8959.83026
+      ],
+      "mean_ratio": 3.593147801784871,
+      "max_ratio": 241.43375885818133,
+      "a110": 0.975,
+      "a125": 0.975,
+      "empty": 0.01200000000000001,
+      "min_a125": 0.975,
+      "candidates": null,
+      "probes": 12.969,
+      "postings": null,
+      "median_ratio": 1.0,
+      "p95_ratio": 1.0,
+      "p99_ratio": 168.13856145064986,
+      "family": "2+2+2+2T",
+      "blocks": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "swapped": true,
+      "a": 2520,
+      "b": 16,
+      "delta": 256.0,
+      "L": 3
+    },
+    "largest_stored": {
+      "seeds": 1,
+      "seed_ids": [
+        1701
+      ],
+      "queries": 1000,
+      "returned": 954,
+      "median_ms": 0.005268026143312454,
+      "latency_range": [
+        0.005268026143312454,
+        0.005268026143312454
+      ],
+      "index_mb": 7866.262156,
+      "index_range": [
+        7866.262156,
+        7866.262156
+      ],
+      "mean_ratio": 3.124114152200476,
+      "max_ratio": 228.41990754320366,
+      "a110": 0.944,
+      "a125": 0.944,
+      "empty": 0.04600000000000004,
+      "min_a125": 0.944,
+      "candidates": null,
+      "probes": 9.431,
+      "postings": null,
+      "median_ratio": 1.0,
+      "p95_ratio": 1.0,
+      "p99_ratio": 78.89308938161409,
+      "family": "3+2+1+1+1T",
+      "blocks": [
+        3,
+        2,
+        1,
+        1,
+        1
+      ],
+      "swapped": true,
+      "a": 3360,
+      "b": 12,
+      "delta": 256.0,
+      "L": 2
+    },
+    "speedup": 150.0501304509877,
+    "qualified_a125_range": [
+      0.941,
+      0.983
+    ],
+    "index_range_mb": [
+      4.223092,
+      8959.83026
+    ],
+    "latency_range_ms": [
+      0.004997476935386658,
+      0.7498720660805702
+    ]
+  }
+}

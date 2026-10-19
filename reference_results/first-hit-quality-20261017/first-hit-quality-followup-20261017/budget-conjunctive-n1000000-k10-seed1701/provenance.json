@@ -1,0 +1,456 @@
+{
+  "script": "approximate_quality_budget_20261017.py",
+  "script_sha256": "3849b47fe884b15cd1e804fc102a2a1c5df7b026ce703419059bb66688059c0d",
+  "frozen_core": {
+    "root": "<repository>",
+    "git_revision": "5275e358be87c05890e89952f9676d1a5a859137",
+    "imported_source_sha256": {
+      "fresh/poc.py": "230aa744613ab7c381b6410e6e6b42747e15ba294c9c1a632477170425fba904",
+      "fresh/regimes.py": "436cb207bc0d54051518502ccaec97f04fc993a5bc6206a4c82ddd25cc6d71c8",
+      "fresh/tuple_quality.py": "01919c696e84eb27e6695d1614c50e609766d22e6854c084b70374f0180bf5ee",
+      "fresh/e1.py": "1da9609c94be54d4007165e35b6b54fefc9bf4468b7167e10e8661cfa2e62d29",
+      "fresh/experiment_first_entry.py": "7332d405f6d465443b560e86c1a1e6ec93fa254d18b0f78dc4f6a16c3e5fc3a6",
+      "fresh/feasibility_first_hit.py": "a5dad05729f629a674389a77727f91f687ec34a343272a8b609f8a735eb2ad8d",
+      "curveset/core.py": "4630f4d283adc08514169ae4905330a4091c1f098a93e53533f314550cc7c9c1",
+      "curveset/orders.py": "365b76786cfa94f9a877d181d7e225baf70d19fb16fb53f745f6caadbe4193a9",
+      "curveset/index.py": "cefa44fc2a516e2aa08ffd4a8d0671c5a3317c821123faf5906bb0995c516406",
+      "curveset/implicit.py": "0a099c50e3168692353d97d078322910219902904753a08b008640fb9b44e93b",
+      "curveset/data.py": "d1dc7104384d72a43c6763d4816bf7ee6053f51c98152f4dc4a2ed7012743895",
+      "curveset/bench.py": "5691b94d3f52587803e5a49e653cc8ff4b3e5da354731abf67bc0067f00088a4"
+    }
+  },
+  "reference": {
+    "reference_root": "results/quality-references/fresh-feasibility-20261014",
+    "reference_job": "results/quality-references/fresh-feasibility-20261014/conjunctive-n1000000-k10-seed1701",
+    "dataset_sha256": "111f97350954dd014f7e4f74485427fa2358a20515b4c21277e13cb3668b47cb",
+    "queries_sha256": "e68a1a8f1891254d1694d8c7b11d127af4c5de1fc25c55436539f6d989596904",
+    "ground_truth_ids_sha256": "2e04d3f0583dc130ce505358c1de44efcb23a83e84babcc76b2e35a176a88171",
+    "ground_truth_distances_sha256": "e5161ae1e810ba3def91759077277767eebcae40e0baa8ac5a816e422c409a68",
+    "reference_artifacts": {
+      "config.json": "7fe8d421c4ebdfaa3833bb097befd045b0a25fafecbadf2608443c2bd1d050bc",
+      "conjunctive-n1000000-k10-seed1701/dataset.json": "4d7fa8e9975b5ad25a525b87ed513e0972bc2beda3fe73e85ddd9c78ba291aae",
+      "conjunctive-n1000000-k10-seed1701/ground-truth.npz": "49c99d28b7653b610b7ae653b55c2982a93fd015e11fa02f383adf0ff36917a0",
+      "conjunctive-n1000000-k10-seed1701/frozen-main-selections.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    }
+  },
+  "reference_config": {
+    "experiment": "measured-hard-budget-object-count-feasibility",
+    "stage": "one-million-object-count-sweep-three-index-seeds",
+    "dataset_seed": 2026101217,
+    "index_seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "m": 32,
+    "d": 2,
+    "rho": 0.5,
+    "relevance_radius": 1.5,
+    "target_recall": 0.9,
+    "tuning_acceptance_recall": 0.95,
+    "tuning_queries": 500,
+    "test_queries": 1000,
+    "warmup_queries": 10,
+    "planted_per_query": 1,
+    "plant_anchor_n": 100000,
+    "deltas": [
+      64.0,
+      128.0,
+      256.0
+    ],
+    "Lmax": 64,
+    "blocking_storage_multipliers": [
+      1,
+      6,
+      24,
+      96
+    ],
+    "include_balanced_in_ablation": true,
+    "blocking_main_latency_weight": 1.0,
+    "ablation_latency_weights": [
+      1.0
+    ],
+    "cost_memory_scale_bytes": 100000000,
+    "cost_latency_scale_seconds": 0.001,
+    "blocking_selection": "fastest full tuning median among configurations within the hard allocated-index budget and reaching 95% exact-NN success within the per-query deadline",
+    "baseline_selection": "fastest full tuning median among configurations within the same hard allocated-index budget and reaching 95% exact-NN success within the per-query deadline",
+    "tuning_guard_note": "95% empirical tuning is a conservative selection guard for a 90% held-out exact-NN-within-deadline requirement; it is not a population-recall certificate.",
+    "posting_compression": "unique (fingerprint,parent) per table for every indexed method",
+    "index_budget_bytes": 1000000000,
+    "peak_ram_cap_bytes": 48000000000,
+    "minimum_available_ram_bytes": 16000000000,
+    "query_deadline_seconds": 0.01,
+    "compilation_deadline_seconds": 60,
+    "build_deadline_seconds": 1800,
+    "run_cap_seconds": 172800,
+    "monitor_interval_seconds": 1,
+    "pin_core": 20,
+    "build_threads": 48,
+    "probe_chunk": 10000,
+    "verification_chunk": 1000,
+    "feasibility_scope": "largest feasible TESTED k in 4..12; every required index seed must meet the serving-index budget and 90% exact-NN success within 10 ms; raw curves and scratch RAM are separate",
+    "cases": [
+      {
+        "id": "conjunctive-n1000000-k4",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 4,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k5",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 5,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k6",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 6,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k7",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 7,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k8",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 8,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k9",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 9,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k10",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 10,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k11",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 11,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k12",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 12,
+        "frequency": 0.18
+      }
+    ]
+  },
+  "protocol": {
+    "experiment": "approximate-quality-fixed-budget",
+    "stage": "common-approximate-quality-four-budgets",
+    "dataset_seed": 2026101217,
+    "index_seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "m": 32,
+    "d": 2,
+    "rho": 0.5,
+    "relevance_radius": 1.5,
+    "target_recall": 0.9,
+    "tuning_acceptance_recall": 0.95,
+    "tuning_queries": 500,
+    "test_queries": 1000,
+    "warmup_queries": 10,
+    "planted_per_query": 1,
+    "plant_anchor_n": 100000,
+    "deltas": [
+      64.0,
+      128.0,
+      256.0
+    ],
+    "Lmax": 8,
+    "blocking_storage_multipliers": [
+      1,
+      6,
+      24,
+      96
+    ],
+    "include_balanced_in_ablation": true,
+    "blocking_main_latency_weight": 1.0,
+    "ablation_latency_weights": [
+      1.0
+    ],
+    "cost_memory_scale_bytes": 100000000,
+    "cost_latency_scale_seconds": 0.001,
+    "blocking_selection": "fastest complete tuning median among all on-time 1.25x-qualified configurations",
+    "baseline_selection": "fastest complete tuning median among all on-time 1.25x-qualified configurations",
+    "tuning_guard_note": "95% empirical tuning guard, not a population-success certificate",
+    "posting_compression": "CL/Intersection: unique (fingerprint,parent); FH: one lowest parent ID per fingerprint",
+    "peak_ram_cap_bytes": 48000000000,
+    "minimum_available_ram_bytes": 16000000000,
+    "compilation_deadline_seconds": 60,
+    "build_deadline_seconds": 1800,
+    "run_cap_seconds": 172800,
+    "monitor_interval_seconds": 1,
+    "pin_core": 20,
+    "build_threads": 48,
+    "probe_chunk": 10000,
+    "verification_chunk": 1000,
+    "feasibility_scope": "per-job >=90% held-out on-time 1.25x success under each of four hard budgets; bounded max8 search only",
+    "cases": [
+      {
+        "id": "conjunctive-n1000000-k4",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 4,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k5",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 5,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k6",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 6,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k7",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 7,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k8",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 8,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k9",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 9,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k10",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 10,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k11",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 11,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k12",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 12,
+        "frequency": 0.18
+      }
+    ],
+    "blocking_only": false,
+    "joint_fh": true,
+    "methods": [
+      "cl_blocking",
+      "fh_blocking",
+      "fh_probe_all",
+      "fh_store_all"
+    ],
+    "L_grid": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8
+    ],
+    "L_max": 8,
+    "required_success": 0.9,
+    "approximation_factor": 1.25,
+    "report_factors": [
+      1.1,
+      1.25
+    ],
+    "budgets": [
+      {
+        "name": "1gb-10ms",
+        "index_budget_bytes": 1000000000,
+        "query_deadline_seconds": 0.01
+      },
+      {
+        "name": "256mb-1ms",
+        "index_budget_bytes": 256000000,
+        "query_deadline_seconds": 0.001
+      },
+      {
+        "name": "16gb-10ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.01
+      },
+      {
+        "name": "16gb-100ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.1
+      }
+    ],
+    "selection": "fastest complete tuning median among all on-time 1.25x-qualified configurations",
+    "search_scope": "family_specs short list; delta={64,128,256}; L={1,2,3,4,5,6,8}; max8; BOTH CL and FH",
+    "infeasibility_scope": "no qualifying configuration in this bounded search is not global approximate infeasibility",
+    "ratio_conditioning": "only finite-distance answers returned within the query deadline; missing/late ratios are null",
+    "tolerance": "positive optimum: distance <= factor*optimum + 1e-8; zero optimum: distance == 0",
+    "timing": "CL and Intersection include exact candidate verification; FH stops before offline returned-distance evaluation",
+    "serving_memory": "actual table arrays, actual stored/probed order families, shifts and masks; raw curves and scratch excluded",
+    "tuning_prefix_policy": "shared prefix views project selected-L storage; final selections rebuilt at exactly L",
+    "construction_guard": "uint32 per-table offsets, signed int32 parent IDs, conservative 48GB raw construction estimate, 1800s alarm before allocation",
+    "build_timeout_caveat": "SIGALRM is armed before allocation; native kernels may return before Python delivers the timeout"
+  },
+  "job": {
+    "id": "conjunctive-n1000000-k10-seed1701",
+    "kind": "conjunctive",
+    "n": 1000000,
+    "k": 10,
+    "frequency": 0.18,
+    "case_id": "conjunctive-n1000000-k10",
+    "index_seed": 1701
+  },
+  "dataset_metadata": {
+    "paths": 51,
+    "nominal_background_path_frequency": 0.1796517001248451,
+    "planted_sets": 1510,
+    "planted_fraction": 0.00151,
+    "planted_per_query": 1,
+    "dataset_seed": 2026102218,
+    "dataset_sha256": "111f97350954dd014f7e4f74485427fa2358a20515b4c21277e13cb3668b47cb",
+    "queries_sha256": "e68a1a8f1891254d1694d8c7b11d127af4c5de1fc25c55436539f6d989596904",
+    "raw_curve_bytes": 5120000000,
+    "id": "conjunctive-n1000000-k10-seed1701",
+    "kind": "conjunctive",
+    "n": 1000000,
+    "k": 10,
+    "frequency": 0.18,
+    "index_seed": 1701,
+    "case_id": "conjunctive-n1000000-k10",
+    "preparation_seconds": 14.63698098785244,
+    "mean_test_nn_distance": 0.9479738828382659,
+    "mean_test_relevant_sets": 1.0
+  },
+  "fixture_reference": false,
+  "python": "3.12.7 (main, Jun 18 2025, 13:16:51) [GCC 14.2.0]",
+  "numpy": "2.5.3",
+  "numba": "0.67.0",
+  "actual_numba_threads": 48,
+  "environment": {
+    "NUMBA_NUM_THREADS": "48",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "PIN_CORE": "20",
+    "PYTHONPATH": "<repository>:<baseline-libs>"
+  },
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63
+  ],
+  "query_splits": {
+    "tuning": [
+      0,
+      500
+    ],
+    "test": [
+      500,
+      1500
+    ],
+    "warmup": [
+      1500,
+      1510
+    ]
+  }
+}

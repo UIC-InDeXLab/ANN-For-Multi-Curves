@@ -1,0 +1,24 @@
+{
+  "interrupted_job": "scaleup-conjunctive-n5000000-k8-seed1701",
+  "interrupted_family": "4+1+1+1+1",
+  "reason": "Measured construction RAM exceeded the declared limit",
+  "measured_peak_bytes": 48118325248,
+  "construction_limit_bytes": 48000000000,
+  "previous_source_revision": "8c8b76c",
+  "resumed_source_revision": "d3ca821",
+  "changes": [
+    "Release temporary slot fingerprints and keys after each built table",
+    "Reserve raw-key workspace, slot fingerprints, metadata, and safety margin before allocating retained tables",
+    "Resume completed configurations and preserve orphaned query rows in a separate partial CSV",
+    "Continue the seed-first queue after explicitly recorded incomplete jobs; do not mark the entire batch complete if any job fails"
+  ],
+  "unchanged": [
+    "48 GB construction RAM limit",
+    "24 GB serving index limit",
+    "Blocking-only scope",
+    "Seed-first order",
+    "Data, ground truth, and query split",
+    "Ordinary exact-hit tuning criterion",
+    "Approximate-budget worker pinned to its separate frozen revision"
+  ]
+}

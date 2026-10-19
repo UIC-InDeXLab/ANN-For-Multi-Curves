@@ -1,0 +1,39 @@
+[
+  {
+    "stored": 1,
+    "probed": 24,
+    "blocks": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false
+  },
+  {
+    "stored": 4,
+    "probed": 6,
+    "blocks": [
+      2,
+      2
+    ],
+    "swapped": false
+  },
+  {
+    "stored": 6,
+    "probed": 4,
+    "blocks": [
+      3,
+      1
+    ],
+    "swapped": false
+  },
+  {
+    "stored": 24,
+    "probed": 1,
+    "blocks": [
+      4
+    ],
+    "swapped": false
+  }
+]

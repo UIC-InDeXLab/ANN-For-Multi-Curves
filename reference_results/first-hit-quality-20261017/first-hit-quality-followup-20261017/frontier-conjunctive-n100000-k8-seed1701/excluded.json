@@ -1,0 +1,88 @@
+[
+  {
+    "family": "8",
+    "blocks": [
+      8
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 40320,
+    "probed": 1,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "status": "not run: peak RAM estimate"
+  },
+  {
+    "family": "8",
+    "blocks": [
+      8
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 40320,
+    "probed": 1,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "status": "not run: peak RAM estimate"
+  },
+  {
+    "family": "3+1+1+1+1+1T",
+    "blocks": [
+      3,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 6720,
+    "probed": 6,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "status": "not run: peak RAM estimate"
+  },
+  {
+    "family": "2+2+1+1+1+1T",
+    "blocks": [
+      2,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 10080,
+    "probed": 4,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "status": "not run: peak RAM estimate"
+  },
+  {
+    "family": "2+1+1+1+1+1+1T",
+    "blocks": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 20160,
+    "probed": 2,
+    "metric": "frechet",
+    "case_id": "conjunctive-n100000-k8",
+    "index_seed": 1701,
+    "status": "not run: peak RAM estimate"
+  }
+]

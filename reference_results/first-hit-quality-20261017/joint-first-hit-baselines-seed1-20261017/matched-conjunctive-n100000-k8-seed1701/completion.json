@@ -1,0 +1,12 @@
+{
+  "completed": 1792295713.749599,
+  "job": "matched-conjunctive-n100000-k8-seed1701",
+  "artifacts": {
+    "test-queries.csv": "31cf9c0062fb3bae1a38ed07cd3c46d84a415ffd8d81d571a502051aa97775d1",
+    "frozen-selections.json": "de745bc8183d405c607770cd52fa0e48a1a02df1e432746159ef4b513050fdcf",
+    "excluded.json": "03da3c9abd298bbedc1ab1eb50f45c517c93c82b1fdcc524c0b3153f14c27ed0",
+    "main-results.json": "97f604ba496c33c764971e766fe468e4772f6b853cae6b3c33d982992be427a0"
+  },
+  "source_revision": "4362384d5b703046217dfa384a4de3b64e88ea50",
+  "plan_sha256": "0b5aec13f89b5c37f3ebaa196906e27b73745e726d644d2a64f89389b3aa96d9"
+}

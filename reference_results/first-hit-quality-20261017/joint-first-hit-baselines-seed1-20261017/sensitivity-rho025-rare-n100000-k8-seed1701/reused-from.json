@@ -1,0 +1,12 @@
+{
+  "source": "results/first-hit-quality-followup-20261017/sensitivity-rho025-rare-n100000-k8-seed1701",
+  "artifacts": {
+    "dataset.json": "75f22dc5de43e23a24c57d4ac52506c015fd7cb88cbc906360be9455d8e6d94f",
+    "frozen-selections.json": "63127a7fcb798790a0c97aa3a073bb99b1ebe09235020e679a39648e3968e4d2",
+    "tuning-configurations.json": "6ab8aa196f8cb90fd400337705b017d8732ab28ab2134be084b512427b9fce32",
+    "main-results.json": "d9ab2b987b62efee6eb47df649613ac3e41606269df4f32bc2e5753ffd5bf22d",
+    "test-queries.csv": "fe592111e51c40e3ea9ea7519a159b129171241be22137b93a20a12003234abf",
+    "excluded.json": "1f200c7e160558b1617e91e4d83b504dec6c39731e3d6e2742c49c92f350be78"
+  },
+  "policy": "Reuse complete canonical families; add only the requested method aliases"
+}

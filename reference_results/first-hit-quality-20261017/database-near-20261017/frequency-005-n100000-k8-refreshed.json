@@ -1,0 +1,7 @@
+{
+  "case": "frequency-005-n100000-k8",
+  "complete": true,
+  "database_near_percent": 0.0010000000000000002,
+  "pdf_sha256": "737d3552b3a1938658a868a708859b7c71376ed7b0ce2ef7e2ac1ab7e8ecb361",
+  "table_sha256": "4163c9ca103a67e6a307e1e49094065d24bd6ece3ed5326a08b18e7b9fda4f8c"
+}

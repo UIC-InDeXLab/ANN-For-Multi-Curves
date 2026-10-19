@@ -1,0 +1,12 @@
+{
+  "completed": 1792306622.5789206,
+  "job": "frontier-rare-n100000-k8-seed1701",
+  "artifacts": {
+    "test-queries.csv": "d34e776fe359fbb5227a826e6d1d442cecfa1f2b3b2a41b298db0893e8deb07d",
+    "frozen-selections.json": "64206449a4bb900b72a3aaac7713da52783886dc522c8a3800e2c21ddd8aecbf",
+    "excluded.json": "11005c2f2bfef37af494536b9f02f4d226e56b7241e8925094421da145bb304c",
+    "main-results.json": "efb7e50074fdeb282d861f7efc9a43656dbd77a616baccfb57b195b6d2457030"
+  },
+  "source_revision": "4362384d5b703046217dfa384a4de3b64e88ea50",
+  "plan_sha256": "2a7c9802da4fc4d9524c4c66cf1cc21ce6d585c03def2c2b142b6daa21b13833"
+}

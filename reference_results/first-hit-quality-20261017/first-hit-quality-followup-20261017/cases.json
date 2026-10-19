@@ -1,0 +1,47 @@
+[
+  {
+    "job": "replication-b-conjunctive-n100000-k8-seed1701",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "replication-b-conjunctive-n100000-k8-seed1702",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "replication-b-conjunctive-n100000-k8-seed1703",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "replication-b-rare-n100000-k8-seed1701",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "replication-b-rare-n100000-k8-seed1702",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "replication-b-rare-n100000-k8-seed1703",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "replication-c-conjunctive-n100000-k8-seed1701",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "replication-c-conjunctive-n100000-k8-seed1702",
+    "status": "complete",
+    "returncode": 0
+  },
+  {
+    "job": "replication-c-conjunctive-n100000-k8-seed1703",
+    "status": "complete",
+    "returncode": 0
+  }
+]

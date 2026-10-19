@@ -1,0 +1,12 @@
+{
+  "completed": 1792295707.6204956,
+  "job": "sensitivity-rho100-rare-n100000-k8-seed1701",
+  "artifacts": {
+    "test-queries.csv": "46708c998ecaf2371597795be5b86e2dd96bbda5515ab8db4ba4ddb8a6cb1d75",
+    "frozen-selections.json": "b5865a1f90b04ec08bc8094df488e73ea0cb6e8234d5458d2324c491b0d9d682",
+    "excluded.json": "1907aa6353879df9225985e79eec918f8d78ffd00cc0278f24d5bb85c3ffb5c6",
+    "main-results.json": "72eaf0c2ccf2f185a1630cfb7dba1b4b3ac3f120f06c04a302e55902d46d05a8"
+  },
+  "source_revision": "4362384d5b703046217dfa384a4de3b64e88ea50",
+  "plan_sha256": "0b5aec13f89b5c37f3ebaa196906e27b73745e726d644d2a64f89389b3aa96d9"
+}

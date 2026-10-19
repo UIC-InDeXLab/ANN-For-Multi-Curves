@@ -1,0 +1,12 @@
+{
+  "source": "results/first-hit-quality-followup-20261017/scaleup-rare-n5000000-k8-seed1701",
+  "artifacts": {
+    "dataset.json": "9767e63779eda03ab9b95a8d521a22b53641cb6c81dc5f651247fb421cac8d37",
+    "frozen-selections.json": "f6619f5539397fd850da6a80ac1562b4b93745e2f96b3fdfd1902a476f1a94d1",
+    "tuning-configurations.json": "edf3529746f21c2d5d443e4e4b37e0b1f2ed447669f7b652bf9bf91df3e3820e",
+    "main-results.json": "3dcc65d50a6113bbbf2a4a1fd6afe2062ad6e93855a9baaaed6e3491b619d5dc",
+    "test-queries.csv": "189a8717c20370a6559c595fb808fa021e9f04c026017fcdc3374ca8d153bcbc",
+    "excluded.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  "policy": "Reuse complete canonical families; add only the requested method aliases"
+}

@@ -1,0 +1,12 @@
+{
+  "source": "results/first-hit-quality-followup-20261017/replication-b-conjunctive-n100000-k8-seed1701",
+  "artifacts": {
+    "dataset.json": "25cc46f712f556833b9a7427900062cb4ba65ce0f0e7c0f82e4096d1334d6b7d",
+    "frozen-selections.json": "6586ec9f6c3b1fb899b25b418909a3a2276308acda60f34505e89ad3d6ad3de3",
+    "tuning-configurations.json": "460401d42934832c8b1d281a71b69f40c4d0e45daae9b1a2f47ef59438585c4c",
+    "main-results.json": "ebf6f5d623cb61f1ee7a80181de597e97090957c788823fa72a6e21e99b02996",
+    "test-queries.csv": "5cc3bb13abd0a33c89554d234e5d288892ae31d52e0e063bd59ef9dd84475d72",
+    "excluded.json": "514f7579895468f943f6b669f0b6a007cb520c5bc086222f9a76e8fca6faa455"
+  },
+  "policy": "Reuse complete canonical families; add only the requested method aliases"
+}

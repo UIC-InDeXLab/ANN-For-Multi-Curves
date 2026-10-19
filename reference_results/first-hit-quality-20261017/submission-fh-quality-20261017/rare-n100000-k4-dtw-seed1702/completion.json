@@ -1,0 +1,15 @@
+{
+  "job": "rare-n100000-k4-dtw-seed1702",
+  "source_revision": "772364be0e07ed6ca40603e0de71bcc7a9addd10",
+  "completed": 1792302355.5439389,
+  "artifacts": {
+    "provenance.json": "a79614eaae9dd2efeebe3c59e15a9fb706bd5eb95a3097229c1848d7071e6642",
+    "dataset.json": "f787d89644a70dd4656904b6eb2cf7988a01f1bab0bb29e67ed649592e00aad7",
+    "tuning-configurations.json": "243794db94dee2c9784acc0aa87a199c6aa733a268df7b21f5bf5816c37271a2",
+    "tuning-queries.csv": "f478e3556a177d04f552a7a4804b2098edd8f73f0ef1ae47845f1837025e2457",
+    "frozen-selections.json": "cdb075ef832a25e8a594f43c7b654f3d3ea83a1948b055b9d6ad8a1c38f5ae8c",
+    "selection-frozen-before-test.json": "ab048fa798ce2c49e649aaf66639b67b208a4bb569320393c52cba589fe51e09",
+    "main-results.json": "3a2a96aed0f88aa672f1552f4779bef0ac024b2d570ba68d01f0d7b559bff38a",
+    "test-queries.csv": "299d1c3ae11b17a5afebadfaf80bc6b2eaa5c9c3e6f2bb7b294fdf95b34f2f73"
+  }
+}

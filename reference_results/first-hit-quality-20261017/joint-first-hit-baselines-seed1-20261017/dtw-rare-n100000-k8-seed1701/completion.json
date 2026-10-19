@@ -1,0 +1,12 @@
+{
+  "completed": 1792295711.628062,
+  "job": "dtw-rare-n100000-k8-seed1701",
+  "artifacts": {
+    "test-queries.csv": "c95ef29a731cf65c6ff031f4047f763ae041df1abfee7b9a9923df6836a18e4d",
+    "frozen-selections.json": "5f74b956210aec0949c2650828f44d0333c07107b8b4815d9dd554cd7c0e1f56",
+    "excluded.json": "3457f9214bd14359f4ef87126dcd0ca93bc63bfdeb4ae342af3bada0b501f364",
+    "main-results.json": "c6fd4cc300f42346a6c7702e05cc1ea508a7edbfcfc6148521bf7b8bcbba4767"
+  },
+  "source_revision": "4362384d5b703046217dfa384a4de3b64e88ea50",
+  "plan_sha256": "0b5aec13f89b5c37f3ebaa196906e27b73745e726d644d2a64f89389b3aa96d9"
+}

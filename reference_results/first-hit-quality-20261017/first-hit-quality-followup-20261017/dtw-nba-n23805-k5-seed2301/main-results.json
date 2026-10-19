@@ -1,0 +1,81 @@
+[
+  {
+    "family": "1+1+1+1+1",
+    "blocks": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "blocking",
+      "probe_all"
+    ],
+    "stored": 1,
+    "probed": 120,
+    "metric": "dtw",
+    "case_id": "nba-n23805-k5",
+    "index_seed": 2301,
+    "config_id": "1+1+1+1+1-d32-L5",
+    "delta": 32.0,
+    "L": 5,
+    "selected_table_count": true,
+    "tuning_target_reached": false,
+    "index_bytes": 1424059,
+    "build_seconds": 0.9578844839707017,
+    "status": "complete",
+    "queries": 1000,
+    "returned": 983,
+    "empty_rate": 0.017000000000000015,
+    "timeout_rate": 0.0,
+    "success_110": 0.005,
+    "success_125": 0.023,
+    "exact_rate": 0.004,
+    "median_ms": 0.005057547241449356,
+    "p95_ms": 0.018202012870460717,
+    "median_ratio": 2.3114447704064123,
+    "p95_ratio": 3.7827798455454666,
+    "p99_ratio": 4.548858397376877,
+    "mean_ratio": 2.4176362120149393,
+    "max_ratio": 7.0991453142501575
+  },
+  {
+    "family": "5",
+    "blocks": [
+      5
+    ],
+    "swapped": false,
+    "labels": [
+      "store_all"
+    ],
+    "stored": 120,
+    "probed": 1,
+    "metric": "dtw",
+    "case_id": "nba-n23805-k5",
+    "index_seed": 2301,
+    "config_id": "5-d16-L12",
+    "delta": 16.0,
+    "L": 12,
+    "selected_table_count": true,
+    "tuning_target_reached": false,
+    "index_bytes": 443430551,
+    "build_seconds": 0.9065964659675956,
+    "status": "complete",
+    "queries": 1000,
+    "returned": 59,
+    "empty_rate": 0.9410000000000001,
+    "timeout_rate": 0.0,
+    "success_110": 0.012,
+    "success_125": 0.021,
+    "exact_rate": 0.009,
+    "median_ms": 0.02388062421232462,
+    "p95_ms": 0.02638244768604636,
+    "median_ratio": 1.3764388832609478,
+    "p95_ratio": 2.0486066186144987,
+    "p99_ratio": 2.8974463640612,
+    "mean_ratio": 1.461778484721628,
+    "max_ratio": 2.8977211894318766
+  }
+]

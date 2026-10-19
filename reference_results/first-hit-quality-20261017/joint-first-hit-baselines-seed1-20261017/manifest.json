@@ -1,0 +1,14 @@
+{
+  "source_revision": "4362384d5b703046217dfa384a4de3b64e88ea50",
+  "plan_sha256": "0b5aec13f89b5c37f3ebaa196906e27b73745e726d644d2a64f89389b3aa96d9",
+  "scheduler_sha256": "2f7f2df418e71169624e296538c9da824259eb0480768941f5e1265fedc07a5a",
+  "first_seed_only": true,
+  "baseline_scope": [
+    "fh_probe_all",
+    "fh_store_all"
+  ],
+  "preserves": [
+    "intersection",
+    "hnsw"
+  ]
+}

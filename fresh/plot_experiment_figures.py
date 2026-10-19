@@ -563,7 +563,7 @@ def ablation(comparison_report, scaleup_report, dest, *, preview: Path | None = 
         context.__exit__(None, None, None)
 
 
-def frontier(data, dest, *, preview: Path | None = None):
+def frontier(data, dest, *, preview: Path | None = None, first_hit=False):
     """Index size versus median latency of every block partition, with the J_lambda selections and the count model."""
     panels = (("conjunctive-n100000-k8", "Common paths"), ("rare-n100000-k8", "Rare paths"))
     context = _paper_context()
@@ -575,10 +575,17 @@ def frontier(data, dest, *, preview: Path | None = None):
             others = [p for p in points if p["a"] != 1]
             probe_all = [p for p in points if p["a"] == 1]
             first = ax is axes[0]
-            ax.plot([p["index_mb"] for p in others], [p["median_ms"] for p in others], linestyle="none", marker="o",
+            filled = [p for p in others if not first_hit or p["a125"] >= .9]
+            hollow = [p for p in others if first_hit and p["a125"] < .9]
+            ax.plot([p["index_mb"] for p in filled], [p["median_ms"] for p in filled], linestyle="none", marker="o",
                     markersize=2.6, markerfacecolor=COLORS["blocking"], markeredgecolor="black", markeredgewidth=0.35,
                     alpha=0.85, label="Configuration" if first else "_nolegend_")
-            size, latency = frontier_results.count_model(points)
+            if hollow:
+                ax.plot([p["index_mb"] for p in hollow], [p["median_ms"] for p in hollow],
+                        linestyle="none", marker="o", markersize=3.2, markerfacecolor="white",
+                        markeredgecolor=COLORS["blocking"], markeredgewidth=.7)
+            fit = [p for p in points if not first_hit or p["a125"] >= .9]
+            size, latency = frontier_results.count_model(fit)
             ax.plot(size, latency, linestyle=(0, (3, 1.6)), color="#555555", linewidth=0.7,
                     label="Count model" if first else "_nolegend_")
             ax.plot([p["index_mb"] for p in probe_all], [p["median_ms"] for p in probe_all],
@@ -616,6 +623,9 @@ def feasibility(report, dest, *, preview: Path | None = None):
         )
         config = report["config"]
         ks = sorted({case["k"] for case in config["cases"]})
+        labels = {method: FEASIBILITY_LABELS[method] +
+                  (" (CL)" if method != "per_curve-intersection" else "")
+                  for method in FEASIBILITY_METHODS}
         for index, method in enumerate(FEASIBILITY_METHODS):
             groups = sorted(
                 (row for row in report["groups"] if row["method"] == method),
@@ -627,7 +637,7 @@ def feasibility(report, dest, *, preview: Path | None = None):
                 ks,
                 "Feasibility plots require every tested k for each method",
             )
-            label = FEASIBILITY_LABELS[method]
+            label = labels[method]
             for row in groups:
                 axes[0].plot(
                     row["k"],
@@ -656,22 +666,23 @@ def feasibility(report, dest, *, preview: Path | None = None):
                         alpha=0.07,
                         linewidth=0,
                     )
-        axes[0].set_title("(a) Feasible in all seeds", pad=2)
-        axes[0].set_yticks(range(len(FEASIBILITY_METHODS)), labels=[FEASIBILITY_LABELS[m] for m in FEASIBILITY_METHODS])
+        axes[0].set_title("(a) Verified-index feasibility", pad=2)
+        axes[0].set_yticks(range(len(FEASIBILITY_METHODS)), labels=[labels[m] for m in FEASIBILITY_METHODS])
         axes[0].invert_yaxis()
-        axes[0].set_xlabel("Objects per set $k$")
+        axes[0].set_xlabel("Curves per multi-curve $k$")
         axes[1].set_title("(b) Allocated index size", pad=2)
-        axes[1].set_xlabel("Objects per set $k$")
+        axes[1].set_xlabel("Curves per multi-curve $k$")
         axes[1].set_ylabel("Allocated index (MB)")
         axes[1].set_yscale("log")
         axes[1].axhline(1000, color="black", linestyle=":", linewidth=0.7)
         axes[2].set_title("(c) Median query time", pad=2)
-        axes[2].set_xlabel("Objects per set $k$")
+        axes[2].set_xlabel("Curves per multi-curve $k$")
         axes[2].set_ylabel("Latency (ms)")
         axes[2].set_yscale("log")
         axes[2].axhline(10, color="black", linestyle=":", linewidth=0.7)
         for ax in axes:
             ax.set_xticks(ks)
+            ax.set_xlim(ks[0] - .4, ks[-1] + .4)
         handles, labels = axes[1].get_legend_handles_labels()
         fig.legend(
             handles,

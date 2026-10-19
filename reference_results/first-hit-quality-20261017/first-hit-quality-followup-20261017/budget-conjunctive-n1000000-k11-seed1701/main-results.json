@@ -1,0 +1,317 @@
+{
+  "case": {
+    "id": "conjunctive-n1000000-k11-seed1701",
+    "kind": "conjunctive",
+    "n": 1000000,
+    "k": 11,
+    "frequency": 0.18,
+    "case_id": "conjunctive-n1000000-k11",
+    "index_seed": 1701
+  },
+  "protocol": {
+    "experiment": "approximate-quality-fixed-budget",
+    "stage": "common-approximate-quality-four-budgets",
+    "dataset_seed": 2026101217,
+    "index_seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "m": 32,
+    "d": 2,
+    "rho": 0.5,
+    "relevance_radius": 1.5,
+    "target_recall": 0.9,
+    "tuning_acceptance_recall": 0.95,
+    "tuning_queries": 500,
+    "test_queries": 1000,
+    "warmup_queries": 10,
+    "planted_per_query": 1,
+    "plant_anchor_n": 100000,
+    "deltas": [
+      64.0,
+      128.0,
+      256.0
+    ],
+    "Lmax": 8,
+    "blocking_storage_multipliers": [
+      1,
+      6,
+      24,
+      96
+    ],
+    "include_balanced_in_ablation": true,
+    "blocking_main_latency_weight": 1.0,
+    "ablation_latency_weights": [
+      1.0
+    ],
+    "cost_memory_scale_bytes": 100000000,
+    "cost_latency_scale_seconds": 0.001,
+    "blocking_selection": "fastest complete tuning median among all on-time 1.25x-qualified configurations",
+    "baseline_selection": "fastest complete tuning median among all on-time 1.25x-qualified configurations",
+    "tuning_guard_note": "95% empirical tuning guard, not a population-success certificate",
+    "posting_compression": "CL/Intersection: unique (fingerprint,parent); FH: one lowest parent ID per fingerprint",
+    "peak_ram_cap_bytes": 48000000000,
+    "minimum_available_ram_bytes": 16000000000,
+    "compilation_deadline_seconds": 60,
+    "build_deadline_seconds": 1800,
+    "run_cap_seconds": 172800,
+    "monitor_interval_seconds": 1,
+    "pin_core": 20,
+    "build_threads": 48,
+    "probe_chunk": 10000,
+    "verification_chunk": 1000,
+    "feasibility_scope": "per-job >=90% held-out on-time 1.25x success under each of four hard budgets; bounded max8 search only",
+    "cases": [
+      {
+        "id": "conjunctive-n1000000-k4",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 4,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k5",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 5,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k6",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 6,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k7",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 7,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k8",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 8,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k9",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 9,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k10",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 10,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k11",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 11,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k12",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 12,
+        "frequency": 0.18
+      }
+    ],
+    "blocking_only": false,
+    "joint_fh": true,
+    "methods": [
+      "cl_blocking",
+      "fh_blocking",
+      "fh_probe_all",
+      "fh_store_all"
+    ],
+    "L_grid": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8
+    ],
+    "L_max": 8,
+    "required_success": 0.9,
+    "approximation_factor": 1.25,
+    "report_factors": [
+      1.1,
+      1.25
+    ],
+    "budgets": [
+      {
+        "name": "1gb-10ms",
+        "index_budget_bytes": 1000000000,
+        "query_deadline_seconds": 0.01
+      },
+      {
+        "name": "256mb-1ms",
+        "index_budget_bytes": 256000000,
+        "query_deadline_seconds": 0.001
+      },
+      {
+        "name": "16gb-10ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.01
+      },
+      {
+        "name": "16gb-100ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.1
+      }
+    ],
+    "selection": "fastest complete tuning median among all on-time 1.25x-qualified configurations",
+    "search_scope": "family_specs short list; delta={64,128,256}; L={1,2,3,4,5,6,8}; max8; BOTH CL and FH",
+    "infeasibility_scope": "no qualifying configuration in this bounded search is not global approximate infeasibility",
+    "ratio_conditioning": "only finite-distance answers returned within the query deadline; missing/late ratios are null",
+    "tolerance": "positive optimum: distance <= factor*optimum + 1e-8; zero optimum: distance == 0",
+    "timing": "CL and Intersection include exact candidate verification; FH stops before offline returned-distance evaluation",
+    "serving_memory": "actual table arrays, actual stored/probed order families, shifts and masks; raw curves and scratch excluded",
+    "tuning_prefix_policy": "shared prefix views project selected-L storage; final selections rebuilt at exactly L",
+    "construction_guard": "uint32 per-table offsets, signed int32 parent IDs, conservative 48GB raw construction estimate, 1800s alarm before allocation",
+    "build_timeout_caveat": "SIGALRM is armed before allocation; native kernels may return before Python delivers the timeout"
+  },
+  "results": [
+    {
+      "method": "cl_blocking",
+      "budget": "1gb-10ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_blocking",
+      "budget": "1gb-10ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_probe_all",
+      "budget": "1gb-10ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_store_all",
+      "budget": "1gb-10ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "cl_blocking",
+      "budget": "256mb-1ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_blocking",
+      "budget": "256mb-1ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_probe_all",
+      "budget": "256mb-1ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_store_all",
+      "budget": "256mb-1ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "cl_blocking",
+      "budget": "16gb-10ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_blocking",
+      "budget": "16gb-10ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_probe_all",
+      "budget": "16gb-10ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_store_all",
+      "budget": "16gb-10ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "cl_blocking",
+      "budget": "16gb-100ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_blocking",
+      "budget": "16gb-100ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_probe_all",
+      "budget": "16gb-100ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_store_all",
+      "budget": "16gb-100ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    }
+  ]
+}

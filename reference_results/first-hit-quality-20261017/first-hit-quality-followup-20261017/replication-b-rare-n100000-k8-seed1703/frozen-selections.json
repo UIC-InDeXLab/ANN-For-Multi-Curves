@@ -1,0 +1,54 @@
+[
+  {
+    "family": "3+1+1+1+1+1",
+    "blocks": [
+      3,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "blocking"
+    ],
+    "stored": 6,
+    "probed": 6720,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1703,
+    "delta": 256.0,
+    "L": 2,
+    "tuning_recall": 0.954,
+    "bytes": 15272060,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "1+1+1+1+1+1+1+1",
+    "blocks": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "probe_all"
+    ],
+    "stored": 1,
+    "probed": 40320,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1703,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.984,
+    "bytes": 4224756,
+    "tuning_target_reached": true
+  }
+]

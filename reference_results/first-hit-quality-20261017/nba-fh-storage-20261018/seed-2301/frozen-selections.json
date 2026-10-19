@@ -1,0 +1,44 @@
+{
+  "blocking": {
+    "family": "2+1+1+1",
+    "blocks": [
+      2,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "blocking"
+    ],
+    "delta": 22.0,
+    "L": 138,
+    "index_bytes": 85031296,
+    "tuning_a125": 0.182,
+    "tuning_a110": 0.084,
+    "tuning_coverage": 0.912,
+    "tuning_mean_ratio": 1.5537155297781668
+  },
+  "probe_all": {
+    "family": "1+1+1+1+1",
+    "blocks": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "blocking",
+      "probe_all"
+    ],
+    "delta": 24.0,
+    "L": 115,
+    "index_bytes": 35409731,
+    "tuning_a125": 0.154,
+    "tuning_a110": 0.05,
+    "tuning_coverage": 0.966,
+    "tuning_mean_ratio": 1.6212765920569834
+  }
+}

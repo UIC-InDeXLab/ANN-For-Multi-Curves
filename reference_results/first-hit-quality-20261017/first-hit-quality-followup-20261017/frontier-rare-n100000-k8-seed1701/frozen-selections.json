@@ -1,0 +1,771 @@
+[
+  {
+    "family": "3+1+1+1+1+1",
+    "blocks": [
+      3,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "blocking"
+    ],
+    "stored": 6,
+    "probed": 6720,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.966,
+    "bytes": 22868012,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "1+1+1+1+1+1+1+1",
+    "blocks": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 1,
+    "probed": 40320,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.974,
+    "bytes": 4224756,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "7+1T",
+    "blocks": [
+      7,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 8,
+    "probed": 5040,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.974,
+    "bytes": 30855820,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "6+2",
+    "blocks": [
+      6,
+      2
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 1440,
+    "probed": 28,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.962,
+    "bytes": 4998637320,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "6+2T",
+    "blocks": [
+      6,
+      2
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 28,
+    "probed": 1440,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.97,
+    "bytes": 106529988,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "6+1+1",
+    "blocks": [
+      6,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 720,
+    "probed": 56,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.964,
+    "bytes": 2517338244,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "6+1+1T",
+    "blocks": [
+      6,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 56,
+    "probed": 720,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.976,
+    "bytes": 211165324,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "5+3",
+    "blocks": [
+      5,
+      3
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 720,
+    "probed": 56,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.974,
+    "bytes": 2554551420,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "5+3T",
+    "blocks": [
+      5,
+      3
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 56,
+    "probed": 720,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.974,
+    "bytes": 212095308,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "5+2+1",
+    "blocks": [
+      5,
+      2,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 240,
+    "probed": 168,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 2,
+    "tuning_recall": 0.952,
+    "bytes": 577135284,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "5+2+1T",
+    "blocks": [
+      5,
+      2,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 168,
+    "probed": 240,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.964,
+    "bytes": 627702556,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "5+1+1+1",
+    "blocks": [
+      5,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 120,
+    "probed": 336,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.976,
+    "bytes": 435264848,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "5+1+1+1T",
+    "blocks": [
+      5,
+      1,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 336,
+    "probed": 120,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.974,
+    "bytes": 1233123356,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+4",
+    "blocks": [
+      4,
+      4
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 576,
+    "probed": 70,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 2,
+    "tuning_recall": 0.952,
+    "bytes": 1368187680,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+4T",
+    "blocks": [
+      4,
+      4
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 70,
+    "probed": 576,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.974,
+    "bytes": 264677824,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+4T",
+    "blocks": [
+      4,
+      4
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 70,
+    "probed": 576,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.974,
+    "bytes": 264677824,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+3+1",
+    "blocks": [
+      4,
+      3,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 144,
+    "probed": 280,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 2,
+    "tuning_recall": 0.954,
+    "bytes": 351100396,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+3+1T",
+    "blocks": [
+      4,
+      3,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 280,
+    "probed": 144,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.97,
+    "bytes": 1039327404,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+2+2",
+    "blocks": [
+      4,
+      2,
+      2
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 96,
+    "probed": 420,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.97,
+    "bytes": 353431380,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+2+2T",
+    "blocks": [
+      4,
+      2,
+      2
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 420,
+    "probed": 96,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.976,
+    "bytes": 1544759692,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+2+1+1",
+    "blocks": [
+      4,
+      2,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 48,
+    "probed": 840,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.972,
+    "bytes": 177972304,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+2+1+1T",
+    "blocks": [
+      4,
+      2,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 840,
+    "probed": 48,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.968,
+    "bytes": 3040778152,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+1+1+1+1",
+    "blocks": [
+      4,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 24,
+    "probed": 1680,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.97,
+    "bytes": 89494360,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "4+1+1+1+1T",
+    "blocks": [
+      4,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 1680,
+    "probed": 24,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.974,
+    "bytes": 5968910672,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "3+3+2",
+    "blocks": [
+      3,
+      3,
+      2
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 72,
+    "probed": 560,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.964,
+    "bytes": 266184076,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "3+3+2T",
+    "blocks": [
+      3,
+      3,
+      2
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 560,
+    "probed": 72,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 2,
+    "tuning_recall": 0.954,
+    "bytes": 1369791520,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "3+3+1+1",
+    "blocks": [
+      3,
+      3,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 36,
+    "probed": 1120,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.97,
+    "bytes": 134038596,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "3+3+1+1T",
+    "blocks": [
+      3,
+      3,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 1120,
+    "probed": 36,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 2,
+    "tuning_recall": 0.952,
+    "bytes": 2698031844,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "3+2+2+1",
+    "blocks": [
+      3,
+      2,
+      2,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 24,
+    "probed": 1680,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.968,
+    "bytes": 90061836,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "3+2+2+1T",
+    "blocks": [
+      3,
+      2,
+      2,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 1680,
+    "probed": 24,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 2,
+    "tuning_recall": 0.95,
+    "bytes": 4021304968,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "3+2+1+1+1",
+    "blocks": [
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 12,
+    "probed": 3360,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.962,
+    "bytes": 45404804,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "3+2+1+1+1T",
+    "blocks": [
+      3,
+      2,
+      1,
+      1,
+      1
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 3360,
+    "probed": 12,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 2,
+    "tuning_recall": 0.954,
+    "bytes": 7866263948,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "2+2+2+2",
+    "blocks": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 16,
+    "probed": 2520,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.98,
+    "bytes": 60644568,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "2+2+2+2T",
+    "blocks": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "swapped": true,
+    "labels": [],
+    "stored": 2520,
+    "probed": 16,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.974,
+    "bytes": 8959831924,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "2+2+2+1+1",
+    "blocks": [
+      2,
+      2,
+      2,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 8,
+    "probed": 5040,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.98,
+    "bytes": 30567828,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "2+2+1+1+1+1",
+    "blocks": [
+      2,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 4,
+    "probed": 10080,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 2,
+    "tuning_recall": 0.95,
+    "bytes": 10333276,
+    "tuning_target_reached": true
+  },
+  {
+    "family": "2+1+1+1+1+1+1",
+    "blocks": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [],
+    "stored": 2,
+    "probed": 20160,
+    "metric": "frechet",
+    "case_id": "rare-n100000-k8",
+    "index_seed": 1701,
+    "delta": 256.0,
+    "L": 3,
+    "tuning_recall": 0.972,
+    "bytes": 7890028,
+    "tuning_target_reached": true
+  }
+]

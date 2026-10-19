@@ -1,0 +1,12 @@
+{
+  "source": "results/first-hit-quality-followup-20261017/sensitivity-rho025-conjunctive-n100000-k8-seed1701",
+  "artifacts": {
+    "dataset.json": "56e062b3d146e0ccf473fa0aec083e4a799f00c2f57790dd8499ee48846c3c2d",
+    "frozen-selections.json": "710ebd83bb6aabe38a012a839d8b1c347ef1008ee7a624c02cbfa3b98c2d537e",
+    "tuning-configurations.json": "b4d36e7f91566bb682cf03f2c95821c1cc2583d7ea3ef833e38141147561850d",
+    "main-results.json": "b7b13c082631ed4da67c0d9fa42400e236a7542fd5a62e0e96735c3e45872d14",
+    "test-queries.csv": "0e23187f7bdab4b58c4fc7a080fee6004ad7c46e9130c30e7268cf57cff4c213",
+    "excluded.json": "514f7579895468f943f6b669f0b6a007cb520c5bc086222f9a76e8fca6faa455"
+  },
+  "policy": "Reuse complete canonical families; add only the requested method aliases"
+}

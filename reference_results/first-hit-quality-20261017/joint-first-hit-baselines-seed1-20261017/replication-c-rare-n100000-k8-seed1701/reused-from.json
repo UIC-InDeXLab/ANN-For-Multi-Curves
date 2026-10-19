@@ -1,0 +1,12 @@
+{
+  "source": "results/first-hit-quality-followup-20261017/replication-c-rare-n100000-k8-seed1701",
+  "artifacts": {
+    "dataset.json": "ec3ed6ea029f0a299b87223ff066e8fe0675863138283eb3f1c38fa415b0b3d3",
+    "frozen-selections.json": "1e69d4621dfe29843e5ce37e941aaceb177f1ad0a06821847ac0b6a97a221cca",
+    "tuning-configurations.json": "4297a9183bbb2b0b536408c7afb50a5d0d45f01cf39c3741377603509f39d52b",
+    "main-results.json": "84d862bcc171defd9628d53c043e78d741bf6d9e9aa660b05151e4c6848ed0cf",
+    "test-queries.csv": "c4f15345ccefe2f7d97ba5768a9d7cd72f265bff1fcaa5a55570f3d6bf5bb752",
+    "excluded.json": "1f200c7e160558b1617e91e4d83b504dec6c39731e3d6e2742c49c92f350be78"
+  },
+  "policy": "Reuse complete canonical families; add only the requested method aliases"
+}

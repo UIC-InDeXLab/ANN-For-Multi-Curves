@@ -1,0 +1,60 @@
+{
+  "blocking": {
+    "family": "5",
+    "blocks": [
+      5
+    ],
+    "swapped": false,
+    "labels": [
+      "blocking",
+      "store_all"
+    ],
+    "delta": 24.0,
+    "L": 60,
+    "index_bytes": 1892084655,
+    "tuning_a125": 0.152,
+    "tuning_a110": 0.052,
+    "tuning_coverage": 0.93,
+    "tuning_mean_ratio": 1.6311798031306954
+  },
+  "probe_all": {
+    "family": "1+1+1+1+1",
+    "blocks": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "blocking",
+      "probe_all"
+    ],
+    "delta": 24.0,
+    "L": 63,
+    "index_bytes": 19404823,
+    "tuning_a125": 0.11,
+    "tuning_a110": 0.054,
+    "tuning_coverage": 0.94,
+    "tuning_mean_ratio": 1.6550416052911652
+  },
+  "store_all": {
+    "family": "5",
+    "blocks": [
+      5
+    ],
+    "swapped": false,
+    "labels": [
+      "blocking",
+      "store_all"
+    ],
+    "delta": 24.0,
+    "L": 60,
+    "index_bytes": 1892084655,
+    "tuning_a125": 0.152,
+    "tuning_a110": 0.052,
+    "tuning_coverage": 0.93,
+    "tuning_mean_ratio": 1.6311798031306954
+  }
+}

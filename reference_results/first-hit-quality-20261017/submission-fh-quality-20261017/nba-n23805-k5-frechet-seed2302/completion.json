@@ -1,0 +1,15 @@
+{
+  "job": "nba-n23805-k5-frechet-seed2302",
+  "source_revision": "772364be0e07ed6ca40603e0de71bcc7a9addd10",
+  "completed": 1792302271.2438223,
+  "artifacts": {
+    "provenance.json": "425f77da996492956464c13a4adc09c08234f2d7387f436116de93e8fde097a0",
+    "dataset.json": "6c3857535cb8841e8a7036db94a6b5731877af00679ce4608f1bc72fb403365e",
+    "tuning-configurations.json": "9b63cfbf64b6149fac51afe11c0f42116ed847baedd9c38ff0e67145a0e2a6e6",
+    "tuning-queries.csv": "f82e142be61bc491ccd8f2d47ca238b700e34b4aa60841aae2ea8b73d91b2851",
+    "frozen-selections.json": "c0090067b7f663230b8451138538cbe6849d434144edc1b049aec6ac07a5b7a3",
+    "selection-frozen-before-test.json": "f6c5c82fb4907551052a6ef0c0211102cf1f51011cc6bc4b81264281badc7375",
+    "main-results.json": "142b6d7a0a59f4cb46a3e71e2d1f65a5f54fdb8e027a63295a5f4ef0cdfa57c3",
+    "test-queries.csv": "353d9adc0ab4a458c492d932832bb629a80956520e59234da1739648bb5d9638"
+  }
+}

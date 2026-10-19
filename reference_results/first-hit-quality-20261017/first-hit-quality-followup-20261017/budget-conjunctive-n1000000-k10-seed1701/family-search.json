@@ -1,0 +1,79 @@
+[
+  {
+    "stored": 1,
+    "probed": 3628800,
+    "blocks": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false
+  },
+  {
+    "stored": 6,
+    "probed": 604800,
+    "blocks": [
+      3,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false
+  },
+  {
+    "stored": 24,
+    "probed": 151200,
+    "blocks": [
+      4,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false
+  },
+  {
+    "stored": 96,
+    "probed": 37800,
+    "blocks": [
+      4,
+      2,
+      2,
+      1,
+      1
+    ],
+    "swapped": false
+  },
+  {
+    "stored": 1440,
+    "probed": 2520,
+    "blocks": [
+      6,
+      2,
+      1,
+      1
+    ],
+    "swapped": false
+  },
+  {
+    "stored": 3628800,
+    "probed": 1,
+    "blocks": [
+      10
+    ],
+    "swapped": false
+  }
+]

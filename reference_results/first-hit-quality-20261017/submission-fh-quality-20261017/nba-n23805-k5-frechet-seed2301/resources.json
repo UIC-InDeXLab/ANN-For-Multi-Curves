@@ -1,0 +1,24 @@
+{
+  "peak_process_bytes": 2829758464,
+  "sampled_peak_rss_by_configuration": {
+    "preparation-seednone": 532480,
+    "5-seed2301": 2801676288,
+    "1+1+1+1+1-seed2301": 433172480,
+    "4+1-seed2301": 799612928,
+    "4+1T-seed2301": 491470848,
+    "3+2-seed2301": 562098176,
+    "3+2T-seed2301": 590647296,
+    "3+1+1-seed2301": 511991808,
+    "3+1+1T-seed2301": 794759168,
+    "2+2+1-seed2301": 470503424,
+    "2+2+1T-seed2301": 958517248,
+    "2+1+1+1-seed2301": 469504000,
+    "2+1+1+1T-seed2301": 1522221056,
+    "blocking-seed2301": 2153021440,
+    "probe_all-seed2301": 465780736
+  },
+  "monitor_interval_seconds": 1,
+  "elapsed_seconds": 133.05224240082316,
+  "returncode": 0,
+  "interruption": null
+}

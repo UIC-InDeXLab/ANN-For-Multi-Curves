@@ -1,0 +1,12 @@
+{
+  "completed": 1792295705.6648881,
+  "job": "sensitivity-rho100-conjunctive-n100000-k8-seed1701",
+  "artifacts": {
+    "test-queries.csv": "3122fef0ba3573df650b1702923fe7bd4be3ef1de7647a8afc1c0b03cb4c8f0a",
+    "frozen-selections.json": "f2e05c6752f270bf38ebc0669bf9dc2e3f64c7103b6d637a12d1c8f28468f04f",
+    "excluded.json": "03da3c9abd298bbedc1ab1eb50f45c517c93c82b1fdcc524c0b3153f14c27ed0",
+    "main-results.json": "a215f25a79dafd587d7a20d614a82adc1bdbce0ece0b662f6c6245c1e9e7e474"
+  },
+  "source_revision": "4362384d5b703046217dfa384a4de3b64e88ea50",
+  "plan_sha256": "0b5aec13f89b5c37f3ebaa196906e27b73745e726d644d2a64f89389b3aa96d9"
+}

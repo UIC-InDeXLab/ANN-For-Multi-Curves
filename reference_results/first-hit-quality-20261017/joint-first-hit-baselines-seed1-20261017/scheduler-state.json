@@ -1,0 +1,9 @@
+{
+  "phase": "running",
+  "job": "frontier-conjunctive-n100000-k8-seed1701",
+  "root": "results/first-hit-quality-followup-20261017",
+  "completed": 44,
+  "total": 55,
+  "first_seed_only": true,
+  "time": 1792295725.2794926
+}

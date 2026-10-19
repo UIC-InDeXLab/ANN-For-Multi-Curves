@@ -1,0 +1,16 @@
+{
+  "case": "frequency-650-n100000-k8",
+  "chunk_entries": 16384,
+  "dataset_sha256": "4e1ba5719c5026ac27340a1734469d31dde5172047cf2ebed987d2a692832890",
+  "factor": 1.25,
+  "generator_source": "903f264a030a2a0b2f8fc3c4cf4f2fe9d59c34093f56a8092cdbffa82239002b",
+  "ground_truth_sha256": "7634104cea564ed032c983d56c96b828639fedbd509c883995ff1c4d727422d7",
+  "method": "exact distance with sound endpoint rejection; every database entry considered",
+  "n": 100000,
+  "queries": 1000,
+  "queries_sha256": "4f796a98264a286d149b84a20128dfb8038493948f64898ba7ebb61f4d2f4bf4",
+  "reference": "results/fresh-selectivity-expanded-20261013/frequency-650-n100000-k8-seed1801",
+  "source": "87f81bc54d130b17d1f1120c9c18db1038c7a5189f699850e7eb6e8f2247c0dd",
+  "threads": 2,
+  "tolerance": 1e-08
+}

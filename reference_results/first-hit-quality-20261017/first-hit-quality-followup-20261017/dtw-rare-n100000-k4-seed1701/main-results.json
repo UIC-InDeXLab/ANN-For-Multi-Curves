@@ -1,0 +1,80 @@
+[
+  {
+    "family": "1+1+1+1",
+    "blocks": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "labels": [
+      "blocking",
+      "probe_all"
+    ],
+    "stored": 1,
+    "probed": 24,
+    "metric": "dtw",
+    "case_id": "rare-n100000-k4",
+    "index_seed": 1701,
+    "config_id": "1+1+1+1-d128-L3",
+    "delta": 128.0,
+    "L": 3,
+    "selected_table_count": true,
+    "tuning_target_reached": true,
+    "index_bytes": 3899552,
+    "build_seconds": 0.9495788689237088,
+    "status": "complete",
+    "queries": 1000,
+    "returned": 988,
+    "empty_rate": 0.01200000000000001,
+    "timeout_rate": 0.0,
+    "success_110": 0.982,
+    "success_125": 0.982,
+    "exact_rate": 0.982,
+    "median_ms": 0.0044014304876327515,
+    "p95_ms": 0.013865099754184481,
+    "median_ratio": 1.0,
+    "p95_ratio": 1.0,
+    "p99_ratio": 1.0,
+    "mean_ratio": 1.9268505753830445,
+    "max_ratio": 179.49187279450464
+  },
+  {
+    "family": "4",
+    "blocks": [
+      4
+    ],
+    "swapped": false,
+    "labels": [
+      "store_all"
+    ],
+    "stored": 24,
+    "probed": 1,
+    "metric": "dtw",
+    "case_id": "rare-n100000-k4",
+    "index_seed": 1701,
+    "config_id": "4-d128-L2",
+    "delta": 128.0,
+    "L": 2,
+    "selected_table_count": true,
+    "tuning_target_reached": true,
+    "index_bytes": 61453320,
+    "build_seconds": 0.15859821601770818,
+    "status": "complete",
+    "queries": 1000,
+    "returned": 943,
+    "empty_rate": 0.05700000000000005,
+    "timeout_rate": 0.0,
+    "success_110": 0.938,
+    "success_125": 0.938,
+    "exact_rate": 0.938,
+    "median_ms": 0.0019730068743228912,
+    "p95_ms": 0.004136504139751195,
+    "median_ratio": 1.0,
+    "p95_ratio": 1.0,
+    "p99_ratio": 1.0,
+    "mean_ratio": 1.9059293865552374,
+    "max_ratio": 192.00032657153236
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "source": "results/first-hit-quality-followup-20261017/scaleup-conjunctive-n2000000-k8-seed1701",
+  "artifacts": {
+    "dataset.json": "96c02312f428f31f3297da96ee2ea4316866283087662ee985a507d50059b363",
+    "frozen-selections.json": "877d73258d14a56efe58b73e5215ea07766b30798839ed969b64813f606dee5f",
+    "tuning-configurations.json": "838af0d26f02b15291dde5e0ebb08a09fbd60a6723ec5f199bcc95e00e6612aa",
+    "main-results.json": "ab512806a7cb77abfa610efd0f48bc2a71cb833e213fe9030903a74dfab5e3d7",
+    "test-queries.csv": "fc884cdfec3713996093f92a7eb585b6d8dcf157d559203c2ec34892a612a664",
+    "excluded.json": "d3a7483b79302f1f3027cff6615f3b1f7eee057b8c180d6c7d5c36dc40fa42c5"
+  },
+  "policy": "Reuse complete canonical families; add only the requested method aliases"
+}

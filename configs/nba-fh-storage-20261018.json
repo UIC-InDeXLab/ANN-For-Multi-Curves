@@ -1,0 +1,58 @@
+{
+  "experiment": "nba-FH-lower-delta-storage-followup",
+  "protocol": {
+    "quality_deltas": [14, 16, 18, 20, 22, 24],
+    "quality_Lmax": 384,
+    "index_budget_bytes": 128000000,
+    "query_deadline_seconds": 60,
+    "build_deadline_seconds": 300,
+    "build_threads": 2,
+    "pin_core": 6,
+    "probe_chunk": 100000,
+    "interior_blocking": true,
+    "storage_selection": {
+      "max_a125_loss": 0.02,
+      "max_coverage_loss": 0.02
+    }
+  },
+  "jobs": [
+    {
+      "id": "nba-n23805-k5-frechet-seed2301",
+      "case_id": "nba-n23805-k5",
+      "study": "nba",
+      "metric": "frechet",
+      "seed": 2301,
+      "methods": ["blocking", "probe_all"],
+      "nba_config": "configs/first-entry-nba-20261016.json",
+      "tuning_reference": "results/submission-fh-quality-20261017/nba-n23805-k5-frechet-seed2301"
+    },
+    {
+      "id": "nba-n23805-k5-frechet-seed2302",
+      "case_id": "nba-n23805-k5",
+      "study": "nba",
+      "metric": "frechet",
+      "seed": 2302,
+      "methods": ["blocking", "probe_all"],
+      "nba_config": "configs/first-entry-nba-20261016.json",
+      "tuning_reference": "results/submission-fh-quality-20261017/nba-n23805-k5-frechet-seed2302"
+    },
+    {
+      "id": "nba-n23805-k5-frechet-seed2303",
+      "case_id": "nba-n23805-k5",
+      "study": "nba",
+      "metric": "frechet",
+      "seed": 2303,
+      "methods": ["blocking", "probe_all"],
+      "nba_config": "configs/first-entry-nba-20261016.json",
+      "tuning_reference": "results/submission-fh-quality-20261017/nba-n23805-k5-frechet-seed2303"
+    }
+  ],
+  "reporting": {
+    "reference": "Previous completed 64-table quality-tuned Store-all; not retuned on the expanded delta grid.",
+    "selection": "Smallest serving index with tuning A1.25 and coverage each within 0.02 of the frozen Store-all reference.",
+    "blocking": "Proper interior families only; Probe-all and Store-all remain separately labelled endpoints.",
+    "splits": "Unchanged audited database, 500 tuning queries and 1000 held-out queries per seed.",
+    "timing": "Local exploratory measurements; do not compare absolute latencies with historical server timings.",
+    "publication": "Preserve previous results and paper outputs; this is a separate exploratory follow-up."
+  }
+}

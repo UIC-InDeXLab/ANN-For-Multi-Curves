@@ -1,0 +1,12 @@
+{
+  "completed": 1792295696.9927979,
+  "job": "sensitivity-m64-conjunctive-n100000-k8-seed1701",
+  "artifacts": {
+    "test-queries.csv": "c3fd523a47c407a23ccfba9ea5412b6908d2adc821c5360d4395625f6439340b",
+    "frozen-selections.json": "2f5eac0af8d4fb4be2e6df76f775e26c1847528b491e5c5baaf13cba838b11ef",
+    "excluded.json": "03da3c9abd298bbedc1ab1eb50f45c517c93c82b1fdcc524c0b3153f14c27ed0",
+    "main-results.json": "da7419b7d743298a08d35a228a78c420d2dd0730ded9b9bdc28b8d3c1ed16f58"
+  },
+  "source_revision": "4362384d5b703046217dfa384a4de3b64e88ea50",
+  "plan_sha256": "0b5aec13f89b5c37f3ebaa196906e27b73745e726d644d2a64f89389b3aa96d9"
+}

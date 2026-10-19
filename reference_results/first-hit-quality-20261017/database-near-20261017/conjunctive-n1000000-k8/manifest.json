@@ -1,0 +1,16 @@
+{
+  "case": "conjunctive-n1000000-k8",
+  "chunk_entries": 16384,
+  "dataset_sha256": "159449803a086d300e07117df874ecb7beacfb39a6ca65034b16744053e22315",
+  "factor": 1.25,
+  "generator_source": "903f264a030a2a0b2f8fc3c4cf4f2fe9d59c34093f56a8092cdbffa82239002b",
+  "ground_truth_sha256": "67b847d29ee93ba9ccefc8adbf79d75880a8643b1515133be3c4d82e7735dc58",
+  "method": "exact distance with sound endpoint rejection; every database entry considered",
+  "n": 1000000,
+  "queries": 1000,
+  "queries_sha256": "c6d0228954491c736eeb3b70519b5acd738953897aba19bbebd3c289546887b0",
+  "reference": "results/fresh-synthetic-expanded-20261012/conjunctive-n1000000-k8-seed1701",
+  "source": "87f81bc54d130b17d1f1120c9c18db1038c7a5189f699850e7eb6e8f2247c0dd",
+  "threads": 2,
+  "tolerance": 1e-08
+}

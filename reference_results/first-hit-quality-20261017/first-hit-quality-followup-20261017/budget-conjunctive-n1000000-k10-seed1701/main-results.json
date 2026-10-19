@@ -1,0 +1,517 @@
+{
+  "case": {
+    "id": "conjunctive-n1000000-k10-seed1701",
+    "kind": "conjunctive",
+    "n": 1000000,
+    "k": 10,
+    "frequency": 0.18,
+    "case_id": "conjunctive-n1000000-k10",
+    "index_seed": 1701
+  },
+  "protocol": {
+    "experiment": "approximate-quality-fixed-budget",
+    "stage": "common-approximate-quality-four-budgets",
+    "dataset_seed": 2026101217,
+    "index_seeds": [
+      1701,
+      1702,
+      1703
+    ],
+    "m": 32,
+    "d": 2,
+    "rho": 0.5,
+    "relevance_radius": 1.5,
+    "target_recall": 0.9,
+    "tuning_acceptance_recall": 0.95,
+    "tuning_queries": 500,
+    "test_queries": 1000,
+    "warmup_queries": 10,
+    "planted_per_query": 1,
+    "plant_anchor_n": 100000,
+    "deltas": [
+      64.0,
+      128.0,
+      256.0
+    ],
+    "Lmax": 8,
+    "blocking_storage_multipliers": [
+      1,
+      6,
+      24,
+      96
+    ],
+    "include_balanced_in_ablation": true,
+    "blocking_main_latency_weight": 1.0,
+    "ablation_latency_weights": [
+      1.0
+    ],
+    "cost_memory_scale_bytes": 100000000,
+    "cost_latency_scale_seconds": 0.001,
+    "blocking_selection": "fastest complete tuning median among all on-time 1.25x-qualified configurations",
+    "baseline_selection": "fastest complete tuning median among all on-time 1.25x-qualified configurations",
+    "tuning_guard_note": "95% empirical tuning guard, not a population-success certificate",
+    "posting_compression": "CL/Intersection: unique (fingerprint,parent); FH: one lowest parent ID per fingerprint",
+    "peak_ram_cap_bytes": 48000000000,
+    "minimum_available_ram_bytes": 16000000000,
+    "compilation_deadline_seconds": 60,
+    "build_deadline_seconds": 1800,
+    "run_cap_seconds": 172800,
+    "monitor_interval_seconds": 1,
+    "pin_core": 20,
+    "build_threads": 48,
+    "probe_chunk": 10000,
+    "verification_chunk": 1000,
+    "feasibility_scope": "per-job >=90% held-out on-time 1.25x success under each of four hard budgets; bounded max8 search only",
+    "cases": [
+      {
+        "id": "conjunctive-n1000000-k4",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 4,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k5",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 5,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k6",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 6,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k7",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 7,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k8",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 8,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k9",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 9,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k10",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 10,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k11",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 11,
+        "frequency": 0.18
+      },
+      {
+        "id": "conjunctive-n1000000-k12",
+        "kind": "conjunctive",
+        "n": 1000000,
+        "k": 12,
+        "frequency": 0.18
+      }
+    ],
+    "blocking_only": false,
+    "joint_fh": true,
+    "methods": [
+      "cl_blocking",
+      "fh_blocking",
+      "fh_probe_all",
+      "fh_store_all"
+    ],
+    "L_grid": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8
+    ],
+    "L_max": 8,
+    "required_success": 0.9,
+    "approximation_factor": 1.25,
+    "report_factors": [
+      1.1,
+      1.25
+    ],
+    "budgets": [
+      {
+        "name": "1gb-10ms",
+        "index_budget_bytes": 1000000000,
+        "query_deadline_seconds": 0.01
+      },
+      {
+        "name": "256mb-1ms",
+        "index_budget_bytes": 256000000,
+        "query_deadline_seconds": 0.001
+      },
+      {
+        "name": "16gb-10ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.01
+      },
+      {
+        "name": "16gb-100ms",
+        "index_budget_bytes": 16000000000,
+        "query_deadline_seconds": 0.1
+      }
+    ],
+    "selection": "fastest complete tuning median among all on-time 1.25x-qualified configurations",
+    "search_scope": "family_specs short list; delta={64,128,256}; L={1,2,3,4,5,6,8}; max8; BOTH CL and FH",
+    "infeasibility_scope": "no qualifying configuration in this bounded search is not global approximate infeasibility",
+    "ratio_conditioning": "only finite-distance answers returned within the query deadline; missing/late ratios are null",
+    "tolerance": "positive optimum: distance <= factor*optimum + 1e-8; zero optimum: distance == 0",
+    "timing": "CL and Intersection include exact candidate verification; FH stops before offline returned-distance evaluation",
+    "serving_memory": "actual table arrays, actual stored/probed order families, shifts and masks; raw curves and scratch excluded",
+    "tuning_prefix_policy": "shared prefix views project selected-L storage; final selections rebuilt at exactly L",
+    "construction_guard": "uint32 per-table offsets, signed int32 parent IDs, conservative 48GB raw construction estimate, 1800s alarm before allocation",
+    "build_timeout_caveat": "SIGALRM is armed before allocation; native kernels may return before Python delivers the timeout"
+  },
+  "results": [
+    {
+      "method": "cl_blocking",
+      "budget": "1gb-10ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_blocking",
+      "budget": "1gb-10ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_probe_all",
+      "budget": "1gb-10ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_store_all",
+      "budget": "1gb-10ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "cl_blocking",
+      "budget": "256mb-1ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_blocking",
+      "budget": "256mb-1ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_probe_all",
+      "budget": "256mb-1ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_store_all",
+      "budget": "256mb-1ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "cl_blocking",
+      "budget": "16gb-10ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_blocking",
+      "budget": "16gb-10ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_probe_all",
+      "budget": "16gb-10ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_store_all",
+      "budget": "16gb-10ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "cl_blocking",
+      "budget": "16gb-100ms",
+      "test_evaluated": true,
+      "feasible": true,
+      "status": "feasible",
+      "config_id": "cl-d256-a96-swap0-L3",
+      "selected_configuration": {
+        "family_id": "cl-d256-a96-swap0",
+        "variant": "cl",
+        "stored": 96,
+        "probed": 37800,
+        "blocks": [
+          4,
+          2,
+          2,
+          1,
+          1
+        ],
+        "swapped": false,
+        "delta": 256.0,
+        "method_labels": [
+          "cl_blocking"
+        ],
+        "family_endpoint": null,
+        "config_id": "cl-d256-a96-swap0-L3",
+        "L": 3,
+        "budget": "16gb-100ms",
+        "deadline_seconds": 0.1,
+        "index_budget_bytes": 16000000000,
+        "index_bytes": 3224610736,
+        "memory_parts": {
+          "tables": 3224231096,
+          "shifts": 480,
+          "orders": 378960,
+          "masks": 200
+        },
+        "scratch_bytes": 12000000,
+        "raw_curve_bytes": 5120000000,
+        "build_seconds": 29.74030057992786,
+        "tuning_prefix_build_L": 8,
+        "status": "qualified",
+        "tuning_complete": true,
+        "tuning_early_rejected": false,
+        "tuning_requested_queries": 500,
+        "tuning_successes": 491,
+        "tuning_success_lower_bound": 0.982,
+        "tuning_success_upper_bound": 0.982,
+        "tuning_summary": {
+          "queries": 500,
+          "returned": 499,
+          "coverage": 0.998,
+          "raw_answer_coverage": 0.998,
+          "no_answer_rate": 0.0020000000000000018,
+          "empty_ontime_rate": 0.002,
+          "timeout_rate": 0.0,
+          "success_110": 0.982,
+          "success_125": 0.982,
+          "exact_rate": 0.982,
+          "conditional_mean_ratio": 4.253584883438735,
+          "conditional_max_ratio": 281.00611734612767,
+          "conditional_mean_distance": 4.000470242975415,
+          "conditional_median_ratio": 1.0,
+          "median_seconds": 0.014243179932236671,
+          "conditional_p95_ratio": 1.0,
+          "p95_seconds": 0.015138155641034245,
+          "conditional_p99_ratio": 176.83316342007,
+          "p99_seconds": 0.015215664505958557,
+          "mean_seconds": 0.013942784131970257,
+          "max_seconds": 0.016616135835647583
+        }
+      },
+      "selected_endpoint": null,
+      "index_bytes": 3224610736,
+      "memory_parts": {
+        "tables": 3224231096,
+        "shifts": 480,
+        "orders": 378960,
+        "masks": 200
+      },
+      "scratch_bytes": 12000000,
+      "raw_curve_bytes": 5120000000,
+      "build_seconds": 11.094014509115368,
+      "serving_build_L": 3,
+      "test_summary": {
+        "queries": 1000,
+        "returned": 999,
+        "coverage": 0.999,
+        "raw_answer_coverage": 0.999,
+        "no_answer_rate": 0.0010000000000000009,
+        "empty_ontime_rate": 0.001,
+        "timeout_rate": 0.0,
+        "success_110": 0.987,
+        "success_125": 0.987,
+        "exact_rate": 0.987,
+        "conditional_mean_ratio": 3.2009658728991264,
+        "conditional_max_ratio": 227.66278868162163,
+        "conditional_mean_distance": 3.0077402843152776,
+        "conditional_median_ratio": 1.0,
+        "median_seconds": 0.01418973202817142,
+        "conditional_p95_ratio": 1.0,
+        "p95_seconds": 0.015154975920449941,
+        "conditional_p99_ratio": 144.00746525055914,
+        "p99_seconds": 0.01557891779113561,
+        "mean_seconds": 0.013888064261293038,
+        "max_seconds": 0.016407371032983065
+      }
+    },
+    {
+      "method": "fh_blocking",
+      "budget": "16gb-100ms",
+      "test_evaluated": true,
+      "feasible": true,
+      "status": "feasible",
+      "config_id": "fh-d128-a96-swap0-L6",
+      "selected_configuration": {
+        "family_id": "fh-d128-a96-swap0",
+        "variant": "fh",
+        "stored": 96,
+        "probed": 37800,
+        "blocks": [
+          4,
+          2,
+          2,
+          1,
+          1
+        ],
+        "swapped": false,
+        "delta": 128.0,
+        "method_labels": [
+          "fh_blocking"
+        ],
+        "family_endpoint": null,
+        "config_id": "fh-d128-a96-swap0-L6",
+        "L": 6,
+        "budget": "16gb-100ms",
+        "deadline_seconds": 0.1,
+        "index_budget_bytes": 16000000000,
+        "index_bytes": 6914662872,
+        "memory_parts": {
+          "tables": 6914282752,
+          "shifts": 960,
+          "orders": 378960,
+          "masks": 200
+        },
+        "scratch_bytes": 12000000,
+        "raw_curve_bytes": 5120000000,
+        "build_seconds": 32.78143969294615,
+        "tuning_prefix_build_L": 8,
+        "status": "qualified",
+        "tuning_complete": true,
+        "tuning_early_rejected": false,
+        "tuning_requested_queries": 500,
+        "tuning_successes": 494,
+        "tuning_success_lower_bound": 0.988,
+        "tuning_success_upper_bound": 0.988,
+        "tuning_summary": {
+          "queries": 500,
+          "returned": 494,
+          "coverage": 0.988,
+          "raw_answer_coverage": 0.988,
+          "no_answer_rate": 0.01200000000000001,
+          "empty_ontime_rate": 0.012,
+          "timeout_rate": 0.0,
+          "success_110": 0.988,
+          "success_125": 0.988,
+          "exact_rate": 0.988,
+          "conditional_mean_ratio": 1.0,
+          "conditional_max_ratio": 1.0,
+          "conditional_mean_distance": 0.9456016432851099,
+          "conditional_median_ratio": 1.0,
+          "median_seconds": 0.004381597973406315,
+          "conditional_p95_ratio": 1.0,
+          "p95_seconds": 0.02250911761075256,
+          "conditional_p99_ratio": 1.0,
+          "p99_seconds": 0.03000938880257308,
+          "mean_seconds": 0.007055830990895629,
+          "max_seconds": 0.031041313195601106
+        }
+      },
+      "selected_endpoint": null,
+      "index_bytes": 6914662872,
+      "memory_parts": {
+        "tables": 6914282752,
+        "shifts": 960,
+        "orders": 378960,
+        "masks": 200
+      },
+      "scratch_bytes": 12000000,
+      "raw_curve_bytes": 5120000000,
+      "build_seconds": 24.72880317689851,
+      "serving_build_L": 6,
+      "test_summary": {
+        "queries": 1000,
+        "returned": 984,
+        "coverage": 0.984,
+        "raw_answer_coverage": 0.984,
+        "no_answer_rate": 0.016000000000000014,
+        "empty_ontime_rate": 0.016,
+        "timeout_rate": 0.0,
+        "success_110": 0.984,
+        "success_125": 0.984,
+        "exact_rate": 0.984,
+        "conditional_mean_ratio": 1.0,
+        "conditional_max_ratio": 1.0,
+        "conditional_mean_distance": 0.9478919734054417,
+        "conditional_median_ratio": 1.0,
+        "median_seconds": 0.004199719987809658,
+        "conditional_p95_ratio": 1.0,
+        "p95_seconds": 0.021036598819773645,
+        "conditional_p99_ratio": 1.0,
+        "p99_seconds": 0.0306805411237292,
+        "mean_seconds": 0.006859254899201915,
+        "max_seconds": 0.032061721896752715
+      }
+    },
+    {
+      "method": "fh_probe_all",
+      "budget": "16gb-100ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    },
+    {
+      "method": "fh_store_all",
+      "budget": "16gb-100ms",
+      "status": "no_qualifying_configuration_in_bounded_search",
+      "feasible": false,
+      "test_evaluated": false,
+      "scope": "no qualifying configuration in this bounded search is not global approximate infeasibility"
+    }
+  ]
+}

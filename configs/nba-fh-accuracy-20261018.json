@@ -1,0 +1,51 @@
+{
+  "experiment": "nba-FH-uniform-and-fine-to-coarse-accuracy",
+  "protocol": {
+    "quality_deltas": [14, 16, 18, 20, 22, 24],
+    "table_grid": [8, 16, 32, 64, 128, 256, 512, 768],
+    "maximum_stages": 3,
+    "index_budget_bytes": 512000000,
+    "minimum_tuning_coverage": 0.90,
+    "query_deadline_seconds": 60,
+    "build_deadline_seconds": 300,
+    "build_threads": 2,
+    "pin_core": 6,
+    "probe_chunk": 100000
+  },
+  "jobs": [
+    {
+      "id": "nba-n23805-k5-frechet-seed2301",
+      "case_id": "nba-n23805-k5",
+      "study": "nba",
+      "metric": "frechet",
+      "seed": 2301,
+      "nba_config": "configs/first-entry-nba-20261016.json",
+      "frozen_family": {"blocks": [2, 1, 1, 1], "swapped": false}
+    },
+    {
+      "id": "nba-n23805-k5-frechet-seed2302",
+      "case_id": "nba-n23805-k5",
+      "study": "nba",
+      "metric": "frechet",
+      "seed": 2302,
+      "nba_config": "configs/first-entry-nba-20261016.json",
+      "frozen_family": {"blocks": [2, 1, 1, 1], "swapped": false}
+    },
+    {
+      "id": "nba-n23805-k5-frechet-seed2303",
+      "case_id": "nba-n23805-k5",
+      "study": "nba",
+      "metric": "frechet",
+      "seed": 2303,
+      "nba_config": "configs/first-entry-nba-20261016.json",
+      "frozen_family": {"blocks": [2, 1, 1, 1], "swapped": false}
+    }
+  ],
+  "reporting": {
+    "objective": "Maximize tuning A1.25, then minimize mean returned-distance ratio; at least 90% tuning coverage.",
+    "cascade": "Increasing delta only; return the first collision in the first successful stage, without candidate verification.",
+    "storage": "512 MB maximum across all stages, including their separate order arrays and shifts.",
+    "splits": "Unchanged audited database, 500 tuning and 1000 held-out queries per seed; freeze uniform and cascade before either test.",
+    "publication": "Exploratory follow-up only; do not change the paper or replace historical results."
+  }
+}

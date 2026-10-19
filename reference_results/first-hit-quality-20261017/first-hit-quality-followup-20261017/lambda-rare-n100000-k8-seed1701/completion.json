@@ -1,0 +1,10 @@
+{
+  "completed": 1792290863.3912518,
+  "job": "lambda-rare-n100000-k8-seed1701",
+  "artifacts": {
+    "test-queries.csv": "815f5eea6833fe47d8355e38750b234c83069ba786394e806e416ca5833da878",
+    "frozen-selections.json": "b4de092d892440186f96c935df7fdcd14ec5a988681c1c34eed7851cbd1af038",
+    "excluded.json": "1f200c7e160558b1617e91e4d83b504dec6c39731e3d6e2742c49c92f350be78",
+    "main-results.json": "3ad5ee786b24aa6b55295a8ee8fd4cabb747b5dcd948b20fe8732331748de50e"
+  }
+}

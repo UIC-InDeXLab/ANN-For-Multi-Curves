@@ -1,0 +1,124 @@
+[
+  {
+    "case_id": "nba-n23805-k5",
+    "metric": "frechet",
+    "index_seed": 2301,
+    "display_method": "uniform",
+    "status": "complete",
+    "blocks": [
+      2,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "schedule": [
+      {
+        "delta": 22,
+        "L": 768,
+        "index_bytes": 473266584
+      }
+    ],
+    "index_bytes": 473266584,
+    "tuning": {
+      "kind": "uniform",
+      "schedule": [
+        {
+          "delta": 22,
+          "L": 768,
+          "index_bytes": 473266584
+        }
+      ],
+      "index_bytes": 473266584,
+      "tuning_a125": 0.21,
+      "tuning_a110": 0.092,
+      "tuning_coverage": 0.968,
+      "tuning_mean_ratio": 1.5361398530258683
+    },
+    "queries": 1000,
+    "returned": 960,
+    "empty_rate": 0.040000000000000036,
+    "timeout_rate": 0.0,
+    "success_110": 0.068,
+    "success_125": 0.195,
+    "exact_rate": 0.043,
+    "median_ms": 0.06941150058992207,
+    "p95_ms": 6.613377279427327,
+    "median_ratio": 1.5061323886338815,
+    "p95_ratio": 2.166611788778782,
+    "p99_ratio": 2.52140980882665,
+    "mean_ratio": 1.5371259919730464,
+    "max_ratio": 3.1533820511079758
+  },
+  {
+    "case_id": "nba-n23805-k5",
+    "metric": "frechet",
+    "index_seed": 2301,
+    "display_method": "cascade",
+    "status": "complete",
+    "blocks": [
+      2,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "schedule": [
+      {
+        "delta": 16,
+        "L": 512,
+        "index_bytes": 316851072
+      },
+      {
+        "delta": 20,
+        "L": 128,
+        "index_bytes": 79093808
+      },
+      {
+        "delta": 22,
+        "L": 128,
+        "index_bytes": 78871536
+      }
+    ],
+    "index_bytes": 474816416,
+    "tuning": {
+      "kind": "cascade",
+      "schedule": [
+        {
+          "delta": 16,
+          "L": 512,
+          "index_bytes": 316851072
+        },
+        {
+          "delta": 20,
+          "L": 128,
+          "index_bytes": 79093808
+        },
+        {
+          "delta": 22,
+          "L": 128,
+          "index_bytes": 78871536
+        }
+      ],
+      "index_bytes": 474816416,
+      "tuning_a125": 0.416,
+      "tuning_a110": 0.206,
+      "tuning_coverage": 0.928,
+      "tuning_mean_ratio": 1.3176711899810458
+    },
+    "queries": 1000,
+    "returned": 909,
+    "empty_rate": 0.09099999999999997,
+    "timeout_rate": 0.0,
+    "success_110": 0.18,
+    "success_125": 0.376,
+    "exact_rate": 0.095,
+    "median_ms": 6.6867590066976845,
+    "p95_ms": 10.549966197868342,
+    "median_ratio": 1.3045955759945733,
+    "p95_ratio": 1.7407568006952845,
+    "p99_ratio": 2.0517159697153784,
+    "mean_ratio": 1.3274585779290031,
+    "max_ratio": 2.3077598976055196
+  }
+]

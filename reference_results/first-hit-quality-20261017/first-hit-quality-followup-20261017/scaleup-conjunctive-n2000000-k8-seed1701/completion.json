@@ -1,0 +1,10 @@
+{
+  "completed": 1792291608.060447,
+  "job": "scaleup-conjunctive-n2000000-k8-seed1701",
+  "artifacts": {
+    "test-queries.csv": "fc884cdfec3713996093f92a7eb585b6d8dcf157d559203c2ec34892a612a664",
+    "frozen-selections.json": "877d73258d14a56efe58b73e5215ea07766b30798839ed969b64813f606dee5f",
+    "excluded.json": "d3a7483b79302f1f3027cff6615f3b1f7eee057b8c180d6c7d5c36dc40fa42c5",
+    "main-results.json": "ab512806a7cb77abfa610efd0f48bc2a71cb833e213fe9030903a74dfab5e3d7"
+  }
+}

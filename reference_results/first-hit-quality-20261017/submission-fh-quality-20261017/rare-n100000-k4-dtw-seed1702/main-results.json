@@ -1,0 +1,55 @@
+[
+  {
+    "case_id": "rare-n100000-k4",
+    "study": "dtw",
+    "metric": "dtw",
+    "index_seed": 1702,
+    "display_method": "blocking",
+    "status": "complete",
+    "quality_tuned": true,
+    "blocks": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "swapped": false,
+    "delta": 64.0,
+    "L": 9,
+    "index_bytes": 11700744,
+    "tuning": {
+      "family": "1+1+1+1",
+      "blocks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "swapped": false,
+      "labels": [
+        "blocking"
+      ],
+      "delta": 64.0,
+      "L": 9,
+      "index_bytes": 11700744,
+      "tuning_a125": 1.0,
+      "tuning_a110": 1.0,
+      "tuning_coverage": 1.0,
+      "tuning_mean_ratio": 1.0
+    },
+    "queries": 1000,
+    "returned": 999,
+    "empty_rate": 0.0010000000000000009,
+    "timeout_rate": 0.0,
+    "success_110": 0.999,
+    "success_125": 0.999,
+    "exact_rate": 0.999,
+    "median_ms": 0.005042995326220989,
+    "p95_ms": 0.02181397285312414,
+    "median_ratio": 1.0,
+    "p95_ratio": 1.0,
+    "p99_ratio": 1.0,
+    "mean_ratio": 1.0,
+    "max_ratio": 1.0
+  }
+]

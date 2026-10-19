@@ -1,0 +1,12 @@
+{
+  "source": "results/first-hit-quality-followup-20261017/sensitivity-m16-rare-n100000-k8-seed1701",
+  "artifacts": {
+    "dataset.json": "a6cb262c19e28619982e79fe64ae0c4340bafcaa0f74c8270d19012c0a793a65",
+    "frozen-selections.json": "fec16c04b84df24f1eac415e77d71bf42ea5f1a2c1f333c6a92a6c88689d539a",
+    "tuning-configurations.json": "2ec6b87817dd112d1d9419fa9da5af271aa417a3c6a6c57141cc79b49f812127",
+    "main-results.json": "86ece7dc481e66dd0c1ae9e6643d7aefcd2c049f1d087b3cb7edf1a5b99d7b8b",
+    "test-queries.csv": "0aa8404152772e3d494cea6e3bb480da1b0ba7c808f5cd7f8f2a659f7d1c3be3",
+    "excluded.json": "1f200c7e160558b1617e91e4d83b504dec6c39731e3d6e2742c49c92f350be78"
+  },
+  "policy": "Reuse complete canonical families; add only the requested method aliases"
+}
